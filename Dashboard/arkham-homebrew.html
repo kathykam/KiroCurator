@@ -36,6 +36,10 @@
     .sources a { color: #4f46e5; text-decoration: none; }
     .sources a:hover { text-decoration: underline; }
     .pick { background: #eef2ff; border-color: #a5b4fc; }
+    .site-nav { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e5e7eb; }
+    .site-nav a { font-size: 0.8rem; text-decoration: none; color: #6b7280; padding: 0.3rem 0.6rem; border-radius: 0.25rem; }
+    .site-nav a:hover { color: #1f2937; background: #f3f4f6; }
+    .site-nav a.active { color: #4f46e5; font-weight: 600; }
     .tabs { display: flex; gap: 0.5rem; margin-bottom: 1.5rem; }
     .tab { padding: 0.5rem 1rem; border: 1px solid #d1d5db; border-radius: 0.5rem; font-size: 0.875rem; cursor: pointer; background: #fff; color: #374151; font-weight: 500; }
     .tab:hover { background: #f9fafb; }
@@ -45,7 +49,12 @@
   </style>
 </head>
 <body>
-  <a href="index.html" style="font-size:0.8rem;color:#4f46e5;text-decoration:none;margin-bottom:0.75rem;display:inline-block;">← Back to Dashboard</a>
+  <nav class="site-nav">
+    <a href="index.html">🎲 Home</a>
+    <a href="collection.html">📚 Collection</a>
+    <a href="arkham-lcg.html">🐙 Arkham LCG</a>
+    <a href="arkham-homebrew.html" class="active">🃏 Homebrew</a>
+  </nav>
   <h1>🃏 Arkham Horror LCG – Homebrew Campaigns &amp; Scenarios</h1>
   <div class="subtitle">Fan-made content to play while Chapter 1 is out of print · Updated May 2026</div>
 
