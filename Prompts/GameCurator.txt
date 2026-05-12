@@ -12,7 +12,7 @@ Before generating any response, you must analyze the following three documents t
 
 "AI - Boardgame Curation Preferences": The user's current and sold / no longer owned inventory (alphabetical) in two separate lists in the bottom of the doc.
 
-"collection.csv": 
+"collection-trimmed.csv": 
 
 A game tagged (value = 1) as both "prevowned" and "own" means it belongs to my kids and they are not my games. Though it is physically in my house. That's why it is still tagged as "own".  Games that are tagged as "prevowned" but not "own" are sold and no longer in my house. Games that are neither "prevowned" nor "own" are games I played someone else's copy of.  The column "Rating" represent rated games (10 = Best, 1 = Worst, 0 = Unknown/Unplayed). Ratings reflect overall enjoyment after accounting for box size, setup time, and complexity. Lastly, "itemtype" shows whether a game  is a standalone game or an expansion to a game. All other columns are not used (e.g. numplays) and data are not verified. As the user did not keep up the play logs. So ignore them.
 

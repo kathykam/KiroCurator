@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐙 Arkham Horror LCG Dashboard</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #1a1a2e; color: #e0e0e0; padding: 1.5rem; max-width: 1100px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; color: #a78bfa; margin-bottom: 0.25rem; }
+    .subtitle { font-size: 0.875rem; color: #9ca3af; margin-bottom: 1rem; }
+    h2 { font-size: 1rem; color: #c4b5fd; margin: 1.5rem 0 0.5rem; }
+    .note { font-size: 0.75rem; color: #6b7280; font-style: italic; margin-bottom: 0.75rem; }
+
+    /* Tabs */
+    .tabs { display: flex; gap: 0; margin-bottom: 1.5rem; border-bottom: 2px solid #374151; }
+    .tab { padding: 0.6rem 1.2rem; cursor: pointer; font-size: 0.85rem; color: #9ca3af; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+    .tab:hover { color: #e0e0e0; }
+    .tab.active { color: #a78bfa; border-bottom-color: #a78bfa; }
+    .view { display: none; }
+    .view.active { display: block; }
+
+    /* Summary */
+    .summary { background: #16213e; border: 1px solid #374151; border-radius: 0.5rem; padding: 1rem; margin-bottom: 1.5rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 0.75rem; }
+    .stat { text-align: center; }
+    .stat-num { font-size: 1.4rem; font-weight: 700; color: #a78bfa; }
+    .stat-label { font-size: 0.65rem; color: #9ca3af; }
+
+    /* Timeline */
+    .timeline-year { font-size: 0.85rem; font-weight: 600; color: #a78bfa; margin: 1rem 0 0.4rem; }
+    .timeline-items { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 0.5rem; }
+    .tl-item { font-size: 0.75rem; padding: 0.3rem 0.6rem; border-radius: 0.25rem; border: 1px solid #374151; }
+    .tl-item.owned { background: #065f46; border-color: #10b981; color: #6ee7b7; }
+    .tl-item.want { background: #78350f; border-color: #f59e0b; color: #fcd34d; }
+    .tl-item.unowned { background: #1f2937; color: #6b7280; }
+    .tl-item .type { font-size: 0.6rem; opacity: 0.7; }
+
+    /* Collection */
+    .campaign { background: #16213e; border: 1px solid #374151; border-radius: 0.5rem; padding: 0.75rem 1rem; margin-bottom: 0.6rem; }
+    .campaign-header { display: flex; justify-content: space-between; align-items: center; }
+    .campaign-name { font-weight: 600; font-size: 0.9rem; }
+    .campaign-year { font-size: 0.7rem; color: #6b7280; }
+    .boxes { display: flex; gap: 0.4rem; margin-top: 0.4rem; flex-wrap: wrap; }
+    .box { font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 0.25rem; border: 1px solid #374151; }
+    .box.owned { background: #065f46; border-color: #10b981; color: #6ee7b7; }
+    .box.want { background: #78350f; border-color: #f59e0b; color: #fcd34d; }
+    .box.unowned { background: #1f2937; color: #6b7280; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 0.5rem; }
+    .card { background: #16213e; border: 1px solid #374151; border-radius: 0.5rem; padding: 0.5rem 0.75rem; display: flex; justify-content: space-between; align-items: center; }
+    .card.owned { border-left: 3px solid #10b981; }
+    .card.want { border-left: 3px solid #f59e0b; }
+    .card.unowned { border-left: 3px solid #4b5563; opacity: 0.6; }
+    .card-name { font-size: 0.8rem; }
+    .card-sub { font-size: 0.65rem; color: #9ca3af; }
+    .badge { font-size: 0.6rem; padding: 0.15rem 0.4rem; border-radius: 1rem; font-weight: 500; }
+    .badge-owned { background: #065f46; color: #6ee7b7; }
+    .badge-want { background: #78350f; color: #fcd34d; }
+    .badge-missing { background: #374151; color: #6b7280; }
+
+    /* Investigators */
+    .class-section { margin-bottom: 1.5rem; }
+    .class-header { font-size: 0.9rem; font-weight: 600; margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem; }
+    .class-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .inv-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0.4rem; }
+    .inv-card { background: #16213e; border: 1px solid #374151; border-radius: 0.4rem; padding: 0.4rem 0.7rem; display: flex; justify-content: space-between; align-items: center; }
+    .inv-card.have { border-left: 3px solid #3b82f6; }
+    .inv-card.nope { border-left: 3px solid #374151; opacity: 0.5; }
+    .inv-name { font-size: 0.8rem; }
+    .inv-name a:hover { color: #a78bfa !important; }
+    .inv-meta { font-size: 0.6rem; color: #6b7280; }
+    .inv-source { font-size: 0.6rem; color: #9ca3af; }
+
+    .filter-row { display: flex; gap: 0.5rem; margin-bottom: 1rem; flex-wrap: wrap; }
+    .filter-btn { font-size: 0.75rem; padding: 0.3rem 0.7rem; border-radius: 1rem; border: 1px solid #374151; background: #1f2937; color: #9ca3af; cursor: pointer; }
+    .filter-btn.active { border-color: #a78bfa; color: #a78bfa; background: #2d1b69; }
+    .tier { font-size: 0.6rem; font-weight: 700; padding: 0.1rem 0.35rem; border-radius: 0.2rem; margin-left: 0.3rem; }
+    .tier-S { background: #fbbf24; color: #1a1a2e; }
+    .tier-A { background: #34d399; color: #1a1a2e; }
+    .tier-B { background: #60a5fa; color: #1a1a2e; }
+    .tier-C { background: #a78bfa; color: #1a1a2e; }
+    .tier-D { background: #6b7280; color: #e0e0e0; }
+  </style>
+</head>
+<body>
+  <h1>🐙 Arkham Horror: The Card Game</h1>
+  <div class="subtitle">Collection Dashboard</div>
+
+  <div class="summary">
+    <div class="stat"><div class="stat-num" id="s-camp"></div><div class="stat-label">Campaigns</div></div>
+    <div class="stat"><div class="stat-num" id="s-inv"></div><div class="stat-label">Investigator Boxes</div></div>
+    <div class="stat"><div class="stat-num" id="s-start"></div><div class="stat-label">Starter Decks</div></div>
+    <div class="stat"><div class="stat-num" id="s-scen"></div><div class="stat-label">Scenario Packs</div></div>
+    <div class="stat"><div class="stat-num" id="s-investigators"></div><div class="stat-label">Investigators</div></div>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-view="timeline">📅 Release Timeline</div>
+    <div class="tab" data-view="collection">📦 My Collection</div>
+    <div class="tab" data-view="investigators">🔍 Investigators</div>
+  </div>
+
+  <div class="view active" id="timeline"></div>
+  <div class="view" id="collection"></div>
+  <div class="view" id="investigators"></div>
+
+  <script>
+    // DATA
+    const campaigns = [
+      { name: "Night of the Zealot", year: 2016, campaign: "owned", investigator: "owned", note: "Core Set",
+        investigators: [
+          { name: "Roland Banks", title: "The Fed", class: "Guardian", tier: "B", solo: true, multi: true },
+          { name: "Daisy Walker", title: "The Librarian", class: "Seeker", tier: "A", solo: false, multi: true },
+          { name: "\"Skids\" O'Toole", title: "The Ex-Con", class: "Rogue", tier: "D", solo: false, multi: false },
+          { name: "Agnes Baker", title: "The Waitress", class: "Mystic", tier: "B", solo: true, multi: true },
+          { name: "Wendy Adams", title: "The Urchin", class: "Survivor", tier: "A", solo: true, multi: true },
+        ]},
+      { name: "The Dunwich Legacy", year: 2017, campaign: "owned", investigator: "owned",
+        investigators: [
+          { name: "Zoey Samaras", title: "The Chef", class: "Guardian", tier: "A", solo: false, multi: true },
+          { name: "Rex Murphy", title: "The Reporter", class: "Seeker", tier: "S", solo: true, multi: true },
+          { name: "Jenny Barnes", title: "The Dilettante", class: "Rogue", tier: "B", solo: true, multi: true },
+          { name: "Jim Culver", title: "The Musician", class: "Mystic", tier: "C", solo: false, multi: false },
+          { name: "\"Ashcan\" Pete", title: "The Drifter", class: "Survivor", tier: "A", solo: true, multi: true },
+        ]},
+      { name: "The Path to Carcosa", year: 2017, campaign: "owned", investigator: "unowned",
+        investigators: [
+          { name: "Mark Harrigan", title: "The Soldier", class: "Guardian", tier: "A", solo: false, multi: true },
+          { name: "Minh Thi Phan", title: "The Secretary", class: "Seeker", tier: "A", solo: false, multi: true },
+          { name: "Sefina Rousseau", title: "The Painter", class: "Rogue", tier: "A", solo: true, multi: true },
+          { name: "Akachi Onyele", title: "The Shaman", class: "Mystic", tier: "B", solo: true, multi: true },
+          { name: "William Yorick", title: "The Gravedigger", class: "Survivor", tier: "A", solo: true, multi: true },
+          { name: "Lola Hayes", title: "The Actress", class: "Neutral", tier: "D", solo: false, multi: false },
+        ]},
+      { name: "The Forgotten Age", year: 2018, campaign: "owned", investigator: "unowned",
+        investigators: [
+          { name: "Leo Anderson", title: "The Expedition Leader", class: "Guardian", tier: "B", solo: false, multi: true },
+          { name: "Ursula Downs", title: "The Explorer", class: "Seeker", tier: "A", solo: true, multi: true },
+          { name: "Finn Edwards", title: "The Bootlegger", class: "Rogue", tier: "B", solo: true, multi: true },
+          { name: "Father Mateo", title: "The Priest", class: "Mystic", tier: "B", solo: true, multi: true },
+          { name: "Calvin Wright", title: "The Haunted", class: "Survivor", tier: "B", solo: false, multi: true },
+        ]},
+      { name: "The Circle Undone", year: 2019, campaign: "want", investigator: "unowned",
+        investigators: [
+          { name: "Carolyn Fern", title: "The Psychologist", class: "Guardian", tier: "A", solo: false, multi: true },
+          { name: "Joe Diamond", title: "The PI", class: "Seeker", tier: "A", solo: true, multi: true },
+          { name: "Preston Fairmont", title: "The Millionaire", class: "Rogue", tier: "B", solo: false, multi: true },
+          { name: "Marie Lambeau", title: "The Entertainer", class: "Mystic", tier: "C", solo: false, multi: false },
+          { name: "Rita Young", title: "The Athlete", class: "Survivor", tier: "B", solo: true, multi: true },
+          { name: "Diana Stanley", title: "The Redeemed Cultist", class: "Mystic", tier: "S", solo: true, multi: true },
+        ]},
+      { name: "The Dream-Eaters", year: 2019, campaign: "unowned", investigator: "unowned",
+        investigators: [
+          { name: "Tommy Muldoon", title: "The Rookie Cop", class: "Guardian", tier: "B", solo: false, multi: true },
+          { name: "Mandy Thompson", title: "The Researcher", class: "Seeker", tier: "S", solo: false, multi: true },
+          { name: "Tony Morgan", title: "The Bounty Hunter", class: "Rogue", tier: "A", solo: true, multi: true },
+          { name: "Luke Robinson", title: "The Dreamer", class: "Mystic", tier: "A", solo: true, multi: true },
+          { name: "Patrice Hathaway", title: "The Violinist", class: "Survivor", tier: "B", solo: true, multi: true },
+        ]},
+      { name: "The Innsmouth Conspiracy", year: 2021, campaign: "unowned", investigator: "unowned",
+        investigators: [
+          { name: "Sister Mary", title: "The Nun", class: "Guardian", tier: "A", solo: false, multi: true },
+          { name: "Amanda Sharpe", title: "The Student", class: "Seeker", tier: "S", solo: true, multi: true },
+          { name: "Trish Scarborough", title: "The Spy", class: "Rogue", tier: "S", solo: true, multi: true },
+          { name: "Dexter Drake", title: "The Magician", class: "Mystic", tier: "B", solo: true, multi: true },
+          { name: "Silas Marsh", title: "The Sailor", class: "Survivor", tier: "A", solo: true, multi: true },
+        ]},
+      { name: "Edge of the Earth", year: 2021, campaign: "owned", investigator: "owned",
+        investigators: [
+          { name: "Daniela Reyes", title: "The Mechanic", class: "Guardian", tier: "A", solo: false, multi: true },
+          { name: "Norman Withers", title: "The Astronomer", class: "Seeker", tier: "A", solo: true, multi: true },
+          { name: "Monterey Jack", title: "The Archaeologist", class: "Rogue", tier: "A", solo: true, multi: true },
+          { name: "Lily Chen", title: "The Martial Artist", class: "Mystic", tier: "B", solo: false, multi: true },
+          { name: "Bob Jenkins", title: "The Salesman", class: "Survivor", tier: "B", solo: false, multi: true },
+        ]},
+      { name: "The Scarlet Keys", year: 2022, campaign: "unowned", investigator: "unowned",
+        investigators: [
+          { name: "Carson Sinclair", title: "The Butler", class: "Guardian", tier: "A", solo: false, multi: true },
+          { name: "Vincent Lee", title: "The Doctor", class: "Seeker", tier: "A", solo: false, multi: true },
+          { name: "Kymani Jones", title: "The Security Consultant", class: "Rogue", tier: "A", solo: true, multi: true },
+          { name: "Amina Zidane", title: "The Operator", class: "Mystic", tier: "A", solo: true, multi: true },
+          { name: "Darrell Simmons", title: "The Photographer", class: "Survivor", tier: "A", solo: true, multi: true },
+          { name: "Charlie Kane", title: "The Politician", class: "Neutral", tier: "B", solo: false, multi: true },
+        ]},
+      { name: "The Feast of Hemlock Vale", year: 2024, campaign: "want", investigator: "unowned",
+        investigators: [
+          { name: "Wilson Richards", title: "The Handyman", class: "Guardian", tier: "A", solo: true, multi: true },
+          { name: "Kate Winthrop", title: "The Scientist", class: "Seeker", tier: "S", solo: true, multi: true },
+          { name: "Alessandra Zorzi", title: "The Countess", class: "Rogue", tier: "A", solo: true, multi: true },
+          { name: "Kōhaku Narukami", title: "The Folklorist", class: "Mystic", tier: "A", solo: true, multi: true },
+          { name: "Hank Samson", title: "The Farmhand", class: "Survivor", tier: "B", solo: true, multi: true },
+        ]},
+      { name: "The Drowned City", year: 2025, campaign: "owned", investigator: "owned",
+        investigators: [
+          { name: "Marion Tavares", title: "The Trawler", class: "Guardian", tier: "A", solo: true, multi: true },
+          { name: "Agatha Crane", title: "The Parapsychologist", class: "Seeker", tier: "A", solo: true, multi: true },
+          { name: "Michael McGlen", title: "The Gangster", class: "Rogue", tier: "B", solo: false, multi: true },
+          { name: "Gloria Goldberg", title: "The Writer", class: "Mystic", tier: "A", solo: true, multi: true },
+          { name: "George Barnaby", title: "The Lawyer", class: "Survivor", tier: "B", solo: false, multi: true },
+          { name: "Lucius Galloway", title: "The Poet", class: "Neutral", tier: "A", solo: true, multi: true },
+        ]},
+    ];
+
+    const starterDecks = [
+      { name: "Nathaniel Cho", title: "The Boxer", class: "Guardian", status: "owned", tier: "A", solo: false, multi: true },
+      { name: "Harvey Walters", title: "The Professor", class: "Seeker", status: "owned", tier: "A", solo: false, multi: true },
+      { name: "Winifred Habbamock", title: "The Aviatrix", class: "Rogue", status: "owned", tier: "S", solo: true, multi: true },
+      { name: "Jacqueline Fine", title: "The Psychic", class: "Mystic", status: "owned", tier: "S", solo: true, multi: true },
+      { name: "Stella Clark", title: "The Letter Carrier", class: "Survivor", status: "owned", tier: "S", solo: true, multi: true },
+    ];
+
+    const scenarios = [
+      { name: "Murder at the Excelsior Hotel", year: 2019, status: "owned" },
+      { name: "Film Fatale", year: 2025, status: "owned" },
+      { name: "Carnevale of Horrors", year: 2016, status: "want" },
+      { name: "The Blob That Ate Everything", year: 2019, status: "want" },
+      { name: "The Midwinter Gala", year: 2024, status: "want" },
+      { name: "Fortune and Folly", year: 2022, status: "unowned" },
+      { name: "War of the Outer Gods", year: 2021, status: "unowned" },
+      { name: "Machinations Through Time", year: 2021, status: "unowned" },
+      { name: "Labyrinths of Lunacy", year: 2018, status: "unowned" },
+    ];
+
+    const returnTo = [
+      { name: "Return to the Night of the Zealot", year: 2018, status: "owned" },
+      { name: "Return to the Dunwich Legacy", year: 2019, status: "unowned" },
+      { name: "Return to the Path to Carcosa", year: 2019, status: "unowned" },
+      { name: "Return to the Forgotten Age", year: 2020, status: "unowned" },
+      { name: "Return to the Circle Undone", year: 2020, status: "unowned" },
+    ];
+
+    // Compute owned investigators
+    function getMyInvestigators() {
+      const list = [];
+      campaigns.forEach(c => {
+        if (c.investigator === 'owned') {
+          c.investigators.forEach(inv => list.push({ ...inv, source: c.name, have: true }));
+        } else {
+          c.investigators.forEach(inv => list.push({ ...inv, source: c.name, have: false }));
+        }
+      });
+      starterDecks.forEach(s => list.push({ ...s, source: "Starter Deck", have: true }));
+      return list;
+    }
+    const allInvestigators = getMyInvestigators();
+
+    // Summary stats
+    document.getElementById('s-camp').textContent = campaigns.filter(c => c.campaign === 'owned').length + '/' + campaigns.length;
+    document.getElementById('s-inv').textContent = campaigns.filter(c => c.investigator === 'owned').length + '/' + campaigns.length;
+    document.getElementById('s-start').textContent = '5/5';
+    document.getElementById('s-scen').textContent = scenarios.filter(s => s.status === 'owned').length + '/' + scenarios.length;
+    document.getElementById('s-investigators').textContent = allInvestigators.filter(i => i.have).length + '/' + allInvestigators.length;
+
+    // TAB SWITCHING
+    document.querySelectorAll('.tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+        document.querySelectorAll('.view').forEach(v => v.classList.remove('active'));
+        tab.classList.add('active');
+        document.getElementById(tab.dataset.view).classList.add('active');
+      });
+    });
+
+    // VIEW 1: TIMELINE
+    function renderTimeline() {
+      const allProducts = [];
+      campaigns.forEach(c => {
+        allProducts.push({ name: c.name + ' Campaign', year: c.year, status: c.campaign, type: 'Campaign' });
+        allProducts.push({ name: c.name + ' Investigator', year: c.year, status: c.investigator, type: 'Investigator' });
+      });
+      starterDecks.forEach(s => allProducts.push({ name: s.name, year: 2020, status: 'owned', type: 'Starter' }));
+      scenarios.forEach(s => allProducts.push({ ...s, type: 'Scenario' }));
+      returnTo.forEach(r => allProducts.push({ ...r, type: 'Return To' }));
+
+      const byYear = {};
+      allProducts.forEach(p => {
+        if (!byYear[p.year]) byYear[p.year] = [];
+        byYear[p.year].push(p);
+      });
+
+      const years = Object.keys(byYear).sort();
+      document.getElementById('timeline').innerHTML = years.map(y =>
+        `<div class="timeline-year">${y}</div><div class="timeline-items">${byYear[y].map(p =>
+          `<span class="tl-item ${p.status}">${p.name} <span class="type">${p.type}</span></span>`
+        ).join('')}</div>`
+      ).join('');
+    }
+
+    // VIEW 2: COLLECTION
+    function renderCollection() {
+      let html = '<h2>Campaigns</h2>';
+      html += campaigns.map(c => {
+        const boxes = [
+          `<span class="box ${c.campaign}">📖 Campaign ${c.campaign === 'owned' ? '✓' : c.campaign === 'want' ? '★' : '✗'}</span>`,
+          `<span class="box ${c.investigator}">🔍 Investigator ${c.investigator === 'owned' ? '✓' : c.investigator === 'want' ? '★' : '✗'}</span>`,
+        ].join('');
+        return `<div class="campaign"><div class="campaign-header"><span class="campaign-name">${c.name}</span><span class="campaign-year">${c.year}${c.note ? ' · '+c.note : ''}</span></div><div class="boxes">${boxes}</div></div>`;
+      }).join('');
+
+      html += '<h2>Starter Decks</h2><div class="grid">' + starterDecks.map(s =>
+        `<div class="card owned"><div><div class="card-name">${s.name} <span class="tier tier-${s.tier}">${s.tier}</span></div><div class="card-sub">${s.title} · ${s.class}</div></div><span class="badge badge-owned">✓</span></div>`
+      ).join('') + '</div>';
+
+      html += '<h2>Scenario Packs</h2><div class="grid">' + scenarios.map(s => {
+        const b = { owned:'badge-owned', want:'badge-want', unowned:'badge-missing' }[s.status];
+        const l = { owned:'✓', want:'★', unowned:'—' }[s.status];
+        return `<div class="card ${s.status}"><span class="card-name">${s.name}</span><span class="badge ${b}">${l}</span></div>`;
+      }).join('') + '</div>';
+
+      html += '<h2>Return To Boxes</h2><div class="grid">' + returnTo.map(r => {
+        const b = { owned:'badge-owned', want:'badge-want', unowned:'badge-missing' }[r.status];
+        const l = { owned:'✓', want:'★', unowned:'—' }[r.status];
+        return `<div class="card ${r.status}"><span class="card-name">${r.name}</span><span class="badge ${b}">${l}</span></div>`;
+      }).join('') + '</div>';
+
+      document.getElementById('collection').innerHTML = html;
+    }
+
+    // VIEW 3: INVESTIGATORS
+    const classColors = { Guardian: '#3b82f6', Seeker: '#f59e0b', Rogue: '#10b981', Mystic: '#a855f7', Survivor: '#ef4444', Neutral: '#6b7280' };
+
+    function renderInvestigators(filter, tierFilter, sortBy) {
+      const classes = ['Guardian', 'Seeker', 'Rogue', 'Mystic', 'Survivor', 'Neutral'];
+      const tierOrder = { S: 0, A: 1, B: 2, C: 3, D: 4 };
+      let filtered = allInvestigators;
+      if (filter === 'owned') filtered = allInvestigators.filter(i => i.have);
+      else if (filter === 'missing') filtered = allInvestigators.filter(i => !i.have);
+      if (tierFilter && tierFilter !== 'all') filtered = filtered.filter(i => i.tier === tierFilter);
+
+      let html = '<div class="filter-row">';
+      ['all','owned','missing'].forEach(f => {
+        html += `<span class="filter-btn ${filter===f?'active':''}" data-filter="${f}">${f==='all'?'All':f==='owned'?'✓ Owned':'✗ Missing'}</span>`;
+      });
+      html += ' | ';
+      ['all','S','A','B','C','D'].forEach(t => {
+        html += `<span class="filter-btn ${tierFilter===t?'active':''}" data-tier="${t}">${t==='all'?'Any Tier':t}</span>`;
+      });
+      html += ' | ';
+      ['class','tier','solo','multi'].forEach(s => {
+        const labels = { class: 'Class', tier: 'Tier', solo: '🎯 Solo', multi: '👥 Multi' };
+        html += `<span class="filter-btn ${sortBy===s?'active':''}" data-sort="${s}">Sort: ${labels[s]}</span>`;
+      });
+      html += '</div>';
+
+      if (sortBy === 'tier') {
+        const tiers = ['S','A','B','C','D'];
+        tiers.forEach(t => {
+          const invs = filtered.filter(i => i.tier === t);
+          if (invs.length === 0) return;
+          html += `<div class="class-section"><div class="class-header"><span class="tier tier-${t}" style="font-size:0.8rem;padding:0.2rem 0.5rem">${t}</span> Tier (${invs.length})</div>`;
+          html += '<div class="inv-grid">' + invs.map(i => {
+            const wikiName = i.name.replace(/"/g, '').replace(/ /g, '_');
+            return `<div class="inv-card ${i.have?'have':'nope'}"><div><div class="inv-name"><a href="https://arkhamhorrorlcg.fandom.com/wiki/${wikiName}" target="_blank" style="color:inherit;text-decoration:none">${i.name}</a></div><div class="inv-meta">${i.title} · <span style="color:${classColors[i.class]}">${i.class}</span></div></div><div class="inv-source">${i.source}</div></div>`;
+          }).join('') + '</div></div>';
+        });
+      } else if (sortBy === 'solo' || sortBy === 'multi') {
+        const key = sortBy;
+        const yes = filtered.filter(i => i[key]);
+        const no = filtered.filter(i => !i[key]);
+        const label = key === 'solo' ? '🎯 True Solo Viable' : '👥 Strong in Multiplayer';
+        const labelNo = key === 'solo' ? 'Not recommended solo' : 'Specialist / needs team support';
+        yes.sort((a, b) => (tierOrder[a.tier] ?? 5) - (tierOrder[b.tier] ?? 5));
+        no.sort((a, b) => (tierOrder[a.tier] ?? 5) - (tierOrder[b.tier] ?? 5));
+        const renderList = (items) => items.map(i => {
+          const wikiName = i.name.replace(/"/g, '').replace(/ /g, '_');
+          const tierBadge = i.tier ? `<span class="tier tier-${i.tier}">${i.tier}</span>` : '';
+          return `<div class="inv-card ${i.have?'have':'nope'}"><div><div class="inv-name"><a href="https://arkhamhorrorlcg.fandom.com/wiki/${wikiName}" target="_blank" style="color:inherit;text-decoration:none">${i.name}</a>${tierBadge}</div><div class="inv-meta">${i.title} · <span style="color:${classColors[i.class]}">${i.class}</span></div></div><div class="inv-source">${i.source}</div></div>`;
+        }).join('');
+        html += `<div class="class-section"><div class="class-header">${label} (${yes.length})</div><div class="inv-grid">${renderList(yes)}</div></div>`;
+        if (no.length) html += `<div class="class-section"><div class="class-header" style="color:#6b7280">${labelNo} (${no.length})</div><div class="inv-grid">${renderList(no)}</div></div>`;
+      } else {
+        classes.forEach(cls => {
+          const invs = filtered.filter(i => i.class === cls).sort((a, b) => (tierOrder[a.tier] ?? 5) - (tierOrder[b.tier] ?? 5));
+          if (invs.length === 0) return;
+          html += `<div class="class-section"><div class="class-header"><div class="class-dot" style="background:${classColors[cls]}"></div>${cls} (${invs.filter(i=>i.have).length}/${allInvestigators.filter(i=>i.class===cls).length})</div>`;
+          html += '<div class="inv-grid">' + invs.map(i => {
+            const wikiName = i.name.replace(/"/g, '').replace(/ /g, '_');
+            const tierBadge = i.tier ? `<span class="tier tier-${i.tier}">${i.tier}</span>` : '';
+            return `<div class="inv-card ${i.have?'have':'nope'}"><div><div class="inv-name"><a href="https://arkhamhorrorlcg.fandom.com/wiki/${wikiName}" target="_blank" style="color:inherit;text-decoration:none">${i.name}</a>${tierBadge}</div><div class="inv-meta">${i.title}</div></div><div class="inv-source">${i.source}</div></div>`;
+          }).join('') + '</div></div>';
+        });
+      }
+
+      document.getElementById('investigators').innerHTML = html;
+
+      // Re-attach filter listeners
+      document.querySelectorAll('#investigators .filter-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const f = btn.dataset.filter || filter;
+          const t = btn.dataset.tier || tierFilter;
+          const s = btn.dataset.sort || sortBy;
+          renderInvestigators(f, t, s);
+        });
+      });
+    }
+
+    renderTimeline();
+    renderCollection();
+    renderInvestigators('all', 'all', 'class');
+  </script>
+</body>
+</html>
