@@ -38,9 +38,19 @@
     .group-header:hover { background: #f3f4f6; }
     .group-header td { font-weight: 500; color: #1f2937; padding: 0.5rem 0.75rem; }
     .indent { padding-left: 2rem !important; }
+    .site-nav { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e5e7eb; }
+    .site-nav a { font-size: 0.8rem; text-decoration: none; color: #6b7280; padding: 0.3rem 0.6rem; border-radius: 0.25rem; }
+    .site-nav a:hover { color: #1f2937; background: #f3f4f6; }
+    .site-nav a.active { color: #4f46e5; font-weight: 600; }
   </style>
 </head>
 <body>
+  <nav class="site-nav">
+    <a href="index.html">🎲 Home</a>
+    <a href="collection.html" class="active">📚 Collection</a>
+    <a href="arkham-lcg.html">🐙 Arkham LCG</a>
+    <a href="arkham-homebrew.html">🃏 Homebrew</a>
+  </nav>
   <h1>📚 My Collection</h1>
   <div class="subtitle" id="count"></div>
   <div class="controls">

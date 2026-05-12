@@ -79,9 +79,19 @@
     .tier-B { background: #60a5fa; color: #1a1a2e; }
     .tier-C { background: #a78bfa; color: #1a1a2e; }
     .tier-D { background: #6b7280; color: #e0e0e0; }
+    .site-nav { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid #374151; }
+    .site-nav a { font-size: 0.8rem; text-decoration: none; color: #9ca3af; padding: 0.3rem 0.6rem; border-radius: 0.25rem; }
+    .site-nav a:hover { color: #e0e0e0; background: #1f2937; }
+    .site-nav a.active { color: #a78bfa; font-weight: 600; }
   </style>
 </head>
 <body>
+  <nav class="site-nav">
+    <a href="index.html">🎲 Home</a>
+    <a href="collection.html">📚 Collection</a>
+    <a href="arkham-lcg.html" class="active">🐙 Arkham LCG</a>
+    <a href="arkham-homebrew.html">🃏 Homebrew</a>
+  </nav>
   <h1>🐙 Arkham Horror: The Card Game</h1>
   <div class="subtitle">Collection Dashboard</div>
 

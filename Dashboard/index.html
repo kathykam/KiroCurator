@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎲 KiroGames</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f9fafb; color: #1f2937; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
+    h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
+    .subtitle { font-size: 0.875rem; color: #6b7280; margin-bottom: 2rem; }
+    .menu { display: grid; gap: 1rem; width: 100%; max-width: 400px; }
+    .menu a { display: block; padding: 1.25rem 1.5rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.75rem; text-decoration: none; color: #1f2937; transition: all 0.15s; }
+    .menu a:hover { border-color: #a5b4fc; box-shadow: 0 2px 8px rgba(79,70,229,0.1); transform: translateY(-1px); }
+    .menu .icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .menu .label { font-weight: 600; font-size: 1rem; }
+    .menu .desc { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+  </style>
+</head>
+<body>
+  <h1>🎲 KiroGames</h1>
+  <p class="subtitle">Board game collection tools</p>
+  <nav class="menu">
+    <a href="collection.html">
+      <div class="icon">📚</div>
+      <div class="label">My Collection</div>
+      <div class="desc">Sortable, filterable view of all games</div>
+    </a>
+    <a href="arkham-lcg.html">
+      <div class="icon">🐙</div>
+      <div class="label">Arkham Horror LCG</div>
+      <div class="desc">Campaign collection dashboard</div>
+    </a>
+    <a href="arkham-homebrew.html">
+      <div class="icon">🃏</div>
+      <div class="label">Arkham Homebrew</div>
+      <div class="desc">Fan-made campaigns &amp; scenarios</div>
+    </a>
+  </nav>
+</body>
+</html>

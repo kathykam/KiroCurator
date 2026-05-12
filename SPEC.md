@@ -21,7 +21,7 @@ When the user says "Update the collection", perform these steps:
 1. Read the new CSV from `UserData/collection.csv`.
 2. Generate a trimmed CSV keeping only these columns: `objectname`, `objectid`, `rating`, `own`, `prevowned`, `wanttoplay`, `wishlist`, `wishlistpriority`, `average`, `avgweight`, `rank`, `minplayers`, `maxplayers`, `maxplaytime`, `minplaytime`, `yearpublished`, `itemtype`.
 3. Save the trimmed CSV to `GamingProfile/collection-trimmed.csv` (overwrite).
-4. Rebuild `collection.html` by embedding the trimmed CSV into the `<script id="csvData" type="text/plain">` tag, replacing the old data.
+4. Rebuild `Dashboard/collection.html` by embedding the trimmed CSV into the `<script id="csvData" type="text/plain">` tag, replacing the old data.
 
 The HTML file is a self-contained sortable/filterable collection viewer — no server required, opens directly in a browser.
 
@@ -43,10 +43,15 @@ Prompts/
   GameRater.txt           — Rater persona prompt
   GameCurator.txt         — Curator persona prompt
   GameRecommendations.txt — Recommender persona prompt
+Output/
+  recommendation.md       — Long-form output from Curator/Recommender personas
 UserData/
   collection.csv          — Full raw BGG export (drop zone for updates)
-collection.html           — Self-contained HTML viewer (trimmed CSV embedded)
-arkham-lcg.html           — Arkham Horror LCG collection dashboard
+Dashboard/
+  index.html              — Navigation menu linking to all HTML pages
+  collection.html         — Self-contained HTML viewer (trimmed CSV embedded)
+  arkham-lcg.html         — Arkham Horror LCG collection dashboard
+  arkham-homebrew.html    — Arkham Horror homebrew campaigns
 ```
 
 ## Key Data Rules (from prompts)

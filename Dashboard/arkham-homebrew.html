@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🃏 Arkham Horror LCG – Homebrew Campaigns</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f9fafb; color: #1f2937; padding: 1.5rem; max-width: 960px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
+    .subtitle { font-size: 0.875rem; color: #6b7280; margin-bottom: 1.5rem; }
+    h2 { font-size: 1.1rem; margin: 1.5rem 0 0.75rem; padding-bottom: 0.25rem; border-bottom: 2px solid #e5e7eb; }
+    .tier-top h2 { border-color: #16a34a; color: #16a34a; }
+    .tier-mid h2 { border-color: #ca8a04; color: #ca8a04; }
+    .tier-standalone h2 { border-color: #7c3aed; color: #7c3aed; }
+    .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.75rem; }
+    .card:hover { border-color: #a5b4fc; box-shadow: 0 1px 4px rgba(79,70,229,0.08); }
+    .card-header { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; flex-wrap: wrap; }
+    .card-title { font-weight: 600; font-size: 1rem; color: #4f46e5; text-decoration: none; }
+    .card-title:hover { text-decoration: underline; }
+    .card-creator { font-size: 0.8rem; color: #6b7280; }
+    .card-desc { font-size: 0.875rem; color: #374151; margin-top: 0.5rem; line-height: 1.5; }
+    .card-meta { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-top: 0.5rem; font-size: 0.75rem; color: #6b7280; }
+    .tag { background: #f3f4f6; border-radius: 0.25rem; padding: 0.15rem 0.4rem; }
+    .tag-green { background: #dcfce7; color: #166534; }
+    .tag-amber { background: #fef9c3; color: #854d0e; }
+    .tag-red { background: #fee2e2; color: #991b1b; }
+    .tag-purple { background: #f3e8ff; color: #6b21a8; }
+    .fit { margin-top: 0.5rem; font-size: 0.8rem; padding: 0.5rem; background: #f0fdf4; border-radius: 0.25rem; border-left: 3px solid #16a34a; }
+    .fit-warn { background: #fffbeb; border-left-color: #ca8a04; }
+    .fit-bad { background: #fef2f2; border-left-color: #ef4444; }
+    .sources { background: #fff; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin-top: 1.5rem; }
+    .sources h3 { font-size: 0.95rem; margin-bottom: 0.5rem; }
+    .sources ul { list-style: none; padding: 0; }
+    .sources li { margin-bottom: 0.4rem; font-size: 0.875rem; }
+    .sources a { color: #4f46e5; text-decoration: none; }
+    .sources a:hover { text-decoration: underline; }
+    .pick { background: #eef2ff; border-color: #a5b4fc; }
+  </style>
+</head>
+<body>
+  <h1>🃏 Arkham Horror LCG – Homebrew Campaigns &amp; Scenarios</h1>
+  <div class="subtitle">Fan-made content to play while Chapter 1 is out of print · Updated May 2026</div>
+
+  <section class="tier-top">
+    <h2>★ Best Campaigns</h2>
+
+    <div class="card pick">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/author/itsoliviajuliet/" target="_blank">Ages Unwound</a>
+        <span class="card-creator">by Olivia Juliet</span>
+      </div>
+      <div class="card-desc">Time travel narrative — investigators fight a cult trying to unmake time and reality. Tight, singular focus with high narrative agency.</div>
+      <div class="card-meta">
+        <span class="tag tag-green">Narrative</span>
+        <span class="tag">Time Travel</span>
+        <span class="tag">Full Campaign</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits you:</strong> Singular narrative focus — every scenario drives the story forward with zero filler. Time-loop structure gives clear goals (Purpose Clarity: high). No grid combat, no app, no per-turn bookkeeping. Drama and agency without systemic chaos. This is the homebrew equivalent of your "Adventurer" pillar.
+      </div>
+    </div>
+
+    <div class="card pick">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2021/05/29/cyclopean-foundations-campaign/" target="_blank">Cyclopean Foundations</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Cthulhu-based campaign that feels closest to an official FFG release. Each scenario builds on a focused mechanic that gives it a cohesive theme.</div>
+      <div class="card-meta">
+        <span class="tag tag-green">Feels Official</span>
+        <span class="tag">Cthulhu</span>
+        <span class="tag">8 Scenarios</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits you:</strong> Designed to feel like a real FFG cycle — clean rules, consistent mechanical language, no homebrew jank. Focused mechanic-per-scenario means you always know what you're doing. Narrative escalates from a robbery to a globe-spanning conspiracy. No grid, no app, no fiddly boss AI.
+      </div>
+    </div>
+
+    <div class="card pick">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/author/theamazingfidget/" target="_blank">Circus Ex Mortis</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Shub-Niggurath campaign with circus horror theming. Spooky and tense. Comes with a circus-themed investigator card expansion.</div>
+      <div class="card-meta">
+        <span class="tag tag-green">Tense</span>
+        <span class="tag">Shub-Niggurath</span>
+        <span class="tag">+ Player Cards</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits you:</strong> Tension from narrative pressure, not token management. Bonus investigator expansion = asymmetric powers (your #1 "like"). The Beard's designs are known for clean rules text. Strong thematic throughline keeps you immersed.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2020/10/30/alice-in-wonderland-campaign/" target="_blank">Alice in Wonderland</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Journey to Wonderland to stop shadows from consuming it. Whimsical writing with clever mechanics. May be on the easier side.</div>
+      <div class="card-meta">
+        <span class="tag">Whimsical</span>
+        <span class="tag">Approachable</span>
+        <span class="tag">Full Campaign</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits you:</strong> Low fiddliness, fast setup. Clever mechanics keep it interesting without overwhelming. Strong narrative voice. May be too easy for a veteran — but "easy + fun" beats "hard + tedious" for your profile.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2022/06/21/jumanji-campaign/" target="_blank">Jumanji</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Only 4 scenarios — tight with no filler. Based on the 1995 movie. Board game mechanics cleverly incorporated into the card game.</div>
+      <div class="card-meta">
+        <span class="tag tag-green">Short &amp; Tight</span>
+        <span class="tag">4 Scenarios</span>
+        <span class="tag">1995 Film</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits you:</strong> 4 scenarios = zero bloat. Every scenario earns its place. Board-game-within-a-card-game concept is mechanically clever without being fiddly. Low commitment — finish in two sessions. Narrative is fun and familiar.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2020/10/30/the-war-of-the-worlds-campaign/" target="_blank">The War of the Worlds</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Three-scenario campaign based on the H.G. Wells novel and Orson Welles radio drama. Short, solid, no low points.</div>
+      <div class="card-meta">
+        <span class="tag tag-green">Weekend Campaign</span>
+        <span class="tag">3 Scenarios</span>
+        <span class="tag">Sci-Fi</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits you:</strong> Sci-fi setting (your favourite). Three scenarios = zero filler. The Beard's clean design language. No ambition beyond "tell this story well" — tight mechanics, no bloat. Great palate cleanser between bigger campaigns.
+      </div>
+    </div>
+  </section>
+
+  <section class="tier-mid">
+    <h2>◆ Campaigns Worth Considering (with caveats)</h2>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2021/04/06/call-of-the-plaguebearer/" target="_blank">Call of the Plaguebearer</a>
+        <span class="card-creator">by Dr. Jack Science</span>
+      </div>
+      <div class="card-desc">Resident Evil / Reanimator inspired. Repeated use of Arkham locations builds familiarity. Complex but varied challenges.</div>
+      <div class="card-meta">
+        <span class="tag">Veteran</span>
+        <span class="tag">Resident Evil</span>
+        <span class="tag">8 Scenarios</span>
+      </div>
+      <div class="fit fit-warn">
+        <strong>Caveat:</strong> Strong survival horror narrative hits your Adventurer pillar. But "complex mechanics" is a yellow flag — some scenarios may cross your fiddliness threshold. The RE DNA means resource tension, not spreadsheet management, so likely fine.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/author/theamazingfidget/" target="_blank">The Colour Out of Oz</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Quest through Oz fighting the corrupting Colour. Multi-goal scenarios with treachery upkeep create shifting board states.</div>
+      <div class="card-meta">
+        <span class="tag">Demanding</span>
+        <span class="tag">Multi-Goal</span>
+        <span class="tag">Oz Setting</span>
+      </div>
+      <div class="fit fit-warn">
+        <strong>Caveat:</strong> Strong narrative and creative setting. But "treachery cards with upkeep" = per-turn maintenance tokens. Brushes against your CPU Rule. Play when you're in the mood to focus.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://github.com/ArkhamDotCards/theghostsofonigawa" target="_blank">The Ghosts of Onigawa</a>
+        <span class="card-creator">by Myriad</span>
+      </div>
+      <div class="card-desc">Set in Japan. Half brilliant down-to-earth horror, half uneven epic scale. Good player card expansion.</div>
+      <div class="card-meta">
+        <span class="tag">Japan Setting</span>
+        <span class="tag">Uneven</span>
+        <span class="tag">+ Player Cards</span>
+      </div>
+      <div class="fit fit-warn">
+        <strong>Caveat:</strong> The intimate horror half is exactly your vibe. The "epic scale" half reportedly gets messy (more tokens, more exceptions). Worth it for the good scenarios alone.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2023/02/07/bloodborne-the-city-of-the-unseen/" target="_blank">Bloodborne: City of the Unseen</a>
+        <span class="card-creator">by aughhh</span>
+      </div>
+      <div class="card-desc">Like the videogame — challenging, rewarding, lore-rich. Long scenarios with high difficulty.</div>
+      <div class="card-meta">
+        <span class="tag tag-red">Hard</span>
+        <span class="tag">Bloodborne</span>
+        <span class="tag">Long Scenarios</span>
+      </div>
+      <div class="fit fit-bad">
+        <strong>Risk:</strong> Long + complex + high difficulty = potential survival grind territory. Repeated death/retry loops may feel like the 7th Continent problem. Only if you loved Bloodborne the videogame and accept the grind.
+      </div>
+    </div>
+  </section>
+
+  <section class="tier-standalone">
+    <h2>🎭 Best Standalone Scenarios</h2>
+
+    <div class="card pick">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2020/10/30/the-legend-of-sleepy-hollow/" target="_blank">The Legend of Sleepy Hollow</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Take on the Headless Horseman in a haunted hollow. Classic horror short story adapted into a single tight scenario.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag tag-green">Tight</span>
+        <span class="tag">Gothic Horror</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Single session, zero bloat. The Beard's clean design. Strong narrative hook (you know the story). No setup overhead — just shuffle and go.
+      </div>
+    </div>
+
+    <div class="card pick">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/2021/10/01/the-fall-of-the-house-of-usher/" target="_blank">The Fall of the House of Usher</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Poe's gothic masterpiece as a scenario. The house itself is the antagonist — atmosphere and dread without complex enemy AI.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag tag-green">Atmospheric</span>
+        <span class="tag">Poe</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Narrative-driven horror with environmental tension rather than fiddly boss mechanics. No monster AI to run — the house IS the threat. Pure Adventurer pillar.
+      </div>
+    </div>
+
+    <div class="card pick">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/author/theamazingfidget/" target="_blank">The Phantom of the Opera</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Investigate the Paris Opera House. Mystery and drama in a single scenario with a strong narrative arc.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag">Mystery</span>
+        <span class="tag">Investigation</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Investigation-focused (your Detective Stories preference). Single antagonist with clear narrative motivation. No grid, no complex AI. Drama over mechanics.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/author/theamazingfidget/" target="_blank">The Invisible Man</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">H.G. Wells sci-fi horror. Hunt an invisible antagonist through a single tense scenario.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag">Sci-Fi</span>
+        <span class="tag">Cat &amp; Mouse</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Sci-fi setting. Single clear objective. The "invisible" mechanic creates tension through uncertainty, not through token tracking.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/author/theamazingfidget/" target="_blank">The Strange Case of Dr. Jekyll and Mr. Hyde</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Classic duality horror. Investigate the connection between Jekyll and Hyde in a narrative-driven standalone.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag">Gothic</span>
+        <span class="tag">Duality</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Investigation + narrative. The duality theme creates interesting mechanical choices without complex upkeep. Classic horror literature = strong thematic hook.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://mysteriouschanting.wordpress.com/author/theamazingfidget/" target="_blank">The Facts in the Case of M. Valdemar</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Poe short story adaptation. A man kept alive through mesmerism begins to decay. Intimate horror scenario.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag">Poe</span>
+        <span class="tag">Body Horror</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Intimate, contained horror. Short story = tight scenario with no padding. Atmospheric dread over mechanical complexity.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://karkhamhorror.neocities.org/standalone/deltagreenconvergence.html" target="_blank">Delta Green: Convergence</a>
+        <span class="card-creator">by Mr Dodger</span>
+      </div>
+      <div class="card-desc">Government conspiracy meets Lovecraft. Delta Green RPG scenario adapted for Arkham LCG. Investigation-heavy.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag">Conspiracy</span>
+        <span class="tag">Investigation</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Investigation-focused (Detective Stories preference). Government conspiracy = strong narrative hook. X-Files meets Lovecraft.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://hallofarkham.com/wp-content/uploads/2020/07/the-symphony-of-erich-zann-1.1-scenario-guide.pdf" target="_blank">The Symphony of Erich Zann</a>
+        <span class="card-creator">by Axolotl</span>
+      </div>
+      <div class="card-desc">Stop an orchestra from playing otherworldly music. Lovecraft short story with a unique musical theme.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone</span>
+        <span class="tag">Lovecraft</span>
+        <span class="tag">Unique Theme</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Lovecraft source material you love. Unique "stop the music" objective is clear and dramatic. One of the most polished fan standalones — hosted directly on Hall of Arkham.
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <a class="card-title" href="https://karkhamhorror.neocities.org/standalone/incidents_overall.html" target="_blank">Arkham Incidents (5-scenario set)</a>
+        <span class="card-creator">by The Beard</span>
+      </div>
+      <div class="card-desc">Five short standalone scenarios designed to slot between campaign scenarios as side stories. Each is self-contained with unique mechanics.</div>
+      <div class="card-meta">
+        <span class="tag tag-purple">Standalone Set</span>
+        <span class="tag tag-green">Modular</span>
+        <span class="tag">5 Scenarios</span>
+      </div>
+      <div class="fit">
+        <strong>Why it fits:</strong> Designed as palate cleansers — short, tight, no commitment. Play one between campaign scenarios for variety. Each tries something different without overstaying its welcome.
+      </div>
+    </div>
+  </section>
+
+  <div class="sources">
+    <h3>📥 Where to Get These</h3>
+    <ul>
+      <li><a href="https://mysteriouschanting.wordpress.com/blog/custom-campaigns/">Mysterious Chanting</a> — The Beard's campaigns + database of fan content (primary source)</li>
+      <li><a href="https://arkhamcentral.com/">Arkham Central</a> — Downloads for many fan campaigns and standalones</li>
+      <li><a href="https://hallofarkham.com/arkham-horror-lcg-custom-scenarios/">Hall of Arkham</a> — Curated custom scenario list with direct PDFs</li>
+      <li><a href="https://karkhamhorror.neocities.org/recommendations">Karkham Horror Reviews</a> — In-depth spoiler-light reviews and play guides</li>
+      <li><a href="https://www.tinkertowngames.com">TinkerTown Games</a> — Professionally printed physical copies (Ages Unwound, others)</li>
+      <li><strong>Tabletop Simulator</strong> — Most campaigns have TTS mods on Steam Workshop</li>
+      <li><strong>ArkhamCards App</strong> — Some custom campaigns integrated into campaign guide</li>
+    </ul>
+  </div>
+</body>
+</html>
