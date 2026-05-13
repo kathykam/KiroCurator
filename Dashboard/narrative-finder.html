@@ -14,14 +14,10 @@
     .filter-toggle.negative.active { background: #ef4444; color: #fff; border-color: #ef4444; }
     .section-label { font-size: 0.7rem; color: #6b7280; font-weight: 600; text-transform: uppercase; margin: 0.75rem 0 0.25rem; width: 100%; }
     .game-count { font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem; }
-    .card-score { font-size: 0.7rem; color: #6b7280; margin-top: 0.25rem; }
-    .card-score span { display: inline-block; margin-right: 0.5rem; }
     .match-high { border-left: 4px solid #16a34a; }
     .match-mid { border-left: 4px solid #ca8a04; }
     .match-low { border-left: 4px solid #d1d5db; }
     .tag-ks { background: #cffafe; color: #155e75; }
-    .pillar-adv { background: #fef3c7; color: #92400e; }
-    .pillar-arch { background: #dbeafe; color: #1e40af; }
   </style>
 </head>
 <body>
@@ -35,38 +31,37 @@
     <a href="narrative-finder.html" class="active">🔍 Finder</a>
   </nav>
   <h1>🔍 Narrative Game Finder</h1>
-  <div class="subtitle">Find your next narrative game · Toggle filters + set minimum narrative depth (0-10)</div>
+  <div class="subtitle">Find your next narrative game · Toggle filters + select narrative type</div>
 
   <div class="filters" id="filters">
     <div class="section-label">✅ I Want</div>
     <button class="filter-toggle active" data-filter="cooperative">Cooperative</button>
     <button class="filter-toggle active" data-filter="asymmetric">Asymmetric Powers</button>
-    <button class="filter-toggle active" data-filter="narrative">Narrative/Campaign</button>
     <button class="filter-toggle active" data-filter="lowFiddle">Low Fiddliness (≤3)</button>
     <button class="filter-toggle active" data-filter="easyTable">Easy to Table</button>
-    <button class="filter-toggle active" data-filter="multiplayer">Genuine Multiplayer</button>
     <button class="filter-toggle" data-filter="scifi">Sci-Fi Theme</button>
     <button class="filter-toggle" data-filter="ozAlice">Oz / Alice Theme</button>
-    <button class="filter-toggle" data-filter="opportunityLuck">Opportunity Luck</button>
     <button class="filter-toggle" data-filter="engineBuild">Engine Building</button>
+    <button class="filter-toggle active" data-filter="mechanicalDepth">Mechanical Depth</button>
 
     <div class="section-label">📖 Narrative Level</div>
-    <select id="narrativeMin" style="padding:0.4rem 0.75rem; border:1px solid #d1d5db; border-radius:2rem; font-size:0.75rem;">
-      <option value="0">Any Narrative</option>
-      <option value="8">8+ (Deep authored story)</option>
-      <option value="6">6+ (Meaningful narrative)</option>
-      <option value="4">4+ (Some narrative)</option>
-      <option value="2">2+ (Emergent only)</option>
+    <select id="narrativeType" style="padding:0.4rem 0.75rem; border:1px solid #d1d5db; border-radius:2rem; font-size:0.75rem;">
+      <option value="all">All Types</option>
+      <option value="campaign">Campaign (authored, multi-session)</option>
+      <option value="scenario">Scenario (authored, standalone)</option>
+      <option value="vignette">Vignette (random snippets)</option>
+      <option value="emergent">Emergent (drama from mechanics)</option>
+      <option value="none">None (no narrative)</option>
     </select>
-    <button class="filter-toggle active" data-filter="mechanicalDepth">Mechanical Depth (not just story)</button>
 
     <div class="section-label">❌ I Avoid</div>
-    <button class="filter-toggle negative active" data-filter="noApp">No App Required</button>
-    <button class="filter-toggle negative active" data-filter="noDeckConstruction">No Deck Construction</button>
-    <button class="filter-toggle negative active" data-filter="noGrid">No Grid Combat</button>
-    <button class="filter-toggle negative active" data-filter="noSurvivalGrind">No Survival Grind</button>
-    <button class="filter-toggle negative" data-filter="noPvP">No Direct PvP</button>
-    <button class="filter-toggle negative" data-filter="noAuction">No Auction/Bidding</button>
+    <button class="filter-toggle negative active" data-filter="solo">No Solo Games</button>
+    <button class="filter-toggle negative active" data-filter="app">No App Required</button>
+    <button class="filter-toggle negative active" data-filter="deckConstruction">No Deck Construction</button>
+    <button class="filter-toggle negative active" data-filter="gridCombat">No Grid Combat</button>
+    <button class="filter-toggle negative active" data-filter="survivalGrind">No Survival Grind</button>
+    <button class="filter-toggle negative" data-filter="pvp">No Direct PvP</button>
+    <button class="filter-toggle negative" data-filter="auction">No Auction/Bidding</button>
   </div>
 
   <div class="game-count" id="gameCount"></div>
@@ -75,25 +70,31 @@
   <script src="games.js"></script>
   <script>
 function render() {
-  const activeFilters = [...document.querySelectorAll('.filter-toggle.active')].map(b => b.dataset.filter);
-  const narrativeMin = parseInt(document.getElementById('narrativeMin').value);
+  const wantFilters = [...document.querySelectorAll('.filter-toggle.active:not(.negative)')].map(b => b.dataset.filter);
+  const avoidFilters = [...document.querySelectorAll('.filter-toggle.negative.active')].map(b => b.dataset.filter);
+  const narrativeType = document.getElementById('narrativeType').value;
   const filtered = games.filter(g => {
-    if (narrativeMin && (g.narrativeScore || 0) < narrativeMin) return false;
-    return activeFilters.every(f => g.tags[f]);
+    if (narrativeType !== 'all' && g.narrativeType !== narrativeType) return false;
+    if (!wantFilters.every(f => g.tags[f])) return false;
+    if (!avoidFilters.every(f => !g.tags[f])) return false;
+    return true;
   });
-  filtered.sort((a,b) => (b.narrativeScore||0) - (a.narrativeScore||0) || 0);
+  filtered.sort((a,b) => {
+    const order = {campaign:4, scenario:3, vignette:2, emergent:1, none:0};
+    return (order[b.narrativeType]||0) - (order[a.narrativeType]||0);
+  });
   document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
   document.getElementById('gameList').innerHTML = filtered.map(g => {
-    const matchCount = activeFilters.filter(f => g.tags[f]).length;
-    const matchPct = activeFilters.length ? matchCount / activeFilters.length : 1;
+    const total = wantFilters.length + avoidFilters.length;
+    const matchCount = wantFilters.filter(f => g.tags[f]).length + avoidFilters.filter(f => !g.tags[f]).length;
+    const matchPct = total ? matchCount / total : 1;
     const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
-    const pillarTag = g.pillar === 'adventurer' ? '<span class="tag pillar-adv">Adventurer</span>' : '<span class="tag pillar-arch">Architect</span>';
     const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
-    const narrTag = g.narrativeScore ? `<span class="tag">📖 ${g.narrativeScore}/10</span>` : '';
+    const narrTag = g.narrativeType !== 'none' ? `<span class="tag">📖 ${g.narrativeType}</span>` : '';
     return `<div class="card ${matchClass}">
       <div class="card-header"><a class="card-title" href="https://boardgamegeek.com/boardgame/${g.bgg}" target="_blank">${g.name}</a><span class="card-creator">${g.designer} · ${g.year}</span></div>
       <div class="card-desc">${g.desc}</div>
-      <div class="card-meta">${pillarTag}${statusTag}${narrTag}</div>
+      <div class="card-meta">${statusTag}${narrTag}</div>
       <div class="fit">${g.fit}</div>
     </div>`;
   }).join('');
@@ -101,7 +102,7 @@ function render() {
 document.querySelectorAll('.filter-toggle').forEach(btn => {
   btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
 });
-document.getElementById('narrativeMin').addEventListener('change', render);
+document.getElementById('narrativeType').addEventListener('change', render);
 render();
   </script>
 </body>

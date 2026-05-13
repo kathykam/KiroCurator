@@ -78,6 +78,7 @@ Randomness that invalidates a strategic plan or removes my agency.
 | **Thematic/Narrative** | Setting and story are important, especially for the Adventurer profile. |
 | **Sci-Fi Setting** | Favorite setting (Battlestar Galactica, T.I.M.E Stories, Android universe). |
 | **Oz / Alice Themes** | Wizard of Oz and Alice in Wonderland are personal favourite themes alongside sci-fi. |
+| **Cyberpunk** | Also love cyberpunk settings. |
 | **Mechanics King** | Arkham Horror LCG and Death May Die are 10s for mechanical brilliance — Lovecraft theme is fine, but not the reason. |
 | **The "Android" Gap** | Want a great game in the Android universe, but Android (7) and Infiltration (6) didn't deliver. |
 | **Apps (for RPGs)** | Very strong "No." |
