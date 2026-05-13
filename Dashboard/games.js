@@ -124,7 +124,7 @@ const games = [
       "narrative": true,
       "lowFiddle": true,
       "easyTable": true,
-      "multiplayer": false,
+      "multiplayer": true,
       "scifi": false,
       "ozAlice": false,
       "opportunityLuck": true,
@@ -189,7 +189,7 @@ const games = [
       "noDeckConstruction": true,
       "noGrid": true,
       "noSurvivalGrind": true,
-      "noPvP": false,
+      "noPvP": true,
       "noAuction": true
     },
     "fit": "SCI-FI + engine building + Vaccarino pedigree. Easy to table, snappy turns. BUT has engine destruction (robots kill your stuff) — tests your 'no negative progress' rule. Shared deck means indirect interaction, not direct PvP.",
@@ -343,7 +343,7 @@ const games = [
     "pillar": "adventurer",
     "desc": "Cooperative deduction sequel. Investigate cases using tangible evidence and story context.",
     "tags": {
-      "cooperative": true,
+      "cooperative": false,
       "asymmetric": false,
       "narrative": true,
       "lowFiddle": true,
@@ -386,7 +386,7 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": false,
-      "noAuction": false
+      "noAuction": true
     },
     "fit": "On your wishlist. Legacy narrative with group decisions. King's Dilemma is highly rated. Has negotiation/voting — not auction but social pressure.",
     "status": "kickstarter"
@@ -593,7 +593,7 @@ const games = [
     "designer": "Phil Walker-Harding",
     "year": 2025,
     "pillar": "architect",
-    "desc": "Halloween-themed engine builder. Draft trick-or-treaters, build candy combos, score sets.",
+    "desc": "Halloween-themed set collection. Draft trick-or-treaters, build candy combos, score sets.",
     "tags": {
       "cooperative": false,
       "asymmetric": false,
@@ -604,7 +604,7 @@ const games = [
       "scifi": false,
       "ozAlice": false,
       "opportunityLuck": true,
-      "engineBuild": true,
+      "engineBuild": false,
       "noApp": true,
       "noDeckConstruction": true,
       "noGrid": true,
@@ -612,7 +612,7 @@ const games = [
       "noPvP": true,
       "noAuction": true
     },
-    "fit": "On your wishlist. Light engine builder, easy to table, opportunity luck. Walker-Harding designs are clean. But drafting is the main mechanism — your dislike.",
+    "fit": "On your wishlist. Light set collection, easy to table, opportunity luck. Walker-Harding designs are clean. But drafting is the main mechanism — your dislike.",
     "status": "available"
   },
   {
