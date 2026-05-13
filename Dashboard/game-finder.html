@@ -62,36 +62,35 @@
   <div class="game-count" id="gameCount"></div>
   <div id="gameList"></div>
 
+  <script src="games.js"></script>
   <script>
-fetch('games.json').then(r => r.json()).then(games => {
-  function render() {
-    const activeFilters = [...document.querySelectorAll('.filter-toggle.active')].map(b => b.dataset.filter);
-    const filtered = games.filter(g => activeFilters.every(f => g.tags[f]));
-    filtered.sort((a,b) => {
-      const scoreA = activeFilters.filter(f => a.tags[f]).length;
-      const scoreB = activeFilters.filter(f => b.tags[f]).length;
-      return scoreB - scoreA;
-    });
-    document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
-    document.getElementById('gameList').innerHTML = filtered.map(g => {
-      const matchCount = activeFilters.filter(f => g.tags[f]).length;
-      const matchPct = activeFilters.length ? matchCount / activeFilters.length : 1;
-      const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
-      const pillarTag = g.pillar === 'adventurer' ? '<span class="tag pillar-adv">Adventurer</span>' : '<span class="tag pillar-arch">Architect</span>';
-      const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
-      return `<div class="card ${matchClass}">
-        <div class="card-header"><a class="card-title" href="https://boardgamegeek.com/boardgame/${g.bgg}" target="_blank">${g.name}</a><span class="card-creator">${g.designer} · ${g.year}</span></div>
-        <div class="card-desc">${g.desc}</div>
-        <div class="card-meta">${pillarTag}${statusTag}</div>
-        <div class="fit">${g.fit}</div>
-      </div>`;
-    }).join('');
-  }
-  document.querySelectorAll('.filter-toggle').forEach(btn => {
-    btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
+function render() {
+  const activeFilters = [...document.querySelectorAll('.filter-toggle.active')].map(b => b.dataset.filter);
+  const filtered = games.filter(g => activeFilters.every(f => g.tags[f]));
+  filtered.sort((a,b) => {
+    const scoreA = activeFilters.filter(f => a.tags[f]).length;
+    const scoreB = activeFilters.filter(f => b.tags[f]).length;
+    return scoreB - scoreA;
   });
-  render();
+  document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
+  document.getElementById('gameList').innerHTML = filtered.map(g => {
+    const matchCount = activeFilters.filter(f => g.tags[f]).length;
+    const matchPct = activeFilters.length ? matchCount / activeFilters.length : 1;
+    const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
+    const pillarTag = g.pillar === 'adventurer' ? '<span class="tag pillar-adv">Adventurer</span>' : '<span class="tag pillar-arch">Architect</span>';
+    const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
+    return `<div class="card ${matchClass}">
+      <div class="card-header"><a class="card-title" href="https://boardgamegeek.com/boardgame/${g.bgg}" target="_blank">${g.name}</a><span class="card-creator">${g.designer} · ${g.year}</span></div>
+      <div class="card-desc">${g.desc}</div>
+      <div class="card-meta">${pillarTag}${statusTag}</div>
+      <div class="fit">${g.fit}</div>
+    </div>`;
+  }).join('');
+}
+document.querySelectorAll('.filter-toggle').forEach(btn => {
+  btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
 });
+render();
   </script>
 </body>
 </html>

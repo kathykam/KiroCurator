@@ -1,4 +1,4 @@
-[
+const games = [
   {
     "name": "Tainted Grail: Kings of Ruin",
     "bgg": 360366,
@@ -1091,4 +1091,4 @@
     "fit": "Rated 8. Architect benchmark. Sci-fi, opportunity luck from dice, always engaged on others' turns. Pure positive spiral.",
     "status": "owned"
   }
-]
+];
