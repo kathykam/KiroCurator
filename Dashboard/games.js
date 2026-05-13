@@ -425,7 +425,7 @@ const games = [
     "designer": "Wyrd Games",
     "year": 2022,
     "pillar": "adventurer",
-    "desc": "Cooperative boss-battler on a ghost train. Story-driven campaign, unique coin-flipping combat, no grid.",
+    "desc": "Cooperative boss-battler on a ghost train. Story-driven campaign, unique coin-flipping combat, grid-based movement.",
     "tags": {
       "cooperative": true,
       "asymmetric": true,
@@ -439,12 +439,12 @@ const games = [
       "engineBuild": false,
       "noApp": true,
       "noDeckConstruction": true,
-      "noGrid": true,
+      "noGrid": false,
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true
     },
-    "fit": "You own this. Boss-battler like CDMD but with campaign narrative. Coin-flipping = opportunity luck. Easy setup. Ghost train theme is unique.",
+    "fit": "You own this. Boss-battler like CDMD but with campaign narrative. Coin-flipping = opportunity luck. Easy setup. BUT uses grid combat — same concern as Gloomhaven.",
     "status": "owned"
   },
   {
