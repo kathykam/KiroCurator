@@ -23,12 +23,11 @@ const games = [
       "noSurvivalGrind": false,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "Arthurian theme. Streamlined from original but still heavy on table presence. Survival elements may trigger your grind concern. Research fiddliness before buying.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 8
   },
   {
     "name": "Oathsworn: Into the Deepwood",
@@ -54,12 +53,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "No grid combat — card-based. Genuine multiplayer. But setup is heavy (minis, cards, storybook). Fiddliness ~4. Sessions run 2-3 hours.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 8
   },
   {
     "name": "Arydia: The Paths We Dare Tread",
@@ -85,12 +83,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "Reviewers praise streamlined mechanics and narrative depth. 'Intuitive, fresh, familiar.' No grid, no GM, no app. Now at retail. Setup still involves map/cards.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 8
   },
   {
     "name": "Nemesis: Retaliation",
@@ -116,12 +113,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "SCI-FI. You love Nemesis (rated 9 on TTS). This is more Nemesis. Same fiddliness concerns — best on TTS. Semi-coop with hidden objectives.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 5
   },
   {
     "name": "Deep Regrets",
@@ -147,12 +143,11 @@ const games = [
       "noSurvivalGrind": false,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "Easy to table, narrative horror, opportunity luck. But solo-focused (1-2p) and has survival/resource elements. Dredge tone is unique.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 6
   },
   {
     "name": "Earthborne Rangers",
@@ -178,12 +173,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "Beautiful world, genuine narrative. BUT has deck construction between sessions (building your Ranger deck). Violates your strict rubric. Otherwise perfect.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 8
   },
   {
     "name": "Moon Colony Bloodbath",
@@ -209,12 +203,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "SCI-FI + engine building + Vaccarino pedigree. Easy to table, snappy turns. BUT has engine destruction (robots kill your stuff) — tests your 'no negative progress' rule. Shared deck means indirect interaction, not direct PvP.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 2
   },
   {
     "name": "Harmonies",
@@ -240,12 +233,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You already rate this 8.5. Benchmark for your Architect pillar. Included for comparison.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 0
   },
   {
     "name": "Cozy Stickerville",
@@ -271,12 +263,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You own this and rated it 8. Pure positive progress, zero maintenance. Benchmark.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 0
   },
   {
     "name": "Lands of Evershade",
@@ -302,12 +293,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "Dark fairy-tale = Oz/Alice adjacent. Leder Games pedigree (Root). Asymmetric co-op. On your wishlist. Watch for fiddliness reports.",
-    "status": "kickstarter"
+    "status": "kickstarter",
+    "narrativeScore": 7
   },
   {
     "name": "Horror on the Orient Express",
@@ -333,12 +323,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Lovecraft narrative campaign. CMON production. Fiddliness unknown — watch reviews. Train setting is unique.",
-    "status": "kickstarter"
+    "status": "kickstarter",
+    "narrativeScore": 7
   },
   {
     "name": "Tales of Arabian Nights: 40th Anniversary",
@@ -364,12 +353,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": false
     },
     "fit": "On your wishlist. Narrative exploration benchmark. Original had chaos/randomness concerns — watch if 40th fixes agency issues.",
-    "status": "kickstarter"
+    "status": "kickstarter",
+    "narrativeScore": 6
   },
   {
     "name": "Watson & Holmes: The Lost Diaries",
@@ -395,12 +383,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Detective Stories = your sweet spot. You own Watson & Holmes. Easy to table. Watch for whether it's competitive or cooperative this time.",
-    "status": "kickstarter"
+    "status": "kickstarter",
+    "narrativeScore": 8
   },
   {
     "name": "The Queen's Dilemma",
@@ -426,12 +413,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": false,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Legacy narrative with group decisions. King's Dilemma is highly rated. Has negotiation/voting — not auction but social pressure.",
-    "status": "kickstarter"
+    "status": "kickstarter",
+    "narrativeScore": 7
   },
   {
     "name": "Kinfire Chronicles: Night's Fall",
@@ -457,12 +443,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Easy to table, genuine co-op, narrative campaign. BUT has deck construction between quests (building your seeker deck). Same concern as Earthborne Rangers.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 8
   },
   {
     "name": "Vagrantsong",
@@ -488,12 +473,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "You own this. Boss-battler like CDMD but with campaign narrative. Coin-flipping = opportunity luck. Easy setup. BUT uses grid combat — same concern as Gloomhaven.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 4
   },
   {
     "name": "Mansions of Madness: Second Edition",
@@ -519,12 +503,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. App handles all fiddliness (monster AI, map reveals). BUT violates your No App rule. Grid movement. Include only if you relax those filters.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 5
   },
   {
     "name": "Dune: Imperium",
@@ -550,12 +533,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": false,
       "noAuction": false,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist (rated via TTS). Sci-fi, engine building, opportunity luck from card market. Has conflict/area control and bidding for Spice. Borderline on your dislikes.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 2
   },
   {
     "name": "Andromeda's Edge",
@@ -581,12 +563,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your want-to-play. Sci-fi + asymmetric + engine building. No direct PvP. But weight 3.7 and complex setup. Heavier than your Architect benchmarks.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 0
   },
   {
     "name": "Unsettled",
@@ -612,12 +593,11 @@ const games = [
       "noSurvivalGrind": false,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. SCI-FI co-op with unique planet puzzles. Easy to table (each planet is self-contained). Survival elements but puzzle-focused not grind-focused.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 4
   },
   {
     "name": "Revive",
@@ -643,12 +623,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Asymmetric engine building, no direct PvP. But weight 3.5 and complex — heavier than your Architect benchmarks.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 1
   },
   {
     "name": "Spooktacular",
@@ -674,12 +653,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Light set collection, easy to table, opportunity luck. Walker-Harding designs are clean. But drafting is the main mechanism — your dislike.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 0
   },
   {
     "name": "Stokerverse",
@@ -705,12 +683,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Gothic horror co-op, asymmetric, narrative. Quick sessions (20-40 min). Watch for depth — may be too light.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 7
   },
   {
     "name": "Witchcraft!",
@@ -736,12 +713,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Oz/Alice-adjacent witchy theme. Engine building with combos. But solo-only — no multiplayer.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 1
   },
   {
     "name": "Planet Unknown",
@@ -767,12 +743,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your want-to-play. Sci-fi, asymmetric, simultaneous turns (no downtime), easy to table. Positive progress. Hits your Architect pillar cleanly.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 0
   },
   {
     "name": "Hegemony: Lead Your Class to Victory",
@@ -798,12 +773,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": false,
       "noAuction": false,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your want-to-play. Extremely asymmetric (your #1 like). But heavy (weight 4.3), has negotiation/legislation, indirect PvP. Political not combative.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 2
   },
   {
     "name": "Mosaic: A Story of Civilization",
@@ -829,12 +803,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": false,
       "noAuction": false,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Asymmetric civ-building. Multiple strategies. But has military conflict and weight 3.0. Borderline.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 1
   },
   {
     "name": "Lost Ruins of Arnak",
@@ -860,12 +833,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your want-to-play. Clean engine building, in-game deck building (not pre-construction), opportunity luck from card market. Positive progress. Weight 2.9.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 2
   },
   {
     "name": "Everdell",
@@ -891,12 +863,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your want-to-play. Pure positive progress, tableau combos, opportunity luck from meadow. Clean turns. Weight 2.8. Charming theme.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 1
   },
   {
     "name": "Earth",
@@ -922,12 +893,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your want-to-play. Wingspan-like engine building with more card variety. Simultaneous activation reduces downtime. Asymmetric starting islands.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 0
   },
   {
     "name": "Arkham Horror: The Card Game",
@@ -953,12 +923,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "YOUR #1. The benchmark. Deck construction between sessions is the tradeoff for campaign depth. Hard to table = setup + teardown + consistent group.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 10
   },
   {
     "name": "T.I.M.E Stories",
@@ -984,12 +953,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "YOUR #2. Easy to table, narrative, cooperative, sci-fi scenarios. The gold standard for 'grab and play' campaign narrative.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 9
   },
   {
     "name": "Battlestar Galactica: The Board Game",
@@ -1015,12 +983,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "YOUR #3. Sci-fi, asymmetric, dramatic tension. Hard to table = needs 5+ players and 3 hours.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 5
   },
   {
     "name": "Detective: A Modern Crime Board Game",
@@ -1046,12 +1013,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "YOUR #4. Easy to table, narrative investigation. Uses a website (not an app per se). Detective Stories = your sweet spot.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 9
   },
   {
     "name": "Cthulhu: Death May Die",
@@ -1077,12 +1043,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "YOUR #5. The 'easy to table' benchmark for co-op. Grab a character, go. Scenarios feel samey (pick-up-and-deliver) but mechanics are 10/10.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 3
   },
   {
     "name": "Nemesis",
@@ -1108,12 +1073,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "YOUR #6. Sci-fi, dramatic, asymmetric. TTS-only for you due to setup/fiddliness. Grid movement but thematic not tactical.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 5
   },
   {
     "name": "Eldritch Horror",
@@ -1139,12 +1103,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": true,
       "mechanicalDepth": true
     },
     "fit": "YOUR #7 (rated 9). Round-based fiddliness is acceptable. Hard to table = massive footprint and 3+ hours.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 4
   },
   {
     "name": "Wingspan",
@@ -1170,12 +1133,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "Rated 8. Architect benchmark. Pure positive progress, opportunity luck from bird feeder dice + card market. Clean turns.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 0
   },
   {
     "name": "Space Base",
@@ -1201,12 +1163,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": false,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "Rated 8. Architect benchmark. Sci-fi, opportunity luck from dice, always engaged on others' turns. Pure positive spiral.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 0
   },
   {
     "name": "Sleeping Gods",
@@ -1232,12 +1193,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "YOUR rated 8.5. Massive narrative exploration. TTS-only for you — stays out on table, multiplayer is one-driver. Solo/duo game in practice.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 9
   },
   {
     "name": "The 7th Citadel",
@@ -1263,12 +1223,11 @@ const games = [
       "noSurvivalGrind": false,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You own this. Improved over 7th Continent (your survival grind benchmark). Still has resource management — watch if it crosses into grind territory.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 7
   },
   {
     "name": "Sleeping Gods: Primeval Peril",
@@ -1294,12 +1253,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist. Streamlined Sleeping Gods for 1-2p. Same TTS concern. Tighter experience than the original.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 8
   },
   {
     "name": "Robinson Crusoe: Adventures on the Cursed Island",
@@ -1325,12 +1283,11 @@ const games = [
       "noSurvivalGrind": false,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You own this (rated 8). Narrative scenarios are great. But survival grind + fiddly rules overhead. TTS-only for you.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 7
   },
   {
     "name": "Sherlock Holmes Consulting Detective",
@@ -1356,12 +1313,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You own this (rated 8). Detective Stories benchmark. Zero setup, pure narrative investigation. The gold standard for easy-to-table narrative.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 9
   },
   {
     "name": "Pandemic Legacy: Season 1",
@@ -1387,12 +1343,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You own this (rated 7). Easy to table, narrative campaign, genuine co-op. Benchmark for legacy games.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 8
   },
   {
     "name": "Forgotten Waters",
@@ -1418,12 +1373,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": false
     },
     "fit": "You own this. Easy to table, narrative, genuine multiplayer. BUT uses an app for storytelling. Violates No App if strict.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 6
   },
   {
     "name": "The Adventures of Robin Hood",
@@ -1449,12 +1403,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": false
     },
     "fit": "You own this (rated 7). Easy to table, narrative, no app. Family-weight — lighter than your usual but charming.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 6
   },
   {
     "name": "ISS Vanguard",
@@ -1480,12 +1433,11 @@ const games = [
       "noSurvivalGrind": false,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "On your wishlist (rated 8). SCI-FI campaign. But TWICE as hard to table as AHLCG — massive setup, crew deck management, ship maintenance between missions.",
-    "status": "available"
+    "status": "available",
+    "narrativeScore": 8
   },
   {
     "name": "Adrift: A Puzzletale",
@@ -1511,12 +1463,11 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You own this (rated 8). Sci-fi narrative puzzle. Easy to table. No randomness — pure puzzle solving. Unique in your collection.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 6
   },
   {
     "name": "The Light in the Mist",
@@ -1542,11 +1493,10 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "narrativeStrong": true,
-      "narrativeEmergent": false,
       "mechanicalDepth": true
     },
     "fit": "You own this (rated 8.5). Detective Stories sweet spot. Easy to table, narrative investigation, no mechanics overhead.",
-    "status": "owned"
+    "status": "owned",
+    "narrativeScore": 9
   }
 ];

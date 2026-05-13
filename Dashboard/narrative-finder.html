@@ -35,7 +35,7 @@
     <a href="narrative-finder.html" class="active">🔍 Finder</a>
   </nav>
   <h1>🔍 Narrative Game Finder</h1>
-  <div class="subtitle">Find your next narrative game · Toggle filters · Emergent = drama from mechanics, Strong = authored story</div>
+  <div class="subtitle">Find your next narrative game · Toggle filters + set minimum narrative depth (0-10)</div>
 
   <div class="filters" id="filters">
     <div class="section-label">✅ I Want</div>
@@ -51,8 +51,13 @@
     <button class="filter-toggle" data-filter="engineBuild">Engine Building</button>
 
     <div class="section-label">📖 Narrative Level</div>
-    <button class="filter-toggle" data-filter="narrativeStrong">Strong (authored story)</button>
-    <button class="filter-toggle" data-filter="narrativeEmergent">Emergent (drama from mechanics)</button>
+    <select id="narrativeMin" style="padding:0.4rem 0.75rem; border:1px solid #d1d5db; border-radius:2rem; font-size:0.75rem;">
+      <option value="0">Any Narrative</option>
+      <option value="8">8+ (Deep authored story)</option>
+      <option value="6">6+ (Meaningful narrative)</option>
+      <option value="4">4+ (Some narrative)</option>
+      <option value="2">2+ (Emergent only)</option>
+    </select>
     <button class="filter-toggle active" data-filter="mechanicalDepth">Mechanical Depth (not just story)</button>
 
     <div class="section-label">❌ I Avoid</div>
@@ -71,12 +76,12 @@
   <script>
 function render() {
   const activeFilters = [...document.querySelectorAll('.filter-toggle.active')].map(b => b.dataset.filter);
-  const filtered = games.filter(g => activeFilters.every(f => g.tags[f]));
-  filtered.sort((a,b) => {
-    const scoreA = activeFilters.filter(f => a.tags[f]).length;
-    const scoreB = activeFilters.filter(f => b.tags[f]).length;
-    return scoreB - scoreA;
+  const narrativeMin = parseInt(document.getElementById('narrativeMin').value);
+  const filtered = games.filter(g => {
+    if (narrativeMin && (g.narrativeScore || 0) < narrativeMin) return false;
+    return activeFilters.every(f => g.tags[f]);
   });
+  filtered.sort((a,b) => (b.narrativeScore||0) - (a.narrativeScore||0) || 0);
   document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
   document.getElementById('gameList').innerHTML = filtered.map(g => {
     const matchCount = activeFilters.filter(f => g.tags[f]).length;
@@ -84,10 +89,11 @@ function render() {
     const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
     const pillarTag = g.pillar === 'adventurer' ? '<span class="tag pillar-adv">Adventurer</span>' : '<span class="tag pillar-arch">Architect</span>';
     const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
+    const narrTag = g.narrativeScore ? `<span class="tag">📖 ${g.narrativeScore}/10</span>` : '';
     return `<div class="card ${matchClass}">
       <div class="card-header"><a class="card-title" href="https://boardgamegeek.com/boardgame/${g.bgg}" target="_blank">${g.name}</a><span class="card-creator">${g.designer} · ${g.year}</span></div>
       <div class="card-desc">${g.desc}</div>
-      <div class="card-meta">${pillarTag}${statusTag}</div>
+      <div class="card-meta">${pillarTag}${statusTag}${narrTag}</div>
       <div class="fit">${g.fit}</div>
     </div>`;
   }).join('');
@@ -95,6 +101,7 @@ function render() {
 document.querySelectorAll('.filter-toggle').forEach(btn => {
   btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
 });
+document.getElementById('narrativeMin').addEventListener('change', render);
 render();
   </script>
 </body>

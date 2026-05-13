@@ -27,7 +27,7 @@
 | `arkham-official.html` | Official FFG campaigns & standalones ranked by profile fit |
 | `arkham-homebrew.html` | Fan-made campaigns & scenarios ranked by profile fit |
 | `arkham-ranked.html` | Combined official + homebrew rankings |
-| `narrative-finder.html` | Toggleable preference filters against curated narrative game list (strong vs emergent) |
+| `narrative-finder.html` | Narrative Game Finder — filter by preferences + narrative depth score (0-10) |
 
 All pages share `styles.css` for consistent styling. Page-specific styles remain inline only when they override the shared base.
 
