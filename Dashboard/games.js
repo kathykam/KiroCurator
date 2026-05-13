@@ -1373,7 +1373,7 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "mechanicalDepth": false
+      "mechanicalDepth": true
     },
     "fit": "You own this. Easy to table, narrative, genuine multiplayer. BUT uses an app for storytelling. Violates No App if strict.",
     "status": "owned",
@@ -1403,7 +1403,7 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "mechanicalDepth": false
+      "mechanicalDepth": true
     },
     "fit": "You own this (rated 7). Easy to table, narrative, no app. Family-weight — lighter than your usual but charming.",
     "status": "owned",
