@@ -63,204 +63,35 @@
   <div id="gameList"></div>
 
   <script>
-const games = [
-  // === ADVENTURER PILLAR ===
-  { name:"Tainted Grail: Kings of Ruin", bgg:360366, designer:"Awaken Realms", year:2024, pillar:"adventurer",
-    desc:"Standalone Arthurian dark fantasy. Streamlined from original — faster setup, clearer rules, campaign narrative with branching choices.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:false, noPvP:true, noAuction:true },
-    fit:"Arthurian theme. Streamlined from original but still heavy on table presence. Survival elements may trigger your grind concern. Research fiddliness before buying.", status:"available" },
-  { name:"Oathsworn: Into the Deepwood", bgg:251661, designer:"Shadowborne Games", year:2022, pillar:"adventurer",
-    desc:"Narrative-heavy campaign. Storybook encounters + card-based combat (no grid). Each session is a self-contained chapter.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"No grid combat — card-based. Genuine multiplayer. But setup is heavy (minis, cards, storybook). Fiddliness ~4. Sessions run 2-3 hours.", status:"available" },
-  { name:"Arydia: The Paths We Dare Tread", bgg:219650, designer:"Far Off Games", year:2025, pillar:"adventurer",
-    desc:"Open-world cooperative RPG, no GM required. Streamlined action economy, narrative exploration, campaign progression.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"Reviewers praise streamlined mechanics and narrative depth. 'Intuitive, fresh, familiar.' No grid, no GM, no app. Now at retail. Setup still involves map/cards.", status:"available" },
-  { name:"Nemesis: Retaliation", bgg:381248, designer:"Awaken Realms", year:2025, pillar:"adventurer",
-    desc:"Standalone Nemesis sequel. New aliens, new ship, same semi-cooperative sci-fi horror. Hidden objectives, dramatic tension.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:false, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"SCI-FI. You love Nemesis (rated 9 on TTS). This is more Nemesis. Same fiddliness concerns — best on TTS. Semi-coop with hidden objectives.", status:"available" },
-  { name:"Deep Regrets", bgg:397931, designer:"Judson Cowan", year:2025, pillar:"adventurer",
-    desc:"Dredge-inspired solo/coop. Fish increasingly horrifying catches, manage your boat, uncover oceanic mysteries.",
-    tags:{ cooperative:true, asymmetric:false, narrative:true, lowFiddle:true, easyTable:true, multiplayer:false, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:false, noPvP:true, noAuction:true },
-    fit:"Easy to table, narrative horror, opportunity luck. But solo-focused (1-2p) and has survival/resource elements. Dredge tone is unique.", status:"available" },
-  { name:"Earthborne Rangers", bgg:342900, designer:"Andrew Navaro", year:2023, pillar:"adventurer",
-    desc:"Solarpunk cooperative card game. Open-world exploration in a far-future wilderness. 50+ hour campaign.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:false, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"Beautiful world, genuine narrative. BUT has deck construction between sessions (building your Ranger deck). Violates your strict rubric. Otherwise perfect.", status:"available" },
-
-  // === COMPETITIVE ARCHITECT PILLAR ===
-  { name:"Moon Colony Bloodbath", bgg:425549, designer:"Donald X. Vaccarino", year:2025, pillar:"architect",
-    desc:"Engine-building engine-DESTROYING tableau game. Build moon colonies while killer robots tear them down. From the Dominion designer.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:false, noAuction:true },
-    fit:"SCI-FI + engine building + Vaccarino pedigree. Easy to table, snappy turns. BUT has engine destruction (robots kill your stuff) — tests your 'no negative progress' rule. Shared deck means indirect interaction, not direct PvP.", status:"available" },
-  { name:"Harmonies", bgg:414317, designer:"Johan Benvenuto", year:2024, pillar:"architect",
-    desc:"Pattern-building with animal scoring. Draft tokens, build 3D landscapes. Your current #9 game.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"You already rate this 8.5. Benchmark for your Architect pillar. Included for comparison.", status:"owned" },
-  { name:"Cozy Stickerville", bgg:456440, designer:"Raman Hryhoryk", year:2026, pillar:"architect",
-    desc:"Cozy engine-builder with sticker-based progression. Simple turns, satisfying combos, positive spiral.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"You own this and rated it 8. Pure positive progress, zero maintenance. Benchmark.", status:"owned" },
-
-  // === KICKSTARTERS TO WATCH (2026 delivery) ===
-  { name:"Lands of Evershade", bgg:415848, designer:"Leder Games", year:2026, pillar:"adventurer",
-    desc:"Cooperative narrative adventure from the Root publisher. Explore a dark fairy-tale world with asymmetric characters.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:false, multiplayer:true, scifi:false, ozAlice:true, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"Dark fairy-tale = Oz/Alice adjacent. Leder Games pedigree (Root). Asymmetric co-op. On your wishlist. Watch for fiddliness reports.", status:"kickstarter" },
-  { name:"Horror on the Orient Express", bgg:394897, designer:"Chaosium / CMON", year:2026, pillar:"adventurer",
-    desc:"Classic Call of Cthulhu campaign adapted to board game. Train-based horror across Europe.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Lovecraft narrative campaign. CMON production. Fiddliness unknown — watch reviews. Train setting is unique.", status:"kickstarter" },
-  { name:"Tales of Arabian Nights: 40th Anniversary", bgg:432392, designer:"Z-Man / Eric Goldberg", year:2026, pillar:"adventurer",
-    desc:"Reimagined classic. Storybook adventure with branching encounters. New edition with modernized mechanics.",
-    tags:{ cooperative:false, asymmetric:false, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Narrative exploration benchmark. Original had chaos/randomness concerns — watch if 40th fixes agency issues.", status:"kickstarter" },
-  { name:"Watson & Holmes: The Lost Diaries", bgg:346142, designer:"Space Cowboys", year:2026, pillar:"adventurer",
-    desc:"Cooperative deduction sequel. Investigate cases using tangible evidence and story context.",
-    tags:{ cooperative:true, asymmetric:false, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:false, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Detective Stories = your sweet spot. You own Watson & Holmes. Easy to table. Watch for whether it's competitive or cooperative this time.", status:"kickstarter" },
-  { name:"The Queen's Dilemma", bgg:341870, designer:"Horrible Guild", year:2026, pillar:"adventurer",
-    desc:"Legacy negotiation game. Sequel to The King's Dilemma with campaign narrative and political intrigue.",
-    tags:{ cooperative:false, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:false, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:false, noAuction:false },
-    fit:"On your wishlist. Legacy narrative with group decisions. King's Dilemma is highly rated. Has negotiation/voting — not auction but social pressure.", status:"kickstarter" },
-
-  // === MORE ADVENTURER PILLAR ===
-  { name:"Kinfire Chronicles: Night's Fall", bgg:364655, designer:"Kevin Wilson", year:2023, pillar:"adventurer",
-    desc:"Cooperative quest-based RPG campaign. 21 quests, card-driven combat, illustrated atlas. No grid, no app.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:false, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Easy to table, genuine co-op, narrative campaign. BUT has deck construction between quests (building your seeker deck). Same concern as Earthborne Rangers.", status:"available" },
-  { name:"Vagrantsong", bgg:340325, designer:"Wyrd Games", year:2022, pillar:"adventurer",
-    desc:"Cooperative boss-battler on a ghost train. Story-driven campaign, unique coin-flipping combat, no grid.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"You own this. Boss-battler like CDMD but with campaign narrative. Coin-flipping = opportunity luck. Easy setup. Ghost train theme is unique.", status:"owned" },
-  { name:"Mansions of Madness: Second Edition", bgg:205059, designer:"FFG", year:2016, pillar:"adventurer",
-    desc:"App-driven Lovecraft investigation. Asymmetric investigators, narrative scenarios, no GM needed.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:false, noDeckConstruction:true, noGrid:false, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. App handles all fiddliness (monster AI, map reveals). BUT violates your No App rule. Grid movement. Include only if you relax those filters.", status:"available" },
-  { name:"Dune: Imperium", bgg:316554, designer:"Dire Wolf", year:2020, pillar:"architect",
-    desc:"Worker placement + deck building in the Dune universe. Competitive with optional solo/coop mode.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:false, noAuction:false },
-    fit:"On your wishlist (rated via TTS). Sci-fi, engine building, opportunity luck from card market. Has conflict/area control and bidding for Spice. Borderline on your dislikes.", status:"available" },
-  { name:"Andromeda's Edge", bgg:358661, designer:"Luke Laurie", year:2024, pillar:"architect",
-    desc:"Sci-fi engine builder. Build a space station at the galaxy's edge. Worker placement + tableau building.",
-    tags:{ cooperative:false, asymmetric:true, narrative:false, lowFiddle:false, easyTable:false, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your want-to-play. Sci-fi + asymmetric + engine building. No direct PvP. But weight 3.7 and complex setup. Heavier than your Architect benchmarks.", status:"available" },
-  { name:"Unsettled", bgg:290484, designer:"Orange Nebula", year:2021, pillar:"adventurer",
-    desc:"Cooperative sci-fi survival on alien planets. Each planet is a unique puzzle box. Asymmetric abilities.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:false, noPvP:true, noAuction:true },
-    fit:"On your wishlist. SCI-FI co-op with unique planet puzzles. Easy to table (each planet is self-contained). Survival elements but puzzle-focused not grind-focused.", status:"available" },
-  { name:"Revive", bgg:332772, designer:"Helge Meissner", year:2022, pillar:"architect",
-    desc:"Post-apocalyptic civilization rebuilding. Asymmetric factions, card-driven engine, explore and build.",
-    tags:{ cooperative:false, asymmetric:true, narrative:false, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Asymmetric engine building, no direct PvP. But weight 3.5 and complex — heavier than your Architect benchmarks.", status:"available" },
-  { name:"Spooktacular", bgg:420931, designer:"Phil Walker-Harding", year:2025, pillar:"architect",
-    desc:"Halloween-themed engine builder. Draft trick-or-treaters, build candy combos, score sets.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Light engine builder, easy to table, opportunity luck. Walker-Harding designs are clean. But drafting is the main mechanism — your dislike.", status:"available" },
-  { name:"Stokerverse", bgg:431169, designer:"Mythic Games", year:2025, pillar:"adventurer",
-    desc:"Cooperative Dracula-universe game. Asymmetric hunters vs narrative campaign across gothic Europe.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Gothic horror co-op, asymmetric, narrative. Quick sessions (20-40 min). Watch for depth — may be too light.", status:"available" },
-  { name:"Witchcraft!", bgg:383499, designer:"Aleph Null", year:2023, pillar:"architect",
-    desc:"Solo/coop engine builder. Brew potions, manage a witch's workshop. Positive spiral with combo chains.",
-    tags:{ cooperative:true, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:false, scifi:false, ozAlice:true, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your wishlist. Oz/Alice-adjacent witchy theme. Engine building with combos. But solo-only — no multiplayer.", status:"available" },
-  { name:"Planet Unknown", bgg:258779, designer:"Ryan Lambert", year:2022, pillar:"architect",
-    desc:"Simultaneous polyomino placement. Build your planet's infrastructure. Asymmetric planet powers.",
-    tags:{ cooperative:false, asymmetric:true, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your want-to-play. Sci-fi, asymmetric, simultaneous turns (no downtime), easy to table. Positive progress. Hits your Architect pillar cleanly.", status:"available" },
-  { name:"Hegemony: Lead Your Class to Victory", bgg:321608, designer:"Varnavas Timotheou", year:2023, pillar:"architect",
-    desc:"Asymmetric economic simulation. Each player is a different social class with unique mechanics and win conditions.",
-    tags:{ cooperative:false, asymmetric:true, narrative:false, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:false, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:false, noAuction:false },
-    fit:"On your want-to-play. Extremely asymmetric (your #1 like). But heavy (weight 4.3), has negotiation/legislation, indirect PvP. Political not combative.", status:"available" },
-  { name:"Mosaic: A Story of Civilization", bgg:329551, designer:"Glenn Drover", year:2022, pillar:"architect",
-    desc:"Civilization building with multiple paths to victory. Engine building, tech trees, wonder construction.",
-    tags:{ cooperative:false, asymmetric:true, narrative:false, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:false, noAuction:false },
-    fit:"On your wishlist. Asymmetric civ-building. Multiple strategies. But has military conflict and weight 3.0. Borderline.", status:"available" },
-  { name:"Lost Ruins of Arnak", bgg:312484, designer:"Mín & Elwen", year:2020, pillar:"architect",
-    desc:"Deck building + worker placement. Explore a mysterious island, research discoveries, build your engine.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your want-to-play. Clean engine building, in-game deck building (not pre-construction), opportunity luck from card market. Positive progress. Weight 2.9.", status:"available" },
-  { name:"Everdell", bgg:199792, designer:"James A. Wilson", year:2018, pillar:"architect",
-    desc:"Tableau builder in a woodland city. Play critters and constructions, chain combos, grow your city.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your want-to-play. Pure positive progress, tableau combos, opportunity luck from meadow. Clean turns. Weight 2.8. Charming theme.", status:"available" },
-  { name:"Earth", bgg:350184, designer:"Maxime Tardif", year:2023, pillar:"architect",
-    desc:"Engine builder with 364 unique cards. Plant ecosystems, grow trees, activate combos. Simultaneous play.",
-    tags:{ cooperative:false, asymmetric:true, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"On your want-to-play. Wingspan-like engine building with more card variety. Simultaneous activation reduces downtime. Asymmetric starting islands.", status:"available" },
-
-  // === BENCHMARKS (Your Top Games) ===
-  { name:"Arkham Horror: The Card Game", bgg:205637, designer:"FFG", year:2016, pillar:"adventurer",
-    desc:"Campaign LCG. Narrative agency, asymmetric investigators, chaos bag, deck progression. Your #1 game (rated 10).",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:false, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"YOUR #1. The benchmark. Deck construction between sessions is the tradeoff for campaign depth. Hard to table = setup + teardown + consistent group.", status:"owned" },
-  { name:"T.I.M.E Stories", bgg:146508, designer:"Pegasus Spiele", year:2015, pillar:"adventurer",
-    desc:"Cooperative time-loop narrative. Explore scenarios, die, loop back with knowledge. Unique temporal mechanic.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"YOUR #2. Easy to table, narrative, cooperative, sci-fi scenarios. The gold standard for 'grab and play' campaign narrative.", status:"owned" },
-  { name:"Battlestar Galactica: The Board Game", bgg:37111, designer:"Corey Konieczka", year:2008, pillar:"adventurer",
-    desc:"Semi-cooperative traitor game. Asymmetric characters, crisis management, hidden loyalty. Sci-fi drama.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:false, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"YOUR #3. Sci-fi, asymmetric, dramatic tension. Hard to table = needs 5+ players and 3 hours.", status:"owned" },
-  { name:"Detective: A Modern Crime Board Game", bgg:223321, designer:"Portal Games", year:2018, pillar:"adventurer",
-    desc:"Cooperative investigation. Real databases, tangible evidence, narrative cases. Your #4 game (rated 10).",
-    tags:{ cooperative:true, asymmetric:false, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:false, engineBuild:false, noApp:false, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"YOUR #4. Easy to table, narrative investigation. Uses a website (not an app per se). Detective Stories = your sweet spot.", status:"owned" },
-  { name:"Cthulhu: Death May Die", bgg:253344, designer:"Rob Daviau / Eric Lang", year:2019, pillar:"adventurer",
-    desc:"Cooperative boss-battler. Insanity track progression, asymmetric investigators, dice-based combat. Your #5 (rated 10).",
-    tags:{ cooperative:true, asymmetric:true, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"YOUR #5. The 'easy to table' benchmark for co-op. Grab a character, go. Scenarios feel samey (pick-up-and-deliver) but mechanics are 10/10.", status:"owned" },
-  { name:"Nemesis", bgg:167355, designer:"Awaken Realms", year:2018, pillar:"adventurer",
-    desc:"Semi-cooperative sci-fi horror. Hidden objectives, alien encounters, ship exploration. Your #6 (rated 9, TTS).",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:false, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"YOUR #6. Sci-fi, dramatic, asymmetric. TTS-only for you due to setup/fiddliness. Grid movement but thematic not tactical.", status:"owned" },
-  { name:"Eldritch Horror", bgg:146021, designer:"Corey Konieczka", year:2013, pillar:"adventurer",
-    desc:"Globe-trotting Lovecraft co-op. Asymmetric investigators, narrative encounters, round-based mythos phase.",
-    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"YOUR #7 (rated 9). Round-based fiddliness is acceptable. Hard to table = massive footprint and 3+ hours.", status:"owned" },
-  { name:"Wingspan", bgg:266192, designer:"Elizabeth Hargrave", year:2019, pillar:"architect",
-    desc:"Engine builder with bird cards. Lay eggs, draw cards, activate rows of birds for cascading combos.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"Rated 8. Architect benchmark. Pure positive progress, opportunity luck from bird feeder dice + card market. Clean turns.", status:"owned" },
-  { name:"Space Base", bgg:242302, designer:"John D. Clair", year:2018, pillar:"architect",
-    desc:"Dice-activated tableau. Buy ships, slot them into your base, trigger combos on every roll. Always engaged.",
-    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
-    fit:"Rated 8. Architect benchmark. Sci-fi, opportunity luck from dice, always engaged on others' turns. Pure positive spiral.", status:"owned" },
-];
-
-function render() {
-  const activeFilters = [...document.querySelectorAll('.filter-toggle.active')].map(b => b.dataset.filter);
-  const filtered = games.filter(g => {
-    return activeFilters.every(f => g.tags[f]);
+fetch('games.json').then(r => r.json()).then(games => {
+  function render() {
+    const activeFilters = [...document.querySelectorAll('.filter-toggle.active')].map(b => b.dataset.filter);
+    const filtered = games.filter(g => activeFilters.every(f => g.tags[f]));
+    filtered.sort((a,b) => {
+      const scoreA = activeFilters.filter(f => a.tags[f]).length;
+      const scoreB = activeFilters.filter(f => b.tags[f]).length;
+      return scoreB - scoreA;
+    });
+    document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
+    document.getElementById('gameList').innerHTML = filtered.map(g => {
+      const matchCount = activeFilters.filter(f => g.tags[f]).length;
+      const matchPct = activeFilters.length ? matchCount / activeFilters.length : 1;
+      const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
+      const pillarTag = g.pillar === 'adventurer' ? '<span class="tag pillar-adv">Adventurer</span>' : '<span class="tag pillar-arch">Architect</span>';
+      const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
+      return `<div class="card ${matchClass}">
+        <div class="card-header"><a class="card-title" href="https://boardgamegeek.com/boardgame/${g.bgg}" target="_blank">${g.name}</a><span class="card-creator">${g.designer} · ${g.year}</span></div>
+        <div class="card-desc">${g.desc}</div>
+        <div class="card-meta">${pillarTag}${statusTag}</div>
+        <div class="fit">${g.fit}</div>
+      </div>`;
+    }).join('');
+  }
+  document.querySelectorAll('.filter-toggle').forEach(btn => {
+    btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
   });
-  filtered.sort((a,b) => {
-    const scoreA = activeFilters.filter(f => a.tags[f]).length;
-    const scoreB = activeFilters.filter(f => b.tags[f]).length;
-    return scoreB - scoreA;
-  });
-  document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
-  document.getElementById('gameList').innerHTML = filtered.map(g => {
-    const matchCount = activeFilters.filter(f => g.tags[f]).length;
-    const matchPct = activeFilters.length ? matchCount / activeFilters.length : 1;
-    const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
-    const pillarTag = g.pillar === 'adventurer' ? '<span class="tag pillar-adv">Adventurer</span>' : '<span class="tag pillar-arch">Architect</span>';
-    const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
-    return `<div class="card ${matchClass}">
-      <div class="card-header"><a class="card-title" href="https://boardgamegeek.com/boardgame/${g.bgg}" target="_blank">${g.name}</a><span class="card-creator">${g.designer} · ${g.year}</span></div>
-      <div class="card-desc">${g.desc}</div>
-      <div class="card-meta">${pillarTag}${statusTag}</div>
-      <div class="fit">${g.fit}</div>
-    </div>`;
-  }).join('');
-}
-
-document.querySelectorAll('.filter-toggle').forEach(btn => {
-  btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
+  render();
 });
-render();
   </script>
 </body>
 </html>
