@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>🔍 Game Finder</title>
+  <title>🔍 Narrative Game Finder</title>
   <link rel="stylesheet" href="styles.css">
   <style>
     .filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
@@ -32,10 +32,10 @@
     <a href="arkham-official.html">📋 Official</a>
     <a href="arkham-homebrew.html">🃏 Homebrew</a>
     <a href="arkham-ranked.html">🏆 Combined</a>
-    <a href="game-finder.html" class="active">🔍 Finder</a>
+    <a href="narrative-finder.html" class="active">🔍 Finder</a>
   </nav>
-  <h1>🔍 Game Finder</h1>
-  <div class="subtitle">Toggle your preferences on/off to filter games available in 2026 · Click active filters to remove them</div>
+  <h1>🔍 Narrative Game Finder</h1>
+  <div class="subtitle">Find your next narrative game · Toggle filters · Emergent = drama from mechanics, Strong = authored story</div>
 
   <div class="filters" id="filters">
     <div class="section-label">✅ I Want</div>
@@ -49,6 +49,10 @@
     <button class="filter-toggle" data-filter="ozAlice">Oz / Alice Theme</button>
     <button class="filter-toggle" data-filter="opportunityLuck">Opportunity Luck</button>
     <button class="filter-toggle" data-filter="engineBuild">Engine Building</button>
+
+    <div class="section-label">📖 Narrative Level</div>
+    <button class="filter-toggle" data-filter="narrativeStrong">Strong (authored story)</button>
+    <button class="filter-toggle" data-filter="narrativeEmergent">Emergent (drama from mechanics)</button>
 
     <div class="section-label">❌ I Avoid</div>
     <button class="filter-toggle negative active" data-filter="noApp">No App Required</button>

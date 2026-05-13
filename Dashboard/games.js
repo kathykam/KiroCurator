@@ -22,7 +22,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": false,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "Arthurian theme. Streamlined from original but still heavy on table presence. Survival elements may trigger your grind concern. Research fiddliness before buying.",
     "status": "available"
@@ -50,7 +52,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "No grid combat — card-based. Genuine multiplayer. But setup is heavy (minis, cards, storybook). Fiddliness ~4. Sessions run 2-3 hours.",
     "status": "available"
@@ -78,7 +82,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "Reviewers praise streamlined mechanics and narrative depth. 'Intuitive, fresh, familiar.' No grid, no GM, no app. Now at retail. Setup still involves map/cards.",
     "status": "available"
@@ -106,7 +112,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "SCI-FI. You love Nemesis (rated 9 on TTS). This is more Nemesis. Same fiddliness concerns — best on TTS. Semi-coop with hidden objectives.",
     "status": "available"
@@ -134,7 +142,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": false,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "Easy to table, narrative horror, opportunity luck. But solo-focused (1-2p) and has survival/resource elements. Dredge tone is unique.",
     "status": "available"
@@ -162,7 +172,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "Beautiful world, genuine narrative. BUT has deck construction between sessions (building your Ranger deck). Violates your strict rubric. Otherwise perfect.",
     "status": "available"
@@ -190,7 +202,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "SCI-FI + engine building + Vaccarino pedigree. Easy to table, snappy turns. BUT has engine destruction (robots kill your stuff) — tests your 'no negative progress' rule. Shared deck means indirect interaction, not direct PvP.",
     "status": "available"
@@ -218,7 +232,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "You already rate this 8.5. Benchmark for your Architect pillar. Included for comparison.",
     "status": "owned"
@@ -246,7 +262,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "You own this and rated it 8. Pure positive progress, zero maintenance. Benchmark.",
     "status": "owned"
@@ -274,7 +292,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "Dark fairy-tale = Oz/Alice adjacent. Leder Games pedigree (Root). Asymmetric co-op. On your wishlist. Watch for fiddliness reports.",
     "status": "kickstarter"
@@ -302,7 +322,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Lovecraft narrative campaign. CMON production. Fiddliness unknown — watch reviews. Train setting is unique.",
     "status": "kickstarter"
@@ -330,7 +352,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Narrative exploration benchmark. Original had chaos/randomness concerns — watch if 40th fixes agency issues.",
     "status": "kickstarter"
@@ -358,7 +382,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Detective Stories = your sweet spot. You own Watson & Holmes. Easy to table. Watch for whether it's competitive or cooperative this time.",
     "status": "kickstarter"
@@ -386,7 +412,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": false,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Legacy narrative with group decisions. King's Dilemma is highly rated. Has negotiation/voting — not auction but social pressure.",
     "status": "kickstarter"
@@ -414,7 +442,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Easy to table, genuine co-op, narrative campaign. BUT has deck construction between quests (building your seeker deck). Same concern as Earthborne Rangers.",
     "status": "available"
@@ -442,7 +472,9 @@ const games = [
       "noGrid": false,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "You own this. Boss-battler like CDMD but with campaign narrative. Coin-flipping = opportunity luck. Easy setup. BUT uses grid combat — same concern as Gloomhaven.",
     "status": "owned"
@@ -470,7 +502,9 @@ const games = [
       "noGrid": false,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "On your wishlist. App handles all fiddliness (monster AI, map reveals). BUT violates your No App rule. Grid movement. Include only if you relax those filters.",
     "status": "available"
@@ -498,7 +532,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": false,
-      "noAuction": false
+      "noAuction": false,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist (rated via TTS). Sci-fi, engine building, opportunity luck from card market. Has conflict/area control and bidding for Spice. Borderline on your dislikes.",
     "status": "available"
@@ -526,7 +562,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your want-to-play. Sci-fi + asymmetric + engine building. No direct PvP. But weight 3.7 and complex setup. Heavier than your Architect benchmarks.",
     "status": "available"
@@ -554,7 +592,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": false,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "On your wishlist. SCI-FI co-op with unique planet puzzles. Easy to table (each planet is self-contained). Survival elements but puzzle-focused not grind-focused.",
     "status": "available"
@@ -582,7 +622,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Asymmetric engine building, no direct PvP. But weight 3.5 and complex — heavier than your Architect benchmarks.",
     "status": "available"
@@ -610,7 +652,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Light set collection, easy to table, opportunity luck. Walker-Harding designs are clean. But drafting is the main mechanism — your dislike.",
     "status": "available"
@@ -638,7 +682,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Gothic horror co-op, asymmetric, narrative. Quick sessions (20-40 min). Watch for depth — may be too light.",
     "status": "available"
@@ -666,7 +712,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Oz/Alice-adjacent witchy theme. Engine building with combos. But solo-only — no multiplayer.",
     "status": "available"
@@ -694,7 +742,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your want-to-play. Sci-fi, asymmetric, simultaneous turns (no downtime), easy to table. Positive progress. Hits your Architect pillar cleanly.",
     "status": "available"
@@ -722,7 +772,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": false,
-      "noAuction": false
+      "noAuction": false,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your want-to-play. Extremely asymmetric (your #1 like). But heavy (weight 4.3), has negotiation/legislation, indirect PvP. Political not combative.",
     "status": "available"
@@ -750,7 +802,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": false,
-      "noAuction": false
+      "noAuction": false,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your wishlist. Asymmetric civ-building. Multiple strategies. But has military conflict and weight 3.0. Borderline.",
     "status": "available"
@@ -778,7 +832,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your want-to-play. Clean engine building, in-game deck building (not pre-construction), opportunity luck from card market. Positive progress. Weight 2.9.",
     "status": "available"
@@ -806,7 +862,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your want-to-play. Pure positive progress, tableau combos, opportunity luck from meadow. Clean turns. Weight 2.8. Charming theme.",
     "status": "available"
@@ -834,7 +892,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "On your want-to-play. Wingspan-like engine building with more card variety. Simultaneous activation reduces downtime. Asymmetric starting islands.",
     "status": "available"
@@ -862,7 +922,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "YOUR #1. The benchmark. Deck construction between sessions is the tradeoff for campaign depth. Hard to table = setup + teardown + consistent group.",
     "status": "owned"
@@ -890,7 +952,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "YOUR #2. Easy to table, narrative, cooperative, sci-fi scenarios. The gold standard for 'grab and play' campaign narrative.",
     "status": "owned"
@@ -918,7 +982,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "YOUR #3. Sci-fi, asymmetric, dramatic tension. Hard to table = needs 5+ players and 3 hours.",
     "status": "owned"
@@ -946,7 +1012,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
     },
     "fit": "YOUR #4. Easy to table, narrative investigation. Uses a website (not an app per se). Detective Stories = your sweet spot.",
     "status": "owned"
@@ -974,7 +1042,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "YOUR #5. The 'easy to table' benchmark for co-op. Grab a character, go. Scenarios feel samey (pick-up-and-deliver) but mechanics are 10/10.",
     "status": "owned"
@@ -1002,7 +1072,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "YOUR #6. Sci-fi, dramatic, asymmetric. TTS-only for you due to setup/fiddliness. Grid movement but thematic not tactical.",
     "status": "owned"
@@ -1030,7 +1102,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": true
     },
     "fit": "YOUR #7 (rated 9). Round-based fiddliness is acceptable. Hard to table = massive footprint and 3+ hours.",
     "status": "owned"
@@ -1058,7 +1132,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "Rated 8. Architect benchmark. Pure positive progress, opportunity luck from bird feeder dice + card market. Clean turns.",
     "status": "owned"
@@ -1086,7 +1162,9 @@ const games = [
       "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
-      "noAuction": true
+      "noAuction": true,
+      "narrativeStrong": false,
+      "narrativeEmergent": false
     },
     "fit": "Rated 8. Architect benchmark. Sci-fi, opportunity luck from dice, always engaged on others' turns. Pure positive spiral.",
     "status": "owned"
@@ -1098,7 +1176,26 @@ const games = [
     "year": 2021,
     "pillar": "adventurer",
     "desc": "Open-world storybook campaign. Explore a vast map, make choices, fight enemies, discover narrative threads across 20+ hours.",
-    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": false, "multiplayer": false, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": false,
+      "multiplayer": false,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "YOUR rated 8.5. Massive narrative exploration. TTS-only for you — stays out on table, multiplayer is one-driver. Solo/duo game in practice.",
     "status": "owned"
   },
@@ -1109,7 +1206,26 @@ const games = [
     "year": 2024,
     "pillar": "adventurer",
     "desc": "Open-world exploration card game. Sequel to 7th Continent with improved mechanics, less grind, more narrative.",
-    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": false, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": false, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": false,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": false,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": false,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this. Improved over 7th Continent (your survival grind benchmark). Still has resource management — watch if it crosses into grind territory.",
     "status": "owned"
   },
@@ -1120,7 +1236,26 @@ const games = [
     "year": 2023,
     "pillar": "adventurer",
     "desc": "Standalone Sleeping Gods sequel for 1-2 players. Tighter map, streamlined rules, prehistoric setting.",
-    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": false, "multiplayer": false, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": false,
+      "multiplayer": false,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "On your wishlist. Streamlined Sleeping Gods for 1-2p. Same TTS concern. Tighter experience than the original.",
     "status": "available"
   },
@@ -1131,7 +1266,26 @@ const games = [
     "year": 2012,
     "pillar": "adventurer",
     "desc": "Cooperative survival adventure. Scenario-based, narrative events, tough decisions. Thematic and punishing.",
-    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": false, "easyTable": false, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": false, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "narrative": true,
+      "lowFiddle": false,
+      "easyTable": false,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": false,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this (rated 8). Narrative scenarios are great. But survival grind + fiddly rules overhead. TTS-only for you.",
     "status": "owned"
   },
@@ -1142,7 +1296,26 @@ const games = [
     "year": 1982,
     "pillar": "adventurer",
     "desc": "Cooperative deduction. Read newspapers, visit locations, solve cases using tangible evidence. Zero mechanics overhead.",
-    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": false, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": false,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": true,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": false,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this (rated 8). Detective Stories benchmark. Zero setup, pure narrative investigation. The gold standard for easy-to-table narrative.",
     "status": "owned"
   },
@@ -1153,7 +1326,26 @@ const games = [
     "year": 2015,
     "pillar": "adventurer",
     "desc": "Legacy campaign cooperative. Evolving narrative, permanent changes, escalating stakes across 12-24 sessions.",
-    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": true,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this (rated 7). Easy to table, narrative campaign, genuine co-op. Benchmark for legacy games.",
     "status": "owned"
   },
@@ -1164,7 +1356,26 @@ const games = [
     "year": 2020,
     "pillar": "adventurer",
     "desc": "Cooperative pirate adventure. App-assisted storytelling with branching narrative and humor. 3-7 players.",
-    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": false, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": true,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": false,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this. Easy to table, narrative, genuine multiplayer. BUT uses an app for storytelling. Violates No App if strict.",
     "status": "owned"
   },
@@ -1175,7 +1386,26 @@ const games = [
     "year": 2021,
     "pillar": "adventurer",
     "desc": "Cooperative narrative adventure. Pop-up book map, hidden tokens, story-driven campaign. Family-weight.",
-    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": false,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": true,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this (rated 7). Easy to table, narrative, no app. Family-weight — lighter than your usual but charming.",
     "status": "owned"
   },
@@ -1186,7 +1416,26 @@ const games = [
     "year": 2022,
     "pillar": "adventurer",
     "desc": "Sci-fi campaign. Explore planets, manage crew, narrative branching. Massive scope and setup.",
-    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": false, "easyTable": false, "multiplayer": true, "scifi": true, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": false, "noGrid": true, "noSurvivalGrind": false, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "narrative": true,
+      "lowFiddle": false,
+      "easyTable": false,
+      "multiplayer": true,
+      "scifi": true,
+      "ozAlice": false,
+      "opportunityLuck": true,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": false,
+      "noGrid": true,
+      "noSurvivalGrind": false,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "On your wishlist (rated 8). SCI-FI campaign. But TWICE as hard to table as AHLCG — massive setup, crew deck management, ship maintenance between missions.",
     "status": "available"
   },
@@ -1197,7 +1446,26 @@ const games = [
     "year": 2022,
     "pillar": "adventurer",
     "desc": "Cooperative narrative puzzle. Solve interconnected puzzles to progress a sci-fi story. Campaign in a box.",
-    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": true, "ozAlice": false, "opportunityLuck": false, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": false,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": true,
+      "multiplayer": true,
+      "scifi": true,
+      "ozAlice": false,
+      "opportunityLuck": false,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this (rated 8). Sci-fi narrative puzzle. Easy to table. No randomness — pure puzzle solving. Unique in your collection.",
     "status": "owned"
   },
@@ -1208,7 +1476,26 @@ const games = [
     "year": 2022,
     "pillar": "adventurer",
     "desc": "Narrative mystery in a box. Investigate a coastal town's secrets through documents, maps, and clues.",
-    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": false, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "tags": {
+      "cooperative": true,
+      "asymmetric": false,
+      "narrative": true,
+      "lowFiddle": true,
+      "easyTable": true,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": false,
+      "opportunityLuck": false,
+      "engineBuild": false,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": true,
+      "noAuction": true,
+      "narrativeStrong": true,
+      "narrativeEmergent": false
+    },
     "fit": "You own this (rated 8.5). Detective Stories sweet spot. Easy to table, narrative investigation, no mechanics overhead.",
     "status": "owned"
   }
