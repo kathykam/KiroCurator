@@ -8,7 +8,7 @@
   <style>
     body { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
     h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-    .menu { display: grid; gap: 1rem; width: 100%; max-width: 400px; }
+    .menu { display: grid; gap: 1rem; width: 100%; max-width: 600px; grid-template-columns: 1fr 1fr; }
     .menu a { display: block; padding: 1.25rem 1.5rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.75rem; text-decoration: none; color: #1f2937; transition: all 0.15s; }
     .menu a:hover { border-color: #a5b4fc; box-shadow: 0 2px 8px rgba(79,70,229,0.1); transform: translateY(-1px); }
     .menu .icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
@@ -44,6 +44,11 @@
       <div class="icon">🏆</div>
       <div class="label">Arkham Combined</div>
       <div class="desc">All scenarios ranked together</div>
+    </a>
+    <a href="game-finder.html">
+      <div class="icon">🔍</div>
+      <div class="label">Game Finder</div>
+      <div class="desc">Filter by preferences, find new games</div>
     </a>
   </nav>
 </body>
