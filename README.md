@@ -17,6 +17,20 @@
 
 **Update the collection** — Drop a new `collection.csv` into `UserData/`, say the trigger, and the AI will trim it, update the data files, and rebuild the HTML viewer.
 
+## Dashboard Pages
+
+| Page | Description |
+|------|-------------|
+| `index.html` | Landing page with 2-column menu grid |
+| `collection.html` | Sortable/filterable collection viewer with multi-select ownership filter |
+| `arkham-lcg.html` | Arkham Horror LCG campaign collection dashboard |
+| `arkham-official.html` | Official FFG campaigns & standalones ranked by profile fit |
+| `arkham-homebrew.html` | Fan-made campaigns & scenarios ranked by profile fit |
+| `arkham-ranked.html` | Combined official + homebrew rankings |
+| `game-finder.html` | Toggleable preference filters against curated 2026 game list |
+
+All pages share `styles.css` for consistent styling. Page-specific styles remain inline only when they override the shared base.
+
 ## Output
 
 Long recommendations from the Curator and Recommender personas are written to `Output/recommendation.md`. Check that file after asking for detailed advice.
