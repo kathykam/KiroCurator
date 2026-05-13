@@ -1498,5 +1498,35 @@ const games = [
     "fit": "You own this (rated 8.5). Detective Stories sweet spot. Easy to table, narrative investigation, no mechanics overhead.",
     "status": "owned",
     "narrativeScore": 9
+  },
+  {
+    "name": "Wonderland's War",
+    "bgg": 227935,
+    "designer": "Tim Eisner / Ben Eisner",
+    "year": 2022,
+    "pillar": "architect",
+    "desc": "Alice in Wonderland bag-building area control. Asymmetric factions, push-your-luck combat, tableau powers.",
+    "tags": {
+      "cooperative": false,
+      "asymmetric": true,
+      "narrative": false,
+      "lowFiddle": false,
+      "easyTable": false,
+      "multiplayer": true,
+      "scifi": false,
+      "ozAlice": true,
+      "opportunityLuck": true,
+      "engineBuild": true,
+      "noApp": true,
+      "noDeckConstruction": true,
+      "noGrid": true,
+      "noSurvivalGrind": true,
+      "noPvP": false,
+      "noAuction": false,
+      "mechanicalDepth": true
+    },
+    "narrativeScore": 2,
+    "fit": "On your want-to-play. ALICE THEME + asymmetric + engine building (bag-building). But has direct area control PvP and bidding. Weight 3.0.",
+    "status": "available"
   }
 ];
