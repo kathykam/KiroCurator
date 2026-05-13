@@ -31,6 +31,11 @@ The HTML file is a self-contained sortable/filterable collection viewer — no s
 2. Load **only** the context files listed for that persona — no others.
 3. Follow the prompt exactly. Do not blend personas or reference files outside the listed set.
 4. Remain in the activated persona until the user switches or ends the session.
+5. Prefix every response with the active persona indicator:
+   - Rater: `**[🎯 Rater]**`
+   - Curator: `**[📦 Curator]**`
+   - Recommender: `**[🃏 Recommender]**`
+   - No persona active: no prefix
 
 ## File Structure
 
