@@ -29,6 +29,8 @@
 | `arkham-ranked.html` | Combined official + homebrew rankings |
 | `narrative-finder.html` | Narrative Game Finder — filter by preferences + narrative depth score (0-10) |
 
+**Mechanical Depth definition:** A game must have a resource you manage (time, actions, health, money, cards) that constrains decisions and forces tradeoffs. Pure puzzles (solve or don't) and random paragraph lookups (no meaningful decisions) are not games.
+
 All pages share `styles.css` for consistent styling. Page-specific styles remain inline only when they override the shared base.
 
 ## Output

@@ -1493,7 +1493,7 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "mechanicalDepth": true
+      "mechanicalDepth": false
     },
     "fit": "You own this (rated 8.5). Detective Stories sweet spot. Easy to table, narrative investigation, no mechanics overhead.",
     "status": "owned",
