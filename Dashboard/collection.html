@@ -9,6 +9,7 @@
     .controls { display: flex; gap: 0.75rem; flex-wrap: wrap; margin-bottom: 1rem; }
     .controls input, .controls select { padding: 0.5rem 0.75rem; border: 1px solid #d1d5db; border-radius: 0.5rem; font-size: 0.875rem; }
     .controls input { flex: 1; min-width: 200px; }
+    .controls select[multiple] { height: auto; min-height: 2rem; }
     .table-wrap { border: 1px solid #e5e7eb; border-radius: 0.5rem; overflow: auto; max-height: calc(100vh - 180px); }
     table { width: 100%; border-collapse: collapse; font-size: 0.875rem; }
     thead { background: #f9fafb; position: sticky; top: 0; z-index: 1; }
@@ -50,9 +51,9 @@
   <div class="subtitle" id="count"></div>
   <div class="controls">
     <input type="text" id="search" placeholder="Search games…">
-    <select id="ownership">
-      <option value="all">All Games</option>
-      <option value="owned" selected>✅ Owned</option>
+    <select id="ownership" multiple size="5">
+      <option value="all" selected>All Games</option>
+      <option value="owned">✅ Owned</option>
       <option value="prevowned">🏷️ Previously Owned</option>
       <option value="wishlist">💝 Wishlist</option>
       <option value="wanttoplay">🎮 Want to Play</option>
@@ -819,15 +820,19 @@ Zombies!!!,2471,3,0,1,0,0,3,5.79426,1.6117,8985,2,6,90,60,2001,standalone
 
     function render() {
       const search = document.getElementById('search').value.toLowerCase();
-      const ownership = document.getElementById('ownership').value;
+      const ownership = [...document.getElementById('ownership').selectedOptions].map(o => o.value);
       const minR = parseFloat(document.getElementById('minRating').value);
 
       let list = games.filter(g => {
         if (search && !g.name.toLowerCase().includes(search)) return false;
-        if (ownership === 'owned' && !g.owned) return false;
-        if (ownership === 'prevowned' && (g.owned || !g.prevOwned)) return false;
-        if (ownership === 'wishlist' && !g.wishlist) return false;
-        if (ownership === 'wanttoplay' && !g.wantToPlay) return false;
+        if (!ownership.includes('all')) {
+          let match = false;
+          if (ownership.includes('owned') && g.owned) match = true;
+          if (ownership.includes('prevowned') && !g.owned && g.prevOwned) match = true;
+          if (ownership.includes('wishlist') && g.wishlist) match = true;
+          if (ownership.includes('wanttoplay') && g.wantToPlay) match = true;
+          if (!match) return false;
+        }
         if (minR && g.userRating < minR) return false;
         return true;
       });
