@@ -67,3 +67,28 @@ Dashboard/
 - Columns displayed: Game name (linked to BGG), User Rating, BGG Average, Year, Player count/playtime, Ownership status.
 - Features: Sort by clicking headers, filter by ownership status, filter by minimum rating, text search, series grouping (splits on " – " or ": ").
 - The trimmed CSV is embedded in a `<script id="csvData" type="text/plain">` tag placed before the main `<script>` tag.
+
+## Homebrew Page Ranking Logic (`Dashboard/arkham-homebrew.html`)
+
+Campaigns and standalones are rated on three axes:
+- **Mechanics** (1-10): Polish, tightness, rules clarity, no confusion
+- **Narrative** (1-10): Story strength, atmosphere, thematic payoff
+- **Fiddliness** (1-10): Per-turn bookkeeping, token tracking, admin overhead (lower = better)
+
+### Sort Order
+
+Group by Mechanics tier first, then sort by Narrative descending within each tier:
+
+| Tier | Mechanics Score | Label |
+|------|----------------|-------|
+| A | 9-10 | Strong mechanics |
+| B | 8 | Good mechanics |
+| C | 7 | Acceptable mechanics |
+| — | Below 7 | Not recommended |
+
+Items below Mechanics 7 are excluded from the page.
+
+### Additional Filters
+
+- Narrative below 6/10 = excluded (not worth the play)
+- Fiddliness is displayed but not used for sorting — it's a warning flag only
