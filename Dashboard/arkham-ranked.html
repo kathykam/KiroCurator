@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🐙 Arkham LCG – Combined Rankings</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:#1a1a2e;color:#e0e0e0;padding:1.5rem;max-width:960px;margin:0 auto}
+    h1{font-size:1.5rem;color:#a78bfa;margin-bottom:0.25rem}
+    .subtitle{font-size:0.875rem;color:#9ca3af;margin-bottom:1.5rem}
+    .site-nav{display:flex;gap:0.5rem;margin-bottom:1.25rem;padding-bottom:0.75rem;border-bottom:1px solid #374151}
+    .site-nav a{font-size:0.8rem;text-decoration:none;color:#9ca3af;padding:0.3rem 0.6rem;border-radius:0.25rem}
+    .site-nav a:hover{color:#e0e0e0;background:#1f2937}
+    .site-nav a.active{color:#a78bfa;font-weight:600}
+    .tabs{display:flex;gap:0;margin-bottom:1.5rem;border-bottom:2px solid #374151}
+    .tab{padding:0.6rem 1.2rem;cursor:pointer;font-size:0.85rem;color:#9ca3af;border-bottom:2px solid transparent;margin-bottom:-2px;transition:all 0.2s}
+    .tab:hover{color:#e0e0e0}
+    .tab.active{color:#a78bfa;border-bottom-color:#a78bfa}
+    .panel{display:none}
+    .panel.active{display:block}
+    .card{background:#16213e;border:1px solid #374151;border-radius:0.5rem;padding:0.75rem 1rem;margin-bottom:0.6rem;display:grid;grid-template-columns:2rem 1fr auto;gap:0.75rem;align-items:start}
+    .card:hover{border-color:#6366f1}
+    .rank{font-size:1.1rem;font-weight:700;color:#a78bfa;text-align:center;padding-top:0.1rem}
+    .card-body{}
+    .card-title{font-size:0.9rem;font-weight:600;color:#e0e0e0}
+    .card-creator{font-size:0.7rem;color:#9ca3af;margin-top:0.1rem}
+    .card-desc{font-size:0.78rem;color:#9ca3af;margin-top:0.35rem;line-height:1.4}
+    .card-tags{display:flex;gap:0.4rem;flex-wrap:wrap;margin-top:0.4rem}
+    .tag{font-size:0.65rem;padding:0.15rem 0.4rem;border-radius:0.25rem;border:1px solid #374151;color:#9ca3af}
+    .tag-official{border-color:#3b82f6;color:#93c5fd;background:#1e3a5f}
+    .tag-homebrew{border-color:#a855f7;color:#d8b4fe;background:#2d1b69}
+    .tag-owned{border-color:#10b981;color:#6ee7b7;background:#065f46}
+    .tag-want{border-color:#f59e0b;color:#fcd34d;background:#78350f}
+    .tag-tierA{border-color:#34d399;color:#34d399}
+    .tag-tierB{border-color:#60a5fa;color:#60a5fa}
+    .tag-tierC{border-color:#a78bfa;color:#a78bfa}
+    .tag-tierD{border-color:#6b7280;color:#6b7280}
+    .tag-scifi{border-color:#06b6d4;color:#67e8f9;background:#164e63}
+    .tag-fiddly{border-color:#ef4444;color:#fca5a5}
+    .scores{display:flex;flex-direction:column;align-items:flex-end;gap:0.2rem;min-width:4.5rem}
+    .score-row{font-size:0.65rem;color:#6b7280;display:flex;gap:0.3rem;align-items:center}
+    .score-val{font-weight:600;color:#c4b5fd;min-width:1rem;text-align:right}
+    .fit{font-size:0.72rem;color:#6ee7b7;margin-top:0.35rem;padding:0.4rem;background:#0f2e1f;border-radius:0.25rem;border-left:2px solid #10b981}
+    .fit-warn{color:#fcd34d;background:#2d2305;border-left-color:#f59e0b}
+    .legend{font-size:0.7rem;color:#6b7280;margin-bottom:1rem;display:flex;gap:1rem;flex-wrap:wrap}
+    .legend span{display:flex;align-items:center;gap:0.3rem}
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">🎲 Home</a>
+    <a href="collection.html">📚 Collection</a>
+    <a href="arkham-lcg.html">🐙 Arkham LCG</a>
+    <a href="arkham-official.html">📋 Official</a>
+    <a href="arkham-homebrew.html">🃏 Homebrew</a>
+    <a href="arkham-ranked.html" class="active">🏆 Combined</a>
+  </nav>
+  <h1>🏆 Arkham Horror LCG – Combined Rankings</h1>
+  <div class="subtitle">Official + Homebrew ranked together by profile fit · Updated May 2026</div>
+
+  <div class="legend">
+    <span><span class="tag tag-official">Official</span> FFG release</span>
+    <span><span class="tag tag-homebrew">Homebrew</span> Fan-made</span>
+    <span><span class="tag tag-owned">Owned</span></span>
+    <span><span class="tag tag-want">Wishlist</span></span>
+  </div>
+
+  <div class="tabs">
+    <div class="tab active" data-panel="campaigns">📖 Campaigns</div>
+    <div class="tab" data-panel="standalones">🎭 Standalones</div>
+  </div>
+
+  <div class="panel active" id="campaigns"></div>
+  <div class="panel" id="standalones"></div>
+
+  <script>
+const campaigns = [
+  { rank:1, name:"The Path to Carcosa", creator:"FFG", type:"official", status:"owned",
+    mech:9, narr:10, fiddle:2, tier:"A",
+    desc:"Theatrical horror masterpiece. Doubt mechanic, unreliable narrator, multiple endings. Community consensus #1 campaign.",
+    fit:"Your Adventurer pillar in its purest form — narrative agency, dramatic stakes, zero fiddliness. The doubt/conviction mechanic IS player choice mattering." },
+  { rank:2, name:"Ages Unwound", creator:"Olivia Juliet", type:"homebrew", status:"none",
+    mech:10, narr:10, fiddle:1, tier:"A",
+    desc:"Time travel narrative — investigators fight a cult trying to unmake time and reality. Tight, singular focus.",
+    fit:"Zero rules confusion. Cause-and-effect time loops = maximum narrative agency. Only 7 scenarios — nothing wasted." },
+  { rank:3, name:"The Dunwich Legacy", creator:"FFG", type:"official", status:"owned",
+    mech:9, narr:9, fiddle:2, tier:"A",
+    desc:"Classic Lovecraft. Miskatonic University, the Necronomicon, extradimensional horrors. Your first full campaign — rated 10.",
+    fit:"The benchmark. Every campaign is measured against this. Essex County Express is a top-5 scenario in the entire game." },
+  { rank:4, name:"Circus Ex Mortis", creator:"The Beard", type:"homebrew", status:"none",
+    mech:9, narr:9, fiddle:2, tier:"A",
+    desc:"Shub-Niggurath campaign with circus horror theming. Comes with a circus-themed investigator card expansion.",
+    fit:"Moon Token mechanic is elegant — one rule creating constant tension. Bonus investigator expansion = asymmetric powers." },
+  { rank:5, name:"Edge of the Earth", creator:"FFG", type:"official", status:"owned",
+    mech:8, narr:9, fiddle:3, tier:"A",
+    desc:"Antarctic expedition horror. Strong partner mechanic, branching narrative, escalating dread.",
+    fit:"Partners give narrative weight to NPCs. Expedition theme = exploration drama. Slightly more bookkeeping than Dunwich but worth it." },
+  { rank:6, name:"Cyclopean Foundations", creator:"The Beard", type:"homebrew", status:"none",
+    mech:9, narr:7, fiddle:2, tier:"A",
+    desc:"Cthulhu-based campaign that feels closest to an official FFG release. Non-Euclidean mechanic ramps elegantly.",
+    fit:"Mechanically the tightest homebrew — zero rules confusion. Narrative starts strong but takes a backseat in the second half." },
+  { rank:7, name:"Dark Matter", creator:"Axolotl", type:"homebrew", status:"none",
+    mech:8, narr:9, fiddle:3, tier:"B",
+    desc:"Deep space sci-fi horror. Wake from cryo-sleep on an abandoned ship, adventure across the solar system.",
+    fit:"SCI-FI SETTING — your #1 favourite. Mystery of your own memories. Choose-your-own-adventure middle section.", tags:["scifi"] },
+  { rank:8, name:"The Innsmouth Conspiracy", creator:"FFG", type:"official", status:"unowned",
+    mech:8, narr:9, fiddle:3, tier:"B",
+    desc:"Coastal horror with flooding mechanic and keys. Strong community ranking, tight narrative arc.",
+    fit:"Flooding locations = environmental tension without monster AI. Keys mechanic adds strategic layer. You don't own it yet." },
+  { rank:9, name:"Heart of Darkness", creator:"Vinn Quest", type:"homebrew", status:"none",
+    mech:8, narr:9, fiddle:3, tier:"B",
+    desc:"Travel deep into the Congo aboard the Roi des Belges. Highest-rated campaign on Arkham Central (4.86/5).",
+    fit:"Same creator as Against the Wendigo. Strong exploration narrative. Some translation quirks." },
+  { rank:10, name:"The Circle Undone", creator:"FFG", type:"official", status:"want",
+    mech:8, narr:8, fiddle:3, tier:"B",
+    desc:"Haunted house, witch covens, Masonic conspiracies. Prologue mechanic and tarot cards.",
+    fit:"On your wishlist. Prologue = narrative stakes before the campaign even starts. Tarot adds opportunity luck." },
+  { rank:11, name:"The Drowned City", creator:"FFG", type:"official", status:"owned",
+    mech:7, narr:8, fiddle:3, tier:"B",
+    desc:"Newest campaign. Underwater Arkham, gang war opening, Cthulhu endgame.",
+    fit:"You own it. Strong second half. Opening scenario is incongruous but it finds its footing." },
+  { rank:12, name:"The Colour Out of Oz", creator:"The Beard", type:"homebrew", status:"none",
+    mech:8, narr:7, fiddle:7, tier:"B",
+    desc:"Quest through Oz fighting the corrupting Colour. Multi-goal scenarios with Decay timers.",
+    fit:"Mechanics are never confusing — but there's a LOT to track every turn. Your CPU Rule in action.", tags:["fiddly"] },
+  { rank:13, name:"The Feast of Hemlock Vale", creator:"FFG", type:"official", status:"want",
+    mech:8, narr:8, fiddle:4, tier:"B",
+    desc:"Folk horror in rural New England. Cottagecore meets cosmic dread. Strong new investigators.",
+    fit:"On your wishlist. Kate Winthrop is S-tier. Folk horror is a fresh tone for the game." },
+  { rank:14, name:"The Forgotten Age", creator:"FFG", type:"official", status:"owned",
+    mech:7, narr:8, fiddle:5, tier:"C",
+    desc:"Jungle expedition. Explore mechanic, supply system, punishing difficulty. Polarizing.",
+    fit:"You own it. Explore mechanic can feel like systemic chaos — cards invalidating plans. Supply tracking is maintenance.", tags:["fiddly"] },
+  { rank:15, name:"Call of the Plaguebearer", creator:"Dr. Jack Science", type:"homebrew", status:"none",
+    mech:7, narr:8, fiddle:6, tier:"C",
+    desc:"Resident Evil / Reanimator inspired. Repeated use of Arkham locations builds familiarity.",
+    fit:"Strong survival horror narrative. But every scenario introduces new mechanics requiring fresh learning." },
+  { rank:16, name:"Alice in Wonderland", creator:"The Beard", type:"homebrew", status:"none",
+    mech:7, narr:8, fiddle:2, tier:"C",
+    desc:"Journey to Wonderland to stop shadows from consuming it. Whimsical writing, clever mechanics. Easy side.",
+    fit:"Clean but simple. Never confusing, never boring, but rarely surprising mechanically." },
+  { rank:17, name:"War of the Worlds", creator:"The Beard", type:"homebrew", status:"none",
+    mech:7, narr:7, fiddle:1, tier:"C",
+    desc:"Three-scenario mini-campaign based on H.G. Wells. Short, solid, no low points.",
+    fit:"Zero filler, zero fiddliness. Perfect palate cleanser. Sci-fi setting.", tags:["scifi"] },
+  { rank:18, name:"The Dream-Eaters", creator:"FFG", type:"official", status:"unowned",
+    mech:7, narr:7, fiddle:4, tier:"C",
+    desc:"Dual campaign structure — waking world and Dreamlands. Innovative but divisive split.",
+    fit:"Split structure means half the deck-building payoff. Dreamlands tone is lighter. Interesting but fragmented." },
+  { rank:19, name:"The Scarlet Keys", creator:"FFG", type:"official", status:"unowned",
+    mech:7, narr:7, fiddle:5, tier:"C",
+    desc:"Open-world globetrotting. Noir detective vibe. Strong first playthrough, weaker on replay.",
+    fit:"RNG-based main mechanism gets old. Lots of reading stretches table time. Great blind, diminishing returns." },
+  { rank:20, name:"Night of the Zealot", creator:"FFG", type:"official", status:"owned",
+    mech:6, narr:6, fiddle:1, tier:"D",
+    desc:"Core Set tutorial campaign. Three scenarios introducing the game's systems.",
+    fit:"It's the tutorial. Does its job. The Midnight Masks is genuinely great; the other two are functional." },
+  { rank:21, name:"The Ghosts of Onigawa", creator:"Myriad", type:"homebrew", status:"none",
+    mech:6, narr:7, fiddle:6, tier:"D",
+    desc:"Set in Japan. Half brilliant quiet horror, half uneven epic scale.",
+    fit:"Scenarios 1-3 are excellent. Second half devolves into slugfest. Ending is busywork." },
+];
+
+const standalones = [
+  { rank:1, name:"Murder at the Excelsior Hotel", creator:"FFG", type:"official", status:"owned",
+    mech:10, narr:10, fiddle:1, tier:"A",
+    desc:"Whodunit in a hotel. Multiple suspects, multiple solutions, massive replayability. You rated it 10.",
+    fit:"Your only 10-rated standalone. Detective narrative with real clues. Zero fiddliness. Replayable. The gold standard." },
+  { rank:2, name:"The Fall of the House of Usher", creator:"The Beard", type:"homebrew", status:"none",
+    mech:9, narr:9, fiddle:2, tier:"A",
+    desc:"Poe's gothic masterpiece. The house crumbles around you — locations flip to dangerous alternate sides.",
+    fit:"The house IS the threat, not fiddly monster AI. Novel boss mechanic with multiple paths to participation." },
+  { rank:3, name:"The Invisible Man", creator:"The Beard", type:"homebrew", status:"none",
+    mech:9, narr:7, fiddle:1, tier:"A",
+    desc:"H.G. Wells sci-fi horror. Hunt an invisible antagonist — flip combat/evasion decks, stack them in your favour.",
+    fit:"Simple idea, ton of fun. Perfect difficulty. Zero fiddliness. Sci-fi setting.", tags:["scifi"] },
+  { rank:4, name:"Consternation on the Constellation", creator:"Mythos Busters", type:"homebrew", status:"none",
+    mech:8, narr:8, fiddle:3, tier:"B",
+    desc:"Race cultists aboard a sinking cruise ship. Chaos bag manipulation, multiple objectives.",
+    fit:"Chaos bag manipulation is clever opportunity luck. Ship flooding = escalating tension. Large map can feel sprawling." },
+  { rank:5, name:"Against the Wendigo", creator:"Vinn Quest", type:"homebrew", status:"none",
+    mech:7, narr:9, fiddle:3, tier:"B",
+    desc:"Investigate a wendigo in the Canadian Rockies. Open-world scenario. Community's most-loved fan standalone (4.67/5, 124 votes).",
+    fit:"Shares DNA with T.I.M.E Stories and Sleeping Gods — narrative exploration with multiple endings. Long (~4 hours)." },
+  { rank:6, name:"Carnevale of Horrors", creator:"FFG", type:"official", status:"want",
+    mech:8, narr:8, fiddle:2, tier:"B",
+    desc:"Venetian carnival with a circular location layout. Unique movement mechanic, strong theme.",
+    fit:"On your wishlist. Circular map is mechanically inventive. Carnival atmosphere is dripping with theme." },
+  { rank:7, name:"The Legend of Sleepy Hollow", creator:"The Beard", type:"homebrew", status:"none",
+    mech:8, narr:8, fiddle:1, tier:"B",
+    desc:"Take on the Headless Horseman. Multiple spread-out objectives where you choose which to tackle.",
+    fit:"Straightforward and to the point. Choose-your-own-objectives puzzle. Zero fiddliness. On the easy side." },
+  { rank:8, name:"The Phantom of the Opera", creator:"The Beard", type:"homebrew", status:"none",
+    mech:8, narr:8, fiddle:2, tier:"B",
+    desc:"Investigate the Paris Opera House using the Concealed mechanic in new ways.",
+    fit:"Fresh twist on Concealed mechanic. Investigation-focused. Requires Scarlet Keys familiarity." },
+  { rank:9, name:"Film Fatale", creator:"FFG", type:"official", status:"owned",
+    mech:7, narr:8, fiddle:3, tier:"B",
+    desc:"Noir mystery on a film set. Newest official standalone.",
+    fit:"You own it. Investigation-focused noir. Solid but not as replayable as Excelsior." },
+  { rank:10, name:"The Blob That Ate Everything", creator:"FFG", type:"official", status:"want",
+    mech:7, narr:6, fiddle:3, tier:"C",
+    desc:"Epic-scale cooperative battle. Designed for large groups. Campy B-movie tone.",
+    fit:"On your wishlist. More combat spectacle than narrative. Fun as an event but not your Adventurer sweet spot." },
+  { rank:11, name:"Delta Green: Convergence", creator:"Mr Dodger", type:"homebrew", status:"none",
+    mech:7, narr:8, fiddle:2, tier:"C",
+    desc:"Government conspiracy meets Lovecraft. Investigation-heavy.",
+    fit:"X-Files meets Lovecraft. Solid but less mechanically inventive." },
+  { rank:12, name:"The Midwinter Gala", creator:"FFG", type:"official", status:"want",
+    mech:7, narr:7, fiddle:2, tier:"C",
+    desc:"Social deduction at a holiday party. Unique tone for Arkham.",
+    fit:"On your wishlist. Lighter tone, social mechanics. Interesting experiment." },
+  { rank:13, name:"The Facts in the Case of M. Valdemar", creator:"The Beard", type:"homebrew", status:"none",
+    mech:7, narr:7, fiddle:1, tier:"C",
+    desc:"Poe short story. A man kept alive through mesmerism begins to decay.",
+    fit:"Intimate, contained horror. Zero fiddliness. Atmospheric dread over mechanical complexity." },
+  { rank:14, name:"The Symphony of Erich Zann", creator:"Axolotl", type:"homebrew", status:"none",
+    mech:7, narr:7, fiddle:2, tier:"C",
+    desc:"Stop an orchestra from playing otherworldly music. Lovecraft short story.",
+    fit:"Unique objective. Polished. Solid all around." },
+  { rank:15, name:"Arkham Incidents (5-scenario set)", creator:"The Beard", type:"homebrew", status:"none",
+    mech:6, narr:6, fiddle:2, tier:"D",
+    desc:"Five short standalones, each involving an iconic ally. Varied mechanics.",
+    fit:"Fun palate cleansers but deck-dependent. Best two: Too Noble and Mysterious Benefits." },
+];
+
+function renderList(data, containerId) {
+  const el = document.getElementById(containerId);
+  el.innerHTML = data.map(c => {
+    const typeTag = c.type === 'official'
+      ? '<span class="tag tag-official">Official</span>'
+      : '<span class="tag tag-homebrew">Homebrew</span>';
+    const statusTag = c.status === 'owned' ? '<span class="tag tag-owned">Owned</span>'
+      : c.status === 'want' ? '<span class="tag tag-want">Wishlist</span>' : '';
+    const tierTag = `<span class="tag tag-tier${c.tier}">Tier ${c.tier}</span>`;
+    const extraTags = (c.tags||[]).map(t => {
+      if (t==='scifi') return '<span class="tag tag-scifi">Sci-Fi</span>';
+      if (t==='fiddly') return '<span class="tag tag-fiddly">⚠️ Fiddly</span>';
+      return '';
+    }).join('');
+    const fitClass = c.fiddle >= 5 ? 'fit fit-warn' : 'fit';
+    return `<div class="card">
+      <div class="rank">${c.rank}</div>
+      <div class="card-body">
+        <div class="card-title">${c.name}</div>
+        <div class="card-creator">${c.creator}${c.mech ? ` · M:${c.mech} N:${c.narr} F:${c.fiddle}` : ''}</div>
+        <div class="card-desc">${c.desc}</div>
+        <div class="card-tags">${typeTag}${statusTag}${tierTag}${extraTags}</div>
+        <div class="${fitClass}">🎯 ${c.fit}</div>
+      </div>
+      <div class="scores">
+        <div class="score-row"><span>M</span><span class="score-val">${c.mech}</span></div>
+        <div class="score-row"><span>N</span><span class="score-val">${c.narr}</span></div>
+        <div class="score-row"><span>F</span><span class="score-val">${c.fiddle}</span></div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+renderList(campaigns, 'campaigns');
+renderList(standalones, 'standalones');
+
+document.querySelectorAll('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    document.querySelectorAll('.panel').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    document.getElementById(tab.dataset.panel).classList.add('active');
+  });
+});
+  </script>
+</body>
+</html>
