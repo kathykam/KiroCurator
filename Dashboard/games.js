@@ -1463,7 +1463,7 @@ const games = [
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true,
-      "mechanicalDepth": true
+      "mechanicalDepth": false
     },
     "fit": "You own this (rated 8). Sci-fi narrative puzzle. Easy to table. No randomness — pure puzzle solving. Unique in your collection.",
     "status": "owned",
