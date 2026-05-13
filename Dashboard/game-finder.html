@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔍 Game Finder</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .filters { display: flex; flex-wrap: wrap; gap: 0.4rem; margin-bottom: 1.5rem; }
+    .filter-toggle { padding: 0.4rem 0.75rem; border: 1px solid #d1d5db; border-radius: 2rem; font-size: 0.75rem; cursor: pointer; background: #fff; user-select: none; transition: all 0.1s; }
+    .filter-toggle:hover { border-color: #a5b4fc; }
+    .filter-toggle.active { background: #4f46e5; color: #fff; border-color: #4f46e5; }
+    .filter-toggle.negative { background: #fee2e2; color: #991b1b; border-color: #fca5a5; }
+    .filter-toggle.negative.active { background: #ef4444; color: #fff; border-color: #ef4444; }
+    .section-label { font-size: 0.7rem; color: #6b7280; font-weight: 600; text-transform: uppercase; margin: 0.75rem 0 0.25rem; width: 100%; }
+    .game-count { font-size: 0.8rem; color: #6b7280; margin-bottom: 1rem; }
+    .card-score { font-size: 0.7rem; color: #6b7280; margin-top: 0.25rem; }
+    .card-score span { display: inline-block; margin-right: 0.5rem; }
+    .match-high { border-left: 4px solid #16a34a; }
+    .match-mid { border-left: 4px solid #ca8a04; }
+    .match-low { border-left: 4px solid #d1d5db; }
+    .tag-ks { background: #cffafe; color: #155e75; }
+    .pillar-adv { background: #fef3c7; color: #92400e; }
+    .pillar-arch { background: #dbeafe; color: #1e40af; }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">🎲 Home</a>
+    <a href="collection.html">📚 Collection</a>
+    <a href="arkham-lcg.html">🐙 Arkham LCG</a>
+    <a href="arkham-official.html">📋 Official</a>
+    <a href="arkham-homebrew.html">🃏 Homebrew</a>
+    <a href="arkham-ranked.html">🏆 Combined</a>
+    <a href="game-finder.html" class="active">🔍 Finder</a>
+  </nav>
+  <h1>🔍 Game Finder</h1>
+  <div class="subtitle">Toggle your preferences on/off to filter games available in 2026 · Click active filters to remove them</div>
+
+  <div class="filters" id="filters">
+    <div class="section-label">✅ I Want</div>
+    <button class="filter-toggle active" data-filter="cooperative">Cooperative</button>
+    <button class="filter-toggle active" data-filter="asymmetric">Asymmetric Powers</button>
+    <button class="filter-toggle active" data-filter="narrative">Narrative/Campaign</button>
+    <button class="filter-toggle active" data-filter="lowFiddle">Low Fiddliness (≤3)</button>
+    <button class="filter-toggle active" data-filter="easyTable">Easy to Table</button>
+    <button class="filter-toggle active" data-filter="multiplayer">Genuine Multiplayer</button>
+    <button class="filter-toggle" data-filter="scifi">Sci-Fi Theme</button>
+    <button class="filter-toggle" data-filter="ozAlice">Oz / Alice Theme</button>
+    <button class="filter-toggle" data-filter="opportunityLuck">Opportunity Luck</button>
+    <button class="filter-toggle" data-filter="engineBuild">Engine Building</button>
+
+    <div class="section-label">❌ I Avoid</div>
+    <button class="filter-toggle negative active" data-filter="noApp">No App Required</button>
+    <button class="filter-toggle negative active" data-filter="noDeckConstruction">No Deck Construction</button>
+    <button class="filter-toggle negative active" data-filter="noGrid">No Grid Combat</button>
+    <button class="filter-toggle negative active" data-filter="noSurvivalGrind">No Survival Grind</button>
+    <button class="filter-toggle negative" data-filter="noPvP">No Direct PvP</button>
+    <button class="filter-toggle negative" data-filter="noAuction">No Auction/Bidding</button>
+  </div>
+
+  <div class="game-count" id="gameCount"></div>
+  <div id="gameList"></div>
+
+  <script>
+const games = [
+  // === ADVENTURER PILLAR ===
+  { name:"Tainted Grail: Kings of Ruin", designer:"Awaken Realms", year:2024, pillar:"adventurer",
+    desc:"Standalone Arthurian dark fantasy. Streamlined from original — faster setup, clearer rules, campaign narrative with branching choices.",
+    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:false, noPvP:true, noAuction:true },
+    fit:"Arthurian theme. Streamlined from original but still heavy on table presence. Survival elements may trigger your grind concern. Research fiddliness before buying.", status:"available" },
+  { name:"Oathsworn: Into the Deepwood", designer:"Shadowborne Games", year:2022, pillar:"adventurer",
+    desc:"Narrative-heavy campaign. Storybook encounters + card-based combat (no grid). Each session is a self-contained chapter.",
+    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"No grid combat — card-based. Genuine multiplayer. But setup is heavy (minis, cards, storybook). Fiddliness ~4. Sessions run 2-3 hours.", status:"available" },
+  { name:"Arydia: The Paths We Dare Tread", designer:"Far Off Games", year:2025, pillar:"adventurer",
+    desc:"Open-world cooperative RPG, no GM required. Streamlined action economy, narrative exploration, campaign progression.",
+    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"Reviewers praise streamlined mechanics and narrative depth. 'Intuitive, fresh, familiar.' No grid, no GM, no app. Now at retail. Setup still involves map/cards.", status:"available" },
+  { name:"Nemesis: Retaliation", designer:"Awaken Realms", year:2025, pillar:"adventurer",
+    desc:"Standalone Nemesis sequel. New aliens, new ship, same semi-cooperative sci-fi horror. Hidden objectives, dramatic tension.",
+    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:false, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"SCI-FI. You love Nemesis (rated 9 on TTS). This is more Nemesis. Same fiddliness concerns — best on TTS. Semi-coop with hidden objectives.", status:"available" },
+  { name:"Deep Regrets", designer:"Judson Cowan", year:2025, pillar:"adventurer",
+    desc:"Dredge-inspired solo/coop. Fish increasingly horrifying catches, manage your boat, uncover oceanic mysteries.",
+    tags:{ cooperative:true, asymmetric:false, narrative:true, lowFiddle:true, easyTable:true, multiplayer:false, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:false, noPvP:true, noAuction:true },
+    fit:"Easy to table, narrative horror, opportunity luck. But solo-focused (1-2p) and has survival/resource elements. Dredge tone is unique.", status:"available" },
+  { name:"Earthborne Rangers", designer:"Andrew Navaro", year:2023, pillar:"adventurer",
+    desc:"Solarpunk cooperative card game. Open-world exploration in a far-future wilderness. 50+ hour campaign.",
+    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:false, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"Beautiful world, genuine narrative. BUT has deck construction between sessions (building your Ranger deck). Violates your strict rubric. Otherwise perfect.", status:"available" },
+
+  // === COMPETITIVE ARCHITECT PILLAR ===
+  { name:"Moon Colony Bloodbath", designer:"Donald X. Vaccarino", year:2025, pillar:"architect",
+    desc:"Engine-building engine-DESTROYING tableau game. Build moon colonies while killer robots tear them down. From the Dominion designer.",
+    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:true, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:false, noAuction:true },
+    fit:"SCI-FI + engine building + Vaccarino pedigree. Easy to table, snappy turns. BUT has engine destruction (robots kill your stuff) — tests your 'no negative progress' rule. Shared deck means indirect interaction, not direct PvP.", status:"available" },
+  { name:"Harmonies", designer:"Johan Benvenuto", year:2024, pillar:"architect",
+    desc:"Pattern-building with animal scoring. Draft tokens, build 3D landscapes. Your current #9 game.",
+    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"You already rate this 8.5. Benchmark for your Architect pillar. Included for comparison.", status:"owned" },
+  { name:"Cozy Stickerville", designer:"Raman Hryhoryk", year:2026, pillar:"architect",
+    desc:"Cozy engine-builder with sticker-based progression. Simple turns, satisfying combos, positive spiral.",
+    tags:{ cooperative:false, asymmetric:false, narrative:false, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:true, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"You own this and rated it 8. Pure positive progress, zero maintenance. Benchmark.", status:"owned" },
+
+  // === KICKSTARTERS TO WATCH (2026 delivery) ===
+  { name:"Lands of Evershade", designer:"Leder Games", year:2026, pillar:"adventurer",
+    desc:"Cooperative narrative adventure from the Root publisher. Explore a dark fairy-tale world with asymmetric characters.",
+    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:true, easyTable:false, multiplayer:true, scifi:false, ozAlice:true, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"Dark fairy-tale = Oz/Alice adjacent. Leder Games pedigree (Root). Asymmetric co-op. On your wishlist. Watch for fiddliness reports.", status:"kickstarter" },
+  { name:"Horror on the Orient Express", designer:"Chaosium / CMON", year:2026, pillar:"adventurer",
+    desc:"Classic Call of Cthulhu campaign adapted to board game. Train-based horror across Europe.",
+    tags:{ cooperative:true, asymmetric:true, narrative:true, lowFiddle:false, easyTable:false, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"On your wishlist. Lovecraft narrative campaign. CMON production. Fiddliness unknown — watch reviews. Train setting is unique.", status:"kickstarter" },
+  { name:"Tales of Arabian Nights: 40th Anniversary", designer:"Z-Man / Eric Goldberg", year:2026, pillar:"adventurer",
+    desc:"Reimagined classic. Storybook adventure with branching encounters. New edition with modernized mechanics.",
+    tags:{ cooperative:false, asymmetric:false, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:true, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"On your wishlist. Narrative exploration benchmark. Original had chaos/randomness concerns — watch if 40th fixes agency issues.", status:"kickstarter" },
+  { name:"Watson & Holmes: The Lost Diaries", designer:"Space Cowboys", year:2026, pillar:"adventurer",
+    desc:"Cooperative deduction sequel. Investigate cases using tangible evidence and story context.",
+    tags:{ cooperative:true, asymmetric:false, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:false, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:true, noAuction:true },
+    fit:"On your wishlist. Detective Stories = your sweet spot. You own Watson & Holmes. Easy to table. Watch for whether it's competitive or cooperative this time.", status:"kickstarter" },
+  { name:"The Queen's Dilemma", designer:"Horrible Guild", year:2026, pillar:"adventurer",
+    desc:"Legacy negotiation game. Sequel to The King's Dilemma with campaign narrative and political intrigue.",
+    tags:{ cooperative:false, asymmetric:true, narrative:true, lowFiddle:true, easyTable:true, multiplayer:true, scifi:false, ozAlice:false, opportunityLuck:false, engineBuild:false, noApp:true, noDeckConstruction:true, noGrid:true, noSurvivalGrind:true, noPvP:false, noAuction:false },
+    fit:"On your wishlist. Legacy narrative with group decisions. King's Dilemma is highly rated. Has negotiation/voting — not auction but social pressure.", status:"kickstarter" },
+];
+
+function render() {
+  const activeFilters = [...document.querySelectorAll('.filter-toggle.active')].map(b => b.dataset.filter);
+  const filtered = games.filter(g => {
+    return activeFilters.every(f => g.tags[f]);
+  });
+  filtered.sort((a,b) => {
+    const scoreA = activeFilters.filter(f => a.tags[f]).length;
+    const scoreB = activeFilters.filter(f => b.tags[f]).length;
+    return scoreB - scoreA;
+  });
+  document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
+  document.getElementById('gameList').innerHTML = filtered.map(g => {
+    const matchCount = activeFilters.filter(f => g.tags[f]).length;
+    const matchPct = activeFilters.length ? matchCount / activeFilters.length : 1;
+    const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
+    const pillarTag = g.pillar === 'adventurer' ? '<span class="tag pillar-adv">Adventurer</span>' : '<span class="tag pillar-arch">Architect</span>';
+    const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
+    return `<div class="card ${matchClass}">
+      <div class="card-header"><span class="card-title">${g.name}</span><span class="card-creator">${g.designer} · ${g.year}</span></div>
+      <div class="card-desc">${g.desc}</div>
+      <div class="card-meta">${pillarTag}${statusTag}</div>
+      <div class="fit">${g.fit}</div>
+    </div>`;
+  }).join('');
+}
+
+document.querySelectorAll('.filter-toggle').forEach(btn => {
+  btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
+});
+render();
+  </script>
+</body>
+</html>
