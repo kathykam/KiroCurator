@@ -103,7 +103,7 @@ const games = [
       "engineBuild": false,
       "noApp": true,
       "noDeckConstruction": true,
-      "noGrid": false,
+      "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true
@@ -999,7 +999,7 @@ const games = [
       "engineBuild": false,
       "noApp": true,
       "noDeckConstruction": true,
-      "noGrid": false,
+      "noGrid": true,
       "noSurvivalGrind": true,
       "noPvP": true,
       "noAuction": true
@@ -1089,6 +1089,127 @@ const games = [
       "noAuction": true
     },
     "fit": "Rated 8. Architect benchmark. Sci-fi, opportunity luck from dice, always engaged on others' turns. Pure positive spiral.",
+    "status": "owned"
+  },
+  {
+    "name": "Sleeping Gods",
+    "bgg": 255984,
+    "designer": "Ryan Laukat",
+    "year": 2021,
+    "pillar": "adventurer",
+    "desc": "Open-world storybook campaign. Explore a vast map, make choices, fight enemies, discover narrative threads across 20+ hours.",
+    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": false, "multiplayer": false, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "YOUR rated 8.5. Massive narrative exploration. TTS-only for you — stays out on table, multiplayer is one-driver. Solo/duo game in practice.",
+    "status": "owned"
+  },
+  {
+    "name": "The 7th Citadel",
+    "bgg": 286063,
+    "designer": "Ludovic Roudy / Bruno Sautter",
+    "year": 2024,
+    "pillar": "adventurer",
+    "desc": "Open-world exploration card game. Sequel to 7th Continent with improved mechanics, less grind, more narrative.",
+    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": false, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": false, "noPvP": true, "noAuction": true },
+    "fit": "You own this. Improved over 7th Continent (your survival grind benchmark). Still has resource management — watch if it crosses into grind territory.",
+    "status": "owned"
+  },
+  {
+    "name": "Sleeping Gods: Primeval Peril",
+    "bgg": 362205,
+    "designer": "Ryan Laukat",
+    "year": 2023,
+    "pillar": "adventurer",
+    "desc": "Standalone Sleeping Gods sequel for 1-2 players. Tighter map, streamlined rules, prehistoric setting.",
+    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": false, "multiplayer": false, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "On your wishlist. Streamlined Sleeping Gods for 1-2p. Same TTS concern. Tighter experience than the original.",
+    "status": "available"
+  },
+  {
+    "name": "Robinson Crusoe: Adventures on the Cursed Island",
+    "bgg": 121921,
+    "designer": "Ignacy Trzewiczek",
+    "year": 2012,
+    "pillar": "adventurer",
+    "desc": "Cooperative survival adventure. Scenario-based, narrative events, tough decisions. Thematic and punishing.",
+    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": false, "easyTable": false, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": false, "noPvP": true, "noAuction": true },
+    "fit": "You own this (rated 8). Narrative scenarios are great. But survival grind + fiddly rules overhead. TTS-only for you.",
+    "status": "owned"
+  },
+  {
+    "name": "Sherlock Holmes Consulting Detective",
+    "bgg": 2511,
+    "designer": "Raymond Edwards",
+    "year": 1982,
+    "pillar": "adventurer",
+    "desc": "Cooperative deduction. Read newspapers, visit locations, solve cases using tangible evidence. Zero mechanics overhead.",
+    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": false, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "You own this (rated 8). Detective Stories benchmark. Zero setup, pure narrative investigation. The gold standard for easy-to-table narrative.",
+    "status": "owned"
+  },
+  {
+    "name": "Pandemic Legacy: Season 1",
+    "bgg": 161936,
+    "designer": "Rob Daviau / Matt Leacock",
+    "year": 2015,
+    "pillar": "adventurer",
+    "desc": "Legacy campaign cooperative. Evolving narrative, permanent changes, escalating stakes across 12-24 sessions.",
+    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "You own this (rated 7). Easy to table, narrative campaign, genuine co-op. Benchmark for legacy games.",
+    "status": "owned"
+  },
+  {
+    "name": "Forgotten Waters",
+    "bgg": 302723,
+    "designer": "Plaid Hat Games",
+    "year": 2020,
+    "pillar": "adventurer",
+    "desc": "Cooperative pirate adventure. App-assisted storytelling with branching narrative and humor. 3-7 players.",
+    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": false, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "You own this. Easy to table, narrative, genuine multiplayer. BUT uses an app for storytelling. Violates No App if strict.",
+    "status": "owned"
+  },
+  {
+    "name": "The Adventures of Robin Hood",
+    "bgg": 326494,
+    "designer": "Michael Menzel",
+    "year": 2021,
+    "pillar": "adventurer",
+    "desc": "Cooperative narrative adventure. Pop-up book map, hidden tokens, story-driven campaign. Family-weight.",
+    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "You own this (rated 7). Easy to table, narrative, no app. Family-weight — lighter than your usual but charming.",
+    "status": "owned"
+  },
+  {
+    "name": "ISS Vanguard",
+    "bgg": 325494,
+    "designer": "Awaken Realms",
+    "year": 2022,
+    "pillar": "adventurer",
+    "desc": "Sci-fi campaign. Explore planets, manage crew, narrative branching. Massive scope and setup.",
+    "tags": { "cooperative": true, "asymmetric": true, "narrative": true, "lowFiddle": false, "easyTable": false, "multiplayer": true, "scifi": true, "ozAlice": false, "opportunityLuck": true, "engineBuild": false, "noApp": true, "noDeckConstruction": false, "noGrid": true, "noSurvivalGrind": false, "noPvP": true, "noAuction": true },
+    "fit": "On your wishlist (rated 8). SCI-FI campaign. But TWICE as hard to table as AHLCG — massive setup, crew deck management, ship maintenance between missions.",
+    "status": "available"
+  },
+  {
+    "name": "Adrift: A Puzzletale",
+    "bgg": 364276,
+    "designer": "Wren Games",
+    "year": 2022,
+    "pillar": "adventurer",
+    "desc": "Cooperative narrative puzzle. Solve interconnected puzzles to progress a sci-fi story. Campaign in a box.",
+    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": true, "ozAlice": false, "opportunityLuck": false, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "You own this (rated 8). Sci-fi narrative puzzle. Easy to table. No randomness — pure puzzle solving. Unique in your collection.",
+    "status": "owned"
+  },
+  {
+    "name": "The Light in the Mist",
+    "bgg": 341519,
+    "designer": "Postmark Games",
+    "year": 2022,
+    "pillar": "adventurer",
+    "desc": "Narrative mystery in a box. Investigate a coastal town's secrets through documents, maps, and clues.",
+    "tags": { "cooperative": true, "asymmetric": false, "narrative": true, "lowFiddle": true, "easyTable": true, "multiplayer": true, "scifi": false, "ozAlice": false, "opportunityLuck": false, "engineBuild": false, "noApp": true, "noDeckConstruction": true, "noGrid": true, "noSurvivalGrind": true, "noPvP": true, "noAuction": true },
+    "fit": "You own this (rated 8.5). Detective Stories sweet spot. Easy to table, narrative investigation, no mechanics overhead.",
     "status": "owned"
   }
 ];
