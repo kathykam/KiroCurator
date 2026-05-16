@@ -5,10 +5,15 @@ h1 { font-size: 1.5rem; margin-bottom: 0.25rem; }
 .subtitle { font-size: 0.875rem; color: #6b7280; margin-bottom: 1.5rem; }
 
 /* Navigation */
-.site-nav { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e5e7eb; }
+.site-nav { display: flex; gap: 0.5rem; margin-bottom: 1.25rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e5e7eb; align-items: center; }
 .site-nav a { font-size: 0.8rem; text-decoration: none; color: #6b7280; padding: 0.3rem 0.6rem; border-radius: 0.25rem; }
 .site-nav a:hover { color: #1f2937; background: #f3f4f6; }
 .site-nav a.active { color: #4f46e5; font-weight: 600; }
+.nav-dropdown { position: relative; }
+.nav-dropdown > a::after { content: ' ▾'; font-size: 0.6rem; }
+.nav-dropdown-menu { display: none; position: absolute; top: 100%; left: 0; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.25rem; box-shadow: 0 2px 8px rgba(0,0,0,0.08); z-index: 10; min-width: 140px; padding: 0.25rem 0; }
+.nav-dropdown:hover .nav-dropdown-menu { display: block; }
+.nav-dropdown-menu a { display: block; padding: 0.4rem 0.75rem; font-size: 0.75rem; white-space: nowrap; }
 
 /* Cards */
 .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.75rem; }

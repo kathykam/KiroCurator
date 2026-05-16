@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🚀 Kickstarter Watchlist</title>
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .phase-badge { font-size: 0.65rem; padding: 0.15rem 0.5rem; border-radius: 1rem; font-weight: 500; }
+    .phase-late { background: #fef3c7; color: #92400e; }
+    .phase-shipping { background: #dcfce7; color: #166534; }
+    .phase-preorder { background: #dbeafe; color: #1e40af; }
+    .phase-upcoming { background: #f3e8ff; color: #6b21a8; }
+    .card-delivery { font-size: 0.7rem; color: #6b7280; }
+    .priority { border-left: 4px solid #4f46e5; background: #eef2ff; }
+    .profile-fit { border-left: 4px solid #4f46e5; background: #eef2ff; }
+    .filtered-out { opacity: 0.4; }
+  </style>
+</head>
+<body>
+  <nav class="site-nav">
+    <a href="index.html">🎲 Home</a>
+    <a href="collection.html">📚 Collection</a>
+    <div class="nav-dropdown">
+      <a href="arkham-lcg.html">🐙 Arkham</a>
+      <div class="nav-dropdown-menu">
+        <a href="arkham-lcg.html">LCG Collection</a>
+        <a href="arkham-official.html">Official Rankings</a>
+        <a href="arkham-homebrew.html">Homebrew Rankings</a>
+        <a href="arkham-ranked.html">Combined Rankings</a>
+      </div>
+    </div>
+    <a href="narrative-finder.html">🔍 Finder</a>
+    <a href="kickstarter.html" class="active">🚀 Watchlist</a>
+  </nav>
+  <h1>🚀 Kickstarter Watchlist</h1>
+  <div class="subtitle">Games to watch — late pledges, pre-orders, and upcoming crowdfunding that fit your profile</div>
+
+  <div class="filters">
+    <label style="font-size:0.8rem; display:flex; align-items:center; gap:0.4rem; cursor:pointer;">
+      <input type="checkbox" id="profileToggle" checked>
+      Profile Fit Only (hide games that violate my rules)
+    </label>
+  </div>
+
+  <div id="gameList"></div>
+
+  <script src="kickstarters.js"></script>
+  <script>
+function render() {
+  const profileOnly = document.getElementById('profileToggle').checked;
+  
+  const phaseOrder = {'Shipping Now':0, 'Late Pledge':1, 'Pre-order 2026':2, 'Crowdfunding 2026':3};
+  const sorted = [...kickstarters].sort((a,b) => (phaseOrder[a.phase]||9) - (phaseOrder[b.phase]||9));
+
+  document.getElementById('gameList').innerHTML = sorted.map(g => {
+    const t = g.tags;
+    const violations = [];
+    if (t.app) violations.push('app');
+    if (t.gridCombat) violations.push('grid combat');
+    if (t.survivalGrind) violations.push('survival grind');
+    if (t.deckConstruction) violations.push('deck construction');
+    if (t.solo) violations.push('solo only');
+    if (!t.mechanicalDepth) violations.push('no mechanical depth');
+    
+    if (profileOnly && violations.length > 0) return '';
+
+    const phaseClass = g.phase.includes('Shipping') ? 'phase-shipping' : g.phase.includes('Late') ? 'phase-late' : g.phase.includes('Pre-order') ? 'phase-preorder' : 'phase-upcoming';
+    const fitClass = violations.length === 0 ? 'profile-fit' : '';
+    const violationTag = violations.length ? `<span class="tag tag-red">⚠️ ${violations.join(', ')}</span>` : '';
+    const narrTag = `<span class="tag">📖 ${g.narrativeType}</span>`;
+
+    return `<div class="card ${fitClass}">
+      <div class="card-header">
+        <a class="card-title" href="${g.url || 'https://boardgamegeek.com/boardgame/' + g.bgg}" target="_blank">${g.name}</a>
+        <span class="card-creator">${g.designer} · ${g.players} · ${g.time}</span>
+      </div>
+      <div class="card-desc">${g.desc}</div>
+      <div class="card-meta">
+        <span class="phase-badge ${phaseClass}">${g.phase}</span>
+        <span class="card-delivery">Est. ${g.delivery}</span>
+        ${narrTag}${violationTag}
+      </div>
+      <div class="fit">${g.fit}</div>
+    </div>`;
+  }).join('');
+}
+
+document.getElementById('profileToggle').addEventListener('change', render);
+render();
+  </script>
+</body>
+</html>

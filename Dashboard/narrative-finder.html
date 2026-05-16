@@ -17,18 +17,26 @@
     .match-high { border-left: 4px solid #4f46e5; }
     .match-mid { border-left: 4px solid #ca8a04; }
     .match-low { border-left: 4px solid #d1d5db; }
+    @keyframes flash-new { from { background: #dbeafe; } to { background: #dbeafe; } }
+    .card-new { background: #dbeafe; }
     .tag-ks { background: #cffafe; color: #155e75; }
   </style>
 </head>
 <body>
-  <nav class="site-nav">
+    <nav class="site-nav">
     <a href="index.html">🎲 Home</a>
     <a href="collection.html">📚 Collection</a>
-    <a href="arkham-lcg.html">🐙 Arkham LCG</a>
-    <a href="arkham-official.html">📋 Official</a>
-    <a href="arkham-homebrew.html">🃏 Homebrew</a>
-    <a href="arkham-ranked.html">🏆 Combined</a>
+    <div class="nav-dropdown">
+      <a href="arkham-lcg.html">🐙 Arkham</a>
+      <div class="nav-dropdown-menu">
+        <a href="arkham-lcg.html">LCG Collection</a>
+        <a href="arkham-official.html">Official Rankings</a>
+        <a href="arkham-homebrew.html">Homebrew Rankings</a>
+        <a href="arkham-ranked.html">Combined Rankings</a>
+      </div>
+    </div>
     <a href="narrative-finder.html" class="active">🔍 Finder</a>
+    <a href="kickstarter.html">🚀 Watchlist</a>
   </nav>
   <h1>🔍 Narrative Game Finder</h1>
   <div class="subtitle">Find your next narrative game · Toggle filters + select narrative type</div>
@@ -39,8 +47,6 @@
     <button class="filter-toggle active" data-filter="asymmetric">Asymmetric Powers</button>
     <button class="filter-toggle active" data-filter="lowFiddle">Low Fiddliness (≤3)</button>
     <button class="filter-toggle active" data-filter="easyTable">Easy to Table</button>
-    <button class="filter-toggle" data-filter="scifi">Sci-Fi Theme</button>
-    <button class="filter-toggle" data-filter="ozAlice">Oz / Alice Theme</button>
     <button class="filter-toggle" data-filter="engineBuild">Engine Building</button>
     <button class="filter-toggle active" data-filter="mechanicalDepth">Mechanical Depth</button>
 
@@ -69,6 +75,7 @@
 
   <script src="games.js"></script>
   <script>
+let prevNames = new Set();
 function render() {
   const wantFilters = [...document.querySelectorAll('.filter-toggle.active:not(.negative)')].map(b => b.dataset.filter);
   const avoidFilters = [...document.querySelectorAll('.filter-toggle.negative.active')].map(b => b.dataset.filter);
@@ -80,24 +87,30 @@ function render() {
     return true;
   });
   filtered.sort((a,b) => {
+    const aNew = prevNames.size > 0 && !prevNames.has(a.name) ? 1 : 0;
+    const bNew = prevNames.size > 0 && !prevNames.has(b.name) ? 1 : 0;
+    if (bNew !== aNew) return bNew - aNew;
     const order = {campaign:4, scenario:3, vignette:2, emergent:1, none:0};
     return (order[b.narrativeType]||0) - (order[a.narrativeType]||0);
   });
+  const currNames = new Set(filtered.map(g => g.name));
   document.getElementById('gameCount').textContent = `${filtered.length} of ${games.length} games match your active filters`;
   document.getElementById('gameList').innerHTML = filtered.map(g => {
     const total = wantFilters.length + avoidFilters.length;
     const matchCount = wantFilters.filter(f => g.tags[f]).length + avoidFilters.filter(f => !g.tags[f]).length;
     const matchPct = total ? matchCount / total : 1;
     const matchClass = matchPct >= 0.9 ? 'match-high' : matchPct >= 0.7 ? 'match-mid' : 'match-low';
+    const isNew = prevNames.size > 0 && !prevNames.has(g.name);
     const statusTag = g.status === 'kickstarter' ? '<span class="tag tag-ks">Kickstarter 2026</span>' : g.status === 'owned' ? '<span class="tag tag-green">Owned</span>' : '<span class="tag">Available Now</span>';
     const narrTag = g.narrativeType !== 'none' ? `<span class="tag">📖 ${g.narrativeType}</span>` : '';
-    return `<div class="card ${matchClass}">
+    return `<div class="card ${matchClass}${isNew ? ' card-new' : ''}">
       <div class="card-header"><a class="card-title" href="https://boardgamegeek.com/boardgame/${g.bgg}" target="_blank">${g.name}</a><span class="card-creator">${g.designer} · ${g.year}</span></div>
       <div class="card-desc">${g.desc}</div>
       <div class="card-meta">${statusTag}${narrTag}</div>
       <div class="fit">${g.fit}</div>
     </div>`;
   }).join('');
+  prevNames = currNames;
 }
 document.querySelectorAll('.filter-toggle').forEach(btn => {
   btn.addEventListener('click', () => { btn.classList.toggle('active'); render(); });
