@@ -167,6 +167,16 @@ Non-negotiable requirements:
 
 ## Digital-Only Play Notes
 
+### Arkham Horror LCG — Card Pool Rules
+
+**Investigator cards available for deckbuilding:**
+- Core Set
+- The Dunwich Legacy (full cycle)
+- Edge of the Earth: Investigator Expansion
+- The Drowned City: Investigator Expansion
+
+**Do NOT pull cards from Investigator Starter Decks** (Harvey, Jacqueline, Nathaniel, Stella, Winifred). These are kept as pick-up-and-play prebuilt decks and should not be raided for parts.
+
 ### Board Game Arena
 
 Harmonies, Space Base, Toy Battle, Can't Stop, Wingspan, Burgle Bros., PARKS, The Crew: The Quest for Planet Nine
