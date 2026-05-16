@@ -5,6 +5,7 @@
 | "Be the Rater" | GameRater | `GamingProfile/collection-trimmed.csv` only |
 | "Be the Curator" | GameCurator | `GamingProfile/collection-trimmed.csv` + `GamingProfile/CurationGuide.md` + `GamingProfile/UserProfile.md` |
 | "Be the Recommender" | GameRecommendations | `GamingProfile/collection-trimmed.csv` + `GamingProfile/UserProfile.md` |
+| "Be the Rules Teacher" | GameRulesTeacher | `GamingProfile/collection-trimmed.csv` only |
 | "Update the collection" | — | Processes `UserData/collection.csv` → updates `GamingProfile/` and `Dashboard/collection.html` |
 
 ## Descriptions
@@ -14,6 +15,8 @@
 **Be the Curator** — Curates game night lists and advises on what to keep, buy, or sell. Considers your full profile and curation preferences.
 
 **Be the Recommender** — Finds new games and evaluates whether you'd enjoy them based on your preferences and rating history.
+
+**Be the Rules Teacher** — Teaches and clarifies board game rules. Explains setup, turn flow, and scoring with focus on commonly confused rules and edge cases.
 
 **Update the collection** — Drop a new `collection.csv` into `UserData/`, say the trigger, and the AI will trim it, update the data files, and rebuild the HTML viewer.
 
@@ -28,6 +31,7 @@
 | `arkham-homebrew.html` | Fan-made campaigns & scenarios ranked by profile fit |
 | `arkham-ranked.html` | Combined official + homebrew rankings |
 | `narrative-finder.html` | Narrative Game Finder — filter by preferences + narrative depth score (0-10) |
+| `faq-<game-slug>.html` | Per-game FAQ pages — rules clarifications added as questions are asked |
 
 **Mechanical Depth definition:** A game must have a resource you manage (time, actions, health, money, cards) that constrains decisions and forces tradeoffs. Pure puzzles (solve or don't) and random paragraph lookups (no meaningful decisions) are not games.
 

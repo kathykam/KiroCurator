@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FAQ — Arkham Horror: The Card Game</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.faq-entry { cursor: pointer; }
+.faq-entry .card-desc { display: none; }
+.faq-entry.open .card-desc { display: block; }
+.faq-entry .card-title::before { content: '▶ '; font-size: 0.75rem; }
+.faq-entry.open .card-title::before { content: '▼ '; }
+.category { margin-top: 2rem; }
+.category:first-of-type { margin-top: 1rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html">Home</a>
+  <a href="collection.html">Collection</a>
+  <div class="nav-dropdown">
+    <a href="#">Arkham ▾</a>
+    <div class="nav-dropdown-menu">
+      <a href="arkham-lcg.html">LCG Collection</a>
+      <a href="arkham-official.html">Official Ranked</a>
+      <a href="arkham-homebrew.html">Homebrew</a>
+      <a href="arkham-ranked.html">Combined</a>
+    </div>
+  </div>
+  <a href="faq-arkham-horror-lcg.html" class="active">FAQ: Arkham</a>
+</nav>
+
+<h1>📖 Arkham Horror: The Card Game — FAQ</h1>
+<p class="subtitle">Rules clarifications from play sessions. Click a question to expand.</p>
+
+<div class="category">
+<h2>General / Round Structure</h2>
+<!-- FAQ entries will be added here as questions are asked -->
+</div>
+
+<div class="category">
+<h2>Investigation Phase & Actions</h2>
+</div>
+
+<div class="category">
+<h2>Skill Tests</h2>
+</div>
+
+<div class="category">
+<h2>Enemies & Combat</h2>
+
+<div class="faq-entry card">
+  <div class="card-title">Do I need to Engage an Aloof enemy before using Parley on it?</div>
+  <div class="card-desc">
+    <p><strong>No.</strong> You can Parley directly with an Aloof enemy without engaging it first.</p>
+    <ul>
+      <li><strong>Aloof</strong> means the enemy doesn't automatically engage you. You must Engage it only if you want to <em>attack</em> (Fight) it.</li>
+      <li><strong>Parley</strong> only requires the enemy to be at your location — it does not require engagement.</li>
+      <li>This saves you 1 action compared to Engage → Parley.</li>
+    </ul>
+    <p><em>Relevant in: Murder at the Excelsior Hotel (suspects are Aloof with Parley abilities).</em></p>
+    <p><strong>Source:</strong> Rules Reference — "Aloof" keyword: "An investigator must use the engage action to engage an aloof enemy in order to attack it."</p>
+  </div>
+</div>
+
+</div>
+
+<div class="category">
+<h2>Mythos Phase & Doom</h2>
+</div>
+
+<div class="category">
+<h2>Timing & Keywords</h2>
+</div>
+
+<div class="category">
+<h2>Campaign & Deckbuilding</h2>
+</div>
+
+<div class="category">
+<h2>Edge Cases</h2>
+</div>
+
+<script>
+document.querySelectorAll('.faq-entry').forEach(el => {
+  el.addEventListener('click', () => el.classList.toggle('open'));
+});
+</script>
+</body>
+</html>

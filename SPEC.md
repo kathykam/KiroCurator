@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This repo contains 3 AI personas for board game collection management. The user activates a persona with a trigger phrase, and the AI adopts that role using only the specified files.
+This repo contains 4 AI personas for board game collection management. The user activates a persona with a trigger phrase, and the AI adopts that role using only the specified files.
 
 ## Trigger Phrases
 
@@ -11,6 +11,7 @@ This repo contains 3 AI personas for board game collection management. The user 
 | "Be the Rater" | `Prompts/GameRater.txt` | `GamingProfile/collection-trimmed.csv` |
 | "Be the Curator" | `Prompts/GameCurator.txt` | `GamingProfile/collection-trimmed.csv`, `GamingProfile/CurationGuide.md`, `GamingProfile/UserProfile.md` |
 | "Be the Recommender" | `Prompts/GameRecommendations.txt` | `GamingProfile/collection-trimmed.csv`, `GamingProfile/UserProfile.md` |
+| "Be the Rules Teacher" | `Prompts/GameRulesTeacher.txt` | `GamingProfile/collection-trimmed.csv` |
 
 ## Actions
 
@@ -35,6 +36,7 @@ The HTML file is a self-contained sortable/filterable collection viewer — no s
    - Rater: `**[🎯 Rater]**`
    - Curator: `**[📦 Curator]**`
    - Recommender: `**[🃏 Recommender]**`
+   - Rules Teacher: `**[📖 Rules Teacher]**`
    - No persona active: no prefix
 
 ## File Structure
@@ -48,8 +50,10 @@ Prompts/
   GameRater.txt           — Rater persona prompt
   GameCurator.txt         — Curator persona prompt
   GameRecommendations.txt — Recommender persona prompt
+  GameRulesTeacher.txt    — Rules Teacher persona prompt
 Output/
   recommendation.md       — Long-form output from Curator/Recommender personas
+RulesReference/           — Downloaded/summarized rulebooks for Rules Teacher reference
 UserData/
   collection.csv          — Full raw BGG export (drop zone for updates)
 Dashboard/
@@ -57,6 +61,7 @@ Dashboard/
   collection.html         — Self-contained HTML viewer (trimmed CSV embedded)
   arkham-lcg.html         — Arkham Horror LCG collection dashboard
   arkham-homebrew.html    — Arkham Horror homebrew campaigns
+  faq-<game-slug>.html    — Per-game FAQ pages (created by Rules Teacher)
 ```
 
 ## Key Data Rules (from prompts)
@@ -97,3 +102,13 @@ Items below Mechanics 7 are excluded from the page.
 
 - Narrative below 6/10 = excluded (not worth the play)
 - Fiddliness is displayed but not used for sorting — it's a warning flag only
+
+## FAQ Pages (`Dashboard/faq-<game-slug>.html`)
+
+The Rules Teacher persona generates per-game FAQ pages as questions are asked.
+
+- **Naming:** `faq-<game-slug>.html` (e.g., `faq-arkham-horror-lcg.html`)
+- **Structure:** Collapsible Q&A entries grouped by category (Setup, Turn Flow, Combat, Scoring, Timing, Edge Cases, etc.)
+- **Styling:** Uses shared `styles.css` with minimal inline overrides for collapsible behavior.
+- **Behavior:** After answering a rules question, the Rules Teacher appends the Q&A to the appropriate category on the game's FAQ page. If the page doesn't exist, create it.
+- **Index link:** New FAQ pages are linked from `Dashboard/index.html`.
