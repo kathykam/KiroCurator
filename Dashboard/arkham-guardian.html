@@ -6,17 +6,20 @@
 <title>Guardian Investigators — Arkham Horror LCG</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-.investigator { margin-bottom: 2.5rem; }
-.stats { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.5rem 0; font-size: 0.85rem; }
-.stat { background: #dbeafe; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-weight: 600; color: #1e40af; }
-.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
-.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
-.tip { margin: 0.5rem 0; padding-left: 1rem; border-left: 2px solid #3b82f6; font-size: 0.875rem; }
-ul { margin: 0.5rem 0 0.5rem 1.5rem; font-size: 0.875rem; }
-li { margin-bottom: 0.3rem; }
+.investigator { margin-bottom: 3rem; }
+.investigator h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0 1rem; font-size: 0.85rem; }
+.stat { background: #dbeafe; padding: 0.3rem 0.6rem; border-radius: 0.25rem; font-weight: 600; color: #1e40af; }
+.ability-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #3b82f6; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
 h1 { color: #1e40af; }
 h2 { border-bottom-color: #3b82f6; color: #1e40af; }
-h3 { color: #2563eb; }
+h3 { color: #2563eb; font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -60,9 +63,11 @@ h3 { color: #2563eb; }
   <span class="stat">🧠 6 Sanity</span>
 </div>
 
-<p><strong>Ability:</strong> After you become engaged with an enemy → gain 1 resource.</p>
-<p><strong>Elder Sign:</strong> +1. If attack succeeds, deal +1 damage.</p>
-<p><strong>Deckbuilding:</strong> Guardian 0–5, Neutral 0–5, up to 5 other level 0 cards from any class.</p>
+<div class="ability-box">
+  <strong>Ability:</strong> After you become engaged with an enemy → gain 1 resource.<br>
+  <strong>Elder Sign:</strong> +1. If attack succeeds, deal +1 damage.<br>
+  <strong>Deckbuilding:</strong> Guardian 0–5, Neutral 0–5, up to 5 other level 0 cards from any class.
+</div>
 
 <div class="sig-card">
   <strong>Zoey's Cross</strong> (Accessory) — After an enemy engages you, exhaust + spend 1 resource: deal 1 damage to that enemy. Essentially free chip damage every time something comes at you.
@@ -105,9 +110,11 @@ h3 { color: #2563eb; }
   <span class="stat">🧠 6 Sanity</span>
 </div>
 
-<p><strong>Ability:</strong> When you deal damage to an enemy by an event or a fight ability on an event → deal 1 additional damage. (Limit once per phase.)</p>
-<p><strong>Elder Sign:</strong> +1. If attack succeeds, return an event from your discard pile to your hand.</p>
-<p><strong>Deckbuilding:</strong> Guardian 0–5, Neutral 0–5 only (no off-class splash).</p>
+<div class="ability-box">
+  <strong>Ability:</strong> When you deal damage to an enemy by an event or a fight ability on an event → deal 1 additional damage. (Limit once per phase.)<br>
+  <strong>Elder Sign:</strong> +1. If attack succeeds, return an event from your discard pile to your hand.<br>
+  <strong>Deckbuilding:</strong> Guardian 0–5, Neutral 0–5 only (no off-class splash).
+</div>
 
 <div class="sig-card">
   <strong>Randall Cho</strong> (Ally) — When he enters play: heal 3 damage OR search your deck/discard for a Weapon asset and play it (paying its cost). A flexible tutor that gets your key weapon out.

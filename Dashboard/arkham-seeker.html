@@ -6,21 +6,23 @@
 <title>Seeker Investigators — Arkham Horror LCG</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-.investigator { margin-bottom: 2.5rem; }
-.stats { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.5rem 0; font-size: 0.85rem; }
-.stat { background: #fef9c3; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-weight: 600; color: #854d0e; }
-.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
-.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
-.tip { margin: 0.5rem 0; padding-left: 1rem; border-left: 2px solid #ca8a04; font-size: 0.875rem; }
-.deck-section { background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
-.deck-section h4 { margin-bottom: 0.5rem; font-size: 0.95rem; color: #854d0e; }
-.deck-list { columns: 2; font-size: 0.8rem; }
-.deck-list li { margin-bottom: 0.2rem; }
-ul { margin: 0.5rem 0 0.5rem 1.5rem; font-size: 0.875rem; }
-li { margin-bottom: 0.3rem; }
+.investigator { margin-bottom: 3rem; }
+.stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0 1rem; font-size: 0.85rem; }
+.stat { background: #fef9c3; padding: 0.3rem 0.6rem; border-radius: 0.25rem; font-weight: 600; color: #854d0e; }
+.ability-box { background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #ca8a04; background: #fffbeb; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+.deck-section { background: #fffbeb; border: 1px solid #fde68a; border-radius: 0.5rem; padding: 1.25rem; margin: 1.5rem 0; }
+.deck-section h4 { margin-bottom: 0.75rem; font-size: 0.95rem; color: #854d0e; }
+.deck-list { columns: 2; font-size: 0.8rem; line-height: 1.8; }
+.deck-list li { margin-bottom: 0.25rem; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
 h1 { color: #854d0e; }
 h2 { border-bottom-color: #ca8a04; color: #854d0e; }
-h3 { color: #a16207; }
+h3 { color: #a16207; font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -64,9 +66,11 @@ h3 { color: #a16207; }
   <span class="stat">🧠 9 Sanity</span>
 </div>
 
-<p><strong>Ability:</strong> After you succeed at a skill test by 2 or more while investigating → discover 1 clue at your location. (Limit once per round — Taboo.)</p>
-<p><strong>Elder Sign:</strong> +2. You may instead choose to automatically fail to draw 3 cards.</p>
-<p><strong>Deckbuilding:</strong> Seeker 0–5, Neutral 0–5, up to 5 other level 0 cards from any class. <strong>No Fortune cards.</strong></p>
+<div class="ability-box">
+  <strong>Ability:</strong> After you succeed at a skill test by 2 or more while investigating → discover 1 clue at your location. (Limit once per round — Taboo.)<br>
+  <strong>Elder Sign:</strong> +2. You may instead choose to automatically fail to draw 3 cards.<br>
+  <strong>Deckbuilding:</strong> Seeker 0–5, Neutral 0–5, up to 5 other level 0 cards from any class. <strong>No Fortune cards.</strong>
+</div>
 
 <div class="sig-card">
   <strong>Search for the Truth</strong> (Event, cost 1) — Discover 1 clue at your location for each card in your hand. Massive clue burst when your hand is full.

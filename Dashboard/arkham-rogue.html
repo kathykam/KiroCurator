@@ -6,21 +6,23 @@
 <title>Rogue Investigators — Arkham Horror LCG</title>
 <link rel="stylesheet" href="styles.css">
 <style>
-.investigator { margin-bottom: 2.5rem; }
-.stats { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.5rem 0; font-size: 0.85rem; }
-.stat { background: #dcfce7; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-weight: 600; color: #166534; }
-.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
-.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
-.tip { margin: 0.5rem 0; padding-left: 1rem; border-left: 2px solid #16a34a; font-size: 0.875rem; }
-ul { margin: 0.5rem 0 0.5rem 1.5rem; font-size: 0.875rem; }
-li { margin-bottom: 0.3rem; }
-.deck-section { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
-.deck-section h4 { margin-bottom: 0.5rem; font-size: 0.95rem; color: #166534; }
-.deck-list { columns: 2; font-size: 0.8rem; }
-.deck-list li { margin-bottom: 0.2rem; }
+.investigator { margin-bottom: 3rem; }
+.stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0 1rem; font-size: 0.85rem; }
+.stat { background: #dcfce7; padding: 0.3rem 0.6rem; border-radius: 0.25rem; font-weight: 600; color: #166534; }
+.ability-box { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #16a34a; background: #f0fdf4; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+.deck-section { background: #f0fdf4; border: 1px solid #bbf7d0; border-radius: 0.5rem; padding: 1.25rem; margin: 1.5rem 0; }
+.deck-section h4 { margin-bottom: 0.75rem; font-size: 0.95rem; color: #166534; }
+.deck-list { columns: 2; font-size: 0.8rem; line-height: 1.8; }
+.deck-list li { margin-bottom: 0.25rem; }
 h1 { color: #166534; }
 h2 { border-bottom-color: #16a34a; color: #166534; }
-h3 { color: #15803d; }
+h3 { color: #15803d; font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -64,9 +66,11 @@ h3 { color: #15803d; }
   <span class="stat">🧠 7 Sanity</span>
 </div>
 
-<p><strong>Ability:</strong> Collect 1 additional resource during each upkeep phase (2 total instead of 1).</p>
-<p><strong>Elder Sign:</strong> +1 for each resource you have.</p>
-<p><strong>Deckbuilding:</strong> Rogue 0–5, Neutral 0–5, up to 5 other level 0 cards from any class.</p>
+<div class="ability-box">
+  <strong>Ability:</strong> Collect 1 additional resource during each upkeep phase (2 total instead of 1).<br>
+  <strong>Elder Sign:</strong> +1 for each resource you have.<br>
+  <strong>Deckbuilding:</strong> Rogue 0–5, Neutral 0–5, up to 5 other level 0 cards from any class.
+</div>
 
 <div class="sig-card">
   <strong>Jenny's Twin .45s</strong> (Asset, 2 hand slots, uses X ammo) — Spend 1 ammo: Fight. +2 combat, +1 damage. Loaded with ammo equal to your resources when played. A powerhouse weapon that scales with your wealth.
