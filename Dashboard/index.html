@@ -8,63 +8,61 @@
   <style>
     body { display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; padding: 2rem; }
     h1 { font-size: 1.75rem; margin-bottom: 0.5rem; }
-    .menu { display: grid; gap: 1rem; width: 100%; max-width: 600px; grid-template-columns: 1fr 1fr; }
-    .menu a { display: block; padding: 1.25rem 1.5rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.75rem; text-decoration: none; color: #1f2937; transition: all 0.15s; }
-    .menu a:hover { border-color: #a5b4fc; box-shadow: 0 2px 8px rgba(79,70,229,0.1); transform: translateY(-1px); }
-    .menu .icon { font-size: 1.5rem; margin-bottom: 0.25rem; }
-    .menu .label { font-weight: 600; font-size: 1rem; }
-    .menu .desc { font-size: 0.8rem; color: #6b7280; margin-top: 0.25rem; }
+    .columns { display: grid; gap: 1.5rem; width: 100%; max-width: 700px; grid-template-columns: 1fr 1fr; }
+    .column h2 { font-size: 0.85rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 0.75rem; padding-bottom: 0.4rem; border-bottom: 1px solid #e5e7eb; }
+    .column a { display: block; padding: 0.75rem 1rem; background: #fff; border: 1px solid #e5e7eb; border-radius: 0.5rem; text-decoration: none; color: #1f2937; transition: all 0.15s; margin-bottom: 0.5rem; }
+    .column a:hover { border-color: #a5b4fc; box-shadow: 0 2px 8px rgba(79,70,229,0.1); transform: translateY(-1px); }
+    .column .icon { display: inline; font-size: 1rem; margin-right: 0.4rem; }
+    .column .label { font-weight: 600; font-size: 0.9rem; display: inline; }
+    .column .desc { font-size: 0.75rem; color: #6b7280; margin-top: 0.2rem; }
   </style>
 </head>
 <body>
   <h1>🎲 KiroGames</h1>
   <p class="subtitle">Board game collection tools</p>
-  <nav class="menu">
-    <a href="collection.html">
-      <div class="icon">📚</div>
-      <div class="label">My Collection</div>
-      <div class="desc">Sortable, filterable view of all games</div>
-    </a>
-    <a href="arkham-lcg.html">
-      <div class="icon">🐙</div>
-      <div class="label">Arkham Horror LCG</div>
-      <div class="desc">Campaign collection dashboard</div>
-    </a>
-    <a href="arkham-official.html">
-      <div class="icon">📋</div>
-      <div class="label">Arkham Official</div>
-      <div class="desc">Official campaigns &amp; standalones ranked</div>
-    </a>
-    <a href="arkham-homebrew.html">
-      <div class="icon">🃏</div>
-      <div class="label">Arkham Homebrew</div>
-      <div class="desc">Fan-made campaigns &amp; scenarios</div>
-    </a>
-    <a href="arkham-ranked.html">
-      <div class="icon">🏆</div>
-      <div class="label">Arkham Combined</div>
-      <div class="desc">All scenarios ranked together</div>
-    </a>
-    <a href="narrative-finder.html">
-      <div class="icon">🔍</div>
-      <div class="label">Narrative Finder</div>
-      <div class="desc">Filter narrative games by preferences</div>
-    </a>
-    <a href="kickstarter.html">
-      <div class="icon">🚀</div>
-      <div class="label">Kickstarter Watchlist</div>
-      <div class="desc">Upcoming games to watch</div>
-    </a>
-    <a href="faq-arkham-horror-lcg.html">
-      <div class="icon">📖</div>
-      <div class="label">Game FAQs</div>
-      <div class="desc">Per-game rules clarifications &amp; edge cases</div>
-    </a>
-    <a href="arkham-guardian.html">
-      <div class="icon">🔰</div>
-      <div class="label">Investigators</div>
-      <div class="desc">Per-class tips for your favourite investigators</div>
-    </a>
-  </nav>
+  <div class="columns">
+    <div class="column">
+      <h2>🐙 Arkham Horror LCG</h2>
+      <a href="arkham-lcg.html">
+        <span class="icon">📦</span><span class="label">LCG Collection</span>
+        <div class="desc">Campaign collection dashboard</div>
+      </a>
+      <a href="arkham-official.html">
+        <span class="icon">📋</span><span class="label">Official Rankings</span>
+        <div class="desc">Official campaigns &amp; standalones ranked</div>
+      </a>
+      <a href="arkham-homebrew.html">
+        <span class="icon">🃏</span><span class="label">Homebrew Rankings</span>
+        <div class="desc">Fan-made campaigns &amp; scenarios</div>
+      </a>
+      <a href="arkham-ranked.html">
+        <span class="icon">🏆</span><span class="label">Combined Rankings</span>
+        <div class="desc">All scenarios ranked together</div>
+      </a>
+      <a href="arkham-guardian.html">
+        <span class="icon">🔰</span><span class="label">Investigators</span>
+        <div class="desc">Per-class tips for your favourite investigators</div>
+      </a>
+      <a href="faq-arkham-horror-lcg.html">
+        <span class="icon">📖</span><span class="label">FAQ</span>
+        <div class="desc">Rules clarifications &amp; edge cases</div>
+      </a>
+    </div>
+    <div class="column">
+      <h2>🎲 General</h2>
+      <a href="collection.html">
+        <span class="icon">📚</span><span class="label">My Collection</span>
+        <div class="desc">Sortable, filterable view of all games</div>
+      </a>
+      <a href="narrative-finder.html">
+        <span class="icon">🔍</span><span class="label">Narrative Finder</span>
+        <div class="desc">Filter narrative games by preferences</div>
+      </a>
+      <a href="kickstarter.html">
+        <span class="icon">🚀</span><span class="label">Kickstarter Watchlist</span>
+        <div class="desc">Upcoming games to watch</div>
+      </a>
+    </div>
+  </div>
 </body>
 </html>
