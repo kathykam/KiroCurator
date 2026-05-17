@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Starter Deck Tips — Arkham Horror LCG</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.investigator { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e7eb; }
+.investigator:last-child { border-bottom: none; }
+.stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0 1rem; font-size: 0.85rem; }
+.stat { padding: 0.3rem 0.6rem; border-radius: 0.25rem; font-weight: 600; }
+.stat-guardian { background: #dbeafe; color: #1e40af; }
+.stat-seeker { background: #fef9c3; color: #854d0e; }
+.stat-rogue { background: #dcfce7; color: #166534; }
+.stat-mystic { background: #f3e8ff; color: #6b21a8; }
+.stat-survivor { background: #fee2e2; color: #991b1b; }
+.ability-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #6366f1; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h2 { font-size: 1.2rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #374151; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
+.class-label { font-size: 0.7rem; padding: 0.15rem 0.4rem; border-radius: 0.2rem; font-weight: 600; vertical-align: middle; margin-left: 0.5rem; }
+.label-guardian { background: #dbeafe; color: #1e40af; }
+.label-seeker { background: #fef9c3; color: #854d0e; }
+.label-rogue { background: #dcfce7; color: #166534; }
+.label-mystic { background: #f3e8ff; color: #6b21a8; }
+.label-survivor { background: #fee2e2; color: #991b1b; }
+.standalone-section { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1.25rem; margin: 2rem 0; }
+.standalone-section h2 { margin-top: 0; }
+table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
+th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; }
+td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; vertical-align: top; }
+td:first-child { width: 10%; font-weight: 600; }
+td:nth-child(2) { width: 25%; }
+td:nth-child(3) { width: 25%; }
+td:nth-child(4) { width: 40%; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html">🎲 Home</a>
+  <a href="collection.html">📚 Collection</a>
+  <div class="nav-dropdown">
+    <a href="arkham-lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="arkham-lcg.html">LCG Collection</a>
+      <a href="arkham-official.html">Official Rankings</a>
+      <a href="arkham-homebrew.html">Homebrew Rankings</a>
+      <a href="arkham-ranked.html">Combined Rankings</a>
+      <a href="faq-arkham-horror-lcg.html">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="arkham-investigators.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="arkham-guardian.html">Guardian</a>
+      <a href="arkham-seeker.html">Seeker</a>
+      <a href="arkham-rogue.html">Rogue</a>
+      <a href="arkham-mystic.html">Mystic</a>
+      <a href="arkham-starters.html" class="active">Starter Decks</a>
+    </div>
+  </div>
+  <a href="narrative-finder.html">🔍 Finder</a>
+  <a href="kickstarter.html">🚀 Watchlist</a>
+</nav>
+
+<h1>📘 Starter Deck Tips</h1>
+<p class="subtitle">Tips for playing the 5 investigator starter decks out of the box + standalone upgrade paths (9 XP)</p>
+
+<!-- NATHANIEL CHO -->
+<div class="investigator">
+<h2>Nathaniel Cho — The Boxer <span class="class-label label-guardian">Guardian</span></h2>
+<div class="stats">
+  <span class="stat stat-guardian">⚡ Will 3</span>
+  <span class="stat stat-guardian">📖 Int 2</span>
+  <span class="stat stat-guardian">⚔️ Com 5</span>
+  <span class="stat stat-guardian">🏃 Agi 2</span>
+  <span class="stat stat-guardian">❤️ 9</span>
+  <span class="stat stat-guardian">🧠 6</span>
+</div>
+<div class="ability-box">
+  <strong>Ability:</strong> When you deal damage via an event or fight ability on an event → +1 damage. (Once per phase.)<br>
+  <strong>Elder Sign:</strong> +1. If attack succeeds, return an event from discard to hand.<br>
+  <strong>Sig:</strong> Randall Cho (ally — heal 3 or tutor a Weapon). <strong>Weakness:</strong> Tommy Malloy (hunter, damage reduced to 1).
+</div>
+<h3>How to Play</h3>
+<ul>
+  <li><strong>Fight with events, not just weapons.</strong> One-Two Punch, Counterpunch, Monster Slayer — each triggers +1 damage from your ability.</li>
+  <li><strong>Boxing Gloves are your engine.</strong> Defeat enemy with fight event → search for next Spirit event. Chain kills together.</li>
+  <li><strong>Mulligan for Randall Cho.</strong> He tutors Boxing Gloves or .45 Automatic directly into play.</li>
+  <li><strong>Counterpunch is free damage.</strong> Fast — play when an enemy attacks you. No action cost + triggers your +1 damage.</li>
+  <li><strong>Once per phase, not per round.</strong> You can get +1 damage in Mythos (Counterpunch on attack) AND Investigation (One-Two Punch on your turn).</li>
+  <li><strong>Tommy Malloy:</strong> Don't waste events on him (damage reduced to 1 anyway). Basic fight actions or just evade and ignore.</li>
+  <li><strong>Weakness: low intellect (2).</strong> Rely on Evidence! and Scene of the Crime for clues, or let teammates investigate.</li>
+</ul>
+</div>
+
+<!-- HARVEY WALTERS -->
+<div class="investigator">
+<h2>Harvey Walters — The Professor <span class="class-label label-seeker">Seeker</span></h2>
+<div class="stats">
+  <span class="stat stat-seeker">⚡ Will 4</span>
+  <span class="stat stat-seeker">📖 Int 5</span>
+  <span class="stat stat-seeker">⚔️ Com 1</span>
+  <span class="stat stat-seeker">🏃 Agi 2</span>
+  <span class="stat stat-seeker">❤️ 7</span>
+  <span class="stat stat-seeker">🧠 8</span>
+</div>
+<div class="ability-box">
+  <strong>Ability:</strong> After an investigator at your location draws cards during investigation phase → draw 1 more. (Once per round.)<br>
+  <strong>Elder Sign:</strong> +1. Draw 1 card.<br>
+  <strong>Sig:</strong> Vault of Knowledge (+2 max hand size, exhaust after investigate to let another investigator draw). <strong>Weakness:</strong> Thrice-Damned Curiosity (1 damage per 3 cards in hand).
+</div>
+<h3>How to Play</h3>
+<ul>
+  <li><strong>Your hand IS your power.</strong> Harvey wants a massive hand — more cards = more commits, more options. Vault of Knowledge raises your max to 10.</li>
+  <li><strong>Intellect 5 is elite.</strong> You investigate at 5 base, making most locations trivial. Stack Magnifying Glass for overkill.</li>
+  <li><strong>Your ability triggers off ANY card draw during investigation phase.</strong> Upkeep draw doesn't count, but Perception's "draw on success" does. Coordinate with teammates.</li>
+  <li><strong>Combat 1 is the worst in the game.</strong> You CANNOT fight. Bring Disc of Itzamna, "I've got a plan!", or rely entirely on teammates for enemies.</li>
+  <li><strong>Thrice-Damned Curiosity punishes big hands.</strong> With 9 cards = 3 damage. Play cards aggressively before it shows up, or keep hand at 5-6 to limit damage to 1-2.</li>
+  <li><strong>Vault of Knowledge helps teammates.</strong> After you investigate, exhaust it to let another investigator at your location draw. Great support card.</li>
+</ul>
+</div>
+
+<!-- WINIFRED HABBAMOCK -->
+<div class="investigator">
+<h2>Winifred Habbamock — The Aviatrix <span class="class-label label-rogue">Rogue</span></h2>
+<div class="stats">
+  <span class="stat stat-rogue">⚡ Will 1</span>
+  <span class="stat stat-rogue">📖 Int 3</span>
+  <span class="stat stat-rogue">⚔️ Com 3</span>
+  <span class="stat stat-rogue">🏃 Agi 5</span>
+  <span class="stat stat-rogue">❤️ 8</span>
+  <span class="stat stat-rogue">🧠 7</span>
+</div>
+<div class="ability-box">
+  <strong>Ability:</strong> If 2 different non-weakness cards committed to a test → draw 1 card. (Once per test.)<br>
+  <strong>Elder Sign:</strong> +1. After test ends, for every 2 you succeeded by, return a committed card to hand.<br>
+  <strong>Sig:</strong> Anything You Can Do, Better (commit-only skill, wild icons). <strong>Weakness:</strong> Arrogance (must commit, SUBTRACTS icons).
+</div>
+<h3>How to Play</h3>
+<ul>
+  <li><strong>Commit 2 cards to every test.</strong> This triggers your draw ability — you spend 2 cards but draw 1 back. Net cost: 1 card for a massive skill boost.</li>
+  <li><strong>Agility 5 makes you the best evader in the game.</strong> Evade everything. Don't fight unless you have to.</li>
+  <li><strong>Over-succeed to get cards back.</strong> Elder Sign returns committed cards if you succeed by 2+. With agility 5 + 2 committed cards, you often succeed by 4+ and get both back.</li>
+  <li><strong>Willpower 1 is catastrophic.</strong> Mythos treacheries will destroy you. Pack Manual Dexterity and Unexpected Courage to commit to willpower tests, or accept you'll fail them.</li>
+  <li><strong>Arrogance is brutal.</strong> You MUST commit it, and it subtracts icons. Time it on a test you're already crushing (agility 5 + other commits) so the subtraction doesn't matter.</li>
+  <li><strong>Anything You Can Do, Better</strong> has wild icons and is perfect for triggering your 2-card commit ability alongside another card.</li>
+  <li><strong>Pickpocketing + Lockpicks</strong> are key starter deck cards — investigate with agility instead of intellect, and draw cards on over-success.</li>
+</ul>
+</div>
+
+<!-- JACQUELINE FINE -->
+<div class="investigator">
+<h2>Jacqueline Fine — The Psychic <span class="class-label label-mystic">Mystic</span></h2>
+<div class="stats">
+  <span class="stat stat-mystic">⚡ Will 5</span>
+  <span class="stat stat-mystic">📖 Int 3</span>
+  <span class="stat stat-mystic">⚔️ Com 2</span>
+  <span class="stat stat-mystic">🏃 Agi 2</span>
+  <span class="stat stat-mystic">❤️ 6</span>
+  <span class="stat stat-mystic">🧠 9</span>
+</div>
+<div class="ability-box">
+  <strong>Ability:</strong> When an investigator at your location reveals chaos token(s) → reveal 2 additional. Cancel 2 non-auto-fail tokens OR 1 auto-fail. (Once per round.)<br>
+  <strong>Elder Sign:</strong> +1. If cancelled/ignored, draw 1 card.<br>
+  <strong>Sig:</strong> Arbiter of Fates (2nd use of ability per round). <strong>Weakness:</strong> Dark Future (forced token reveal each turn until Elder Sign appears).
+</div>
+<h3>How to Play</h3>
+<ul>
+  <li><strong>Use your ability on the most important test each round.</strong> Don't waste it on easy tests — save it for critical investigate/fight actions or nasty treacheries.</li>
+  <li><strong>Works for teammates at your location.</strong> Position yourself next to whoever is taking the hardest test this round.</li>
+  <li><strong>Willpower 5 + spells = fight and investigate.</strong> Shrivelling and Rite of Seeking both use willpower. Jacqueline is a flex investigator.</li>
+  <li><strong>Arbiter of Fates doubles your ability.</strong> Get it out early — 2 manipulated tests per round is incredibly powerful.</li>
+  <li><strong>Dark Future locks your ability down.</strong> While it's out, you're spending your ability trying to clear it (need Elder Sign to appear). Play aggressively to end scenarios before it stalls you.</li>
+  <li><strong>Crystal Pendulum</strong> (in starter deck) rewards you for naming the right token type — pairs perfectly with seeing 3 tokens.</li>
+  <li><strong>If auto-fail appears with 2 bad tokens:</strong> Cancel the auto-fail but take the combined modifier of the other 2. Sometimes -7 is better than auto-fail (if you're at +8).</li>
+</ul>
+</div>
+
+<!-- STELLA CLARK -->
+<div class="investigator">
+<h2>Stella Clark — The Letter Carrier <span class="class-label label-survivor">Survivor</span></h2>
+<div class="stats">
+  <span class="stat stat-survivor">⚡ Will 3</span>
+  <span class="stat stat-survivor">📖 Int 2</span>
+  <span class="stat stat-survivor">⚔️ Com 3</span>
+  <span class="stat stat-survivor">🏃 Agi 4</span>
+  <span class="stat stat-survivor">❤️ 8</span>
+  <span class="stat stat-survivor">🧠 8</span>
+</div>
+<div class="ability-box">
+  <strong>Ability:</strong> After you fail a skill test → take 1 additional action this round. (Once per round.)<br>
+  <strong>Elder Sign:</strong> +1. You may auto-fail instead to heal 1 damage and 1 horror.<br>
+  <strong>Sig:</strong> Neither Rain nor Snow ×3 (if test fails, cancel ALL effects of failure). <strong>Weakness:</strong> Called by the Mists (difficulty 4+ tests trigger bad effects).
+</div>
+<h3>How to Play</h3>
+<ul>
+  <li><strong>Failing is your superpower.</strong> Stella WANTS to fail one test per round — it gives her a 4th action. Plan one "throwaway" test each turn.</li>
+  <li><strong>Neither Rain nor Snow makes failure free.</strong> Commit it to a test you expect to fail → cancel all negative effects → still get your bonus action. Pure upside.</li>
+  <li><strong>"Look what I found!" triggers on failure.</strong> Fail an investigate test → discover 2 clues anyway. Stella's main clue tool.</li>
+  <li><strong>Take Heart on a failed test = draw 2 + gain 2 resources.</strong> Fail intentionally with Take Heart committed for massive value.</li>
+  <li><strong>Don't fail EVERY test.</strong> You still need to succeed at things. Fail one easy test for the bonus action, then use that action productively.</li>
+  <li><strong>Called by the Mists punishes difficulty 4+ tests.</strong> Avoid high-difficulty tests when it's out, or clear it quickly. Stella's low stats mean most tests are already hard.</li>
+  <li><strong>Survivor cards reward failure:</strong> Lucky!, Live and Learn, Oops! — all trigger on or modify failed tests. Lean into the fail-forward archetype.</li>
+  <li><strong>Elder Sign choice:</strong> Auto-fail to heal is great when you're wounded and the test doesn't matter. Free healing + bonus action from the failure.</li>
+</ul>
+</div>
+
+<!-- STANDALONE UPGRADE PATHS -->
+<div class="standalone-section">
+<h2>🎯 Standalone Upgrade Paths (9 XP)</h2>
+<p style="font-size:0.85rem; color:#6b7280; margin-bottom:1rem;">Standalone mode gives 9 XP. "→ Lv X" means upgrade in place (pay XP difference). All verified against actual starter decklists. <strong>All added cards come from the same starter box</strong> — no other sets needed.</p>
+
+<h3>Murder at the Excelsior Hotel</h3>
+<div class="tip" style="margin-bottom:0.75rem;">
+<strong>Key facts:</strong> Hotel Guests are Aloof enemies with Parley (intellect/willpower 3 test to discard them). They add doom if they reach Crime Scene locations. Driven to Madness makes them hostile (lose Aloof, can't Parley anymore). Killing innocents poisons the chaos bag — avoid it if possible. You need clues to advance acts. Prioritize: Parley support, clue efficiency, and reactive combat for when enemies go hostile.
+</div>
+<table>
+<tr><th>Deck</th><th>Remove</th><th>Add</th><th>Rationale</th></tr>
+<tr><td><strong>Nathaniel</strong></td><td>2× Counterpunch → Lv 2<br>2× Dodge<br>1× Vicious Blow</td><td>2× Counterpunch (2) [upgrade]<br>1× Evidence! (1)<br>1× Lesson Learned (2)<br>1× Overpower (2)</td><td>Can't Parley (int 2/will 3). His role: kill hostile enemies + grab clues from kills. Counterpunch (2) retaliates free when guests go hostile (replaces Dodge's defensive role). Evidence!/Lesson Learned convert kills into clues. Overpower (2) draws 2 cards. Vicious Blow is redundant — Nathaniel's ability already adds damage on events.</td></tr>
+<tr><td><strong>Harvey</strong></td><td>2× Occult Invocation<br>2× Extensive Research<br>1× Feed the Mind</td><td>2× Seeking Answers (2)<br>2× Perception (2)<br>1× Library Docent (1)</td><td>Int 5 makes Parley trivial. Focus on hoovering clues fast. Seeking Answers grabs clues from connecting locations without moving. Perception (2) draws 2 cards to fuel Higher Education. Docent finds tomes for extra draw.</td></tr>
+<tr><td><strong>Winifred</strong></td><td>2× Slip Away → Lv 2<br>1× Pilfer → Lv 3<br>1× Sneak By</td><td>2× Slip Away (2) [upgrade]<br>1× Pilfer (3) [upgrade]<br>1× Manual Dexterity (2)</td><td>Agility 5 handles Parley via evade-based cards. Pilfer (3) grabs 2 clues using agility. Slip Away (2) removes hostile enemies + draws a card. Manual Dex (2) draws 2 on agility success — fuels her commit engine.</td></tr>
+<tr><td><strong>Jacqueline</strong></td><td>1× Azure Flame → Lv 3<br>1× Clairvoyance → Lv 3<br>1× Parallel Fates<br>1× Dark Prophecy</td><td>1× Azure Flame (3) [upgrade]<br>1× Clairvoyance (3) [upgrade]<br>1× Grotesque Statue (2)<br>1× Eldritch Inspiration (1)</td><td>Will 5 makes Parley easy. Clairvoyance (3) investigates with willpower — perfect for this scenario. Azure Flame handles hostile enemies. Grotesque Statue + her ability = near-guaranteed success on critical tests. Parallel Fates/Dark Prophecy are too slow here.</td></tr>
+<tr><td><strong>Stella</strong></td><td>2× "Look what I found!" → Lv 2<br>2× A Test of Will → Lv 2<br>1× Grit Your Teeth</td><td>2× "Look what I found!" (2) [upgrade]<br>2× A Test of Will (2) [upgrade]<br>1× Cherished Keepsake (1)</td><td>Stella fails Parley tests (int 2/will 3) — but that's fine. Fail → bonus action + "Look what I found!" (2) discovers clues at ANY location. Test of Will (2) cancels treacheries for free. Keepsake soaks horror from the scenario's horror-heavy encounter deck.</td></tr>
+</table>
+
+<h3>The Blob That Ate Everything</h3>
+<div class="tip" style="margin-bottom:0.75rem;">
+<strong>Key facts:</strong> Epic combat gauntlet. Swarms of enemies + the Blob itself with massive HP. Multiple acts require dealing huge amounts of damage to advance. Minimal investigation needed. Sustained damage output over many rounds is critical. Designed for up to 4 players cooperatively.
+</div>
+<table>
+<tr><th>Deck</th><th>Remove</th><th>Add</th><th>Rationale</th></tr>
+<tr><td><strong>Nathaniel</strong></td><td>1× One-Two Punch → Lv 5<br>2× Counterpunch → Lv 2</td><td>1× One-Two Punch (5) [upgrade]<br>2× Counterpunch (2) [upgrade]</td><td>Pure damage. One-Two Punch (5) deals massive burst to high-HP enemies. Counterpunch (2) retaliates free when swarmed by multiple enemies — happens constantly in Blob. All in-place upgrades, no deck changes needed.</td></tr>
+<tr><td><strong>Harvey</strong></td><td>2× Occult Invocation<br>2× Arcane Enlightenment<br>1× Feed the Mind</td><td>2× "I've got a plan!" (2)<br>2× Cryptic Writings (2)<br>1× Library Docent (1)</td><td>Harvey can't fight (combat 1) but needs to contribute damage. "I've got a plan!" (2) uses intellect 5 to fight. Cryptic Writings (2) generates free resources on draw (Harvey draws constantly) to fuel "I've got a plan!". Keeps Extensive Research for clue objectives. Arcane Enlightenment is a luxury in a combat rush.</td></tr>
+<tr><td><strong>Winifred</strong></td><td>2× Cheap Shot → Lv 2<br>2× Sneak By</td><td>2× Cheap Shot (2) [upgrade]<br>1× Beretta M1918 (4)<br>1× Liquid Courage (1)</td><td>Needs sustained combat. Beretta M1918 is a machine gun (+4 combat, +1 damage, 4 ammo). Cheap Shot (2) deals damage AND evades — crowd control when swarmed. Liquid Courage heals horror from the Blob's treacheries. Sneak By is useless when you need to kill, not evade.</td></tr>
+<tr><td><strong>Jacqueline</strong></td><td>2× Azure Flame → Lv 3<br>1× Ineffable Truth → Lv 3</td><td>2× Azure Flame (3) [upgrade]<br>1× Ineffable Truth (3) [upgrade]</td><td>All combat spells upgraded. Azure Flame (3) has more charges + higher willpower boost for sustained fighting. Ineffable Truth (3) evades on success — crowd control against swarms. All in-place, no deck changes. Jacqueline's ability makes spell attacks very reliable.</td></tr>
+<tr><td><strong>Stella</strong></td><td>2× "Look what I found!" → Lv 2<br>2× Grit Your Teeth</td><td>2× "Look what I found!" (2) [upgrade]<br>1× Chainsaw (4)<br>1× Leather Coat (1)</td><td>Stella needs a real weapon. Chainsaw is +2 combat, +2 damage — her best option. Leather Coat soaks damage while fighting. "Look what I found!" (2) still useful for any clue objectives. Grit Your Teeth is too passive for a combat scenario.</td></tr>
+</table>
+
+<h3>Film Fatale</h3>
+<div class="tip" style="margin-bottom:0.75rem;">
+<strong>Key facts:</strong> Investigation-heavy noir scenario. Clue-gathering is the primary challenge — you need lots of clues to advance. Moderate enemies appear but combat isn't the focus. Narrative choices affect the outcome. Balanced approach needed but clue efficiency is king.
+</div>
+<table>
+<tr><th>Deck</th><th>Remove</th><th>Add</th><th>Rationale</th></tr>
+<tr><td><strong>Nathaniel</strong></td><td>1× Grete Wagner → Lv 3<br>2× Dodge<br>1× Stand Together</td><td>1× Grete Wagner (3) [upgrade]<br>2× Evidence! (1)<br>1× Lesson Learned (2)<br>1× Overpower (2)</td><td>Int 2 means Nathaniel can't investigate normally. Solution: get clues from combat. Grete Wagner (3) discovers a clue every time you deal damage. Evidence!/Lesson Learned add more clues per kill. Overpower draws cards. Dodge is less needed — enemies are moderate here.</td></tr>
+<tr><td><strong>Harvey</strong></td><td>2× Occult Invocation<br>2× Feed the Mind<br>1× Extensive Research</td><td>2× Seeking Answers (2)<br>2× Perception (2)<br>1× Library Docent (1)</td><td>Harvey is the clue king here. Int 5 + Higher Education = trivial investigations. Seeking Answers grabs clues from connecting locations without wasting move actions. Perception (2) draws 2 cards to maintain hand size. Feed the Mind is too slow for a scenario that rewards speed.</td></tr>
+<tr><td><strong>Winifred</strong></td><td>2× Pilfer → Lv 3<br>1× Sneak By</td><td>2× Pilfer (3) [upgrade]<br>1× Backstab (3)</td><td>Clue-focused. Pilfer (3) grabs 2 clues using agility 5 — Winifred's best stat. Backstab handles the moderate enemies that appear (3 damage burst). Sneak By is redundant when Slip Away already handles evasion.</td></tr>
+<tr><td><strong>Jacqueline</strong></td><td>2× Clairvoyance → Lv 3<br>1× Parallel Fates<br>1× Dark Prophecy</td><td>2× Clairvoyance (3) [upgrade]<br>1× Grotesque Statue (2)<br>1× Eldritch Inspiration (1)</td><td>Investigation-focused. Clairvoyance (3) investigates with willpower 5 + more charges for sustained clue gathering. Grotesque Statue + her ability = almost never fail. Eldritch Inspiration reuses spell effects. Parallel Fates/Dark Prophecy are too niche for a clue-rush scenario.</td></tr>
+<tr><td><strong>Stella</strong></td><td>2× "Look what I found!" → Lv 2<br>2× A Test of Will → Lv 2<br>1× Grit Your Teeth</td><td>2× "Look what I found!" (2) [upgrade]<br>2× A Test of Will (2) [upgrade]<br>1× Cherished Keepsake (1)</td><td>Stella's clue plan: fail investigate → bonus action + "Look what I found!" (2) discovers clues at ANY location (not just yours). Test of Will (2) cancels treacheries for free — protects your tempo. Same package as Excelsior because Stella's fail-forward engine works everywhere.</td></tr>
+</table>
+</div>
+
+</body>
+</html>
