@@ -74,6 +74,8 @@ Dashboard/
     seeker.html           — Rex deck + tips
     rogue.html            — Jenny deck + tips
     mystic.html           — Agnes deck + tips
+    survivor.html         — Pete deck + tips
+    lily.html             — Lily Chen page (Sleepy Hollow / Blob Team 2)
     starters.html         — 5 starter deck tips + standalone upgrades
   scenarios/
     excelsior.html        — Murder at the Excelsior Hotel guide
@@ -83,7 +85,14 @@ Dashboard/
     consternation.html    — Consternation on the Constellation guide (homebrew)
     sleepy-hollow.html    — The Legend of Sleepy Hollow guide (homebrew)
   campaigns/
-    index.html            — Campaign guides (placeholder)
+    index.html            — Campaign guides landing page (team composition tables)
+    zealot.html           — Night of the Zealot campaign guide
+    dunwich.html          — The Dunwich Legacy campaign guide
+    carcosa.html          — The Path to Carcosa campaign guide
+    forgotten-age.html    — The Forgotten Age campaign guide
+    edge-of-earth.html    — Edge of the Earth campaign guide
+    drowned-city.html     — The Drowned City campaign guide
+    homebrew.html         — Homebrew campaign guides (Dark Matter, Cyclopean, Alice)
 ```
 
 ## Key Data Rules (from prompts)
@@ -186,3 +195,17 @@ Each scenario page (`scenarios/*.html`) includes 3 recommended teams for 3-playe
 **Constraint:** Roland and Zoey share a physical deck (8-card swap). They cannot appear on the same team in Team 1 or Team 2.
 
 The overview table on `investigators/index.html` shows Team 1 for each scenario.
+
+### Campaign Team Recommendations
+
+Each campaign guide (`campaigns/*.html`) includes team recommendations for both 3-player and 2-player.
+
+**3-player teams** follow the same tier system as scenario pages (Team 1 = best prebuilt, Team 2 = alternate composition with different playstyle).
+
+**2-player teams** use a different framework:
+- **Team 1 (Specialist):** Dedicated fighter + dedicated cluever from prebuilt/starter pool. Maximum efficiency when each person focuses on their role.
+- **Team 2 (Generalist):** Two flex investigators from expanded pool (includes Pete, Lily). Both can fight and clue. Maximum adaptability when things go wrong or investigators get separated.
+- **Team 3 (Synergy):** Two investigators whose abilities mechanically combo with each other from prebuilt/starter/expanded pool. The "1+1=3" pair — pick for the interaction, not just individual strength.
+- **Team 4 (Theoretical best):** Strongest pair from full owned pool (Core, Dunwich, Edge of the Earth, Drowned City). Requires deckbuilding.
+
+The campaign landing page (`campaigns/index.html`) shows all teams at a glance in sortable tables.
