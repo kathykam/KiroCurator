@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Edge of the Earth — Campaign Guide</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.scenario { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e7eb; }
+.scenario:last-child { border-bottom: none; }
+.scenario h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.overview { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #6366f1; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+.mistake { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #ef4444; background: #fef2f2; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #374151; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
+table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
+th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; }
+td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; vertical-align: top; }
+.fit-great { color: #16a34a; font-weight: 600; }
+.fit-good { color: #ca8a04; }
+.fit-ok { color: #6b7280; }
+.built { font-size: 0.7rem; background: #dbeafe; color: #1e40af; padding: 0.1rem 0.3rem; border-radius: 0.2rem; margin-left: 0.3rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-dropdown">
+    <a href="../collection.html">📚 Collection</a>
+    <div class="nav-dropdown-menu">
+      <a href="../collection.html">My Collection</a>
+      <a href="../kickstarter.html">Kickstarter Watchlist</a>
+      <a href="../narrative-finder.html">Narrative Finder</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../arkham/lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="../arkham/lcg.html">LCG Collection</a>
+      <a href="../arkham/official.html">Official Rankings</a>
+      <a href="../arkham/homebrew.html">Homebrew Rankings</a>
+      <a href="../arkham/ranked.html">Combined Rankings</a>
+      <a href="../arkham/faq.html">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../investigators/index.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="../investigators/guardian.html">Zoey/Roland (Guardian)</a>
+      <a href="../investigators/seeker.html">Rex (Seeker)</a>
+      <a href="../investigators/rogue.html">Jenny (Rogue)</a>
+      <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/starters.html">Starter Decks</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../scenarios/excelsior.html">🎬 Scenarios</a>
+    <div class="nav-dropdown-menu">
+      <a href="../scenarios/excelsior.html">Excelsior Hotel</a>
+      <a href="../scenarios/blob.html">The Blob</a>
+      <a href="../scenarios/film-fatale.html">Film Fatale</a>
+      <a href="../scenarios/wendigo.html">Wendigo</a>
+      <a href="../scenarios/consternation.html">Consternation</a>
+      <a href="../scenarios/sleepy-hollow.html">Sleepy Hollow</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../campaigns/index.html" class="active">📖 Campaigns</a>
+    <div class="nav-dropdown-menu">
+      <a href="../campaigns/zealot.html">Night of the Zealot</a>
+      <a href="../campaigns/dunwich.html">Dunwich Legacy</a>
+      <a href="../campaigns/carcosa.html">Path to Carcosa</a>
+      <a href="../campaigns/forgotten-age.html">Forgotten Age</a>
+      <a href="../campaigns/edge-of-earth.html">Edge of the Earth</a>
+      <a href="../campaigns/drowned-city.html">Drowned City</a>
+    </div>
+  </div>
+</nav>
+
+<h1>📖 Edge of the Earth</h1>
+<p class="subtitle">Campaign guide — spoiler-free strategy tips</p>
+
+<div class="overview">
+  <strong>Premise:</strong> An Antarctic expedition goes wrong. Survive the ice, uncover ancient secrets, and face horrors from beyond the stars. Based on Lovecraft's "At the Mountains of Madness."<br>
+  <strong>Players:</strong> 1–4 | <strong>Difficulty:</strong> Medium–Hard | <strong>Length:</strong> ~16–20 hours (5 main scenarios with sub-scenarios and interludes)<br>
+  <strong>Key mechanics:</strong> Partner allies (expedition team members who travel with you), Tekeli-li weakness deck (shared madness cards), branching scenario structure, Frost tokens in chaos bag<br>
+  <strong>XP available:</strong> ~40–55 total (generous — partners can die giving bonus XP)
+</div>
+
+<!-- RECOMMENDED TEAMS -->
+<h3>Recommended Teams (3 players)</h3>
+<div class="tip"><strong>🃏 Team 1 (prebuilt — best): <span style="color:#1e40af;font-weight:700">Zoey</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Agnes</span></strong> — Tekeli-li tests willpower when drawn — Zoey's Will 4 passes where Roland's Will 3 fails. Frost tokens worsen the chaos bag over time, so higher base stats matter more as the campaign progresses. Zoey's resource generation funds expensive upgrades across the long campaign. Agnes (Will 5) handles Tekeli-li effortlessly. Rex's speed covers the massive maps.</div>
+<div class="tip"><strong>Team 2: <span style="color:#1e40af;font-weight:700">Zoey</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Jacqueline</span></strong> — Jacqueline's token manipulation directly counters Frost tokens (she can avoid pulling them). Will 5 handles Tekeli-li. Zoey handles the heavy combat. Rex for speed. Very strong defensive team.</div>
+<div class="tip"><strong>Team 3: <span style="color:#1e40af;font-weight:700">Zoey</span> + <span style="color:#854d0e;font-weight:700">Harvey</span> + <span style="color:#6b21a8;font-weight:700">Agnes</span></strong> — Harvey's card draw keeps everyone fueled across the long campaign. His Int 5 handles high-shroud Antarctic locations. Will 4 handles Tekeli-li. Agnes + Zoey cover combat and willpower.</div>
+
+<!-- PARTNER ALLIES GUIDE -->
+<h3>Partner Allies — How They Work</h3>
+<div class="tip">
+<strong>You choose expedition team members at campaign start.</strong> They travel with you as story allies — free assets that provide bonuses. But they can be killed or go missing.<br><br>
+<strong>Key rules:</strong><br>
+• Each investigator gets one partner. Partners have health/sanity and can be defeated.<br>
+• Dead partners give bonus XP but you lose their ability permanently.<br>
+• Partners provide stat boosts, soak, or special abilities. Choose partners that cover your investigator's weaknesses.<br>
+• <strong>Protect your partners.</strong> Their abilities compound over the campaign. Losing one early hurts.
+</div>
+
+<!-- SCENARIO 1 -->
+<div class="scenario">
+<h2>Scenario 1: Ice and Death</h2>
+<div class="overview">
+  <strong>Setting:</strong> Antarctic ice shelf. Your expedition has just arrived.<br>
+  <strong>Primary challenge:</strong> Exploration + survival. Introduces the campaign's core mechanics.<br>
+  <strong>Doom pressure:</strong> Moderate — weather creates time pressure
+</div>
+<ul>
+  <li><strong>This scenario branches into sub-scenarios.</strong> Based on your choices, you'll play different follow-up scenarios. All paths are viable — choose based on your team's strengths.</li>
+  <li><strong>Frost tokens enter the chaos bag.</strong> These are negative modifiers that accumulate over the campaign. Every Frost token makes future tests harder. Avoid gaining them when possible.</li>
+  <li><strong>Tekeli-li cards are shared weaknesses.</strong> They shuffle into your deck and test willpower when drawn. High willpower investigators handle them better.</li>
+  <li><strong>Explore the map thoroughly.</strong> Locations are face-down and revealed as you move. Some contain supplies or story assets that help later.</li>
+  <li><strong>Partners are vulnerable.</strong> Enemies can attack your partners. Position your fighter to protect them.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 2 -->
+<div class="scenario">
+<h2>Scenario 2: Fatal Mirage</h2>
+<div class="overview">
+  <strong>Setting:</strong> A dreamlike space. Memories of your partners manifest as threats.<br>
+  <strong>Primary challenge:</strong> Navigate a surreal map + protect partners from their own pasts<br>
+  <strong>Doom pressure:</strong> Moderate
+</div>
+<ul>
+  <li><strong>This scenario is about your partners.</strong> Their backstories create the threats. Partners you chose determine which enemies and locations appear.</li>
+  <li><strong>The map is non-linear.</strong> Locations connect in unusual ways. Read connection symbols carefully — don't assume adjacency.</li>
+  <li><strong>Enemies are tied to specific partners.</strong> Defeating them resolves that partner's story. Prioritize partners whose abilities you rely on most.</li>
+  <li><strong>Willpower tests are frequent.</strong> The dreamlike setting tests willpower heavily. Agnes and Jacqueline excel.</li>
+  <li><strong>This scenario can be replayed.</strong> It appears multiple times in the campaign with different partner memories each time.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 3 -->
+<div class="scenario">
+<h2>Scenario 3: To the Forbidden Peaks</h2>
+<div class="overview">
+  <strong>Setting:</strong> Mountain ascent. Climbing toward something ancient.<br>
+  <strong>Primary challenge:</strong> Vertical movement — ascend the mountain while surviving hazards<br>
+  <strong>Doom pressure:</strong> High — weather and enemies close in
+</div>
+<ul>
+  <li><strong>Movement is vertical.</strong> You climb upward through locations. Falling back down wastes actions. Bring movement/climbing aids.</li>
+  <li><strong>Weather hazards deal damage.</strong> Treacheries deal direct damage/horror from cold and altitude. Health and sanity soak are essential.</li>
+  <li><strong>Enemies are tough.</strong> Antarctic creatures are strong fighters. Roland/Zoey need upgraded weapons by now.</li>
+  <li><strong>Frost tokens accumulate.</strong> The chaos bag gets worse. Over-commit to important tests — you can't afford failures at altitude.</li>
+  <li><strong>Supplies from earlier scenarios help.</strong> Items found during Ice and Death may provide bonuses here.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 4 -->
+<div class="scenario">
+<h2>Scenario 4: City of the Elder Things</h2>
+<div class="overview">
+  <strong>Setting:</strong> An ancient alien city beneath the ice.<br>
+  <strong>Primary challenge:</strong> Massive exploration map + multiple objectives<br>
+  <strong>Doom pressure:</strong> Moderate — but the map is huge
+</div>
+<ul>
+  <li><strong>The map is enormous.</strong> Many locations to explore. Split up to cover ground but stay within reach of your fighter.</li>
+  <li><strong>Multiple objectives compete for time.</strong> You can't do everything. Prioritize based on what your campaign needs.</li>
+  <li><strong>Some enemies are not hostile.</strong> Not everything in the city wants to kill you. Pay attention to enemy keywords before attacking.</li>
+  <li><strong>Investigation is primary.</strong> Rex and Harvey shine here — lots of clues across many locations. High shroud values in the alien city.</li>
+  <li><strong>This scenario determines the finale's difficulty.</strong> What you accomplish here directly affects the final scenario. Be thorough.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 5 -->
+<div class="scenario">
+<h2>Scenario 5: The Heart of Madness</h2>
+<div class="overview">
+  <strong>Setting:</strong> Deep beneath the city. The source of everything.<br>
+  <strong>Primary challenge:</strong> The finale — survival + multiple paths to victory<br>
+  <strong>Doom pressure:</strong> Extreme
+</div>
+<ul>
+  <li><strong>This is a two-part finale.</strong> Expect a long session. Both parts are intense.</li>
+  <li><strong>Everything you've done matters.</strong> Partners alive, Frost tokens accumulated, objectives completed — all affect difficulty and available options.</li>
+  <li><strong>Combat is heavy.</strong> The finale throws powerful enemies at you. Upgraded weapons and damage spells are essential.</li>
+  <li><strong>Willpower remains critical.</strong> Tekeli-li cards and treacheries continue testing willpower. Low-will investigators may be overwhelmed.</li>
+  <li><strong>Multiple endings based on your campaign path.</strong> All are narratively satisfying. Use everything you have — there's nothing after this.</li>
+</ul>
+<div class="mistake">
+<strong>⚠️ Common mistakes across the campaign:</strong>
+<ul>
+  <li>Letting partners die for XP early — their abilities are worth more than the XP over 5 scenarios.</li>
+  <li>Ignoring Frost tokens — they compound. Every token you can avoid gaining saves you across the entire campaign.</li>
+  <li>Low willpower teams — Tekeli-li punishes Will 1-2 every time it's drawn. Bring at least 2 high-will investigators.</li>
+  <li>Not exploring thoroughly in Scenario 4 — what you find there determines the finale's difficulty.</li>
+</ul>
+</div>
+</div>
+
+<!-- INVESTIGATOR FIT TABLE -->
+<h3>Investigator Fit — Edge of the Earth</h3>
+<p style="font-size:0.8rem;color:#6b7280;">Rated for the full campaign. Needs: willpower (Tekeli-li), combat (tough enemies), investigation (large maps), resilience (Frost tokens worsen bag).</p>
+<table>
+<tr><th>Investigator</th><th>Fit</th><th>Why</th></tr>
+<tr><td>Agnes Baker <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Will 5 handles Tekeli-li effortlessly. Horror-ping provides flexible damage. Shrivelling scales for tough enemies. Excellent all campaign.</td></tr>
+<tr><td>Rex Murphy <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Extra clues essential for the massive maps (City of Elder Things). Int 4 handles high shroud. Speed keeps pace with branching scenarios.</td></tr>
+<tr><td>Roland Banks <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Combat 4 + clue-on-kill. Handles tough Antarctic enemies. Partners cover his Will 3 weakness. Essential fighter for the back half.</td></tr>
+<tr><td>Jacqueline Fine <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Will 5 + token manipulation directly counters Frost tokens. She can avoid pulling them or mitigate their effect. Tailor-made for this campaign's chaos bag mechanic.</td></tr>
+<tr><td>Harvey Walters <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Int 5 + Will 4 + card draw. Handles clues, Tekeli-li, and keeps the team fueled. Sanity 7 survives horror. Consistent across all scenarios.</td></tr>
+<tr><td>Zoey Samaras <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Combat 4 + Will 4 + resource generation. Handles tough enemies and Tekeli-li. Resources fund expensive upgrades. Strong all campaign.</td></tr>
+<tr><td>Norman Withers</td><td class="fit-great">★★★</td><td>Int 5 + Will 4. Handles both primary test types. Top-deck play gives flexible responses. Strong in City of Elder Things.</td></tr>
+<tr><td>Daisy Walker</td><td class="fit-great">★★★</td><td>Int 5 for massive maps. Will 3 is risky but Sanity 7 buffers. Tome actions for efficiency. Strong in exploration scenarios.</td></tr>
+<tr><td>"Ashcan" Pete</td><td class="fit-good">★★☆</td><td>Duke at 4/4. Will 4 handles Tekeli-li. Flexible and resilient. Survivor recursion. Good all-rounder.</td></tr>
+<tr><td>Jenny Barnes <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Balanced 3/3/3/3 + resources. Handles anything adequately. Will 3 is risky for Tekeli-li. Resources fund solutions.</td></tr>
+<tr><td>Gloria Goldberg</td><td class="fit-good">★★☆</td><td>Will 5 + encounter manipulation. Can bury Tekeli-li-triggering treacheries. Int 4 for clues. Strong defensive value.</td></tr>
+<tr><td>Stella Clark <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Fail-forward helps when Frost tokens cause failures. Survivor recursion. Will 3 is risky but Sanity 8 buffers.</td></tr>
+<tr><td>Wendy Adams</td><td class="fit-good">★★☆</td><td>Will 4 + token redraw (helps with Frost tokens). Survivor recursion. Needs clue events for large maps.</td></tr>
+<tr><td>Nathaniel Cho <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Combat 5 for tough enemies. Will 3 is risky for Tekeli-li. Pure fighter — needs teammates for everything else.</td></tr>
+<tr><td>Jim Culver</td><td class="fit-good">★★☆</td><td>Will 4 + skull-as-0. Decent flex. Helps with worsening chaos bag. Not spectacular.</td></tr>
+<tr><td>Agatha Crane</td><td class="fit-good">★★☆</td><td>Will 4 + Int 4. Token sealing helps with Frost tokens. Good all-rounder.</td></tr>
+<tr><td>Monterey Jack</td><td class="fit-good">★★☆</td><td>Int 4 + movement efficiency. Free card on move helps explore large maps. Will 2 is dangerous for Tekeli-li.</td></tr>
+<tr><td>Bob Jenkins</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Item economy. Solid support across long campaign.</td></tr>
+<tr><td>"Skids" O'Toole</td><td class="fit-good">★★☆</td><td>Extra actions help explore large maps. Will 2 is very dangerous for Tekeli-li.</td></tr>
+<tr><td>Lucius Galloway</td><td class="fit-good">★★☆</td><td>Int 4 + evade. Movement tricks for large maps. Willpower value determines viability.</td></tr>
+<tr><td>George Barnaby</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Resources. Solid support.</td></tr>
+<tr><td>Marion Tavares</td><td class="fit-good">★★☆</td><td>Event readying for action efficiency. Will 3 is risky.</td></tr>
+<tr><td>Winifred Habbamock <span class="built">starter</span></td><td class="fit-ok">★☆☆</td><td>Will 1 is catastrophic for Tekeli-li — guaranteed failure every time. Agility focus doesn't help when willpower is tested constantly.</td></tr>
+<tr><td>Daniela Reyes</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate the massive maps. Will 4 is her only strength. Reactive damage is slow for tough enemies.</td></tr>
+<tr><td>Michael McGlen</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate. Will 3 risky. Pure combat but the campaign needs more than just fighting.</td></tr>
+<tr><td>Lily Chen</td><td class="fit-ok">★☆☆</td><td>Int 2 + Will 3. Can't investigate or handle Tekeli-li reliably. Combat stances are slow to set up.</td></tr>
+</table>
+
+<!-- UPGRADE PATH -->
+<h3>Upgrade Path — Team 1 (Zoey + Rex + Agnes)</h3>
+<p style="font-size:0.8rem;color:#6b7280;">~40–55 XP across the campaign (generous). Partners dying gives bonus XP but costs you their ability. Prioritize combat scaling and willpower protection.</p>
+
+<table>
+<tr><th>Investigator</th><th>Priority Upgrades (in order)</th><th>XP</th></tr>
+<tr><td style="color:#1e40af;font-weight:600;">Zoey</td><td>
+  <strong>1. Machete (1)</strong> — immediate combat.<br>
+  <strong>2. Beat Cop (2)</strong> — +1 combat + ping.<br>
+  <strong>3. .45 Automatic (2)</strong> — 2-damage for tough Antarctic enemies.<br>
+  <strong>4. Stick to the Plan (6)</strong> — guarantees key events.<br>
+  <strong>5. Shortcut (2) ×2</strong> — movement for large maps.
+</td><td>1+2+2+6+4 = 15</td></tr>
+<tr><td style="color:#854d0e;font-weight:600;">Rex</td><td>
+  <strong>1. Higher Education (3)</strong> — boost intellect for high-shroud alien locations.<br>
+  <strong>2. Pathfinder (3)</strong> — free movement for massive maps.<br>
+  <strong>3. Deduction (2) ×2</strong> — double clues.<br>
+  <strong>4. Cryptic Research (4)</strong> — burst draw.<br>
+  <strong>5. Disc of Itzamna (2)</strong> — auto-evade protection.
+</td><td>3+3+4+4+2 = 16</td></tr>
+<tr><td style="color:#6b21a8;font-weight:600;">Agnes</td><td>
+  <strong>1. Peter Sylvestre (2)</strong> — horror soak + triggers her ability safely.<br>
+  <strong>2. Shrivelling (3)</strong> — upgraded damage for tough enemies.<br>
+  <strong>3. Ward of Protection (2)</strong> — cancel devastating treacheries.<br>
+  <strong>4. Shrivelling (5)</strong> — endgame damage.<br>
+  <strong>5. Grotesque Statue (4)</strong> — token manipulation counters Frost tokens.
+</td><td>2+3+2+5+4 = 16</td></tr>
+</table>
+<p style="font-size:0.8rem;color:#6b7280;">Total: ~47 XP. This campaign is generous with XP. Prioritize Zoey's Stick to the Plan and Agnes's Grotesque Statue — both directly counter the Frost token problem.</p>
+
+</body>
+</html>

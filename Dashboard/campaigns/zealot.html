@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Night of the Zealot — Campaign Guide</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.scenario { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e7eb; }
+.scenario:last-child { border-bottom: none; }
+.scenario h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.overview { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #6366f1; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+.mistake { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #ef4444; background: #fef2f2; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #374151; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
+table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
+th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; }
+td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; vertical-align: top; }
+.fit-great { color: #16a34a; font-weight: 600; }
+.fit-good { color: #ca8a04; }
+.fit-ok { color: #6b7280; }
+.built { font-size: 0.7rem; background: #dbeafe; color: #1e40af; padding: 0.1rem 0.3rem; border-radius: 0.2rem; margin-left: 0.3rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-dropdown">
+    <a href="../collection.html">📚 Collection</a>
+    <div class="nav-dropdown-menu">
+      <a href="../collection.html">My Collection</a>
+      <a href="../kickstarter.html">Kickstarter Watchlist</a>
+      <a href="../narrative-finder.html">Narrative Finder</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../arkham/lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="../arkham/lcg.html">LCG Collection</a>
+      <a href="../arkham/official.html">Official Rankings</a>
+      <a href="../arkham/homebrew.html">Homebrew Rankings</a>
+      <a href="../arkham/ranked.html">Combined Rankings</a>
+      <a href="../arkham/faq.html">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../investigators/index.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="../investigators/guardian.html">Zoey/Roland (Guardian)</a>
+      <a href="../investigators/seeker.html">Rex (Seeker)</a>
+      <a href="../investigators/rogue.html">Jenny (Rogue)</a>
+      <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/survivor.html">Pete (Survivor)</a>
+      <a href="../investigators/starters.html">Starter Decks</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../scenarios/excelsior.html">🎬 Scenarios</a>
+    <div class="nav-dropdown-menu">
+      <a href="../scenarios/excelsior.html">Excelsior Hotel</a>
+      <a href="../scenarios/blob.html">The Blob</a>
+      <a href="../scenarios/film-fatale.html">Film Fatale</a>
+      <a href="../scenarios/wendigo.html">Wendigo</a>
+      <a href="../scenarios/consternation.html">Consternation</a>
+      <a href="../scenarios/sleepy-hollow.html">Sleepy Hollow</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../campaigns/index.html" class="active">📖 Campaigns</a>
+    <div class="nav-dropdown-menu">
+      <a href="../campaigns/zealot.html">Night of the Zealot</a>
+      <a href="../campaigns/dunwich.html">Dunwich Legacy</a>
+      <a href="../campaigns/carcosa.html">Path to Carcosa</a>
+      <a href="../campaigns/forgotten-age.html">Forgotten Age</a>
+      <a href="../campaigns/edge-of-earth.html">Edge of the Earth</a>
+      <a href="../campaigns/drowned-city.html">Drowned City</a>
+    </div>
+  </div>
+</nav>
+
+<h1>📖 Night of the Zealot</h1>
+<p class="subtitle">Campaign guide — spoiler-free strategy tips</p>
+
+<div class="overview">
+  <strong>Premise:</strong> Strange things stir in Arkham. A cult worships an ancient evil beneath your very home. Stop the ritual before the Devourer consumes everything.<br>
+  <strong>Players:</strong> 1–4 | <strong>Difficulty:</strong> Easy–Medium | <strong>Length:</strong> ~3 hours (3 scenarios)<br>
+  <strong>Key mechanics:</strong> Doom clock, cultist hunting, chaos bag introduction<br>
+  <strong>XP available:</strong> ~10 total (4 + 4 + 2 from victory display)
+</div>
+
+<!-- RECOMMENDED TEAMS -->
+<h3>Recommended Teams (3 players)</h3>
+<div class="tip"><strong>🃏 Team 1 (prebuilt — best): <span style="color:#1e40af;font-weight:700">Roland</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Agnes</span></strong> — Roland fights + gets clues on kill (perfect for Gathering's Ghoul Priest). Rex vacuums clues in Midnight Masks to find cultists fast. Agnes handles willpower treacheries and pings enemies with horror damage. Balanced coverage of all three scenarios' demands.</div>
+<div class="tip"><strong>Team 2: <span style="color:#1e40af;font-weight:700">Roland</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Jacqueline</span></strong> — Jacqueline's token manipulation softens the chaos bag (which gets worse each scenario). Her willpower 5 handles treacheries that Rex and Roland struggle with. Slightly less damage output than Agnes.</div>
+<div class="tip"><strong>Team 3: <span style="color:#1e40af;font-weight:700">Zoey</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Agnes</span></strong> — Zoey generates resources from engaging enemies (plenty of cultists and ghouls). Stronger combat than Roland but no clue-on-kill synergy. Better for Devourer Below's heavy combat.</div>
+
+<!-- SCENARIO 1 -->
+<div class="scenario">
+<h2>Scenario 1: The Gathering</h2>
+<div class="overview">
+  <strong>Setting:</strong> Your house. Something is in the basement.<br>
+  <strong>Primary challenge:</strong> Clue gathering → boss fight (Ghoul Priest)<br>
+  <strong>Doom pressure:</strong> Moderate — agenda gives you time if you're efficient
+</div>
+
+<h3>Strategy Tips</h3>
+<ul>
+  <li><strong>Rush the Study.</strong> The Study has 2 clues per investigator — clearing it advances the act. Don't waste actions exploring other rooms first.</li>
+  <li><strong>Accept help when offered.</strong> An ally appears early — take her. She gives +1 combat vs Monsters and 1 bonus damage, making the boss fight dramatically easier.</li>
+  <li><strong>Boss fight: fight or resign?</strong> Fighting the boss gives 2 XP (victory display). With 3 players it has ~10 health. If your team lacks combat, resigning is fine — you keep your investigators for the next scenario.</li>
+  <li><strong>Hallway is a trap.</strong> The Hallway connects everything but has no clues. Don't end your turn there — Ghouls spawn and you waste actions moving.</li>
+  <li><strong>Rotting Remains is the scariest treachery.</strong> Willpower test or take horror. Agnes loves this (triggers her ability). Others need willpower icons or cancellation.</li>
+</ul>
+
+<div class="mistake">
+<strong>⚠️ Common mistakes:</strong>
+<ul>
+  <li>Splitting up too early — the boss needs focused damage from multiple investigators.</li>
+  <li>Ignoring rooms with clues you need to advance the act.</li>
+  <li>Burning your ally's damage on weak enemies instead of saving her for the boss.</li>
+</ul>
+</div>
+</div>
+
+<!-- SCENARIO 2 -->
+<div class="scenario">
+<h2>Scenario 2: The Midnight Masks</h2>
+<div class="overview">
+  <strong>Setting:</strong> Downtown Arkham at night. Cultists hide among the townsfolk.<br>
+  <strong>Primary challenge:</strong> Find and interrogate/defeat as many cultists as possible before doom runs out<br>
+  <strong>Doom pressure:</strong> HIGH — cultists add doom, agenda is tight
+</div>
+
+<h3>Strategy Tips</h3>
+<ul>
+  <li><strong>This is a race, not a puzzle.</strong> You won't get all 6 cultists on your first play. Getting 4 is good, 5 is great, 6 is exceptional.</li>
+  <li><strong>Split up immediately.</strong> Each location has 1-2 clues that reveal cultist locations. Three investigators covering three locations = maximum information per round.</li>
+  <li><strong>Resign timing matters.</strong> You can resign at any time at the starting location. Resign when doom is about to pop the agenda — don't let it advance. Cultists you've defeated/interrogated carry forward; ones still in play don't.</li>
+  <li><strong>Prioritize high-doom cultists.</strong> Some cultists add doom when they enter play. Kill or parley them first before they accelerate the clock.</li>
+  <li><strong>Rex is MVP here.</strong> His extra-clue ability means he finds cultist locations in half the actions. Send him to high-shroud locations.</li>
+  <li><strong>Mysterious Chanting</strong> is the worst treachery — adds doom to an enemy. Cancel it if you can.</li>
+</ul>
+
+<div class="mistake">
+<strong>⚠️ Common mistakes:</strong>
+<ul>
+  <li>Staying grouped — you need to cover ground fast, not fight together.</li>
+  <li>Fighting cultists you could Parley — some can be interrogated (intellect/willpower test) which is faster than combat.</li>
+  <li>Forgetting to resign — if the agenda advances, ALL remaining cultists escape. Resign one round early.</li>
+</ul>
+</div>
+</div>
+
+<!-- SCENARIO 3 -->
+<div class="scenario">
+<h2>Scenario 3: The Devourer Below</h2>
+<div class="overview">
+  <strong>Setting:</strong> The woods south of Arkham. Something ancient stirs.<br>
+  <strong>Primary challenge:</strong> Navigate locations → disrupt a ritual OR face the final threat<br>
+  <strong>Doom pressure:</strong> Moderate — but chaos bag is at its worst
+</div>
+
+<h3>Strategy Tips</h3>
+<ul>
+  <li><strong>Cultists you missed in Scenario 2 appear here.</strong> Every cultist that escaped Midnight Masks makes this scenario harder. This is why Scenario 2 matters so much.</li>
+  <li><strong>The path is linear.</strong> You must move through several locations to reach the final site. Movement efficiency matters — don't backtrack.</li>
+  <li><strong>You don't have to fight the final enemy.</strong> You can win by advancing the act (placing clues). With 3 players, the direct fight is extremely hard.</li>
+  <li><strong>There are multiple valid endings.</strong> Some involve sacrifice, some involve brute force. Read your options carefully when they appear.</li>
+  <li><strong>Chaos bag is brutal now.</strong> After two scenarios of adding tokens, expect -3 to -5 modifiers. Over-commit to important tests.</li>
+  <li><strong>Bring movement cards.</strong> Shortcut, Elusive, Pathfinder — anything that saves actions moving through the woods.</li>
+</ul>
+
+<div class="mistake">
+<strong>⚠️ Common mistakes:</strong>
+<ul>
+  <li>Trying to fight the final enemy head-on with a 3-player team — it has massive health. Advance the act instead.</li>
+  <li>Under-committing to tests — the chaos bag is much worse than Scenarios 1-2. Commit cards liberally.</li>
+  <li>Forgetting that woods locations are randomized — you may need to explore multiple paths.</li>
+</ul>
+</div>
+</div>
+
+<!-- INVESTIGATOR FIT TABLE -->
+<h3>Investigator Fit — Night of the Zealot</h3>
+<p style="font-size:0.8rem;color:#6b7280;">Rated for the full 3-scenario arc. Campaign needs: balanced clue/combat, willpower for treacheries, speed for Midnight Masks.</p>
+<table>
+<tr><th>Investigator</th><th>Fit</th><th>Why</th></tr>
+<tr><td>Roland Banks <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Combat 4 + clue-on-kill is perfect for Gathering's Ghoul Priest. Covers both axes. Crowbar investigates at 4.</td></tr>
+<tr><td>Rex Murphy <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Extra clue ability dominates Midnight Masks — finds cultists in half the time. Int 4 handles all shroud values.</td></tr>
+<tr><td>Agnes Baker <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Will 5 shrugs off Rotting Remains. Horror-ping kills Acolytes without actions. Shrivelling handles Ghoul Priest.</td></tr>
+<tr><td>Daisy Walker</td><td class="fit-great">★★★</td><td>Int 5 crushes every investigate test. Old Book of Lore finds key cards fast. Tome action economy.</td></tr>
+<tr><td>Harvey Walters <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Int 5 + massive card draw. Finds answers fast. Weak to horror but campaign is short enough.</td></tr>
+<tr><td>Jacqueline Fine <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Will 5 + token manipulation counters the worsening chaos bag across all 3 scenarios.</td></tr>
+<tr><td>Norman Withers</td><td class="fit-great">★★★</td><td>Int 5 + Will 4. Top-deck play gives flexible responses. Handles both clues and treacheries.</td></tr>
+<tr><td>Zoey Samaras <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Combat 4 + resource on engage. Plenty of enemies to trigger her ability. No clue tools without Crowbar.</td></tr>
+<tr><td>Jenny Barnes <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Balanced 3/3/3/3 + resources. Flexible but doesn't excel at any one thing. Good generalist for Midnight Masks spread.</td></tr>
+<tr><td>"Ashcan" Pete</td><td class="fit-good">★★☆</td><td>Duke investigates at 4 and fights at 4. True flex investigator. Readying Duke = action efficiency.</td></tr>
+<tr><td>Wendy Adams</td><td class="fit-good">★★☆</td><td>Will 4 + token redraw helps with worsening bag. High agility evades. Needs clue events (Look what I found!).</td></tr>
+<tr><td>Jim Culver</td><td class="fit-good">★★☆</td><td>Will 4 + skull-as-0 softens the chaos bag. Decent flex with Shrivelling + clue spells.</td></tr>
+<tr><td>Nathaniel Cho <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Combat 5 demolishes Ghoul Priest and Devourer Below enemies. Zero clue ability — needs teammates.</td></tr>
+<tr><td>Stella Clark <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Fail-forward works well in a forgiving campaign. "Look what I found!" grabs clues. Survivor recursion.</td></tr>
+<tr><td>Monterey Jack</td><td class="fit-good">★★☆</td><td>Int 4 for clues + free card on move. Movement efficiency helps Midnight Masks and Devourer Below.</td></tr>
+<tr><td>"Skids" O'Toole</td><td class="fit-good">★★☆</td><td>Extra actions help cover ground in Midnight Masks. Combat 3 is passable with weapons. Resource-hungry.</td></tr>
+<tr><td>Bob Jenkins</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Item sharing supports team. Solid but unspectacular.</td></tr>
+<tr><td>Agatha Crane</td><td class="fit-good">★★☆</td><td>Will 4 + Int 4. Token sealing helps with worsening bag. Good flex.</td></tr>
+<tr><td>Gloria Goldberg</td><td class="fit-good">★★☆</td><td>Will 5 + encounter manipulation. Can bury Mysterious Chanting before it fires. Int 4 for clues.</td></tr>
+<tr><td>George Barnaby</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Resource engine funds assets. Solid support.</td></tr>
+<tr><td>Lucius Galloway</td><td class="fit-good">★★☆</td><td>Int 4 + evade ability. Handles enemies without killing. Movement tricks help Midnight Masks.</td></tr>
+<tr><td>Marion Tavares</td><td class="fit-good">★★☆</td><td>Int 3 passable. Event-based readying gives action efficiency. Better in longer campaigns.</td></tr>
+<tr><td>Winifred Habbamock <span class="built">starter</span></td><td class="fit-ok">★☆☆</td><td>Agility-focused in a campaign that tests willpower and intellect. Over-succeed draw is nice but she lacks core tools.</td></tr>
+<tr><td>Daniela Reyes</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate. Reactive damage is slow for a short campaign. Needs full setup time she doesn't have.</td></tr>
+<tr><td>Michael McGlen</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate. Pure combat overkill for a campaign with limited enemies outside Ghoul Priest.</td></tr>
+<tr><td>Lily Chen</td><td class="fit-ok">★☆☆</td><td>Combat stances need time to set up. Campaign is too short to benefit from her scaling. Int 2 hurts.</td></tr>
+</table>
+
+<!-- UPGRADE PATH -->
+<h3>Upgrade Path — Team 1 (Roland + Rex + Agnes)</h3>
+<p style="font-size:0.8rem;color:#6b7280;">~10 XP total across the campaign. Spend after Scenario 1 (4 XP if you kill Ghoul Priest) and after Scenario 2 (4-6 XP from cultists in victory display).</p>
+
+<table>
+<tr><th>Investigator</th><th>Priority Upgrades</th><th>XP</th></tr>
+<tr><td style="color:#1e40af;font-weight:600;">Roland</td><td><strong>Machete (1)</strong> — Taboo cost but essential for consistent +1 damage. Then <strong>Beat Cop (2)</strong> for +1 combat and ping damage.</td><td>1 + 2 = 3</td></tr>
+<tr><td style="color:#854d0e;font-weight:600;">Rex</td><td><strong>Higher Education (3)</strong> — boost intellect on demand for high-shroud locations in Devourer Below. Or <strong>Deduction (2)</strong> ×1 for double clues.</td><td>3</td></tr>
+<tr><td style="color:#6b21a8;font-weight:600;">Agnes</td><td><strong>Shrivelling (3)</strong> — upgrade from level 0. More charges, more damage. Then <strong>Ward of Protection (2)</strong> to cancel Mysterious Chanting or Ancient Evils.</td><td>3 + 2 = 5</td></tr>
+</table>
+<p style="font-size:0.8rem;color:#6b7280;">Note: With only ~10 XP total, you won't buy everything. Prioritize Roland's Machete (immediate combat boost) and Agnes's Shrivelling (3) for Devourer Below.</p>
+
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Forgotten Age — Campaign Guide</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.scenario { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e7eb; }
+.scenario:last-child { border-bottom: none; }
+.scenario h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.overview { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #6366f1; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+.mistake { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #ef4444; background: #fef2f2; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #374151; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
+table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
+th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; }
+td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; vertical-align: top; }
+.fit-great { color: #16a34a; font-weight: 600; }
+.fit-good { color: #ca8a04; }
+.fit-ok { color: #6b7280; }
+.built { font-size: 0.7rem; background: #dbeafe; color: #1e40af; padding: 0.1rem 0.3rem; border-radius: 0.2rem; margin-left: 0.3rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-dropdown">
+    <a href="../collection.html">📚 Collection</a>
+    <div class="nav-dropdown-menu">
+      <a href="../collection.html">My Collection</a>
+      <a href="../kickstarter.html">Kickstarter Watchlist</a>
+      <a href="../narrative-finder.html">Narrative Finder</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../arkham/lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="../arkham/lcg.html">LCG Collection</a>
+      <a href="../arkham/official.html">Official Rankings</a>
+      <a href="../arkham/homebrew.html">Homebrew Rankings</a>
+      <a href="../arkham/ranked.html">Combined Rankings</a>
+      <a href="../arkham/faq.html">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../investigators/index.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="../investigators/guardian.html">Zoey/Roland (Guardian)</a>
+      <a href="../investigators/seeker.html">Rex (Seeker)</a>
+      <a href="../investigators/rogue.html">Jenny (Rogue)</a>
+      <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/starters.html">Starter Decks</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../scenarios/excelsior.html">🎬 Scenarios</a>
+    <div class="nav-dropdown-menu">
+      <a href="../scenarios/excelsior.html">Excelsior Hotel</a>
+      <a href="../scenarios/blob.html">The Blob</a>
+      <a href="../scenarios/film-fatale.html">Film Fatale</a>
+      <a href="../scenarios/wendigo.html">Wendigo</a>
+      <a href="../scenarios/consternation.html">Consternation</a>
+      <a href="../scenarios/sleepy-hollow.html">Sleepy Hollow</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../campaigns/index.html" class="active">📖 Campaigns</a>
+    <div class="nav-dropdown-menu">
+      <a href="../campaigns/zealot.html">Night of the Zealot</a>
+      <a href="../campaigns/dunwich.html">Dunwich Legacy</a>
+      <a href="../campaigns/carcosa.html">Path to Carcosa</a>
+      <a href="../campaigns/forgotten-age.html">Forgotten Age</a>
+      <a href="../campaigns/edge-of-earth.html">Edge of the Earth</a>
+      <a href="../campaigns/drowned-city.html">Drowned City</a>
+    </div>
+  </div>
+</nav>
+
+<h1>📖 The Forgotten Age</h1>
+<p class="subtitle">Campaign guide — spoiler-free strategy tips</p>
+
+<div class="overview">
+  <strong>Premise:</strong> An expedition into the ruins of a forgotten civilization. Ancient secrets, deadly traps, and something that should have stayed buried.<br>
+  <strong>Players:</strong> 1–4 | <strong>Difficulty:</strong> Hard (hardest official campaign) | <strong>Length:</strong> ~16–20 hours (8 scenarios)<br>
+  <strong>Key mechanics:</strong> Explore (reveal locations from a deck), Supply Points (choose gear before scenarios), Vengeance (killing certain enemies makes the campaign harder), trauma-heavy<br>
+  <strong>XP available:</strong> ~30–40 total (lower than other campaigns due to Vengeance reducing rewards)
+</div>
+
+<div class="mistake">
+<strong>⚠️ Campaign Warning:</strong> This is the hardest official campaign. It punishes mistakes permanently (trauma carries forward, Vengeance makes the chaos bag worse). Expect investigator deaths. Build resilient decks with healing and horror soak. Don't play this first — play Zealot or Dunwich first.
+</div>
+
+<!-- RECOMMENDED TEAMS -->
+<h3>Recommended Teams (3 players)</h3>
+<div class="tip"><strong>🃏 Team 1 (prebuilt — best): <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#166534;font-weight:700">Jenny</span> + <span style="color:#991b1b;font-weight:700">Stella</span></strong> — This campaign punishes killing (Vengeance). You want to EVADE, not fight. Jenny (Agi 3 + Streetwise boosts + resources) and Stella (Agi 4 + fail-forward) handle traps brilliantly. Rex explores fast. Stella's Survivor recursion survives the punishing trauma. Jenny with Rogue weapons handles unavoidable combat in the back half. No dedicated Guardian because fighting is actively punished — evade Vengeance enemies instead.</div>
+<div class="tip"><strong>Team 2: <span style="color:#1e40af;font-weight:700">Roland</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#166534;font-weight:700">Jenny</span></strong> — If you want a dedicated fighter for the brutal back half (Scenarios 5-7). Roland's clue-on-kill helps when combat is unavoidable. Jenny handles traps and resources. Trade-off: Roland's Agi 2 fails traps constantly.</div>
+<div class="tip"><strong>Team 3: <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#166534;font-weight:700">Winifred</span> + <span style="color:#991b1b;font-weight:700">Stella</span></strong> — Maximum agility. Winifred's Agi 5 trivializes every trap. Her over-succeed draw keeps her hand full. Stella's Agi 4 + fail-forward. Rex for clues. Extremely risky (Winifred's Will 1) but traps never touch this team.</div>
+
+<!-- SUPPLY POINTS GUIDE -->
+<h3>Supply Points — What to Buy</h3>
+<div class="tip">
+<strong>Before certain scenarios, you spend Supply Points on gear.</strong> These are campaign resources — choose wisely.<br><br>
+<strong>Always buy:</strong> Provisions (heal damage/horror between scenarios), Rope/Chalk (bypass specific obstacles)<br>
+<strong>Situational:</strong> Map (helps with Explore), Torches (shroud reduction), Medicine (heal trauma)<br>
+<strong>Skip:</strong> Blanket (marginal benefit), Binoculars (too narrow)
+</div>
+
+<!-- SCENARIO 1 -->
+<div class="scenario">
+<h2>Scenario 1: The Untamed Wilds</h2>
+<div class="overview">
+  <strong>Setting:</strong> Dense jungle. Your expedition begins.<br>
+  <strong>Primary challenge:</strong> Explore mechanic introduction + Vengeance enemies<br>
+  <strong>Doom pressure:</strong> Moderate
+</div>
+<ul>
+  <li><strong>Explore is the new action.</strong> Instead of fixed locations, you draw from a location deck. Some draws are dead ends (treacheries). This costs actions — budget for failed explores.</li>
+  <li><strong>Vengeance enemies: DO NOT KILL unless forced.</strong> Enemies with Vengeance add to a campaign counter when killed. This counter makes future scenarios harder. Evade them instead.</li>
+  <li><strong>Agility matters immediately.</strong> Treacheries test agility for traps. Jenny (3), Winifred (5), and Stella (4) handle these. Roland (2) and Rex (3) struggle.</li>
+  <li><strong>This scenario sets the tone.</strong> It's harder than Zealot's opening. Don't be discouraged — the campaign is designed to be punishing from the start.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 2 -->
+<div class="scenario">
+<h2>Scenario 2: The Doom of Eztli</h2>
+<div class="overview">
+  <strong>Setting:</strong> Ancient temple ruins. Traps everywhere.<br>
+  <strong>Primary challenge:</strong> Navigate traps + escape before the temple collapses<br>
+  <strong>Doom pressure:</strong> High — timed escape
+</div>
+<ul>
+  <li><strong>This is a timed escape.</strong> You must get in, get what you need, and get out before the agenda advances. Don't linger.</li>
+  <li><strong>Traps test agility and intellect.</strong> Failing traps deals damage/horror. Bring agility commits or trap-bypassing cards.</li>
+  <li><strong>Explore continues.</strong> Dead-end explores waste precious time. Cards that let you look at the top of the explore deck are valuable.</li>
+  <li><strong>Resign is always an option.</strong> If things go badly, resign early. Taking trauma is better than being defeated (which gives MORE trauma).</li>
+</ul>
+</div>
+
+<!-- SCENARIO 3 -->
+<div class="scenario">
+<h2>Scenario 3: Threads of Fate</h2>
+<div class="overview">
+  <strong>Setting:</strong> Back in Arkham. Multiple objectives compete for your time.<br>
+  <strong>Primary challenge:</strong> Multi-objective race — you can't do everything<br>
+  <strong>Doom pressure:</strong> High — doom clock is shared across all objectives
+</div>
+<ul>
+  <li><strong>Multiple storylines run simultaneously.</strong> You must choose which objectives to pursue. You cannot complete all of them in one play.</li>
+  <li><strong>Split up.</strong> With 3 players, send each investigator to a different objective. Reconvene only if someone needs help.</li>
+  <li><strong>Prioritize based on your campaign state.</strong> Some objectives are more valuable depending on earlier choices. Read the act cards carefully.</li>
+  <li><strong>This is the most "open" scenario in the campaign.</strong> Enjoy the freedom — later scenarios are more linear and punishing.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 4 -->
+<div class="scenario">
+<h2>Scenario 4: The Boundary Beyond</h2>
+<div class="overview">
+  <strong>Setting:</strong> Reality shifts. Past and present overlap.<br>
+  <strong>Primary challenge:</strong> Locations transform — investigate before they change<br>
+  <strong>Doom pressure:</strong> High
+</div>
+<ul>
+  <li><strong>Locations flip between two states.</strong> You need clues from specific sides. Timing your investigation around the flips is key.</li>
+  <li><strong>Vengeance enemies return.</strong> Continue evading them. The Vengeance counter is cumulative — every kill makes the rest of the campaign harder.</li>
+  <li><strong>Willpower tests appear more here.</strong> The encounter deck shifts toward willpower. Agnes would be useful if she were on your team.</li>
+  <li><strong>Explore is still present.</strong> Budget actions for failed explores. Movement efficiency matters.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 5 -->
+<div class="scenario">
+<h2>Scenario 5: Heart of the Elders</h2>
+<div class="overview">
+  <strong>Setting:</strong> Deep jungle / underground. A two-part scenario.<br>
+  <strong>Primary challenge:</strong> Exploration + combat gauntlet<br>
+  <strong>Doom pressure:</strong> Moderate per part
+</div>
+<ul>
+  <li><strong>This is effectively two scenarios.</strong> Part 1 is exploration-focused, Part 2 is combat-focused. Your team needs to handle both.</li>
+  <li><strong>Supplies matter here.</strong> Rope and Torches have specific uses. If you bought them earlier, they pay off now.</li>
+  <li><strong>Combat ramps significantly.</strong> Enemies are tougher than anything you've faced so far. Roland needs upgraded weapons by now.</li>
+  <li><strong>Explore dead ends are extra punishing.</strong> The doom clock is tight. Every wasted explore action hurts.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 6 -->
+<div class="scenario">
+<h2>Scenario 6: The City of Archives</h2>
+<div class="overview">
+  <strong>Setting:</strong> Somewhere very strange. Your abilities are... different.<br>
+  <strong>Primary challenge:</strong> Unique puzzle — your normal stats may not apply<br>
+  <strong>Doom pressure:</strong> Moderate
+</div>
+<ul>
+  <li><strong>This scenario changes the rules.</strong> Your investigators may not function as expected. Adapt to the new conditions rather than fighting them.</li>
+  <li><strong>Intellect is king here.</strong> Investigation and intellect-based tests dominate. Rex and Harvey excel; combat-focused investigators struggle.</li>
+  <li><strong>Don't panic about the setup.</strong> The scenario looks weird but it's solvable. Read everything carefully and adapt.</li>
+  <li><strong>This is a breather from the brutality.</strong> Enjoy the puzzle — the next two scenarios are the hardest in the campaign.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 7 -->
+<div class="scenario">
+<h2>Scenario 7: The Depths of Yoth</h2>
+<div class="overview">
+  <strong>Setting:</strong> Deep underground. Descending into darkness.<br>
+  <strong>Primary challenge:</strong> Survival descent — each level is harder than the last<br>
+  <strong>Doom pressure:</strong> Extreme — Vengeance counter directly affects difficulty here
+</div>
+<ul>
+  <li><strong>Your Vengeance counter determines how hard this is.</strong> Every Vengeance enemy you killed earlier makes this scenario more punishing. This is the payoff for evading instead of killing.</li>
+  <li><strong>Each level is harder.</strong> You descend through increasingly dangerous areas. Save your best cards and resources for the deeper levels.</li>
+  <li><strong>Combat is unavoidable.</strong> Unlike earlier scenarios, you must fight here. Upgraded weapons are essential.</li>
+  <li><strong>Healing and soak are critical.</strong> You'll take damage and horror. Investigators without soak may be defeated.</li>
+  <li><strong>This is widely considered the hardest scenario in the game.</strong> Losses are expected. Don't restart — push through.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 8 -->
+<div class="scenario">
+<h2>Scenario 8: Shattered Aeons</h2>
+<div class="overview">
+  <strong>Setting:</strong> Beyond time. The finale.<br>
+  <strong>Primary challenge:</strong> Navigate a fractured reality + make final choices<br>
+  <strong>Doom pressure:</strong> High
+</div>
+<ul>
+  <li><strong>Multiple paths to victory.</strong> The scenario offers different approaches based on your campaign choices. Read your options carefully.</li>
+  <li><strong>Every stat matters.</strong> Expect tests of all types. Balanced investigators have an edge.</li>
+  <li><strong>Your campaign state determines difficulty.</strong> Trauma, Vengeance, supplies — everything accumulated across 7 scenarios affects the finale.</li>
+  <li><strong>Use everything.</strong> Spend all resources, commit all cards. There's nothing after this.</li>
+  <li><strong>Multiple endings exist.</strong> Some are bittersweet, some are triumphant. All are earned.</li>
+</ul>
+<div class="mistake">
+<strong>⚠️ Common mistakes across the whole campaign:</strong>
+<ul>
+  <li>Killing Vengeance enemies — evade them. Every kill makes Scenario 7 harder.</li>
+  <li>Skipping supplies — Provisions and Rope pay for themselves multiple times over.</li>
+  <li>Bringing low-agility teams — traps test agility constantly. Will 5 doesn't help when you need Agi 3+.</li>
+  <li>Not bringing healing — trauma accumulates. Without healing, investigators die mid-campaign.</li>
+</ul>
+</div>
+</div>
+
+<!-- INVESTIGATOR FIT TABLE -->
+<h3>Investigator Fit — The Forgotten Age</h3>
+<p style="font-size:0.8rem;color:#6b7280;">Rated for the full 8-scenario arc. Campaign needs: agility (traps), evasion (Vengeance enemies), exploration speed, combat scaling, resilience (trauma).</p>
+<table>
+<tr><th>Investigator</th><th>Fit</th><th>Why</th></tr>
+<tr><td>Rex Murphy <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Extra clues accelerate Explore-heavy scenarios. Int 4 handles investigation. Agi 3 is passable for traps. Speed is survival in this campaign.</td></tr>
+<tr><td>Jenny Barnes <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Balanced 3/3/3/3 handles every test type. Resources fund supplies and expensive assets. Agi 3 passes traps. Sanity 7 survives horror. Best generalist for this campaign.</td></tr>
+<tr><td>Stella Clark <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Fail-forward is MADE for this campaign. Agi 4 handles traps. Survivor recursion keeps her alive through trauma. "Look what I found!" grabs clues. Sanity 8 is incredible.</td></tr>
+<tr><td>Winifred Habbamock <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Agi 5 trivializes traps. Over-succeed draw keeps hand full. Rogue evasion avoids Vengeance enemies entirely. Will 1 is dangerous but agility compensates.</td></tr>
+<tr><td>Monterey Jack</td><td class="fit-great">★★★</td><td>Int 4 + Agi 4. Free card on move. Movement efficiency for Explore scenarios. Handles both clues and traps. Made for this campaign thematically and mechanically.</td></tr>
+<tr><td>"Ashcan" Pete</td><td class="fit-great">★★★</td><td>Duke investigates at 4 and fights at 4. Will 4 for treacheries. Survivor recursion. Flexible and resilient — exactly what this campaign demands.</td></tr>
+<tr><td>Roland Banks <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Combat 4 essential for back half. Clue-on-kill helps. But Agi 2 fails traps constantly and Will 3 is risky. Needs agility commits.</td></tr>
+<tr><td>Wendy Adams</td><td class="fit-good">★★☆</td><td>Will 4 + Agi 4. Token redraw. Survivor recursion. Handles traps and treacheries. Needs clue events. Sanity 7 is great.</td></tr>
+<tr><td>Zoey Samaras <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Combat 4 + Will 4. Handles fighting and treacheries. But Agi 2 fails traps. Resource generation helps fund supplies.</td></tr>
+<tr><td>"Skids" O'Toole</td><td class="fit-good">★★☆</td><td>Agi 4 handles traps. Extra actions help with Explore tempo loss. Combat 3 passable. Will 2 is risky.</td></tr>
+<tr><td>Agnes Baker <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Will 5 handles some treacheries but Agi 3 is only passable for traps. Horror-ping less useful when you should be evading, not killing. Still strong but not her best campaign.</td></tr>
+<tr><td>Nathaniel Cho <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Combat 5 for the brutal back half. But Agi 2 + Int 2 means he fails traps and can't investigate. Needs heavy team support.</td></tr>
+<tr><td>Lucius Galloway</td><td class="fit-good">★★☆</td><td>Int 4 + evade ability. Avoids Vengeance enemies cleanly. Movement tricks help Explore scenarios.</td></tr>
+<tr><td>Bob Jenkins</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Item economy funds supplies. Agi 3 passable. Solid support.</td></tr>
+<tr><td>Jacqueline Fine <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Will 5 + token manipulation. Helps team pass tests. But Agi 2 fails traps. Less dominant here than in Carcosa.</td></tr>
+<tr><td>Harvey Walters <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Int 5 + card draw. Consistent clues. But Agi 2 fails traps and Health 7/Sanity 7 doesn't help when trauma accumulates.</td></tr>
+<tr><td>Daisy Walker</td><td class="fit-good">★★☆</td><td>Int 5 for clues. Will 3 + Agi 2 means she fails both traps and willpower treacheries. Fragile in a punishing campaign.</td></tr>
+<tr><td>Jim Culver</td><td class="fit-good">★★☆</td><td>Will 4 + skull-as-0. Decent flex. Agi 3 passable. Not spectacular but never terrible.</td></tr>
+<tr><td>Marion Tavares</td><td class="fit-good">★★☆</td><td>Event readying for action efficiency. Helps with Explore tempo. Agi value determines viability.</td></tr>
+<tr><td>Norman Withers</td><td class="fit-good">★★☆</td><td>Int 5 + Will 4. Strong stats but Agi 2 fails traps. Top-deck play helps find answers.</td></tr>
+<tr><td>Gloria Goldberg</td><td class="fit-good">★★☆</td><td>Will 5 + encounter manipulation. Can bury trap treacheries. But Agi 2 when traps do fire.</td></tr>
+<tr><td>Agatha Crane</td><td class="fit-good">★★☆</td><td>Will 4 + Int 4. Token sealing. Agi value determines trap handling.</td></tr>
+<tr><td>George Barnaby</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Resources for supplies. Solid but unexciting.</td></tr>
+<tr><td>Daniela Reyes</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate. Reactive damage kills Vengeance enemies (bad). Agi 3 is passable but she contributes little to Explore scenarios.</td></tr>
+<tr><td>Michael McGlen</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate. Combat overkill when you should be evading. Agi 2 fails traps.</td></tr>
+<tr><td>Lily Chen</td><td class="fit-ok">★☆☆</td><td>Int 2 can't investigate well. Agi 3 passable but combat stances encourage killing (bad for Vengeance). Needs too much setup.</td></tr>
+</table>
+
+<!-- UPGRADE PATH -->
+<h3>Upgrade Path — Team 1 (Rex + Jenny + Stella)</h3>
+<p style="font-size:0.8rem;color:#6b7280;">~30–40 XP across 8 scenarios (lower than other campaigns). Prioritize evasion tools and agility boosts early, then back-half combat for Jenny.</p>
+
+<table>
+<tr><th>Investigator</th><th>Priority Upgrades (in order)</th><th>XP</th></tr>
+<tr><td style="color:#854d0e;font-weight:600;">Rex</td><td>
+  <strong>1. Pathfinder (3)</strong> — free movement. Essential when Explore wastes actions.<br>
+  <strong>2. Higher Education (3)</strong> — boost intellect on demand.<br>
+  <strong>3. Deduction (2) ×2</strong> — double clues for tight scenarios.<br>
+  <strong>4. Disc of Itzamna (2)</strong> — auto-evade Vengeance enemies without killing.
+</td><td>3+3+4+2 = 12</td></tr>
+<tr><td style="color:#166534;font-weight:600;">Jenny</td><td>
+  <strong>1. Streetwise (3)</strong> — boost agility or intellect on demand with her resources. Handles traps AND clues.<br>
+  <strong>2. Lockpicks (1)</strong> — investigate at agility. Efficient clues.<br>
+  <strong>3. Elusive (2)</strong> — emergency escape from Vengeance enemies + free movement.<br>
+  <strong>4. .41 Derringer (2)</strong> or <strong>Switchblade (2)</strong> — back-half combat when fighting is unavoidable.<br>
+  <strong>5. Lola Santiago (3)</strong> — convert resources to clues.
+</td><td>3+1+2+2+3 = 11</td></tr>
+<tr><td style="color:#991b1b;font-weight:600;">Stella</td><td>
+  <strong>1. Peter Sylvestre (2)</strong> — agility boost + horror soak. Handles traps even better.<br>
+  <strong>2. "Look what I found!" (2)</strong> — clues from failed tests (she fails on purpose).<br>
+  <strong>3. Survival Instinct (2)</strong> — evade + move in one action. Perfect for Vengeance enemies.<br>
+  <strong>4. True Survivor (3)</strong> — recur Survivor skills from discard. Infinite value.
+</td><td>2+2+2+3 = 9</td></tr>
+</table>
+<p style="font-size:0.8rem;color:#6b7280;">Total: ~32 XP. This campaign gives less XP than others. Prioritize Jenny's Streetwise and Rex's Pathfinder early — they solve the campaign's core problems (trap tests, tempo loss from Explore). Stella is cheap to upgrade because Survivor cards are low-level.</p>
+
+</body>
+</html>

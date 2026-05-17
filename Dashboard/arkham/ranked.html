@@ -18,6 +18,10 @@
     .tag-tierD { background: #f3f4f6; color: #6b7280; }
     .tag-scifi { background: #cffafe; color: #155e75; }
     .tag-fiddly { background: #fee2e2; color: #991b1b; }
+    .sort-btn { padding: 0.3rem 0.6rem; border: 1px solid #d1d5db; border-radius: 0.25rem; background: #fff; cursor: pointer; font-size: 0.75rem; }
+    .sort-btn.active { background: #1e40af; color: #fff; border-color: #1e40af; }
+    .sort-btn:hover { background: #f3f4f6; }
+    .sort-btn.active:hover { background: #1e3a8a; }
     .legend { font-size: 0.7rem; color: #6b7280; margin-bottom: 1rem; display: flex; gap: 1rem; flex-wrap: wrap; }
     .legend span { display: flex; align-items: center; gap: 0.3rem; }
   </style>
@@ -49,6 +53,7 @@
       <a href="../investigators/seeker.html">Rex (Seeker)</a>
       <a href="../investigators/rogue.html">Jenny (Rogue)</a>
       <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/survivor.html">Pete (Survivor)</a>
       <a href="../investigators/starters.html">Starter Decks</a>
     </div>
   </div>
@@ -66,7 +71,13 @@
   <div class="nav-dropdown">
     <a href="../campaigns/index.html">📖 Campaigns</a>
     <div class="nav-dropdown-menu">
-      <a href="../campaigns/index.html">(Coming soon)</a>
+      <a href="../campaigns/zealot.html">Night of the Zealot</a>
+      <a href="../campaigns/dunwich.html">Dunwich Legacy</a>
+      <a href="../campaigns/carcosa.html">Path to Carcosa</a>
+      <a href="../campaigns/forgotten-age.html">Forgotten Age</a>
+      <a href="../campaigns/edge-of-earth.html">Edge of the Earth</a>
+      <a href="../campaigns/drowned-city.html">Drowned City</a>
+      <a href="../campaigns/homebrew.html">Homebrew Campaigns</a>
     </div>
   </div>
 </nav>
@@ -83,6 +94,15 @@
   <div class="tabs">
     <div class="tab active" data-panel="campaigns">📖 Campaigns</div>
     <div class="tab" data-panel="standalones">🎭 Standalones</div>
+  </div>
+
+  <div class="sort-controls" style="margin:0.75rem 0; display:flex; gap:0.5rem; font-size:0.8rem;">
+    <span style="color:#6b7280; padding:0.3rem 0;">Sort:</span>
+    <button class="sort-btn active" data-sort="fit">Profile Fit</button>
+    <button class="sort-btn" data-sort="difficulty-asc">Easiest First</button>
+    <button class="sort-btn" data-sort="difficulty-desc">Hardest First</button>
+    <button class="sort-btn" data-sort="mechanics">Best Mechanics</button>
+    <button class="sort-btn" data-sort="narrative">Best Narrative</button>
   </div>
 
   <div class="panel active" id="campaigns"></div>
@@ -268,6 +288,32 @@ function renderList(data, containerId) {
 
 renderList(campaigns, 'campaigns');
 renderList(standalones, 'standalones');
+
+function sortData(data, sortType) {
+  const tierOrder = {A:0, B:1, C:2, D:3};
+  const sorted = [...data];
+  switch(sortType) {
+    case 'fit': sorted.sort((a,b) => a.rank - b.rank); break;
+    case 'difficulty-asc': sorted.sort((a,b) => a.fiddle - b.fiddle || a.rank - b.rank); break;
+    case 'difficulty-desc': sorted.sort((a,b) => b.fiddle - a.fiddle || a.rank - b.rank); break;
+    case 'mechanics': sorted.sort((a,b) => b.mech - a.mech || a.rank - b.rank); break;
+    case 'narrative': sorted.sort((a,b) => b.narr - a.narr || a.rank - b.rank); break;
+  }
+  return sorted;
+}
+
+function applySort(sortType) {
+  renderList(sortData(campaigns, sortType), 'campaigns');
+  renderList(sortData(standalones, sortType), 'standalones');
+}
+
+document.querySelectorAll('.sort-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    applySort(btn.dataset.sort);
+  });
+});
 
 document.querySelectorAll('.tab').forEach(tab => {
   tab.addEventListener('click', () => {

@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Drowned City — Campaign Guide</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.scenario { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e7eb; }
+.scenario:last-child { border-bottom: none; }
+.scenario h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.overview { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #6366f1; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+.mistake { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #ef4444; background: #fef2f2; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #374151; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
+table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
+th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; }
+td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; vertical-align: top; }
+.fit-great { color: #16a34a; font-weight: 600; }
+.fit-good { color: #ca8a04; }
+.fit-ok { color: #6b7280; }
+.built { font-size: 0.7rem; background: #dbeafe; color: #1e40af; padding: 0.1rem 0.3rem; border-radius: 0.2rem; margin-left: 0.3rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-dropdown">
+    <a href="../collection.html">📚 Collection</a>
+    <div class="nav-dropdown-menu">
+      <a href="../collection.html">My Collection</a>
+      <a href="../kickstarter.html">Kickstarter Watchlist</a>
+      <a href="../narrative-finder.html">Narrative Finder</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../arkham/lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="../arkham/lcg.html">LCG Collection</a>
+      <a href="../arkham/official.html">Official Rankings</a>
+      <a href="../arkham/homebrew.html">Homebrew Rankings</a>
+      <a href="../arkham/ranked.html">Combined Rankings</a>
+      <a href="../arkham/faq.html">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../investigators/index.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="../investigators/guardian.html">Zoey/Roland (Guardian)</a>
+      <a href="../investigators/seeker.html">Rex (Seeker)</a>
+      <a href="../investigators/rogue.html">Jenny (Rogue)</a>
+      <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/starters.html">Starter Decks</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../scenarios/excelsior.html">🎬 Scenarios</a>
+    <div class="nav-dropdown-menu">
+      <a href="../scenarios/excelsior.html">Excelsior Hotel</a>
+      <a href="../scenarios/blob.html">The Blob</a>
+      <a href="../scenarios/film-fatale.html">Film Fatale</a>
+      <a href="../scenarios/wendigo.html">Wendigo</a>
+      <a href="../scenarios/consternation.html">Consternation</a>
+      <a href="../scenarios/sleepy-hollow.html">Sleepy Hollow</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../campaigns/index.html" class="active">📖 Campaigns</a>
+    <div class="nav-dropdown-menu">
+      <a href="../campaigns/zealot.html">Night of the Zealot</a>
+      <a href="../campaigns/dunwich.html">Dunwich Legacy</a>
+      <a href="../campaigns/carcosa.html">Path to Carcosa</a>
+      <a href="../campaigns/forgotten-age.html">Forgotten Age</a>
+      <a href="../campaigns/edge-of-earth.html">Edge of the Earth</a>
+      <a href="../campaigns/drowned-city.html">Drowned City</a>
+    </div>
+  </div>
+</nav>
+
+<h1>📖 The Drowned City</h1>
+<p class="subtitle">Campaign guide — spoiler-free strategy tips</p>
+
+<div class="overview">
+  <strong>Premise:</strong> Something stirs beneath Arkham. The city floods, ancient ruins surface, and a cosmic horror awakens. Tied to the Cthulhu mythos directly.<br>
+  <strong>Players:</strong> 1–4 | <strong>Difficulty:</strong> Medium–Hard | <strong>Length:</strong> ~18–22 hours (9 scenarios)<br>
+  <strong>Key mechanics:</strong> Flood levels (locations become submerged, changing their properties), Glyph puzzles (rune-matching for rewards), Artifact story assets (powerful items found during play), Alert/Patrol enemies<br>
+  <strong>XP available:</strong> ~40–50 total across 9 scenarios
+</div>
+
+<!-- RECOMMENDED TEAMS -->
+<h3>Recommended Teams (3 players)</h3>
+<div class="tip"><strong>🃏 Team 1 (prebuilt — best): <span style="color:#1e40af;font-weight:700">Nathaniel</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Agnes</span></strong> — Alert enemies deal damage when you FAIL attacks. Nathaniel's Combat 5 minimizes failures — he almost never triggers Alert. His event-based fighting doesn't provoke attacks of opportunity, making him ideal for aggressive enemies. Agnes (Will 5) handles cosmic treacheries that dominate the back half. Rex solves Glyph puzzles fast with his extra-clue ability. Nathaniel's weaknesses (Int 2, Will 3) are fully covered by his teammates.</div>
+<div class="tip"><strong>Team 2: <span style="color:#1e40af;font-weight:700">Zoey</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Agnes</span></strong> — Zoey's Combat 4 + Will 4 + resources. More balanced than Nathaniel — she handles willpower tests herself. Slightly less combat output but more self-sufficient. Good if you want fewer team dependencies.</div>
+<div class="tip"><strong>Team 3: <span style="color:#1e40af;font-weight:700">Nathaniel</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Jacqueline</span></strong> — Jacqueline's token manipulation helps Nathaniel's already-high combat become near-guaranteed. Her Will 5 covers cosmic treacheries. Rex for clues. Maximum combat reliability against Alert enemies.</div>
+
+<!-- FLOOD MECHANICS GUIDE -->
+<h3>Flood Levels — How They Work</h3>
+<div class="tip">
+<strong>Locations have flood levels that increase over time.</strong> As flood rises, locations change:<br><br>
+• <strong>Unflooded:</strong> Normal. No penalties.<br>
+• <strong>Partially flooded:</strong> Increased shroud or movement costs. Harder to investigate.<br>
+• <strong>Fully flooded:</strong> Location may become inaccessible or extremely dangerous. May deal damage to investigators there.<br><br>
+<strong>Strategy:</strong> Investigate locations BEFORE they flood. Prioritize low-lying locations first. Movement between flooded locations may cost extra actions.
+</div>
+
+<!-- SCENARIO 1 -->
+<div class="scenario">
+<h2>Scenario 1: One Last Job</h2>
+<div class="overview">
+  <strong>Setting:</strong> Arkham's underworld. Gang conflict.<br>
+  <strong>Primary challenge:</strong> Navigate criminal factions + gather information<br>
+  <strong>Doom pressure:</strong> Moderate
+</div>
+<ul>
+  <li><strong>This is a noir-style opening.</strong> Investigation and social interaction dominate. Combat is present but not the focus.</li>
+  <li><strong>Multiple factions compete.</strong> You interact with rival gangs. Your choices affect which allies and enemies appear later.</li>
+  <li><strong>Intellect and combat both matter.</strong> You need clues to advance but enemies are aggressive. Balanced teams handle this best.</li>
+  <li><strong>Introduces the campaign's tone.</strong> Darker and more grounded than other campaigns initially — the cosmic horror builds gradually.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 2 -->
+<div class="scenario">
+<h2>Scenario 2: The Western Wall</h2>
+<div class="overview">
+  <strong>Setting:</strong> Ancient underwater ruins. The first descent.<br>
+  <strong>Primary challenge:</strong> Navigate treacherous paths + solve Glyph puzzles<br>
+  <strong>Doom pressure:</strong> Moderate — flood timer creates urgency
+</div>
+<ul>
+  <li><strong>Flood mechanics fully activate here.</strong> Locations flood over time. Investigate before the water rises.</li>
+  <li><strong>Glyph puzzles appear.</strong> Matching rune symbols unlocks rewards (artifacts, story progression). Pay attention to symbols on locations and cards.</li>
+  <li><strong>The path is dangerous.</strong> Treacherous locations test agility or deal damage. Movement isn't free — plan your route.</li>
+  <li><strong>Deep One enemies appear.</strong> Aquatic enemies that are stronger in flooded locations. Fight them in unflooded areas when possible.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 3 -->
+<div class="scenario">
+<h2>Scenario 3: The Drowned Quarter</h2>
+<div class="overview">
+  <strong>Setting:</strong> Submerged ruins. An ancient barrier system.<br>
+  <strong>Primary challenge:</strong> Reactivate ancient technology while surviving underwater threats<br>
+  <strong>Doom pressure:</strong> High — the dome is collapsing
+</div>
+<ul>
+  <li><strong>Objective-based scenario.</strong> You must interact with specific locations/objects to progress. Clues alone don't advance the act.</li>
+  <li><strong>Enemies are tougher here.</strong> Underwater creatures are more dangerous. Upgraded weapons help.</li>
+  <li><strong>Artifacts found here carry forward.</strong> Story assets you discover become permanent additions to your campaign. Search thoroughly.</li>
+  <li><strong>Flood pressure is real.</strong> The collapsing environment creates a timer. Don't linger — accomplish objectives and move on.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 4 -->
+<div class="scenario">
+<h2>Scenario 4: The Apiary</h2>
+<div class="overview">
+  <strong>Setting:</strong> A biological horror — organic tunnels and parasitic threats.<br>
+  <strong>Primary challenge:</strong> Survive a hostile environment + rescue objectives<br>
+  <strong>Doom pressure:</strong> High — parasites spread
+</div>
+<ul>
+  <li><strong>The environment itself is hostile.</strong> Locations deal damage or horror just for being there. Health and sanity soak are essential.</li>
+  <li><strong>Parasitic enemies transform.</strong> Some enemies change form or attach to investigators. Dealing with them quickly prevents escalation.</li>
+  <li><strong>Combat is primary.</strong> This is the most combat-heavy scenario so far. Roland/Zoey/Nathaniel need to be fully online.</li>
+  <li><strong>Artifacts continue to appear.</strong> Glyph-marked items provide campaign-long benefits. Don't skip them.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 5 -->
+<div class="scenario">
+<h2>Scenario 5: The Grand Vault</h2>
+<div class="overview">
+  <strong>Setting:</strong> Deep within R'lyeh. Ancient machinery.<br>
+  <strong>Primary challenge:</strong> Navigate shifting architecture + solve complex puzzles<br>
+  <strong>Doom pressure:</strong> High — walls shift on a timer
+</div>
+<ul>
+  <li><strong>The map shifts.</strong> Locations move or change connections. You can't plan a fixed route — adapt each round.</li>
+  <li><strong>Glyph puzzles are more complex.</strong> Multiple runes must be matched in sequence. Intellect-heavy investigators shine.</li>
+  <li><strong>Deadly mechanisms deal damage.</strong> Treacheries from the environment are hazard-typed. Agility or intellect tests to avoid.</li>
+  <li><strong>This is a puzzle scenario.</strong> Combat is secondary to navigation and problem-solving. Rex and Harvey are more valuable than fighters here.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 6 -->
+<div class="scenario">
+<h2>Scenario 6: Court of the Ancients</h2>
+<div class="overview">
+  <strong>Setting:</strong> A towering structure. Ancient beings observe you.<br>
+  <strong>Primary challenge:</strong> Ascend while dealing with massive threats<br>
+  <strong>Doom pressure:</strong> High
+</div>
+<ul>
+  <li><strong>Vertical movement returns.</strong> You ascend through the structure. Falling back wastes actions.</li>
+  <li><strong>A massive enemy guards the area.</strong> It's extremely tough. You may need to bypass it rather than fight directly.</li>
+  <li><strong>Willpower tests increase.</strong> The cosmic influence grows stronger. Low-willpower investigators suffer.</li>
+  <li><strong>Artifacts from earlier scenarios may help.</strong> Story assets you've collected can provide shortcuts or bonuses here.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 7 -->
+<div class="scenario">
+<h2>Scenario 7: Obsidian Canyons</h2>
+<div class="overview">
+  <strong>Setting:</strong> Open alien landscape. Storms and flying threats.<br>
+  <strong>Primary challenge:</strong> Exploration under hostile weather + aerial enemies<br>
+  <strong>Doom pressure:</strong> High — storms close in
+</div>
+<ul>
+  <li><strong>Weather is a mechanic.</strong> Storms affect movement and tests. Timing your actions around weather patterns matters.</li>
+  <li><strong>Flying enemies are dangerous.</strong> They move unpredictably and hit hard. Combat readiness is essential.</li>
+  <li><strong>The map is open.</strong> Multiple paths to objectives. Split up to cover ground but regroup for combat.</li>
+  <li><strong>Agility tests for terrain.</strong> Navigating the canyons tests agility. High-agility investigators move faster.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 8 -->
+<div class="scenario">
+<h2>Scenario 8: Sepulchre of the Sleeper</h2>
+<div class="overview">
+  <strong>Setting:</strong> The resting place. Something ancient sleeps here.<br>
+  <strong>Primary challenge:</strong> Interact with the environment before it's too late<br>
+  <strong>Doom pressure:</strong> Extreme — awakening is imminent
+</div>
+<ul>
+  <li><strong>This is the penultimate scenario.</strong> What you accomplish here directly determines the finale's difficulty.</li>
+  <li><strong>Glyph puzzles reach their climax.</strong> All the rune knowledge you've gathered pays off. Artifacts provide bonuses.</li>
+  <li><strong>Willpower is critical.</strong> The cosmic presence tests willpower heavily. Agnes and Jacqueline are essential.</li>
+  <li><strong>Time is extremely tight.</strong> Every action must advance your objective. No exploration for its own sake.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 9 -->
+<div class="scenario">
+<h2>Scenario 9: The Doom of Arkham</h2>
+<div class="overview">
+  <strong>Setting:</strong> Arkham itself. The finale.<br>
+  <strong>Primary challenge:</strong> Save the city — everything converges<br>
+  <strong>Doom pressure:</strong> Maximum
+</div>
+<ul>
+  <li><strong>Two-part finale.</strong> Expect a long, intense session. Both parts are brutal.</li>
+  <li><strong>Everything you've done matters.</strong> Artifacts collected, Glyphs solved, allies saved — all affect your options and difficulty.</li>
+  <li><strong>Combat is extreme.</strong> The final threats are the toughest in the campaign. Fully upgraded weapons and damage spells are mandatory.</li>
+  <li><strong>Multiple paths to victory.</strong> Your campaign choices determine which endings are available. All require sacrifice.</li>
+  <li><strong>Use everything.</strong> Spend all resources, commit all cards, activate all artifacts. This is the end.</li>
+</ul>
+<div class="mistake">
+<strong>⚠️ Common mistakes across the campaign:</strong>
+<ul>
+  <li>Ignoring flood timing — investigate locations BEFORE they flood. Once submerged, shroud increases dramatically.</li>
+  <li>Skipping Glyph puzzles — artifacts from puzzles provide permanent campaign benefits. They're worth the actions.</li>
+  <li>Fighting Alert enemies without high combat — Alert means they hit you if you fail. Only attack with Combat 4+ or use events.</li>
+  <li>Not bringing combat upgrades for the back half — Scenarios 6-9 are extremely combat-heavy.</li>
+</ul>
+</div>
+</div>
+
+<!-- INVESTIGATOR FIT TABLE -->
+<h3>Investigator Fit — The Drowned City</h3>
+<p style="font-size:0.8rem;color:#6b7280;">Rated for the full 9-scenario arc. Campaign needs: combat (Alert/Patrol enemies), investigation (Glyph puzzles + flooded shroud), willpower (cosmic influence), balanced stats.</p>
+<table>
+<tr><th>Investigator</th><th>Fit</th><th>Why</th></tr>
+<tr><td>Roland Banks <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Combat 4 handles Alert enemies safely. Clue-on-kill for action efficiency. Crowbar investigates. Essential fighter for this combat-heavy campaign.</td></tr>
+<tr><td>Rex Murphy <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Extra clues solve Glyph puzzles fast. Int 4 handles increased shroud from flooding. Speed keeps pace with tight doom clocks.</td></tr>
+<tr><td>Agnes Baker <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Will 5 for cosmic treacheries. Horror-ping handles small enemies without triggering Alert. Shrivelling for big threats. Strong all campaign.</td></tr>
+<tr><td>Zoey Samaras <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Combat 4 + Will 4 + resources. Handles Alert enemies and willpower tests. Resource generation funds expensive upgrades across 9 scenarios.</td></tr>
+<tr><td>Nathaniel Cho <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Combat 5 + event-based fighting. Events don't trigger attacks of opportunity — perfect for Alert enemies. Dominates combat scenarios.</td></tr>
+<tr><td>Harvey Walters <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Int 5 + Will 4 + card draw. Solves Glyph puzzles, handles treacheries, keeps team fueled across 9 scenarios. Consistent.</td></tr>
+<tr><td>Jacqueline Fine <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Will 5 + token manipulation. Helps team pass tests in flooded (high-shroud) locations. Counters cosmic willpower treacheries.</td></tr>
+<tr><td>Norman Withers</td><td class="fit-great">★★★</td><td>Int 5 + Will 4. Handles Glyph puzzles and treacheries. Top-deck play for flexible responses. Strong in puzzle scenarios.</td></tr>
+<tr><td>Daisy Walker</td><td class="fit-good">★★☆</td><td>Int 5 for Glyph puzzles and flooded locations. Will 3 is risky for cosmic treacheries. Tome actions for efficiency.</td></tr>
+<tr><td>"Ashcan" Pete</td><td class="fit-good">★★☆</td><td>Duke at 4/4. Will 4 handles treacheries. Flexible across all scenario types. Survivor recursion for resilience.</td></tr>
+<tr><td>Jenny Barnes <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Balanced 3/3/3/3 + resources. Handles anything adequately. Will 3 is risky. Resources fund solutions across 9 scenarios.</td></tr>
+<tr><td>Gloria Goldberg</td><td class="fit-good">★★☆</td><td>Will 5 + encounter manipulation. Buries dangerous treacheries. Int 4 for puzzles. Strong defensive value.</td></tr>
+<tr><td>Stella Clark <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Fail-forward helps when flooded locations increase difficulty. Survivor recursion. Will 3 is risky but Sanity 8 buffers.</td></tr>
+<tr><td>Wendy Adams</td><td class="fit-good">★★☆</td><td>Will 4 + token redraw. Survivor recursion. Needs clue events for Glyph puzzles. Sanity 7 is good.</td></tr>
+<tr><td>Monterey Jack</td><td class="fit-good">★★☆</td><td>Int 4 + movement efficiency. Helps navigate flooded maps. Will 2 is dangerous for cosmic treacheries.</td></tr>
+<tr><td>Jim Culver</td><td class="fit-good">★★☆</td><td>Will 4 + skull-as-0. Decent flex. Helps with chaos bag across 9 scenarios.</td></tr>
+<tr><td>Agatha Crane</td><td class="fit-good">★★☆</td><td>Will 4 + Int 4. Token sealing. Good all-rounder for balanced demands.</td></tr>
+<tr><td>"Skids" O'Toole</td><td class="fit-good">★★☆</td><td>Extra actions help with tight doom clocks. Combat 3 passable. Will 2 is dangerous.</td></tr>
+<tr><td>Bob Jenkins</td><td class="fit-good">★★☆</td><td>Int 4 for puzzles. Item economy across 9 scenarios. Solid support.</td></tr>
+<tr><td>Lucius Galloway</td><td class="fit-good">★★☆</td><td>Int 4 + evade. Avoids Alert enemies without fighting. Movement tricks for flooded maps.</td></tr>
+<tr><td>George Barnaby</td><td class="fit-good">★★☆</td><td>Int 4 for puzzles. Resources. Solid but unexciting.</td></tr>
+<tr><td>Marion Tavares</td><td class="fit-good">★★☆</td><td>Event readying for action efficiency. Helps with tight doom clocks.</td></tr>
+<tr><td>Winifred Habbamock <span class="built">starter</span></td><td class="fit-ok">★☆☆</td><td>Will 1 fails cosmic treacheries guaranteed. Agility focus doesn't help when willpower and intellect are tested. Combat 3 can't handle Alert enemies safely.</td></tr>
+<tr><td>Daniela Reyes</td><td class="fit-ok">★☆☆</td><td>Int 1 can't solve Glyph puzzles. Reactive damage triggers Alert (bad). Will 4 is her only strength.</td></tr>
+<tr><td>Michael McGlen</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate or solve puzzles. Combat is strong but Alert enemies punish missed attacks and he can't contribute otherwise.</td></tr>
+<tr><td>Lily Chen</td><td class="fit-ok">★☆☆</td><td>Int 2 + Will 3. Can't investigate or handle treacheries. Combat stances are slow to set up across 9 scenarios.</td></tr>
+</table>
+
+<!-- UPGRADE PATH -->
+<h3>Upgrade Path — Team 1 (Nathaniel + Rex + Agnes)</h3>
+<p style="font-size:0.8rem;color:#6b7280;">~40–50 XP across 9 scenarios. Prioritize combat reliability early (Alert enemies punish misses), then investigation scaling for Glyph puzzles.</p>
+
+<table>
+<tr><th>Investigator</th><th>Priority Upgrades (in order)</th><th>XP</th></tr>
+<tr><td style="color:#1e40af;font-weight:600;">Nathaniel</td><td>
+  <strong>1. Counterpunch (2) ×2</strong> — event-based damage that doesn't provoke. Perfect for Alert enemies.<br>
+  <strong>2. One-Two Punch (5)</strong> — massive burst damage for elite enemies.<br>
+  <strong>3. Safeguard (2)</strong> — move with teammates for free. Keeps him near Rex for protection.<br>
+  <strong>4. Physical Training (2)</strong> — boost combat even higher for guaranteed Alert safety.
+</td><td>4+5+2+2 = 13</td></tr>
+<tr><td style="color:#854d0e;font-weight:600;">Rex</td><td>
+  <strong>1. Higher Education (3)</strong> — boost intellect for flooded (high-shroud) locations.<br>
+  <strong>2. Deduction (2) ×2</strong> — double clues for Glyph puzzles.<br>
+  <strong>3. Pathfinder (3)</strong> — free movement in flooded maps.<br>
+  <strong>4. Cryptic Research (4)</strong> — burst draw to find key cards.
+</td><td>3+4+3+4 = 14</td></tr>
+<tr><td style="color:#6b21a8;font-weight:600;">Agnes</td><td>
+  <strong>1. Shrivelling (3)</strong> — reliable damage for combat scenarios.<br>
+  <strong>2. Peter Sylvestre (2)</strong> — horror soak + triggers ability safely.<br>
+  <strong>3. Ward of Protection (2)</strong> — cancel cosmic treacheries.<br>
+  <strong>4. Shrivelling (5)</strong> — endgame damage for the brutal finale.<br>
+  <strong>5. Grotesque Statue (4)</strong> — token manipulation for critical tests.
+</td><td>3+2+2+5+4 = 16</td></tr>
+</table>
+<p style="font-size:0.8rem;color:#6b7280;">Total: ~43 XP. Nathaniel's event upgrades are the priority — Counterpunch at level 2 is his bread and butter against Alert enemies. One-Two Punch (5) is expensive but handles elite enemies in one action.</p>
+
+</body>
+</html>

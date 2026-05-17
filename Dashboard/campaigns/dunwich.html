@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Dunwich Legacy — Campaign Guide</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.scenario { margin-bottom: 3rem; padding-bottom: 2rem; border-bottom: 1px solid #e5e7eb; }
+.scenario:last-child { border-bottom: none; }
+.scenario h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
+.overview { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #6366f1; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+.mistake { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #ef4444; background: #fef2f2; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h3 { font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #374151; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
+table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
+th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; }
+td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; vertical-align: top; }
+.fit-great { color: #16a34a; font-weight: 600; }
+.fit-good { color: #ca8a04; }
+.fit-ok { color: #6b7280; }
+.built { font-size: 0.7rem; background: #dbeafe; color: #1e40af; padding: 0.1rem 0.3rem; border-radius: 0.2rem; margin-left: 0.3rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-dropdown">
+    <a href="../collection.html">📚 Collection</a>
+    <div class="nav-dropdown-menu">
+      <a href="../collection.html">My Collection</a>
+      <a href="../kickstarter.html">Kickstarter Watchlist</a>
+      <a href="../narrative-finder.html">Narrative Finder</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../arkham/lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="../arkham/lcg.html">LCG Collection</a>
+      <a href="../arkham/official.html">Official Rankings</a>
+      <a href="../arkham/homebrew.html">Homebrew Rankings</a>
+      <a href="../arkham/ranked.html">Combined Rankings</a>
+      <a href="../arkham/faq.html">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../investigators/index.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="../investigators/guardian.html">Zoey/Roland (Guardian)</a>
+      <a href="../investigators/seeker.html">Rex (Seeker)</a>
+      <a href="../investigators/rogue.html">Jenny (Rogue)</a>
+      <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/starters.html">Starter Decks</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../scenarios/excelsior.html">🎬 Scenarios</a>
+    <div class="nav-dropdown-menu">
+      <a href="../scenarios/excelsior.html">Excelsior Hotel</a>
+      <a href="../scenarios/blob.html">The Blob</a>
+      <a href="../scenarios/film-fatale.html">Film Fatale</a>
+      <a href="../scenarios/wendigo.html">Wendigo</a>
+      <a href="../scenarios/consternation.html">Consternation</a>
+      <a href="../scenarios/sleepy-hollow.html">Sleepy Hollow</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../campaigns/index.html" class="active">📖 Campaigns</a>
+    <div class="nav-dropdown-menu">
+      <a href="../campaigns/zealot.html">Night of the Zealot</a>
+      <a href="../campaigns/dunwich.html">Dunwich Legacy</a>
+      <a href="../campaigns/carcosa.html">Path to Carcosa</a>
+      <a href="../campaigns/forgotten-age.html">Forgotten Age</a>
+      <a href="../campaigns/edge-of-earth.html">Edge of the Earth</a>
+      <a href="../campaigns/drowned-city.html">Drowned City</a>
+    </div>
+  </div>
+</nav>
+
+<h1>📖 The Dunwich Legacy</h1>
+<p class="subtitle">Campaign guide — spoiler-free strategy tips</p>
+
+<div class="overview">
+  <strong>Premise:</strong> Professors from Miskatonic University have gone missing. Your mentor asks you to investigate. Classic Lovecraft — the Dunwich Horror brought to the card game.<br>
+  <strong>Players:</strong> 1–4 | <strong>Difficulty:</strong> Medium | <strong>Length:</strong> ~12–16 hours (8 scenarios)<br>
+  <strong>Key mechanics:</strong> Exile (cards removed from game permanently), Beyond the Veil (damage for failed willpower), timed scenarios, ally NPCs at risk<br>
+  <strong>XP available:</strong> ~35–45 total across the campaign
+</div>
+
+<!-- RECOMMENDED TEAMS -->
+<h3>Recommended Teams (3 players)</h3>
+<div class="tip"><strong>🃏 Team 1 (prebuilt — best): <span style="color:#1e40af;font-weight:700">Zoey</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#6b21a8;font-weight:700">Agnes</span></strong> — Beyond the Veil tests willpower across 8 scenarios — Zoey's Will 4 passes where Roland's Will 3 fails. Rex handles ALL clues so Roland's flex investigation is wasted. Zoey's resource generation from engaging enemies funds upgrades across the long campaign. Agnes (Will 5) anchors willpower treacheries and provides flexible damage.</div>
+<div class="tip"><strong>Team 2: <span style="color:#1e40af;font-weight:700">Zoey</span> + <span style="color:#854d0e;font-weight:700">Rex</span> + <span style="color:#991b1b;font-weight:700">Stella</span></strong> — Stella's fail-forward shines in timed scenarios — failed tests still give her benefits and trigger extra actions. Her Agi 4 dominates the Museum evasion scenario. Survivor recursion keeps her alive through trauma. Different feel: aggressive tempo, less spell-reliant than Agnes.</div>
+<div class="tip"><strong>Team 3: <span style="color:#1e40af;font-weight:700">Nathaniel</span> + <span style="color:#854d0e;font-weight:700">Harvey</span> + <span style="color:#6b21a8;font-weight:700">Jacqueline</span></strong> — Completely different playstyle. Nathaniel's Combat 5 demolishes the back half. Harvey's Int 5 + card draw handles all clues and keeps the team fueled. Jacqueline's token manipulation counters Beyond the Veil AND helps Nathaniel land attacks. Brute force + consistency.</div>
+
+<!-- SCENARIO 1 -->
+<div class="scenario">
+<h2>Scenario 1: Extracurricular Activity</h2>
+<div class="overview">
+  <strong>Setting:</strong> Miskatonic University campus at night.<br>
+  <strong>Primary challenge:</strong> Investigation + a dangerous enemy that patrols the map<br>
+  <strong>Doom pressure:</strong> Moderate
+</div>
+<ul>
+  <li><strong>A large enemy patrols between locations.</strong> You can fight it or avoid it — both are valid. Evading and focusing on clues is often faster.</li>
+  <li><strong>Multiple buildings to explore.</strong> Split up to cover ground but stay within 1 move of your fighter in case the patrol catches someone.</li>
+  <li><strong>Willpower matters early.</strong> Treacheries in this scenario test willpower. Agnes and Jacqueline shine; Rex and Roland need committed cards.</li>
+  <li><strong>You can play Scenarios 1 and 2 in either order.</strong> This one is slightly easier to start with for most teams.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 2 -->
+<div class="scenario">
+<h2>Scenario 2: The House Always Wins</h2>
+<div class="overview">
+  <strong>Setting:</strong> A speakeasy with dangerous clientele.<br>
+  <strong>Primary challenge:</strong> Social investigation that can turn violent fast<br>
+  <strong>Doom pressure:</strong> Moderate — but things escalate
+</div>
+<ul>
+  <li><strong>Start by gathering information.</strong> The early game is investigation-focused. Don't start fights you don't need to.</li>
+  <li><strong>Things escalate suddenly.</strong> Be ready to pivot from clue-gathering to survival. Have weapons in hand before the midpoint.</li>
+  <li><strong>Resources matter here.</strong> Jenny's economy shines. Expensive assets need to be down early.</li>
+  <li><strong>An ally NPC can be saved or lost.</strong> Prioritize reaching them — their fate carries forward in the campaign.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 3 -->
+<div class="scenario">
+<h2>Scenario 3: The Miskatonic Museum</h2>
+<div class="overview">
+  <strong>Setting:</strong> A museum after hours. Something hunts you in the dark.<br>
+  <strong>Primary challenge:</strong> Evasion + investigation under pursuit<br>
+  <strong>Doom pressure:</strong> Low — but a relentless hunter creates constant pressure
+</div>
+<ul>
+  <li><strong>A powerful enemy hunts you throughout.</strong> It's very hard to kill early. Evade it and keep moving — fighting wastes actions.</li>
+  <li><strong>Agility matters.</strong> Evade tests are frequent. Winifred and Jenny have an edge here. Roland struggles — keep him away from the hunter.</li>
+  <li><strong>Investigate efficiently.</strong> You need clues from multiple rooms. Rex's ability to grab 2 clues per action is huge for staying ahead of the hunter.</li>
+  <li><strong>Don't dead-end yourself.</strong> Always have an escape route. If the hunter corners you in a room with one exit, you're in trouble.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 4 -->
+<div class="scenario">
+<h2>Scenario 4: The Essex County Express</h2>
+<div class="overview">
+  <strong>Setting:</strong> A train. It's not stopping.<br>
+  <strong>Primary challenge:</strong> TIMED — locations disappear behind you. Move forward or die.<br>
+  <strong>Doom pressure:</strong> EXTREME — the train cars vanish on a timer
+</div>
+<ul>
+  <li><strong>This is the most famous scenario in the game.</strong> Pure speed. You must move forward through train cars, gathering clues to unlock the next one, before the rear cars are destroyed.</li>
+  <li><strong>Every action counts.</strong> No wasted turns. If you spend an action doing anything other than investigating, moving, or dealing with immediate threats, you're falling behind.</li>
+  <li><strong>Rex is MVP.</strong> His extra clue per success means you clear cars in half the time. Prioritize getting him to the front.</li>
+  <li><strong>Bring movement cards.</strong> Shortcut, Elusive, anything that saves move actions. One saved action can mean the difference between life and death.</li>
+  <li><strong>Enemies are distractions.</strong> Evade if possible. Only fight if an enemy is blocking your path forward. Every action spent fighting is an action not spent advancing.</li>
+</ul>
+<div class="mistake">
+<strong>⚠️ Common mistakes:</strong>
+<ul>
+  <li>Staying in a car to "clear it fully" — move forward even if you leave clues behind. Survival > perfection.</li>
+  <li>Fighting every enemy — evade and run. The train doesn't care about your combat prowess.</li>
+  <li>Not having movement cards in your deck — this scenario punishes slow decks brutally.</li>
+</ul>
+</div>
+</div>
+
+<!-- SCENARIO 5 -->
+<div class="scenario">
+<h2>Scenario 5: Blood on the Altar</h2>
+<div class="overview">
+  <strong>Setting:</strong> A small village. Something is wrong with the locals.<br>
+  <strong>Primary challenge:</strong> Find hidden objectives before time runs out — allies are at stake<br>
+  <strong>Doom pressure:</strong> High — a countdown threatens NPCs you've collected
+</div>
+<ul>
+  <li><strong>Your campaign allies are at risk.</strong> NPCs you've saved in earlier scenarios can be permanently lost here. Speed matters.</li>
+  <li><strong>Locations hide what you need.</strong> You must investigate locations to find key objectives. Spread out and search fast.</li>
+  <li><strong>Combat ramps up.</strong> Enemies are tougher than earlier scenarios. Roland/Zoey need upgraded weapons by now.</li>
+  <li><strong>Willpower treacheries continue.</strong> Beyond the Veil (direct damage for failed willpower) is in the encounter deck. Low-willpower investigators take a beating.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 6 -->
+<div class="scenario">
+<h2>Scenario 6: Undimensioned and Unseen</h2>
+<div class="overview">
+  <strong>Setting:</strong> Open countryside. Massive invisible enemies.<br>
+  <strong>Primary challenge:</strong> Unique combat — you need specific tools to even interact with the threats<br>
+  <strong>Doom pressure:</strong> Moderate
+</div>
+<ul>
+  <li><strong>Normal weapons don't work.</strong> The enemies in this scenario require a specific approach to damage. You'll gain access to special tools — use them.</li>
+  <li><strong>Willpower and intellect are your combat stats here.</strong> Investigators with high willpower or intellect can contribute to "fighting" even if they're not traditional fighters.</li>
+  <li><strong>Agnes is incredible here.</strong> Her willpower 5 directly contributes to the unique combat mechanic. She goes from support to primary damage dealer.</li>
+  <li><strong>Spread out.</strong> Threats move between locations. You need coverage across the map to intercept them.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 7 -->
+<div class="scenario">
+<h2>Scenario 7: Where Doom Awaits</h2>
+<div class="overview">
+  <strong>Setting:</strong> A hill. Reality is thinning.<br>
+  <strong>Primary challenge:</strong> Ascending through increasingly dangerous locations<br>
+  <strong>Doom pressure:</strong> High
+</div>
+<ul>
+  <li><strong>The chaos bag is at its worst.</strong> Expect brutal modifiers. Over-commit to every important test.</li>
+  <li><strong>Locations get harder as you ascend.</strong> Higher shroud, nastier enemies. Save your best cards and resources for the top.</li>
+  <li><strong>Beyond the Veil is still here.</strong> Willpower failures deal direct damage. Agnes and Jacqueline handle this; Rex and Roland need willpower commits.</li>
+  <li><strong>This is the gateway to the finale.</strong> Make sure your team is fully upgraded before attempting this. If you're under-powered, the final scenario will be brutal.</li>
+</ul>
+</div>
+
+<!-- SCENARIO 8 -->
+<div class="scenario">
+<h2>Scenario 8: Lost in Time and Space</h2>
+<div class="overview">
+  <strong>Setting:</strong> Beyond reality. Nothing makes sense.<br>
+  <strong>Primary challenge:</strong> Navigate an unpredictable map + survive the finale<br>
+  <strong>Doom pressure:</strong> High
+</div>
+<ul>
+  <li><strong>Locations are unstable.</strong> The map shifts and changes. You can't plan a fixed route — adapt on the fly.</li>
+  <li><strong>Every stat gets tested.</strong> Willpower, intellect, combat, agility — all matter. Balanced investigators (Jenny, Pete) have an edge over specialists.</li>
+  <li><strong>Bring cancellation.</strong> Treacheries here are devastating. Any card that cancels or avoids encounter cards is gold.</li>
+  <li><strong>Stick together.</strong> Unlike earlier scenarios, splitting up here is dangerous. The map can separate you permanently.</li>
+  <li><strong>Don't panic about the chaos bag.</strong> It's terrible, but you've had 7 scenarios of XP to build your deck. Trust your upgrades.</li>
+</ul>
+<div class="mistake">
+<strong>⚠️ Common mistakes:</strong>
+<ul>
+  <li>Splitting up — the shifting map can strand investigators alone with no way to regroup.</li>
+  <li>Hoarding resources for "later" — there is no later. Spend everything to advance.</li>
+  <li>Giving up after a bad round — the scenario is winnable even after setbacks. Keep pushing.</li>
+</ul>
+</div>
+</div>
+
+<!-- INVESTIGATOR FIT TABLE -->
+<h3>Investigator Fit — The Dunwich Legacy</h3>
+<p style="font-size:0.8rem;color:#6b7280;">Rated for the full 8-scenario arc. Campaign needs: speed (timed scenarios), willpower (Beyond the Veil), combat scaling (back half), clue efficiency.</p>
+<table>
+<tr><th>Investigator</th><th>Fit</th><th>Why</th></tr>
+<tr><td>Rex Murphy <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Extra clue ability is campaign-defining. Essex County Express and Blood on the Altar demand fast clues. Best investigator for this campaign.</td></tr>
+<tr><td>Agnes Baker <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Will 5 handles Beyond the Veil. Horror-ping kills small enemies without actions. Shrivelling scales into the back half. Unique combat in Scenario 6 uses her best stat.</td></tr>
+<tr><td>Roland Banks <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Combat 4 + clue-on-kill. Handles the escalating combat. Crowbar covers investigation. Needs willpower commits for Beyond the Veil.</td></tr>
+<tr><td>Daisy Walker</td><td class="fit-great">★★★</td><td>Int 5 + Tome actions. Fast clues for timed scenarios. Old Book of Lore finds key cards. Will 3 is her weakness — bring commits.</td></tr>
+<tr><td>Jacqueline Fine <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Will 5 + token manipulation. Counters the worsening chaos bag across 8 scenarios. Helps teammates pass critical tests under time pressure.</td></tr>
+<tr><td>Harvey Walters <span class="built">starter</span></td><td class="fit-great">★★★</td><td>Int 5 + massive draw. Consistent clue-getter across all 8 scenarios. Card draw means you always have commits for willpower tests.</td></tr>
+<tr><td>Norman Withers</td><td class="fit-great">★★★</td><td>Int 5 + Will 4. Handles both clues and willpower treacheries. Top-deck play gives flexible responses to shifting situations.</td></tr>
+<tr><td>Zoey Samaras <span class="built">deck</span></td><td class="fit-great">★★★</td><td>Combat 4 + resource on engage. Back half is combat-heavy with many enemies. Will 4 handles Beyond the Veil. Strong finisher.</td></tr>
+<tr><td>Gloria Goldberg</td><td class="fit-good">★★☆</td><td>Will 5 + encounter manipulation. Can bury Beyond the Veil before it fires. Int 4 for clues. Excellent defensive value.</td></tr>
+<tr><td>"Ashcan" Pete</td><td class="fit-good">★★☆</td><td>Duke investigates at 4 and fights at 4. Flexible for any scenario. Will 4 handles treacheries. Good all-rounder for an 8-scenario campaign.</td></tr>
+<tr><td>Jenny Barnes <span class="built">deck</span></td><td class="fit-good">★★☆</td><td>Balanced stats + resources. Handles any situation adequately. Agility helps in Museum. Will 3 is a liability for Beyond the Veil.</td></tr>
+<tr><td>Wendy Adams</td><td class="fit-good">★★☆</td><td>Will 4 + token redraw. Survivor recursion keeps her alive. High agility for evasion scenarios. Needs clue events.</td></tr>
+<tr><td>Monterey Jack</td><td class="fit-good">★★☆</td><td>Int 4 + movement efficiency. Free card on move helps in Essex County Express. Agility 4 for evasion. Will 2 is dangerous.</td></tr>
+<tr><td>Stella Clark <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Fail-forward works across 8 scenarios. Survivor cards recur. Will 3 is risky for Beyond the Veil but "neither" triggers help.</td></tr>
+<tr><td>Nathaniel Cho <span class="built">starter</span></td><td class="fit-good">★★☆</td><td>Combat 5 dominates the back half. Event-based fighting is action-efficient. Will 3 + Int 2 means he contributes nothing outside combat.</td></tr>
+<tr><td>Jim Culver</td><td class="fit-good">★★☆</td><td>Will 4 + skull-as-0. Softens the chaos bag over 8 scenarios. Decent flex with spells. Not spectacular at anything.</td></tr>
+<tr><td>Agatha Crane</td><td class="fit-good">★★☆</td><td>Will 4 + Int 4. Token sealing helps with worsening bag. Good flex investigator.</td></tr>
+<tr><td>"Skids" O'Toole</td><td class="fit-good">★★☆</td><td>Extra actions help in timed scenarios. Combat 3 passable with weapons. Will 2 is a serious liability.</td></tr>
+<tr><td>Bob Jenkins</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Item economy supports team over 8 scenarios. Solid but unexciting.</td></tr>
+<tr><td>Lucius Galloway</td><td class="fit-good">★★☆</td><td>Int 4 + evade. Handles Museum scenario well. Movement tricks help timed scenarios.</td></tr>
+<tr><td>George Barnaby</td><td class="fit-good">★★☆</td><td>Int 4 for clues. Resource engine funds expensive upgrades. Solid support.</td></tr>
+<tr><td>Marion Tavares</td><td class="fit-good">★★☆</td><td>Event-based readying gives action efficiency. Better in long campaigns. Will 3 is risky.</td></tr>
+<tr><td>Winifred Habbamock <span class="built">starter</span></td><td class="fit-ok">★☆☆</td><td>Agility-focused but campaign tests willpower constantly. Will 1 means Beyond the Veil is near-guaranteed damage every time. Dangerous pick.</td></tr>
+<tr><td>Daniela Reyes</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate. Reactive damage is too slow for timed scenarios. Will 4 is her only saving grace.</td></tr>
+<tr><td>Michael McGlen</td><td class="fit-ok">★☆☆</td><td>Int 1 can't investigate. Pure combat but Scenario 6 uses willpower/intellect for its unique enemies. Bad fit.</td></tr>
+<tr><td>Lily Chen</td><td class="fit-ok">★☆☆</td><td>Needs setup time the timed scenarios don't give. Int 2 + Will 3 means she fails the campaign's most common tests.</td></tr>
+</table>
+
+<!-- UPGRADE PATH -->
+<h3>Upgrade Path — Team 1 (Zoey + Rex + Agnes)</h3>
+<p style="font-size:0.8rem;color:#6b7280;">~35–45 XP across 8 scenarios. Prioritize speed upgrades early (Scenarios 1-4 are timed/fast), then combat scaling for the back half (Scenarios 5-8).</p>
+
+<table>
+<tr><th>Investigator</th><th>Priority Upgrades (in order)</th><th>XP</th></tr>
+<tr><td style="color:#1e40af;font-weight:600;">Zoey</td><td>
+  <strong>1. Machete (1)</strong> — immediate combat consistency.<br>
+  <strong>2. Beat Cop (2)</strong> — +1 combat + ping damage.<br>
+  <strong>3. .45 Automatic (2)</strong> — 2-damage weapon for the back half's tougher enemies.<br>
+  <strong>4. Stick to the Plan (6)</strong> — guarantees key events in opening hand.
+</td><td>1+2+2+6 = 11</td></tr>
+<tr><td style="color:#854d0e;font-weight:600;">Rex</td><td>
+  <strong>1. Higher Education (3)</strong> — boost intellect on demand. Critical for high-shroud locations.<br>
+  <strong>2. Deduction (2) ×2</strong> — double clues = double speed.<br>
+  <strong>3. Pathfinder (3)</strong> — free movement. Essential for Essex County Express and timed scenarios.<br>
+  <strong>4. Cryptic Research (4)</strong> — burst draw to find key cards.
+</td><td>3+4+3+4 = 14</td></tr>
+<tr><td style="color:#6b21a8;font-weight:600;">Agnes</td><td>
+  <strong>1. Shrivelling (3)</strong> — more charges, more damage for the back half.<br>
+  <strong>2. Peter Sylvestre (2)</strong> — horror soak + agility boost. Keeps Agnes alive and triggers her ability safely.<br>
+  <strong>3. Ward of Protection (2)</strong> — cancel Beyond the Veil or other devastating treacheries.<br>
+  <strong>4. Shrivelling (5)</strong> — endgame damage. 3 damage per charge handles anything.
+</td><td>3+2+2+5 = 12</td></tr>
+</table>
+<p style="font-size:0.8rem;color:#6b7280;">Total: ~37 XP. Zoey's Stick to the Plan is expensive but guarantees combat readiness every scenario. Prioritize Rex's Pathfinder before Scenario 4 (the timed train) if possible.</p>
+
+</body>
+</html>
