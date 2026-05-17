@@ -112,3 +112,31 @@ The Rules Teacher persona generates per-game FAQ pages as questions are asked.
 - **Styling:** Uses shared `styles.css` with minimal inline overrides for collapsible behavior.
 - **Behavior:** After answering a rules question, the Rules Teacher appends the Q&A to the appropriate category on the game's FAQ page. If the page doesn't exist, create it.
 - **Index link:** New FAQ pages are linked from `Dashboard/index.html`.
+
+## Dashboard Conventions
+
+- **Navigation is inline.** Each HTML page contains its own `<nav class="site-nav">...</nav>` block. Do NOT use JavaScript-based nav (file:// doesn't support it).
+- **When adding a new page:** Update the `<nav>` block in ALL existing HTML files to include the new link.
+- **When removing a page:** Remove its link from all `<nav>` blocks.
+- **Styling:** All pages share `Dashboard/styles.css`. Page-specific styles go inline only when they override the shared base.
+- **No server required.** All pages must work when opened directly via `file://` in a browser. No JS module imports, no fetch() calls to local files.
+
+### Investigator Page Hierarchy
+
+Each investigator page (`arkham-guardian.html`, `arkham-seeker.html`, `arkham-rogue.html`, `arkham-mystic.html`) follows this section order:
+
+1. **Overview** — Stats, ability, elder sign, deckbuilding rules, signature card, weakness
+2. **Tips** — How to play this investigator effectively
+3. **Mitigation** — How to handle their weakness
+4. **My Deck** — Current decklist + strategy notes (links to ArkhamDB)
+5. **Standalone 9 XP Build** — Per-scenario upgrade tables (Excelsior, Blob, Film Fatale) for 3-player standalone play. Columns: XP | Remove | Add | Why
+6. **Campaign Upgrade Wishlist** — Aspirational long-term upgrades for campaign play
+
+### Standalone 9 XP Build Rules
+
+- Budget is exactly 9 XP (standalone mode grant).
+- All cards must come from the player's owned card pool: Core + Dunwich cycle + Edge of the Earth Investigator + Drowned City Investigator + Return to Night of the Zealot.
+- Do NOT use cards from Investigator Starter Decks (Harvey, Jacqueline, Nathaniel, Stella, Winifred) — those are kept as prebuilt pick-up-and-play decks.
+- Do NOT use cards that are already in another investigator's built deck (e.g., Grotesque Statue is in Jacqueline's starter).
+- Default build is tuned for Excelsior. Blob/Film Fatale variants note what changes from default.
+- Tables use `table-layout:fixed` with colgroup: XP 5%, Remove 25%, Add 25%, Why 45%.
