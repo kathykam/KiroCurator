@@ -18,8 +18,10 @@
 .skip { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; margin: 0.5rem 0; font-size: 0.85rem; }
 .maybe { background: #fef9c3; border-left: 3px solid #ca8a04; padding: 0.5rem 0.75rem; margin: 0.5rem 0; font-size: 0.85rem; }
 table { width: 100%; font-size: 0.8rem; border-collapse: collapse; margin: 0.5rem 0; }
-th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; }
+th { padding: 0.3rem 0.5rem; text-align: left; background: #f3f4f6; white-space: nowrap; }
 td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; }
+.inv-table td:nth-child(2) { width: 4rem; }
+.inv-table td:nth-child(3) { white-space: nowrap; }
 </style>
 </head>
 <body>
@@ -51,8 +53,6 @@ td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; }
       <a href="../investigators/rogue.html">Jenny (Rogue)</a>
       <a href="../investigators/mystic.html">Agnes (Mystic)</a>
       <a href="../investigators/survivor.html">Pete (Survivor)</a>
-      <a href="../investigators/lily.html">Lily (Mystic/Guardian)</a>
-      <a href="../investigators/ch2-research.html" class="active">Chapter 2 Research</a>
       <a href="../investigators/starters.html">Starter Decks</a>
     </div>
   </div>
@@ -84,68 +84,41 @@ td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; }
 <h1>🔬 Chapter 2 Core Set — Buy Research</h1>
 <p class="subtitle">Hypothetical: If I buy Chapter 2, how do my scenario teams improve?</p>
 
-<h2>The 5 New Investigators</h2>
+<h2>The 10 New Investigators — Who They Replace</h2>
 
-<div class="investigator">
-<h3>Daniela Reyes — Guardian</h3>
-<div class="stats">
-  <span class="stat stat-guardian">Will 3 / Int 2 / Com 5 / Agi 2 / 9 HP / 5 San</span>
-</div>
-<p><strong>Ability:</strong> After an enemy attacks an investigator at your location → Fight that enemy for free. (Once per round.)</p>
-<div class="maybe"><strong>VERDICT: MAYBE.</strong> Combat 5 + free retaliatory fight = powerful. BUT her ability triggers on Attacks of Opportunity timing, requiring coordination with teammates and rules knowledge. Community rates her Simplicity ★★☆☆☆. <strong>Conflicts with your CPU Rule</strong> — per-turn positioning decisions and timing disputes. Zoey is simpler and already built.</div>
-<p><strong>Replaces:</strong> Zoey in Blob teams IF you don't mind the complexity. Otherwise Zoey stays.</p>
-</div>
+<h3>Chapter 2 Core Set (5 investigators)</h3>
+<table class="inv-table">
+<tr><th>New</th><th>Class</th><th>Stats</th><th>Ability</th><th>Replaces</th><th>Better?</th><th>Buy?</th></tr>
+<tr><td><strong>Daniela Reyes</strong></td><td>Guardian</td><td>3/2/5/2 · ❤️9/🧠5</td><td>Free fight when enemy attacks nearby</td><td>Zoey</td><td>Stronger but fiddly (AoO timing, CPU Rule conflict)</td><td class="maybe">⚠️</td></tr>
+<tr><td><strong>Joe Diamond</strong></td><td>Seeker</td><td>2/4/4/2 · ❤️7/🧠7</td><td>Draw 1 card after successful investigate</td><td>Roland</td><td><strong>Yes — strictly better flex</strong> (same combat, better Int, built-in draw)</td><td class="verdict">✅</td></tr>
+<tr><td><strong>Trish Scarborough</strong></td><td>Rogue</td><td>2/4/2/4 · ❤️8/🧠6</td><td>Free evade action each turn</td><td>Jenny (Excelsior only)</td><td>Only for non-lethal scenarios. Jenny better everywhere else (economy)</td><td class="maybe">⚠️</td></tr>
+<tr><td><strong>Dexter Drake</strong></td><td>Mystic</td><td>5/2/2/3 · ❤️6/🧠8</td><td>Swap assets in/out of play on each play</td><td>Nobody</td><td>Agnes is simpler + already built. Dexter adds fiddliness.</td><td class="skip">❌</td></tr>
+<tr><td><strong>Isabelle Barnes</strong></td><td>Survivor</td><td>4/2/3/3 · ❤️5/🧠9</td><td>Take horror → commit skill from discard</td><td>Pete (niche)</td><td>Different style but Pete/Duke is more complete</td><td class="skip">❌</td></tr>
+</table>
 
-<div class="investigator">
-<h3>Joe Diamond — Seeker</h3>
-<div class="stats">
-  <span class="stat stat-seeker">Will 2 / Int 4 / Com 4 / Agi 2 / 7 HP / 7 San</span>
-</div>
-<p><strong>Ability:</strong> After you successfully investigate → Draw 1 card. (Once per round.)</p>
-<div class="verdict"><strong>VERDICT: BUY.</strong> Int 4 + Combat 4 = true flex investigator. Investigates AND fights without needing special cards. Card draw on investigate keeps hand full. Better than Roland for Film Fatale (higher intellect, same combat).</div>
-<p><strong>Replaces:</strong> Roland in investigation-heavy scenarios. Joe does what Roland does but with better intellect and built-in card draw.</p>
-</div>
+<h3>Chapter 2 Starter Decks (5 investigators, sold separately)</h3>
+<table class="inv-table">
+<tr><th>New</th><th>Class</th><th>Stats</th><th>Ability</th><th>Replaces</th><th>Better than Ch1 starter?</th><th>Buy?</th></tr>
+<tr><td><strong>Tommy Muldoon</strong></td><td>Guardian</td><td>3/3/4/2 · ❤️9/🧠6</td><td>Cycle Firearms in and out of play</td><td>Nathaniel</td><td>No — Nathaniel has higher combat + burst chains</td><td class="maybe">⚠️</td></tr>
+<tr><td><strong>Carolyn Fern</strong></td><td>Seeker</td><td>3/5/1/3 · ❤️6/🧠9</td><td>Heal horror → discover 1 clue</td><td>Harvey</td><td><strong>Yes — unique support + clues role</strong></td><td class="verdict">✅</td></tr>
+<tr><td><strong>André Patel</strong></td><td>Rogue</td><td>2/3/2/5 · ❤️7/🧠8</td><td>Bonus action on succeed-by-2</td><td>Winifred</td><td>No — Winifred's commit engine is more consistent</td><td class="skip">❌</td></tr>
+<tr><td><strong>Marie Lambeau</strong></td><td>Mystic</td><td>4/4/1/3 · ❤️8/🧠7</td><td>Draw 2 cards when damaged</td><td>Jacqueline</td><td>No — Jacqueline's token control helps whole team</td><td class="skip">❌</td></tr>
+<tr><td><strong>Miguel de la Cruz</strong></td><td>Survivor</td><td>3/2/3/4 · ❤️8/🧠8</td><td>Free action each turn for events only</td><td>Stella</td><td>No — Stella's fail-forward is more cohesive</td><td class="skip">❌</td></tr>
+</table>
 
-<div class="investigator">
-<h3>Trish Scarborough — Rogue</h3>
-<div class="stats">
-  <span class="stat stat-rogue">Will 2 / Int 4 / Com 2 / Agi 4 / 8 HP / 6 San</span>
-</div>
-<p><strong>Ability:</strong> Take an additional action each turn that can only be used to evade.</p>
-<div class="maybe"><strong>VERDICT: MAYBE.</strong> Free evade action is great for Excelsior (handle enemies without killing). Int 4 + Agi 4 = clues + evasion. But Jenny already fills the Rogue flex slot and has better economy.</div>
-<p><strong>Replaces:</strong> Jenny in Excelsior (free evade = never kill innocents). Doesn't replace Jenny everywhere — Jenny's resource generation is unique.</p>
-</div>
-
-<div class="investigator">
-<h3>Dexter Drake — Mystic</h3>
-<div class="stats">
-  <span class="stat stat-mystic">Will 5 / Int 2 / Com 2 / Agi 3 / 6 HP / 8 San</span>
-</div>
-<p><strong>Ability:</strong> After you play an asset → return another asset to hand OR play a different asset from hand. (Once per round.)</p>
-<div class="skip"><strong>VERDICT: SKIP.</strong> Will 5 is great but Agnes already covers Mystic with Will 5 + damage pings. Dexter's asset cycling is powerful but complex — adds fiddliness you don't enjoy. Agnes is simpler and already built.</div>
-<p><strong>Replaces:</strong> Nobody. Agnes is better for your playstyle (straightforward spell combat vs Dexter's asset juggling).</p>
-</div>
-
-<div class="investigator">
-<h3>Isabelle Barnes — Survivor</h3>
-<div class="stats">
-  <span class="stat stat-survivor">Will 4 / Int 2 / Com 3 / Agi 3 / 5 HP / 9 San</span>
-</div>
-<p><strong>Ability:</strong> Take 1 direct horror → commit a skill from your discard pile to a test. (Once per round.)</p>
-<div class="maybe"><strong>VERDICT: MAYBE.</strong> Recurs skills from discard = never runs out of commits. 9 sanity fuels her ability for 8+ uses. But Pete already covers Survivor with Duke (better stats via ally). Isabelle is a different style — commit-heavy vs Pete's asset-heavy.</div>
-<p><strong>Replaces:</strong> Could replace Pete in teams where you want more consistent skill tests over Duke's flexibility. Niche.</p>
-</div>
+<p style="font-size:0.85rem; margin-top:1rem;"><strong>Summary: Only 2 of 10 are clear upgrades</strong> — Joe Diamond (replaces Roland) and Carolyn Fern (replaces Harvey with a unique twist). Everything else is a sidegrade or skip.</p>
 
 <h2>Hypothetical Team 1 Changes (if all 5 built)</h2>
 
 <table>
+<colgroup><col style="width:12%"><col style="width:22%"><col style="width:22%"><col style="width:44%"></colgroup>
 <tr><th>Scenario</th><th>Current Team 1</th><th>New Team 1 (with Ch2)</th><th>Why it's better</th></tr>
-<tr><td><strong>Excelsior</strong></td><td>Rex + Roland + Jacqueline</td><td><strong>Rex + Trish + Jacqueline</strong></td><td>Trish's free evade action = never kill innocent guests. Int 4 helps with Parley. Roland's combat is overkill here.</td></tr>
-<tr><td><strong>Blob</strong></td><td>Zoey + Nathaniel + Agnes</td><td><strong>Daniela + Nathaniel + Agnes</strong></td><td>Daniela's retaliatory fight is strictly better than Zoey in swarm scenarios. Combat 5 + free attacks when swarmed.</td></tr>
-<tr><td><strong>Film Fatale</strong></td><td>Rex + Jenny + Roland</td><td><strong>Rex + Joe + Jenny</strong></td><td>Joe (Int 4, Com 4) replaces Roland — better investigation + card draw. Jenny handles enemies via evasion. More clue power overall.</td></tr>
-<tr><td><strong>Wendigo</strong></td><td>Rex + Jenny + Roland</td><td><strong>Rex + Joe + Daniela</strong></td><td>4-hour scenario needs sustain. Joe's card draw never runs dry. Daniela's 9 HP tanks wildlife all game.</td></tr>
-<tr><td><strong>Consternation</strong></td><td>Jenny + Agnes + Roland</td><td><strong>Jenny + Agnes + Joe</strong></td><td>Joe's Int 4 + Com 4 handles multi-objective better than Roland. Card draw keeps options flowing.</td></tr>
-<tr><td><strong>Sleepy Hollow</strong></td><td>Roland + Agnes + Jacqueline</td><td><strong>Daniela + Agnes + Jacqueline</strong></td><td>Daniela tanks the Horseman's attacks and retaliates. Agnes + Jacqueline handle Haunted (Will 5 each).</td></tr>
+<tr><td><strong>Excelsior</strong></td><td>Rex + <span style="color:#9ca3af;text-decoration:line-through">Roland</span> + Jacqueline</td><td>Rex + <strong>Trish</strong> + Jacqueline</td><td>Trish's free evade action = never kill innocent guests. Int 4 helps with Parley. Roland's combat is overkill here.</td></tr>
+<tr><td><strong>Blob</strong></td><td><span style="color:#9ca3af;text-decoration:line-through">Zoey</span> + Nathaniel + Agnes</td><td><strong>Daniela</strong> + Nathaniel + Agnes</td><td>Daniela's retaliatory fight is strictly better than Zoey in swarm scenarios. Combat 5 + free attacks when swarmed.</td></tr>
+<tr><td><strong>Film Fatale</strong></td><td>Rex + Jenny + <span style="color:#9ca3af;text-decoration:line-through">Roland</span></td><td>Rex + <strong>Joe</strong> + Jenny</td><td>Joe (Int 4, Com 4) replaces Roland — better investigation + card draw. Jenny handles enemies via evasion. More clue power overall.</td></tr>
+<tr><td><strong>Wendigo</strong></td><td>Rex + <span style="color:#9ca3af;text-decoration:line-through">Jenny</span> + <span style="color:#9ca3af;text-decoration:line-through">Roland</span></td><td>Rex + <strong>Joe</strong> + <strong>Daniela</strong></td><td>4-hour scenario needs sustain. Joe's card draw never runs dry. Daniela's 9 HP tanks wildlife all game.</td></tr>
+<tr><td><strong>Consternation</strong></td><td>Jenny + Agnes + <span style="color:#9ca3af;text-decoration:line-through">Roland</span></td><td>Jenny + Agnes + <strong>Joe</strong></td><td>Joe's Int 4 + Com 4 handles multi-objective better than Roland. Card draw keeps options flowing.</td></tr>
+<tr><td><strong>Sleepy Hollow</strong></td><td><span style="color:#9ca3af;text-decoration:line-through">Roland</span> + Agnes + Jacqueline</td><td><strong>Daniela</strong> + Agnes + Jacqueline</td><td>Daniela tanks the Horseman's attacks and retaliates. Agnes + Jacqueline handle Haunted (Will 5 each).</td></tr>
 </table>
 
 <h2>Usage Summary</h2>
@@ -159,54 +132,17 @@ td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; }
 <tr><td><strong>Isabelle</strong></td><td>None (0)</td><td>❌ SKIP — Pete covers Survivor</td></tr>
 </table>
 
-<h2>Chapter 2 Investigator Starter Decks (sold separately)</h2>
-<p style="font-size:0.85rem; color:#6b7280;">5 additional pre-built decks, like the Chapter 1 starters (Harvey, Winifred, etc.). Pick-up-and-go.</p>
-
-<div class="investigator">
-<h3>Tommy Muldoon — Guardian</h3>
-<div class="stats"><span class="stat stat-guardian">Will 3 / Int 3 / Com 4 / Agi 2 / 9 HP / 6 San</span></div>
-<p><strong>Ability:</strong> Spend 1 resource or discard a Firearm → play a Firearm from hand (paying cost). Enters play ready. Cycles weapons constantly.</p>
-<div class="verdict"><strong>VERDICT: BUY.</strong> Combat 4 + 9 HP + Firearm cycling = sustained fighter who never runs out of guns. Different from Daniela (retaliatory) and Zoey (resource-based). Good for Blob and Wendigo.</div>
-</div>
-
-<div class="investigator">
-<h3>Carolyn Fern — Seeker</h3>
-<div class="stats"><span class="stat stat-seeker">Will 3 / Int 5 / Com 1 / Agi 3 / 6 HP / 9 San</span></div>
-<p><strong>Ability:</strong> After you heal horror from an investigator or Ally → discover 1 clue at your location. (Once per round.)</p>
-<div class="verdict"><strong>VERDICT: BUY.</strong> Int 5 = best cluever stat. Heals team horror AND gets free clues doing it. Perfect for horror-heavy scenarios (Excelsior, Sleepy Hollow). Support + clues in one package.</div>
-</div>
-
-<div class="investigator">
-<h3>André Patel — Rogue</h3>
-<div class="stats"><span class="stat stat-rogue">Will 2 / Int 3 / Com 2 / Agi 5 / 7 HP / 8 San</span></div>
-<p><strong>Ability:</strong> After you succeed by 2+ during your turn → take an additional action. (Once per round.)</p>
-<div class="maybe"><strong>VERDICT: MAYBE.</strong> Agi 5 + bonus action on over-success = 4+ actions/turn. Great for evasion-heavy scenarios. But Will 2 / Com 2 means he can't fight or resist treacheries. Very specialized.</div>
-</div>
-
-<div class="investigator">
-<h3>Marie Lambeau — Mystic</h3>
-<div class="stats"><span class="stat stat-mystic">Will 4 / Int 4 / Com 1 / Agi 3 / 8 HP / 7 San</span></div>
-<p><strong>Ability:</strong> After damage is placed on Marie → draw 2 cards, discard 1. (Once per phase.)</p>
-<div class="maybe"><strong>VERDICT: MAYBE.</strong> Will 4 / Int 4 is flexible. Card draw on damage is interesting but requires taking hits. Agnes already covers Mystic combat. Marie is more of a flex/support Mystic.</div>
-</div>
-
-<div class="investigator">
-<h3>Miguel de la Cruz — Survivor</h3>
-<div class="stats"><span class="stat stat-survivor">Will 3 / Int 2 / Com 3 / Agi 4 / 8 HP / 8 San</span></div>
-<p><strong>Ability:</strong> Take an additional action each turn that can only be used to play an event.</p>
-<div class="maybe"><strong>VERDICT: MAYBE.</strong> Free event action = play Lucky!, "Look what I found!", or combat events without spending a regular action. 8/8 HP/San is tanky. But Pete already covers Survivor with Duke's flexibility.</div>
-</div>
-
 <h2>Hypothetical Team 1 with ALL Chapter 2 (Core + Starters)</h2>
 
 <table>
+<colgroup><col style="width:12%"><col style="width:22%"><col style="width:22%"><col style="width:44%"></colgroup>
 <tr><th>Scenario</th><th>Current Team 1</th><th>Best Team 1 (with all Ch2)</th><th>Why</th></tr>
-<tr><td><strong>Excelsior</strong></td><td>Rex + Roland + Jacqueline</td><td><strong>Carolyn + Trish + Jacqueline</strong></td><td>Carolyn (Int 5) clues + heals horror from encounter deck. Trish's free evade handles guests non-lethally. Jacqueline token control. No killing needed.</td></tr>
-<tr><td><strong>Blob</strong></td><td>Zoey + Nathaniel + Agnes</td><td><strong>Daniela + Tommy + Nathaniel</strong></td><td>Triple Guardian combat. Daniela retaliates, Tommy cycles guns, Nathaniel bursts events. Maximum sustained damage.</td></tr>
-<tr><td><strong>Film Fatale</strong></td><td>Rex + Jenny + Roland</td><td><strong>Carolyn + Joe + André</strong></td><td>Carolyn (Int 5) + Joe (Int 4) double cluever. André's bonus actions on over-success accelerates everything. All investigation, minimal combat needed.</td></tr>
-<tr><td><strong>Wendigo</strong></td><td>Rex + Jenny + Roland</td><td><strong>Rex + Joe + Daniela</strong></td><td>4-hour scenario. Joe's card draw sustains. Daniela's 9 HP tanks wildlife. Rex clues the huge map.</td></tr>
-<tr><td><strong>Consternation</strong></td><td>Jenny + Agnes + Roland</td><td><strong>Jenny + Joe + Daniela</strong></td><td>Multi-objective. Joe flexes (Int 4 + Com 4). Daniela handles cultists. Jenny funds everything.</td></tr>
-<tr><td><strong>Sleepy Hollow</strong></td><td>Roland + Agnes + Jacqueline</td><td><strong>Daniela + Carolyn + Jacqueline</strong></td><td>Daniela tanks Horseman. Carolyn heals horror (Haunted) → free clues. Jacqueline protects all tests.</td></tr>
+<tr><td><strong>Excelsior</strong></td><td><span style="color:#9ca3af;text-decoration:line-through">Rex</span> + <span style="color:#9ca3af;text-decoration:line-through">Roland</span> + Jacqueline</td><td><strong>Carolyn</strong> + <strong>Trish</strong> + Jacqueline</td><td>Carolyn (Int 5) clues + heals horror from encounter deck. Trish's free evade handles guests non-lethally. Jacqueline token control. No killing needed.</td></tr>
+<tr><td><strong>Blob</strong></td><td><span style="color:#9ca3af;text-decoration:line-through">Zoey</span> + Nathaniel + <span style="color:#9ca3af;text-decoration:line-through">Agnes</span></td><td><strong>Daniela</strong> + <strong>Tommy</strong> + Nathaniel</td><td>Triple Guardian combat. Daniela retaliates, Tommy cycles guns, Nathaniel bursts events. Maximum sustained damage.</td></tr>
+<tr><td><strong>Film Fatale</strong></td><td><span style="color:#9ca3af;text-decoration:line-through">Rex</span> + <span style="color:#9ca3af;text-decoration:line-through">Jenny</span> + <span style="color:#9ca3af;text-decoration:line-through">Roland</span></td><td><strong>Carolyn</strong> + <strong>Joe</strong> + <strong>André</strong></td><td>Carolyn (Int 5) + Joe (Int 4) double cluever. André's bonus actions on over-success accelerates everything. All investigation, minimal combat needed.</td></tr>
+<tr><td><strong>Wendigo</strong></td><td>Rex + <span style="color:#9ca3af;text-decoration:line-through">Jenny</span> + <span style="color:#9ca3af;text-decoration:line-through">Roland</span></td><td>Rex + <strong>Joe</strong> + <strong>Daniela</strong></td><td>4-hour scenario. Joe's card draw sustains. Daniela's 9 HP tanks wildlife. Rex clues the huge map.</td></tr>
+<tr><td><strong>Consternation</strong></td><td>Jenny + <span style="color:#9ca3af;text-decoration:line-through">Agnes</span> + <span style="color:#9ca3af;text-decoration:line-through">Roland</span></td><td>Jenny + <strong>Joe</strong> + <strong>Daniela</strong></td><td>Multi-objective. Joe flexes (Int 4 + Com 4). Daniela handles cultists. Jenny funds everything.</td></tr>
+<tr><td><strong>Sleepy Hollow</strong></td><td><span style="color:#9ca3af;text-decoration:line-through">Roland</span> + <span style="color:#9ca3af;text-decoration:line-through">Agnes</span> + Jacqueline</td><td><strong>Daniela</strong> + <strong>Carolyn</strong> + Jacqueline</td><td>Daniela tanks Horseman. Carolyn heals horror (Haunted) → free clues. Jacqueline protects all tests.</td></tr>
 </table>
 
 <h2>Starter Usage Summary</h2>
@@ -276,16 +212,13 @@ td { padding: 0.3rem 0.5rem; border-top: 1px solid #e5e7eb; }
 
 <h2>Final Bottom Line</h2>
 
-<div class="verdict">
-<strong>Buy the Chapter 2 Core Set</strong> — primarily for the <strong>neutral skill reprints</strong> (Guts, Perception, Overpower, Manual Dexterity, Unexpected Courage, Emergency Cache). These solve your card-sharing bottleneck permanently and let you build more decks without conflicts.<br><br>
-<strong>Build priority:</strong><br>
-1. <strong>Joe Diamond</strong> — simple, effective flex (Int 4 + Com 4 + card draw). Replaces Roland in investigation-heavy scenarios.<br>
-2. <strong>Carolyn Fern (starter)</strong> — Int 5 + healing → free clues. Unique support role nobody else fills.<br>
-3. <strong>Daniela</strong> — only if you're OK with AoO timing complexity. Skip if fiddliness bothers you; Zoey is fine.<br>
-4. Skip Trish (Jenny covers Rogue), Dexter (Agnes covers Mystic), Isabelle/Miguel (Pete covers Survivor).
+<div class="maybe">
+<strong>WAIT.</strong> Don't buy yet. The Ch2 Core Set campaign (Brethren of Ash) is weak — community says "uneven," "impersonal," worse narrative than Night of the Zealot. The card reprints are nice but not urgent.<br><br>
+<strong>Decision point: Children of Blood (Summer 2026)</strong> — FFG's next campaign expansion requires Ch2 encounter sets. If reviews say it's good narrative + good mechanics, buy the Ch2 Core Set then. One purchase gets you: neutral reprints + Joe Diamond + access to future Ch2 campaigns.<br><br>
+<strong>If Children of Blood is bad:</strong> Buy a used 3rd original Core Set ($15-20) for the neutral reprints only. Skip Ch2 entirely.
 </div>
 
-<p style="font-size:0.85rem; margin-top:1rem;"><strong>Minimum spend for maximum impact:</strong> Core Set ($50) + Carolyn Starter ($20) = $70 for Joe + Carolyn + neutral reprints. Covers 4+ scenario Team 1s and solves deckbuilding constraints.</p>
+<p style="font-size:0.85rem; margin-top:1rem;"><strong>Meanwhile:</strong> Your current collection handles all 6 scenarios + Alice campaign. Play the free homebrew campaigns (Ages Unwound, Circus Ex Mortis) — they're rated higher than Brethren of Ash.</p>
 
 </body>
 </html>

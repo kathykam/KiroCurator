@@ -77,6 +77,7 @@ Dashboard/
     survivor.html         — Pete deck + tips
     lily.html             — Lily Chen page (Sleepy Hollow / Blob Team 2)
     starters.html         — 5 starter deck tips + standalone upgrades
+    ch2-research.html     — Arkham Horror Chapter 2 Core Set research
   scenarios/
     excelsior.html        — Murder at the Excelsior Hotel guide
     blob.html             — The Blob That Ate Everything guide
@@ -178,7 +179,7 @@ Each investigator page (`investigators/guardian.html`, `investigators/seeker.htm
 ### Standalone 9 XP Build Rules
 
 - Budget is exactly 9 XP (standalone mode grant).
-- All cards must come from the player's owned card pool: Core + Dunwich cycle + Edge of the Earth Investigator + Drowned City Investigator + Return to Night of the Zealot.
+- All cards must come from the player's owned card pool: Core ×3 (3rd incomplete) + Dunwich cycle + Edge of the Earth Investigator + Drowned City Investigator + Return to Night of the Zealot.
 - Do NOT use cards from Investigator Starter Decks (Harvey, Jacqueline, Nathaniel, Stella, Winifred) — those are kept as prebuilt pick-up-and-play decks.
 - Do NOT use cards that are already in another investigator's built deck (e.g., Grotesque Statue is in Jacqueline's starter).
 - Default build is tuned for Excelsior. Blob/Film Fatale variants note what changes from default.
