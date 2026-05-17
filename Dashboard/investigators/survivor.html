@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Survivor Investigator — Arkham Horror LCG</title>
+<link rel="stylesheet" href="../styles.css">
+<style>
+.investigator { margin-bottom: 2.5rem; }
+.stats { display: flex; gap: 1rem; flex-wrap: wrap; margin: 0.5rem 0; font-size: 0.85rem; }
+.stat { background: #fee2e2; padding: 0.2rem 0.5rem; border-radius: 0.25rem; font-weight: 600; color: #991b1b; }
+.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
+.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
+.tip { margin: 0.5rem 0; padding-left: 1rem; border-left: 2px solid #fca5a5; font-size: 0.875rem; }
+.deck-section { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin: 1rem 0; }
+.deck-list { columns: 2; font-size: 0.8rem; }
+.deck-list li { margin-bottom: 0.2rem; }
+ul { margin: 0.5rem 0 0.5rem 1.5rem; font-size: 0.875rem; }
+li { margin-bottom: 0.3rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <div class="nav-dropdown">
+    <a href="../collection.html">📚 Collection</a>
+    <div class="nav-dropdown-menu">
+      <a href="../collection.html">My Collection</a>
+      <a href="../kickstarter.html">Kickstarter Watchlist</a>
+      <a href="../narrative-finder.html">Narrative Finder</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../arkham/lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="../arkham/lcg.html">LCG Collection</a>
+      <a href="../arkham/official.html">Official Rankings</a>
+      <a href="../arkham/homebrew.html">Homebrew Rankings</a>
+      <a href="../arkham/ranked.html">Combined Rankings</a>
+      <a href="../arkham/faq.html">FAQ</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../investigators/index.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="../investigators/guardian.html">Zoey/Roland (Guardian)</a>
+      <a href="../investigators/seeker.html">Rex (Seeker)</a>
+      <a href="../investigators/rogue.html">Jenny (Rogue)</a>
+      <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/survivor.html" class="active">Pete (Survivor)</a>
+      <a href="../investigators/starters.html">Starter Decks</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../scenarios/excelsior.html">🎬 Scenarios</a>
+    <div class="nav-dropdown-menu">
+      <a href="../scenarios/excelsior.html">Excelsior Hotel</a>
+      <a href="../scenarios/blob.html">The Blob</a>
+      <a href="../scenarios/film-fatale.html">Film Fatale</a>
+      <a href="../scenarios/wendigo.html">Wendigo</a>
+      <a href="../scenarios/consternation.html">Consternation</a>
+      <a href="../scenarios/sleepy-hollow.html">Sleepy Hollow</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../campaigns/index.html">📖 Campaigns</a>
+    <div class="nav-dropdown-menu">
+      <a href="../campaigns/zealot.html">Night of the Zealot</a>
+      <a href="../campaigns/dunwich.html">Dunwich Legacy</a>
+      <a href="../campaigns/carcosa.html">Path to Carcosa</a>
+      <a href="../campaigns/forgotten-age.html">Forgotten Age</a>
+      <a href="../campaigns/edge-of-earth.html">Edge of the Earth</a>
+      <a href="../campaigns/drowned-city.html">Drowned City</a>
+      <a href="../campaigns/homebrew.html">Homebrew Campaigns</a>
+    </div>
+  </div>
+</nav>
+
+<h1>⭐ Survivor: "Ashcan" Pete</h1>
+<p class="subtitle">The Drifter — Duke does everything</p>
+
+<div class="investigator">
+<h2>"Ashcan" Pete — The Drifter</h2>
+<div class="stats">
+  <span class="stat">🧠 Will 4</span>
+  <span class="stat">📖 Int 2</span>
+  <span class="stat">👊 Combat 2</span>
+  <span class="stat">🦶 Agility 3</span>
+  <span class="stat">❤️ 6 HP</span>
+  <span class="stat">🧠 5 Sanity</span>
+</div>
+
+<p><strong>Ability:</strong> You begin the game with Duke in play. Fast — Discard a card from your hand: Ready an asset you control. (Limit once per round.)</p>
+<p><strong>Elder Sign:</strong> +2. Ready Duke.</p>
+<p><strong>Deckbuilding:</strong> Survivor 0–5, Neutral 0–5, up to 5 other level 0 cards from any class.</p>
+
+<div class="sig-card">
+  <strong>Duke</strong> (Asset, Ally) — Starts in play. Exhaust: Fight at base combat 4, +1 damage. OR Exhaust: Investigate at base intellect 4, may move to a connecting location first. Duke IS Pete's stats.
+</div>
+
+<div class="weakness-card">
+  <strong>Wracked by Nightmares</strong> (Treachery) — Revelation: Exhaust all your assets. Assets you control cannot ready. Costs 2 actions to discard. Devastating — shuts down Duke entirely.
+</div>
+
+<h3>Tips for Playing Pete</h3>
+<ul>
+  <li><strong>🎯 Mulligan for:</strong> Dark Horse or Peter Sylvestre. Duke is always in play (signature), so Pete's setup priority is his economy engine. Dark Horse turns his "stay poor" strategy into +1 to all stats. Peter Sylvestre soaks horror (Pete's 5 sanity is fragile) + gives passive agility.</li>
+  <li><strong>Duke is your entire character.</strong> Pete's printed stats (2/2) are irrelevant. Duke fights at 4 combat +1 damage AND investigates at 4 intellect. Protect Duke at all costs.</li>
+  <li><strong>Duke can move + investigate in one action.</strong> Exhaust Duke to move to a connecting location and then investigate there. This is insane action efficiency.</li>
+  <li><strong>Pete's ability readies Duke.</strong> Discard a card → ready Duke → use Duke again. Two Duke actions per turn (fight + investigate, or investigate twice).</li>
+  <li><strong>Dark Horse + Fire Axe = stay broke on purpose.</strong> At 0 resources: Dark Horse gives +1 to all stats (Duke at 5/5!), Fire Axe gets +2 combat for free. Spend resources down before testing.</li>
+  <li><strong>Scavenging recurs items from discard.</strong> Succeed by 2 on an investigate (Duke at 4+ vs shroud 2 = easy) → get back Flashlight, Magnifying Glass, or Fire Axe.</li>
+  <li><strong>Dr. Milan + Duke = economy.</strong> Milan gives +1 intellect (Duke at 5) AND 1 resource per successful investigation. But conflicts with Dark Horse (you want 0 resources).</li>
+  <li><strong>Two builds in one deck:</strong> Milan build (rich, boost Duke) vs Dark Horse build (broke, all stats boosted). Mulligan decides which game plan you're on.</li>
+  <li><strong>Rabbit's Foot draws on failure.</strong> Pete's base stats are terrible — when you test without Duke, you'll fail. Rabbit's Foot turns those failures into card draw.</li>
+</ul>
+
+<h3>Mitigating Wracked by Nightmares</h3>
+<div class="tip">
+  <p>Wracked by Nightmares exhausts ALL your assets and prevents them from readying. Duke is dead until you spend 2 actions clearing it.</p>
+  <ul>
+    <li><strong>Clear it immediately.</strong> 2 actions is brutal but a turn without Duke is worse. Don't delay.</li>
+    <li><strong>Pete's ability doesn't help.</strong> It readies an asset, but Wracked prevents readying entirely. You MUST discard it.</li>
+    <li><strong>Thin your deck.</strong> The faster you draw through, the sooner you see it and get it over with. Better early (low pressure) than late (critical moment).</li>
+    <li><strong>Lucky! can't save you.</strong> It's a Revelation — no test to pass or fail. You just eat it.</li>
+    <li><strong>Plan for the lost turn.</strong> If you're in a safe location with no enemies, it's less painful. Position before it hits.</li>
+  </ul>
+</div>
+
+<div class="deck-section">
+<h4>🃏 Your Deck: "Ashcan Pete Fights the Blob" (Blob default, 9 XP)</h4>
+<p style="font-size:0.8rem; color:#6b7280;">Source: <a href="https://arkhamdb.com/deck/view/6021430">ArkhamDB #6021430</a>. No card conflicts with any other built deck (2 original cores).</p>
+<ul class="deck-list">
+  <li>2× Fire Axe</li>
+  <li>2× Dark Horse</li>
+  <li>2× Leather Coat</li>
+  <li>2× Lucky! (Lv 2) [4 XP]</li>
+  <li>2× Survival Instinct (Lv 2) [4 XP]</li>
+  <li>2× "Look what I found!"</li>
+  <li>2× Rise to the Occasion</li>
+  <li>2× Oops!</li>
+  <li>2× Jury-Rig</li>
+  <li>2× Overpower</li>
+  <li>2× Manual Dexterity</li>
+  <li>2× Emergency Cache</li>
+  <li>2× Dynamite Blast [off-class, Guardian]</li>
+  <li>2× Sneak Attack [off-class, Rogue]</li>
+  <li>1× Smoking Pipe</li>
+  <li>1× Fire Extinguisher (Lv 1) [1 XP]</li>
+</ul>
+<p style="font-size:0.75rem; color:#6b7280;">XP: Lucky! Lv 2 ×2 [4] + Survival Instinct Lv 2 ×2 [4] + Fire Extinguisher Lv 1 [1] = 9 ✓</p>
+<p style="font-size:0.75rem; color:#6b7280;">Off-class (4): 2× Dynamite Blast + 2× Sneak Attack.</p>
+
+<h4>Deck Strategy Notes</h4>
+<ul>
+  <li><strong>Mulligan for:</strong> Dark Horse or Fire Axe. Duke starts in play — you need the stat boost and backup weapon.</li>
+  <li><strong>Duke fights twice per turn.</strong> Exhaust Duke (fight at 4, +1 damage) → discard a card to ready Duke → fight again. 4 damage/turn baseline.</li>
+  <li><strong>Dark Horse + Fire Axe at 0 resources:</strong> Duke at combat 5, Fire Axe at combat 4 +1 damage. Three fight actions per turn.</li>
+  <li><strong>Dynamite Blast clears swarms.</strong> 3 damage to EACH enemy at a location. Blob spawns clusters — Dynamite wipes them.</li>
+  <li><strong>Sneak Attack + evade combo:</strong> Evade an enemy (exhausts it) → Sneak Attack deals 2 damage. No fight test needed.</li>
+  <li><strong>Oops! on failed fights:</strong> Miss with Fire Axe? Oops! still deals the damage. Fail-forward combat.</li>
+  <li><strong>Lucky! Lv 2 from discard:</strong> Even after you play it, you can play it again from your discard pile. Always available for critical tests.</li>
+  <li><strong>Survival Instinct Lv 2:</strong> Evade + disengage ALL enemies + move away. Emergency escape when swarmed.</li>
+  <li><strong>Overpower + Manual Dexterity</strong> commit to Duke's fights and draw cards — fueling the discard-to-ready engine.</li>
+</ul>
+
+<h4 style="margin-top:2rem;">🎯 Standalone Scenario Swaps (3 players)</h4>
+<p style="font-size:0.75rem; color:#6b7280; font-style:italic; margin-bottom:0.5rem;">Deck is built for Blob. For other scenarios, swap level-0 cards. Raiding other decks is OK (you only play one team at a time).</p>
+
+<h5 style="margin:1rem 0 0.25rem;">The Blob That Ate Everything (default)</h5>
+<p style="font-size:0.8rem;">Play as-is. Duke + Fire Axe + Dynamite Blast = sustained damage machine. Lucky! Lv 2 saves critical fights.</p>
+
+<h5 style="margin:1rem 0 0.25rem;">Murder at the Excelsior Hotel</h5>
+<table style="width:100%; font-size:0.8rem; border-collapse:collapse; margin:0.5rem 0; table-layout:fixed;">
+<colgroup><col style="width:5%"><col style="width:25%"><col style="width:25%"><col style="width:45%"></colgroup>
+<tr style="background:#f3f4f6;"><th style="padding:0.3rem 0.5rem; text-align:left;">XP</th><th style="padding:0.3rem 0.5rem; text-align:left;">Remove</th><th style="padding:0.3rem 0.5rem; text-align:left;">Add</th><th style="padding:0.3rem 0.5rem; text-align:left;">Why</th></tr>
+<tr style="border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">0</td><td style="padding:0.3rem 0.5rem;">2× Dynamite Blast</td><td style="padding:0.3rem 0.5rem;">2× Dr. Milan Christopher (from Rex)</td><td style="padding:0.3rem 0.5rem;">Duke at intellect 5 + economy. Don't AoE innocent guests.</td></tr>
+<tr style="border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">0</td><td style="padding:0.3rem 0.5rem;">2× Sneak Attack</td><td style="padding:0.3rem 0.5rem;">2× Fine Clothes (from Jenny)</td><td style="padding:0.3rem 0.5rem;">+1 to Parley. Pete at Will 4 + Fine Clothes = 5 vs difficulty 3.</td></tr>
+<tr style="border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">0</td><td style="padding:0.3rem 0.5rem;">1× Backstab</td><td style="padding:0.3rem 0.5rem;">1× Magnifying Glass (from Jenny)</td><td style="padding:0.3rem 0.5rem;">Duke at intellect 6 with Milan. Triggers succeed-by-2 easily.</td></tr>
+</table>
+<p style="font-size:0.75rem; color:#6b7280;">Off-class becomes: 2× Milan + 2× Fine Clothes + 1× Magnifying Glass = 5 ✓. Pete is a full flex investigator.</p>
+
+<h5 style="margin:1rem 0 0.25rem;">Film Fatale</h5>
+<table style="width:100%; font-size:0.8rem; border-collapse:collapse; margin:0.5rem 0; table-layout:fixed;">
+<colgroup><col style="width:5%"><col style="width:25%"><col style="width:25%"><col style="width:45%"></colgroup>
+<tr style="background:#f3f4f6;"><th style="padding:0.3rem 0.5rem; text-align:left;">XP</th><th style="padding:0.3rem 0.5rem; text-align:left;">Remove</th><th style="padding:0.3rem 0.5rem; text-align:left;">Add</th><th style="padding:0.3rem 0.5rem; text-align:left;">Why</th></tr>
+<tr style="border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">0</td><td style="padding:0.3rem 0.5rem;">2× Dynamite Blast</td><td style="padding:0.3rem 0.5rem;">2× Dr. Milan Christopher (from Rex)</td><td style="padding:0.3rem 0.5rem;">Duke at intellect 5 + economy for investigation-heavy scenario.</td></tr>
+<tr style="border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">0</td><td style="padding:0.3rem 0.5rem;">2× Sneak Attack</td><td style="padding:0.3rem 0.5rem;">2× Deduction (from Rex)</td><td style="padding:0.3rem 0.5rem;">Duke investigate + Deduction = 2 clues/action. No Parley needed.</td></tr>
+<tr style="border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">0</td><td style="padding:0.3rem 0.5rem;">1× Backstab</td><td style="padding:0.3rem 0.5rem;">1× Magnifying Glass (from Jenny)</td><td style="padding:0.3rem 0.5rem;">Duke at intellect 6. Clue machine.</td></tr>
+</table>
+<p style="font-size:0.75rem; color:#6b7280;">Off-class: 2× Milan + 2× Deduction + 1× Magnifying Glass = 5 ✓. Pete becomes primary cluever alongside Duke's combat.</p>
+
+<h4 style="margin-top:2rem;">📋 Campaign Upgrade Wishlist</h4>
+<p style="font-size:0.75rem; color:#6b7280; font-style:italic; margin-bottom:0.5rem;">📌 Aspirational — swap these in as you earn XP in campaign.</p>
+<table style="width:100%; font-size:0.8rem; border-collapse:collapse; margin:0.5rem 0; table-layout:fixed;">
+<colgroup><col style="width:5%"><col style="width:25%"><col style="width:25%"><col style="width:45%"></colgroup>
+<tr style="background:#f3f4f6;"><th style="padding:0.3rem 0.5rem; text-align:left;">XP</th><th style="padding:0.3rem 0.5rem; text-align:left;">Buy</th><th style="padding:0.3rem 0.5rem; text-align:left;">Replaces</th><th style="padding:0.3rem 0.5rem; text-align:left;">Why</th></tr>
+<tr style="font-weight:600; border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">4</td><td style="padding:0.3rem 0.5rem;">Lucky! (Lv 2) ×2</td><td style="padding:0.3rem 0.5rem;">Smoking Pipe ×2</td><td style="padding:0.3rem 0.5rem;">#1 priority. +3 modifier, playable from discard. Saves any critical test.</td></tr>
+<tr style="font-weight:600; border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">4</td><td style="padding:0.3rem 0.5rem;">Rabbit's Foot (Lv 3) ×2</td><td style="padding:0.3rem 0.5rem;">Rabbit's Foot (Lv 0) ×2</td><td style="padding:0.3rem 0.5rem;">Upgraded draw engine. Fail = draw, optionally fail harder = draw more.</td></tr>
+<tr style="font-weight:600; border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">3</td><td style="padding:0.3rem 0.5rem;">Will to Survive (Lv 3)</td><td style="padding:0.3rem 0.5rem;">Cunning Distraction</td><td style="padding:0.3rem 0.5rem;">No chaos tokens for the rest of the round. Auto-succeed everything. Boss turn.</td></tr>
+<tr style="font-weight:600; border-top:1px solid #e5e7eb;"><td style="padding:0.3rem 0.5rem;">3</td><td style="padding:0.3rem 0.5rem;">Aquinnah (Lv 3)</td><td style="padding:0.3rem 0.5rem;">Bait and Switch</td><td style="padding:0.3rem 0.5rem;">Redirect enemy damage to another enemy. Turns boss attacks into boss kills. Takes ally slot — need Charisma to keep Duke.</td></tr>
+</table>
+<p style="font-size:0.8rem; margin-top:0.5rem;"><strong>Priority:</strong> Lucky! Lv 2 → Rabbit's Foot Lv 3 → Will to Survive → Aquinnah (requires Charisma Lv 3 first).</p>
+</div>
+</div>
+
+</body>
+</html>

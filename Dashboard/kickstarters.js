@@ -25,35 +25,7 @@ const kickstarters = [
       "pvp": false,
       "auction": false
     },
-    "fit": "Strong narrative campaign, asymmetric characters, no app. BUT has grid-based tactical combat. Cyberpunk-adjacent dark fantasy. €10.4M raised — massive community confidence."
-  },
-  {
-    "name": "Cyberpunk Legends: Into the Night",
-    "bgg": 430000,
-    "designer": "Night Crew Games",
-    "players": "1-4",
-    "time": "60-90 min",
-    "phase": "Late Pledge",
-    "delivery": "2026",
-    "platform": "Kickstarter",
-    "url": "https://cyberpunklegends.com/",
-    "desc": "Cooperative story-driven card game in a cyberpunk city. Campaign narrative with branching missions. Combat resolved by forming poker hands from your card pool.",
-    "narrativeType": "campaign",
-    "tags": {
-      "cooperative": true,
-      "asymmetric": true,
-      "lowFiddle": true,
-      "easyTable": true,
-      "mechanicalDepth": true,
-      "solo": false,
-      "app": false,
-      "deckConstruction": false,
-      "gridCombat": false,
-      "survivalGrind": false,
-      "pvp": false,
-      "auction": false
-    },
-    "fit": "CYBERPUNK THEME. Cooperative campaign, no app, no grid. BUT core mechanic is forming poker hands — may feel like set collection rather than meaningful tactical decisions. Research if hand-building has enough agency for you."
+    "fit": "Strong narrative campaign, asymmetric characters, no app. BUT has grid-based tactical combat. Cyberpunk-adjacent dark fantasy. \u20ac10.4M raised \u2014 massive community confidence."
   },
   {
     "name": "Lands of Evershade",
@@ -81,7 +53,7 @@ const kickstarters = [
       "pvp": false,
       "auction": false
     },
-    "fit": "Dark fairy-tale (Oz/Alice adjacent). Awaken Realms (Tainted Grail, Nemesis). Asymmetric co-op campaign. No app. Has tactical combat — watch for fiddliness."
+    "fit": "Dark fairy-tale (Oz/Alice adjacent). Awaken Realms (Tainted Grail, Nemesis). Asymmetric co-op campaign. No app. Has tactical combat \u2014 watch for fiddliness."
   },
   {
     "name": "Horror on the Orient Express",
@@ -109,35 +81,7 @@ const kickstarters = [
       "pvp": false,
       "auction": false
     },
-    "fit": "Lovecraft narrative campaign. CMON production quality. No app, no grid. Fiddliness unknown — CMON games tend toward heavy setup. Train setting is unique."
-  },
-  {
-    "name": "Tales of Arabian Nights: 40th Anniversary",
-    "bgg": 432392,
-    "designer": "Z-Man / Eric Goldberg",
-    "players": "1-6",
-    "time": "120 min",
-    "phase": "Crowdfunding 2026",
-    "delivery": "2027",
-    "platform": "Kickstarter",
-    "url": "",
-    "desc": "Reimagined classic storybook adventure. New edition with modernized mechanics and branching encounters.",
-    "narrativeType": "vignette",
-    "tags": {
-      "cooperative": false,
-      "asymmetric": false,
-      "lowFiddle": true,
-      "easyTable": true,
-      "mechanicalDepth": false,
-      "solo": false,
-      "app": false,
-      "deckConstruction": false,
-      "gridCombat": false,
-      "survivalGrind": false,
-      "pvp": false,
-      "auction": false
-    },
-    "fit": "Original had no mechanical depth (random paragraphs). Watch if 40th Anniversary adds real game mechanics or stays pure CYOA."
+    "fit": "Lovecraft narrative campaign. CMON production quality. No app, no grid. Fiddliness unknown \u2014 CMON games tend toward heavy setup. Train setting is unique."
   },
   {
     "name": "Watson & Holmes: The Lost Diaries",
@@ -194,62 +138,6 @@ const kickstarters = [
       "auction": true
     },
     "fit": "Legacy narrative with group decisions. Has negotiation/voting (auction-adjacent). King's Dilemma is highly rated. Easy to table."
-  },
-  {
-    "name": "Cthulhu: Death May Die – Season 4",
-    "bgg": 374590,
-    "designer": "Rob Daviau / Eric Lang",
-    "players": "1-5",
-    "time": "90-120 min",
-    "phase": "Late Pledge",
-    "delivery": "2026",
-    "platform": "CMON",
-    "url": "",
-    "desc": "New season expansion for CDMD. New Elder Ones, new scenarios, new investigators.",
-    "narrativeType": "emergent",
-    "tags": {
-      "cooperative": true,
-      "asymmetric": true,
-      "lowFiddle": true,
-      "easyTable": true,
-      "mechanicalDepth": true,
-      "solo": false,
-      "app": false,
-      "deckConstruction": false,
-      "gridCombat": false,
-      "survivalGrind": false,
-      "pvp": false,
-      "auction": false
-    },
-    "fit": "More CDMD — your #5 game. New scenarios may add variety to the samey pick-up-and-deliver loop. Same great mechanics."
-  },
-  {
-    "name": "Cthulhu: Death May Die – Forbidden Reaches",
-    "bgg": 433640,
-    "designer": "Rob Daviau / Eric Lang",
-    "players": "1-5",
-    "time": "90 min",
-    "phase": "Late Pledge",
-    "delivery": "2026",
-    "platform": "CMON",
-    "url": "",
-    "desc": "Standalone CDMD expansion. New campaign-style connected scenarios with narrative progression between games.",
-    "narrativeType": "campaign",
-    "tags": {
-      "cooperative": true,
-      "asymmetric": true,
-      "lowFiddle": true,
-      "easyTable": true,
-      "mechanicalDepth": true,
-      "solo": false,
-      "app": false,
-      "deckConstruction": false,
-      "gridCombat": false,
-      "survivalGrind": false,
-      "pvp": false,
-      "auction": false
-    },
-    "fit": "CDMD with CAMPAIGN NARRATIVE. Connected scenarios with progression — exactly what you said was missing. This could fix the samey problem. HIGH PRIORITY."
   },
   {
     "name": "Elden Ring: The Board Game",
@@ -373,7 +261,7 @@ const kickstarters = [
     "delivery": "2027",
     "platform": "Gamefound",
     "url": "https://gamefound.com/en/projects/dimension-hinge/netherworld-candle",
-    "desc": "Chinese folk horror campaign. Fate Deck + Karma system — your greed becomes physical damage. No dice, no illusions, visceral and lethal. Massive box, English edition of a Chinese original.",
+    "desc": "Chinese folk horror campaign. Fate Deck + Karma system \u2014 your greed becomes physical damage. No dice, no illusions, visceral and lethal. Massive box, English edition of a Chinese original.",
     "narrativeType": "campaign",
     "tags": {
       "cooperative": true,
@@ -389,7 +277,7 @@ const kickstarters = [
       "pvp": false,
       "auction": false
     },
-    "fit": "Horror campaign with unique Karma mechanic (your choices hurt you). No dice — Fate Deck driven. Thematic consequences = narrative agency. Watch for fiddliness and whether Karma system feels like survival grind or meaningful tension."
+    "fit": "Horror campaign with unique Karma mechanic (your choices hurt you). No dice \u2014 Fate Deck driven. Thematic consequences = narrative agency. Watch for fiddliness and whether Karma system feels like survival grind or meaningful tension."
   },
   {
     "name": "Netherwatch",
@@ -417,6 +305,118 @@ const kickstarters = [
       "pvp": false,
       "auction": false
     },
-    "fit": "Cooperative horror deduction — Detective Stories meets haunted house. Variable player powers, no app, no grid. BUT from HEXplore It designer (known for fiddly games). Fiddliness unconfirmed — wait for reviews."
+    "fit": "Cooperative horror deduction \u2014 Detective Stories meets haunted house. Variable player powers, no app, no grid. BUT from HEXplore It designer (known for fiddly games). Fiddliness unconfirmed \u2014 wait for reviews."
+  },
+  {
+    "name": "Fateforge: Chronicles of Kaan",
+    "bgg": 0,
+    "designer": "Mighty Boards",
+    "players": "1-4",
+    "time": "60-120 min",
+    "phase": "Pledge Manager",
+    "delivery": "2026",
+    "platform": "Gamefound",
+    "url": "https://gamefound.com/en/projects/mightyboards/fateforge-chronicles-of-kaan",
+    "desc": "Cooperative RPG-like board game with meaningful narrative choices and intense combat. Accessible entry point with deep campaign progression.",
+    "narrativeType": "campaign",
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "lowFiddle": false,
+      "easyTable": false,
+      "mechanicalDepth": true,
+      "solo": true,
+      "app": false,
+      "deckConstruction": false,
+      "gridCombat": true,
+      "survivalGrind": false,
+      "pvp": false,
+      "auction": false
+    },
+    "fit": "Cooperative narrative campaign, 1-4 players, RPG-like progression. Has grid combat (potential concern). No app. Worth investigating if combat feels tactical vs fiddly."
+  },
+  {
+    "name": "Malhya: Lands of Legends",
+    "bgg": 356731,
+    "designer": "4 Univers / La Boite de Jeu",
+    "players": "1-5",
+    "time": "60-90 min",
+    "phase": "Pledge Manager",
+    "delivery": "2025",
+    "platform": "Gamefound",
+    "url": "https://gamefound.com/en/projects/la-boite-de-jeu/malhya-lands-of-legends-pledge-manager",
+    "desc": "Cooperative adventure game with 6 years of development. Exploration, narrative choices, and character progression across a branching campaign.",
+    "narrativeType": "campaign",
+    "tags": {
+      "cooperative": true,
+      "asymmetric": true,
+      "lowFiddle": false,
+      "easyTable": false,
+      "mechanicalDepth": true,
+      "solo": true,
+      "app": false,
+      "deckConstruction": false,
+      "gridCombat": false,
+      "survivalGrind": false,
+      "pvp": false,
+      "auction": false
+    },
+    "fit": "Cooperative narrative adventure, no grid combat, no app. 6 years development suggests polish. Check if mechanical depth is real or just paragraph-reading."
+  },
+  {
+    "name": "The Eternaut",
+    "bgg": 0,
+    "designer": "Pendragon Game Studio",
+    "players": "1-4",
+    "time": "60-90 min",
+    "phase": "Late Pledge",
+    "delivery": "2025",
+    "platform": "Gamefound",
+    "url": "https://gamefound.com/en/projects/pendragon-game-studio-srl/the-eternaut---the-board-game",
+    "desc": "Narrative cooperative game based on the Argentine sci-fi comic. Survival against alien invasion with branching story and expansion content.",
+    "narrativeType": "campaign",
+    "tags": {
+      "cooperative": true,
+      "asymmetric": false,
+      "lowFiddle": false,
+      "easyTable": false,
+      "mechanicalDepth": true,
+      "solo": true,
+      "app": false,
+      "deckConstruction": false,
+      "gridCombat": false,
+      "survivalGrind": true,
+      "pvp": false,
+      "auction": false
+    },
+    "fit": "Cooperative narrative survival. Sci-fi theme. No grid, no app. Has survival elements (potential grind concern). Based on a beloved comic \u2014 strong thematic source."
+  },
+  {
+    "name": "Corps of Discovery",
+    "bgg": 0,
+    "designer": "Jay Cormier (Mind MGMT)",
+    "players": "1-4",
+    "time": "60-90 min",
+    "phase": "Late Pledge",
+    "delivery": "2026",
+    "platform": "Kickstarter",
+    "url": "https://www.kickstarter.com/projects/mindmgmt/corps-of-discovery",
+    "desc": "Cooperative deduction and survival game. Lewis & Clark expedition meets monsters. From the designer of Mind MGMT.",
+    "narrativeType": "scenario",
+    "tags": {
+      "cooperative": true,
+      "asymmetric": false,
+      "lowFiddle": true,
+      "easyTable": true,
+      "mechanicalDepth": true,
+      "solo": true,
+      "app": false,
+      "deckConstruction": false,
+      "gridCombat": false,
+      "survivalGrind": false,
+      "pvp": false,
+      "auction": false
+    },
+    "fit": "From Mind MGMT designer (strong pedigree). Cooperative deduction + survival. Low fiddle, no grid, no app. Deduction mechanic suggests meaningful decisions. Strong candidate."
   }
 ];

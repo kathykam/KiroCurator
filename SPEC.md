@@ -125,15 +125,14 @@ Items below Mechanics 7 are excluded from the page.
 - Narrative below 6/10 = excluded (not worth the play)
 - Fiddliness is displayed but not used for sorting — it's a warning flag only
 
-## FAQ Pages (`Dashboard/faq-<game-slug>.html`)
+## FAQ Page (`Dashboard/arkham/faq.html`)
 
-The Rules Teacher persona generates per-game FAQ pages as questions are asked.
+The Rules Teacher persona appends Q&A entries to the FAQ page as questions are asked.
 
-- **Naming:** `faq-<game-slug>.html` (e.g., `faq-arkham-horror-lcg.html`)
-- **Structure:** Collapsible Q&A entries grouped by category (Setup, Turn Flow, Combat, Scoring, Timing, Edge Cases, etc.)
-- **Styling:** Uses shared `styles.css` with minimal inline overrides for collapsible behavior.
-- **Behavior:** After answering a rules question, the Rules Teacher appends the Q&A to the appropriate category on the game's FAQ page. If the page doesn't exist, create it.
-- **Index link:** New FAQ pages are linked from `Dashboard/index.html`.
+- **Location:** `Dashboard/arkham/faq.html` (single page for all Arkham Horror LCG rules questions)
+- **Structure:** Collapsible Q&A entries grouped by category (General, Investigation, Skill Tests, Enemies & Combat, Mythos & Doom, Timing & Keywords, Campaign & Deckbuilding, Edge Cases)
+- **Styling:** Uses shared `styles.css`. FAQ-specific styles use `.faq-entry`, `.faq-question`, `.faq-answer` classes (not `.card`/`.card-title` to avoid collision with shared styles).
+- **Behavior:** After answering a rules question, the Rules Teacher appends the Q&A to the appropriate category. New categories can be added as needed.
 
 ## Dashboard Conventions
 
@@ -145,7 +144,20 @@ The Rules Teacher persona generates per-game FAQ pages as questions are asked.
 
 ### Investigator Page Hierarchy
 
-Each investigator page (`arkham-guardian.html`, `arkham-seeker.html`, `arkham-rogue.html`, `arkham-mystic.html`) follows this section order:
+#### Class Emoji Mapping
+
+| Class | Emoji | Color |
+|-------|-------|-------|
+| Guardian | 🛡️ | Blue (#1e40af) |
+| Seeker | 🔍 | Gold (#854d0e) |
+| Rogue | 💵 | Green (#166534) |
+| Mystic | 🔮 | Purple (#6b21a8) |
+| Survivor | ⭐ | Red (#991b1b) |
+| Starters | 📘 | — |
+
+Use these consistently in h1 headings, class badges, and card icons.
+
+Each investigator page (`investigators/guardian.html`, `investigators/seeker.html`, `investigators/rogue.html`, `investigators/mystic.html`) follows this section order:
 
 1. **Overview** — Stats, ability, elder sign, deckbuilding rules, signature card, weakness
 2. **Tips** — How to play this investigator effectively
@@ -162,3 +174,15 @@ Each investigator page (`arkham-guardian.html`, `arkham-seeker.html`, `arkham-ro
 - Do NOT use cards that are already in another investigator's built deck (e.g., Grotesque Statue is in Jacqueline's starter).
 - Default build is tuned for Excelsior. Blob/Film Fatale variants note what changes from default.
 - Tables use `table-layout:fixed` with colgroup: XP 5%, Remove 25%, Add 25%, Why 45%.
+
+### Scenario Team Recommendations
+
+Each scenario page (`scenarios/*.html`) includes 3 recommended teams for 3-player play:
+
+- **Team 1 (ideal — prebuilt/starter decks):** The best team using only physically built decks (Rex, Roland, Zoey, Jenny, Agnes) and starter decks (Nathaniel, Harvey, Winifred, Jacqueline, Stella). Ready to play immediately.
+- **Team 2 (alternate — expanded pool):** Best team from the Team 1 pool PLUS any investigator with a decklist on ArkhamDB (deck page exists on the Dashboard). Doesn't have to include them — just expands the options. Pick the strongest different combo.
+- **Team 3 (theoretical best — requires deckbuilding):** The strongest team from the full owned investigator pool (Core, Dunwich, Edge of the Earth, Drowned City). No starters. Requires building new decks from scratch.
+
+**Constraint:** Roland and Zoey share a physical deck (8-card swap). They cannot appear on the same team in Team 1 or Team 2.
+
+The overview table on `investigators/index.html` shows Team 1 for each scenario.
