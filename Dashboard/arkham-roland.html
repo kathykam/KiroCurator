@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roland Banks — Arkham Horror LCG</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+.investigator { margin-bottom: 3rem; }
+.stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0 1rem; font-size: 0.85rem; }
+.stat { background: #dbeafe; padding: 0.3rem 0.6rem; border-radius: 0.25rem; font-weight: 600; color: #1e40af; }
+.ability-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #3b82f6; background: #f8fafc; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
+.deck-section { background: #f8fafc; border: 1px solid #dbeafe; border-radius: 0.5rem; padding: 1.25rem; margin: 1.5rem 0; }
+.deck-section h4 { margin-bottom: 0.75rem; font-size: 0.95rem; color: #1e40af; }
+.deck-list { columns: 2; font-size: 0.8rem; line-height: 1.8; }
+.deck-list li { margin-bottom: 0.25rem; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h1 { color: #1e40af; }
+h2 { border-bottom-color: #3b82f6; color: #1e40af; }
+h3 { color: #2563eb; font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
+</style>
+</head>
+<body>
+<nav class="site-nav">
+  <a href="index.html">🎲 Home</a>
+  <a href="collection.html">📚 Collection</a>
+  <div class="nav-dropdown">
+    <a href="arkham-lcg.html">🐙 Arkham</a>
+    <div class="nav-dropdown-menu">
+      <a href="arkham-lcg.html">LCG Collection</a>
+      <a href="arkham-official.html">Official Rankings</a>
+      <a href="arkham-homebrew.html">Homebrew Rankings</a>
+      <a href="arkham-ranked.html">Combined Rankings</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="arkham-investigators.html">🔰 Play Guides</a>
+    <div class="nav-dropdown-menu">
+      <a href="arkham-guardian.html">Investigator: Zoey</a>
+      <a href="arkham-roland.html" class="active">Investigator: Roland</a>
+      <a href="arkham-seeker.html">Investigator: Rex</a>
+      <a href="arkham-rogue.html">Investigator: Jenny</a>
+      <a href="arkham-mystic.html">Investigator: Agnes</a>
+      <a href="arkham-starters.html">Starter Decks</a>
+      <a href="arkham-scenario-excelsior.html">Scenario: Excelsior Hotel</a>
+      <a href="arkham-scenario-blob.html">Scenario: The Blob</a>
+      <a href="arkham-scenario-film-fatale.html">Scenario: Film Fatale</a>
+      <a href="arkham-scenario-wendigo.html">Scenario: Wendigo</a>
+      <a href="arkham-scenario-consternation.html">Scenario: Consternation</a>
+      <a href="arkham-scenario-sleepy-hollow.html">Scenario: Sleepy Hollow</a>
+      <a href="faq-arkham-horror-lcg.html">FAQ</a>
+    </div>
+  </div>
+  <a href="narrative-finder.html">🔍 Finder</a>
+  <a href="kickstarter.html">🚀 Watchlist</a>
+</nav>
+
+<h1>🔰 Roland Banks — The Fed</h1>
+<p class="subtitle">Guardian flex investigator — fights AND gets clues</p>
+
+<div class="investigator">
+<h2>Roland Banks</h2>
+<div class="stats">
+  <span class="stat">🧠 Will 3</span>
+  <span class="stat">📖 Int 3</span>
+  <span class="stat">👊 Combat 4</span>
+  <span class="stat">🦶 Agility 2</span>
+  <span class="stat">❤️ 9 HP</span>
+  <span class="stat">🧠 5 Sanity</span>
+</div>
+
+<div class="ability-box">
+  <strong>Ability:</strong> After you defeat an enemy → discover 1 clue at your location.<br>
+  <strong>Elder Sign:</strong> +1 for each clue on your location.<br>
+  <strong>Deckbuilding:</strong> Guardian 0–5, Seeker 0–5, Neutral 0–5.
+</div>
+
+<div class="sig-card">
+  <strong>Roland's .38 Special</strong> (Hand, Firearm) — +1 combat, +1 damage. Gets +1 combat for each clue on your location. Scales with investigation progress.
+</div>
+
+<div class="weakness-card">
+  <strong>Cover Up</strong> — Starts with 2 clues on it. If Cover Up still has clues when the game ends, suffer 1 mental trauma. Discover clues at your location to remove them from Cover Up instead.
+</div>
+
+<h3>Why Roland for Excelsior</h3>
+<div class="tip">
+  Roland is secretly one of the best investigators for Excelsior Hotel:
+  <ul>
+    <li><strong>Clue on kill</strong> — When guests go hostile via Driven to Madness, killing them gives you a free clue. You're solving the problem AND advancing.</li>
+    <li><strong>Crowbar</strong> — Investigate using combat 4 instead of intellect 3. Roland becomes a 4-stat investigator.</li>
+    <li><strong>Fine Clothes</strong> — Boosts Parley to int 4 or will 4. Roland can actually Parley guests reliably.</li>
+    <li><strong>Seeker access</strong> — "I've got a plan!" (Lv 2), Deduction, Pathfinder — tools other Guardians can't take.</li>
+  </ul>
+</div>
+
+<h3>Tips for Playing Roland</h3>
+<ul>
+  <li><strong>Kill hostile guests, don't avoid them.</strong> Unlike other investigators who evade, Roland WANTS to kill — each kill = free clue from his ability.</li>
+  <li><strong>Crowbar is your primary investigation tool.</strong> Combat 4 + Crowbar = investigate at 4 effective. Better than his base intellect 3.</li>
+  <li><strong>Cover Up is manageable.</strong> You're already discovering clues constantly (ability + Crowbar + Evidence!). Just make sure to be at a location with clues when you discover them.</li>
+  <li><strong>Low sanity (5) is your weakness.</strong> Horror treacheries are dangerous. Guts helps, but be careful in horror-heavy rounds.</li>
+  <li><strong>"I've got a plan!" (Lv 2) is burst damage.</strong> Deals damage equal to clues on your location (up to 3). Save it for tough enemies.</li>
+  <li><strong>Pathfinder saves actions.</strong> Free move to reach hostile guests or clue-rich locations without spending an action.</li>
+</ul>
+
+<h3>Mitigating Cover Up</h3>
+<div class="tip">
+  <p>Cover Up has 2 clues. When you discover clues at your location, you can place them on Cover Up instead of on your investigator card.</p>
+  <ul>
+    <li>Clear it early — don't let it linger until the end.</li>
+    <li>Roland's ability (clue on kill) can place that clue on Cover Up.</li>
+    <li>Crowbar investigations also work — discover a clue, put it on Cover Up.</li>
+    <li>Only 2 clues needed — usually cleared by round 2-3 if you prioritize it.</li>
+  </ul>
+</div>
+
+<div class="deck-section">
+<h4>🃏 Roland Banks — Excelsior Hotel (9 XP standalone)</h4>
+<p style="font-size:0.8rem; color:#6b7280;">Cards from: Core Set ×3 + Dunwich + Edge of the Earth + Drowned City. No overlap with Zoey's deck.</p>
+<ul class="deck-list">
+  <li>2× Machete</li>
+  <li>2× Crowbar (Drowned City)</li>
+  <li>2× Guard Dog</li>
+  <li>2× Fine Clothes</li>
+  <li>2× Flashlight</li>
+  <li>2× Dodge</li>
+  <li>2× Emergency Cache</li>
+  <li>2× Ready for Anything (Drowned City)</li>
+  <li>2× Vicious Blow</li>
+  <li>2× Perception</li>
+  <li>2× Guts</li>
+  <li>2× Unexpected Courage</li>
+  <li>1× Beat Cop (Lv 2)</li>
+  <li>1× Pathfinder (Lv 1)</li>
+  <li>2× "I've got a plan!" (Lv 2)</li>
+  <li>1× Deduction (Lv 2)</li>
+</ul>
+
+<h4>Deck Strategy Notes</h4>
+<ul>
+  <li><strong>Mulligan for:</strong> Machete or Crowbar. Machete for combat, Crowbar for investigation. Either one gets you rolling.</li>
+  <li><strong>Crowbar + Machete = full flex.</strong> Investigate with Crowbar (combat 4), fight with Machete (+1 combat, +1 damage). Roland does both at 4+ effective.</li>
+  <li><strong>"I've got a plan!" (Lv 2)</strong> deals up to 3 damage using intellect. Save for tough enemies or the Horseman-equivalent in Excelsior.</li>
+  <li><strong>Beat Cop (Lv 2)</strong> — exhaust for 1 damage. Repeatable ping to finish off wounded enemies.</li>
+  <li><strong>Pathfinder</strong> — free move once per round. Reach hostile guests without wasting an action.</li>
+  <li><strong>Deduction (Lv 2)</strong> — commit to a Crowbar investigation for +1 intellect AND discover 2 extra clues on success by 2+. Massive clue burst.</li>
+  <li><strong>Ready for Anything</strong> — draw 1 card (2 if you drew an enemy this round). In Excelsior, enemies appear often = consistent 2-card draw.</li>
+  <li><strong>Fine Clothes</strong> — +1 to Parley. Roland at will 3 + Fine Clothes = 4, or int 3 + Fine Clothes = 4. Passes the difficulty 3 Parley test reliably.</li>
+</ul>
+
+<h4>XP Breakdown (9 XP)</h4>
+<ul>
+  <li>2× "I've got a plan!" (Lv 2) = 4 XP — burst damage using intellect</li>
+  <li>1× Beat Cop (Lv 2) = 2 XP — repeatable ping damage</li>
+  <li>1× Deduction (Lv 2) = 2 XP — extra clues on Crowbar success</li>
+  <li>1× Pathfinder (Lv 1) = 1 XP — free movement</li>
+</ul>
+</div>
+</div>
+
+</body>
+</html>
