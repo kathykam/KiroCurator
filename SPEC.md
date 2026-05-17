@@ -200,7 +200,10 @@ The overview table on `investigators/index.html` shows Team 1 for each scenario.
 
 Each campaign guide (`campaigns/*.html`) includes team recommendations for both 3-player and 2-player.
 
-**3-player teams** follow the same tier system as scenario pages (Team 1 = best prebuilt, Team 2 = alternate composition with different playstyle).
+**3-player teams** follow a 3-tier system:
+- **Team 1 (best):** From prebuilt + starter deck pool only.
+- **Team 2 (alternate):** Different composition from prebuilt + starter + expanded pool (Pete, Lily).
+- **Team 3 (co-released):** Best team using only investigators that co-released with that campaign cycle. Thematic pick — may require decks you don't own.
 
 **2-player teams** use a different framework:
 - **Team 1 (Specialist):** Dedicated fighter + dedicated cluever from prebuilt/starter pool. Maximum efficiency when each person focuses on their role.
