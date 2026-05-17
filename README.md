@@ -22,16 +22,19 @@
 
 ## Dashboard Pages
 
-| Page | Description |
+| Path | Description |
 |------|-------------|
-| `index.html` | Landing page with 2-column menu grid |
-| `collection.html` | Sortable/filterable collection viewer with multi-select ownership filter |
-| `arkham-lcg.html` | Arkham Horror LCG campaign collection dashboard |
-| `arkham-official.html` | Official FFG campaigns & standalones ranked by profile fit |
-| `arkham-homebrew.html` | Fan-made campaigns & scenarios ranked by profile fit |
-| `arkham-ranked.html` | Combined official + homebrew rankings |
-| `narrative-finder.html` | Narrative Game Finder — filter by preferences + narrative depth score (0-10) |
-| `faq-<game-slug>.html` | Per-game FAQ pages — rules clarifications added as questions are asked |
+| `collection.html` | Home page — sortable/filterable collection viewer |
+| `kickstarter.html` | Kickstarter watchlist |
+| `narrative-finder.html` | Narrative Game Finder — filter by preferences |
+| `arkham/lcg.html` | Arkham Horror LCG campaign collection dashboard |
+| `arkham/official.html` | Official FFG campaigns & standalones ranked |
+| `arkham/homebrew.html` | Fan-made campaigns & scenarios ranked |
+| `arkham/ranked.html` | Combined official + homebrew rankings |
+| `arkham/faq.html` | Rules FAQ — clarifications added as questions are asked |
+| `investigators/` | Investigator deck pages (guardian, seeker, rogue, mystic, starters) |
+| `scenarios/` | Scenario guides (excelsior, blob, film-fatale, wendigo, consternation, sleepy-hollow) |
+| `campaigns/` | Campaign guides (coming soon) |
 
 **Mechanical Depth definition:** A game must have a resource you manage (time, actions, health, money, cards) that constrains decisions and forces tradeoffs. Pure puzzles (solve or don't) and random paragraph lookups (no meaningful decisions) are not games.
 

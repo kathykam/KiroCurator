@@ -4,49 +4,70 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>FAQ — Arkham Horror: The Card Game</title>
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 <style>
-.faq-entry { cursor: pointer; }
-.faq-entry .card-desc { display: none; }
-.faq-entry.open .card-desc { display: block; }
-.faq-entry .card-title::before { content: '▶ '; font-size: 0.75rem; }
-.faq-entry.open .card-title::before { content: '▼ '; }
+.faq-entry { background: #fff; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1rem; margin-bottom: 0.75rem; cursor: pointer; }
+.faq-entry:hover { border-color: #a5b4fc; }
+.faq-entry .faq-question { font-weight: 600; font-size: 0.9rem; color: #1f2937; }
+.faq-entry .faq-question::before { content: '▶ '; font-size: 0.75rem; }
+.faq-entry.open .faq-question::before { content: '▼ '; }
+.faq-entry .faq-answer { display: none; margin-top: 0.75rem; font-size: 0.875rem; color: #374151; line-height: 1.6; }
+.faq-entry .faq-answer p { margin-bottom: 0.5rem; }
+.faq-entry .faq-answer ul { margin: 0.5rem 0 0.5rem 1.25rem; }
+.faq-entry .faq-answer li { margin-bottom: 0.3rem; }
+.faq-entry.open .faq-answer { display: block; }
 .category { margin-top: 2rem; }
 .category:first-of-type { margin-top: 1rem; }
+.category h2 { font-size: 1rem; color: #374151; border-bottom: 1px solid #e5e7eb; padding-bottom: 0.25rem; }
 </style>
 </head>
 <body>
 <nav class="site-nav">
-  <a href="index.html">🎲 Home</a>
-  <a href="collection.html">📚 Collection</a>
   <div class="nav-dropdown">
-    <a href="arkham-lcg.html">🐙 Arkham</a>
+    <a href="../collection.html">📚 Collection</a>
     <div class="nav-dropdown-menu">
-      <a href="arkham-lcg.html">LCG Collection</a>
-      <a href="arkham-official.html">Official Rankings</a>
-      <a href="arkham-homebrew.html">Homebrew Rankings</a>
-      <a href="arkham-ranked.html">Combined Rankings</a>
+      <a href="../collection.html">My Collection</a>
+      <a href="../kickstarter.html">Kickstarter Watchlist</a>
+      <a href="../narrative-finder.html">Narrative Finder</a>
     </div>
   </div>
   <div class="nav-dropdown">
-    <a href="arkham-investigators.html">🔰 Play Guides</a>
+    <a href="../arkham/lcg.html">🐙 Arkham</a>
     <div class="nav-dropdown-menu">
-      <a href="arkham-guardian.html">Investigator: Zoey/Roland</a>
-      <a href="arkham-seeker.html">Investigator: Rex</a>
-      <a href="arkham-rogue.html">Investigator: Jenny</a>
-      <a href="arkham-mystic.html">Investigator: Agnes</a>
-      <a href="arkham-starters.html">Starter Decks</a>
-      <a href="arkham-scenario-excelsior.html">Scenario: Excelsior Hotel</a>
-      <a href="arkham-scenario-blob.html">Scenario: The Blob</a>
-      <a href="arkham-scenario-film-fatale.html">Scenario: Film Fatale</a>
-      <a href="arkham-scenario-wendigo.html">Scenario: Wendigo</a>
-      <a href="arkham-scenario-consternation.html">Scenario: Consternation</a>
-      <a href="arkham-scenario-sleepy-hollow.html">Scenario: Sleepy Hollow</a>
-      <a href="faq-arkham-horror-lcg.html">FAQ</a>
+      <a href="../arkham/lcg.html">LCG Collection</a>
+      <a href="../arkham/official.html">Official Rankings</a>
+      <a href="../arkham/homebrew.html">Homebrew Rankings</a>
+      <a href="../arkham/ranked.html">Combined Rankings</a>
+      <a href="../arkham/faq.html">FAQ</a>
     </div>
   </div>
-  <a href="narrative-finder.html">🔍 Finder</a>
-  <a href="kickstarter.html">🚀 Watchlist</a>
+  <div class="nav-dropdown">
+    <a href="../investigators/index.html">🔰 Investigators</a>
+    <div class="nav-dropdown-menu">
+      <a href="../investigators/guardian.html">Zoey/Roland (Guardian)</a>
+      <a href="../investigators/seeker.html">Rex (Seeker)</a>
+      <a href="../investigators/rogue.html">Jenny (Rogue)</a>
+      <a href="../investigators/mystic.html">Agnes (Mystic)</a>
+      <a href="../investigators/starters.html">Starter Decks</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../scenarios/excelsior.html">🎬 Scenarios</a>
+    <div class="nav-dropdown-menu">
+      <a href="../scenarios/excelsior.html">Excelsior Hotel</a>
+      <a href="../scenarios/blob.html">The Blob</a>
+      <a href="../scenarios/film-fatale.html">Film Fatale</a>
+      <a href="../scenarios/wendigo.html">Wendigo</a>
+      <a href="../scenarios/consternation.html">Consternation</a>
+      <a href="../scenarios/sleepy-hollow.html">Sleepy Hollow</a>
+    </div>
+  </div>
+  <div class="nav-dropdown">
+    <a href="../campaigns/index.html">📖 Campaigns</a>
+    <div class="nav-dropdown-menu">
+      <a href="../campaigns/index.html">(Coming soon)</a>
+    </div>
+  </div>
 </nav>
 
 <h1>📖 Arkham Horror: The Card Game — FAQ</h1>
@@ -68,9 +89,9 @@
 <div class="category">
 <h2>Enemies & Combat</h2>
 
-<div class="faq-entry card">
-  <div class="card-title">How do Nathaniel Cho's fight events work?</div>
-  <div class="card-desc">
+<div class="faq-entry">
+  <div class="faq-question">How do Nathaniel Cho's fight events work?</div>
+  <div class="faq-answer">
     <p>A fight event is an Event card with a Fight action on it. You play it from hand (1 action), resolve the fight, then it goes to your discard pile — one-shot use.</p>
     <p><strong>Example — One-Two Punch:</strong></p>
     <ol>
@@ -85,9 +106,9 @@
   </div>
 </div>
 
-<div class="faq-entry card">
-  <div class="card-title">Do I need to Engage an Aloof enemy before using Parley on it?</div>
-  <div class="card-desc">
+<div class="faq-entry">
+  <div class="faq-question">Do I need to Engage an Aloof enemy before using Parley on it?</div>
+  <div class="faq-answer">
     <p><strong>No.</strong> You can Parley directly with an Aloof enemy without engaging it first.</p>
     <ul>
       <li><strong>Aloof</strong> means the enemy doesn't automatically engage you. You must Engage it only if you want to <em>attack</em> (Fight) it.</li>
@@ -99,9 +120,9 @@
   </div>
 </div>
 
-<div class="faq-entry card">
-  <div class="card-title">Does Driven to Madness on a Hotel Guest cause it to immediately engage an investigator?</div>
-  <div class="card-desc">
+<div class="faq-entry">
+  <div class="faq-question">Does Driven to Madness on a Hotel Guest cause it to immediately engage an investigator?</div>
+  <div class="faq-answer">
     <p><strong>Yes.</strong> Driven to Madness causes the attached enemy to lose Aloof. Once Aloof is removed, normal engagement rules apply — a ready, unengaged enemy at an investigator's location immediately engages them.</p>
     <p>Additionally, Driven to Madness says "Investigators cannot parley with attached enemy," so the Hotel Guest's Parley action is completely blocked.</p>
     <p><strong>Your options:</strong></p>
@@ -122,9 +143,9 @@
 <div class="category">
 <h2>Timing & Keywords</h2>
 
-<div class="faq-entry card">
-  <div class="card-title">How does Jacqueline Fine's ability work?</div>
-  <div class="card-desc">
+<div class="faq-entry">
+  <div class="faq-question">How does Jacqueline Fine's ability work?</div>
+  <div class="faq-answer">
     <p>When any investigator at her location would reveal chaos token(s), she can activate her ability (once per round) to reveal <strong>2 additional tokens</strong> (3 total). Then choose:</p>
     <ul>
       <li><strong>Cancel 2 non-auto-fail tokens</strong> — keep the best one, OR</li>
@@ -148,9 +169,9 @@
 <div class="category">
 <h2>Campaign & Deckbuilding</h2>
 
-<div class="faq-entry card">
-  <div class="card-title">Do Permanent cards count toward your deck size?</div>
-  <div class="card-desc">
+<div class="faq-entry">
+  <div class="faq-question">Do Permanent cards count toward your deck size?</div>
+  <div class="faq-answer">
     <p><strong>No.</strong> Permanent cards do not count toward your 30-card deck size. They are "extra" — outside the deck entirely.</p>
     <ul>
       <li>Start in play at the beginning of every game (no need to draw them).</li>

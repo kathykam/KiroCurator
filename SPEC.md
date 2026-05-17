@@ -57,11 +57,33 @@ RulesReference/           — Downloaded/summarized rulebooks for Rules Teacher 
 UserData/
   collection.csv          — Full raw BGG export (drop zone for updates)
 Dashboard/
-  index.html              — Navigation menu linking to all HTML pages
-  collection.html         — Self-contained HTML viewer (trimmed CSV embedded)
-  arkham-lcg.html         — Arkham Horror LCG collection dashboard
-  arkham-homebrew.html    — Arkham Horror homebrew campaigns
-  faq-<game-slug>.html    — Per-game FAQ pages (created by Rules Teacher)
+  index.html              — Redirect to collection.html
+  collection.html         — Self-contained HTML viewer (trimmed CSV embedded, home page)
+  kickstarter.html        — Kickstarter watchlist
+  narrative-finder.html   — Narrative game finder
+  styles.css              — Shared styles
+  arkham/
+    lcg.html              — Arkham Horror LCG collection dashboard
+    official.html         — Official campaigns ranked
+    homebrew.html         — Homebrew campaigns ranked
+    ranked.html           — Combined rankings
+    faq.html              — Rules FAQ (per-game clarifications)
+  investigators/
+    index.html            — Investigator landing page (overview + beginner picks)
+    guardian.html          — Zoey/Roland shared deck + tips
+    seeker.html           — Rex deck + tips
+    rogue.html            — Jenny deck + tips
+    mystic.html           — Agnes deck + tips
+    starters.html         — 5 starter deck tips + standalone upgrades
+  scenarios/
+    excelsior.html        — Murder at the Excelsior Hotel guide
+    blob.html             — The Blob That Ate Everything guide
+    film-fatale.html      — Film Fatale guide
+    wendigo.html          — Against the Wendigo guide (homebrew)
+    consternation.html    — Consternation on the Constellation guide (homebrew)
+    sleepy-hollow.html    — The Legend of Sleepy Hollow guide (homebrew)
+  campaigns/
+    index.html            — Campaign guides (placeholder)
 ```
 
 ## Key Data Rules (from prompts)
@@ -78,7 +100,7 @@ Dashboard/
 - Features: Sort by clicking headers, filter by ownership status, filter by minimum rating, text search, series grouping (splits on " – " or ": ").
 - The trimmed CSV is embedded in a `<script id="csvData" type="text/plain">` tag placed before the main `<script>` tag.
 
-## Homebrew Page Ranking Logic (`Dashboard/arkham-homebrew.html`)
+## Homebrew Page Ranking Logic (`Dashboard/arkham/homebrew.html`)
 
 Campaigns and standalones are rated on three axes:
 - **Mechanics** (1-10): Polish, tightness, rules clarity, no confusion
