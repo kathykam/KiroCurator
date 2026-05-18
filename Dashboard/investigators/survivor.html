@@ -6,17 +6,24 @@
 <title>Survivor Investigator — Arkham Horror LCG</title>
 <link rel="stylesheet" href="../styles.css">
 <style>
-.investigator { margin-bottom: 2.5rem; }
+.investigator { margin-bottom: 3rem; }
+.investigator h2 { font-size: 1.25rem; margin-bottom: 0.5rem; }
 .stats { display: flex; gap: 0.75rem; flex-wrap: wrap; margin: 0.75rem 0 1rem; font-size: 0.85rem; }
 .stat { background: #fee2e2; padding: 0.3rem 0.6rem; border-radius: 0.25rem; font-weight: 600; color: #991b1b; }
-.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
-.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.5rem 0.75rem; margin: 0.5rem 0; border-radius: 0.25rem; font-size: 0.875rem; }
+.ability-box { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.5rem; padding: 0.75rem 1rem; margin: 0.75rem 0; font-size: 0.9rem; line-height: 1.6; }
+.sig-card { background: #f0fdf4; border-left: 3px solid #16a34a; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
+.weakness-card { background: #fef2f2; border-left: 3px solid #ef4444; padding: 0.75rem 1rem; margin: 0.75rem 0; border-radius: 0.25rem; font-size: 0.875rem; line-height: 1.5; }
 .tip { margin: 0.75rem 0; padding: 0.75rem 1rem; border-left: 3px solid #ef4444; background: #fef2f2; border-radius: 0 0.25rem 0.25rem 0; font-size: 0.875rem; line-height: 1.5; }
-.deck-section { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 0.5rem; padding: 1.25rem; margin: 1.5rem 0; }
-.deck-list { columns: 2; font-size: 0.8rem; }
-.deck-list li { margin-bottom: 0.2rem; }
-ul { margin: 0.5rem 0 0.5rem 1.5rem; font-size: 0.875rem; }
-li { margin-bottom: 0.3rem; }
+.deck-section { background: #fef2f2; border: 1px solid #fecaca; border-radius: 0.5rem; padding: 1.25rem; margin: 1.5rem 0; }
+.deck-section h4 { margin-bottom: 0.75rem; font-size: 0.95rem; color: #991b1b; }
+.deck-list { columns: 2; font-size: 0.8rem; line-height: 1.8; }
+.deck-list li { margin-bottom: 0.25rem; }
+ul { margin: 0.75rem 0 0.75rem 1.25rem; font-size: 0.875rem; line-height: 1.7; }
+li { margin-bottom: 0.5rem; }
+h1 { color: #991b1b; }
+h2 { border-bottom-color: #ef4444; color: #991b1b; }
+h3 { color: #b91c1c; font-size: 1rem; margin-top: 1.5rem; margin-bottom: 0.75rem; }
+p { line-height: 1.6; margin-bottom: 0.5rem; font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -37,7 +44,7 @@ li { margin-bottom: 0.3rem; }
       <a href="../arkham/homebrew.html">Homebrew Rankings</a>
       <a href="../arkham/ranked.html">Combined Rankings</a>
       <a href="../arkham/faq.html">FAQ</a>
-      <a href="../investigators/ch2-research.html">Chapter 2 Research</a>
+      <a href="../investigators/buy-guide.html">Buy Guide</a>
     </div>
   </div>
   <div class="nav-dropdown">
@@ -90,9 +97,11 @@ li { margin-bottom: 0.3rem; }
   <span class="stat">🧠 5 Sanity</span>
 </div>
 
-<p><strong>Ability:</strong> You begin the game with Duke in play. Fast — Discard a card from your hand: Ready an asset you control. (Limit once per round.)</p>
-<p><strong>Elder Sign:</strong> +2. Ready Duke.</p>
-<p><strong>Deckbuilding:</strong> Survivor 0–5, Neutral 0–5, up to 5 other level 0 cards from any class.</p>
+<div class="ability-box">
+  <strong>Ability:</strong> You begin the game with Duke in play. Fast — Discard a card from your hand: Ready an asset you control. (Limit once per round.)<br>
+  <strong>Elder Sign:</strong> +2. Ready Duke.<br>
+  <strong>Deckbuilding:</strong> Survivor 0–5, Neutral 0–5, up to 5 other level 0 cards from any class.
+</div>
 
 <div class="sig-card">
   <strong>Duke</strong> (Asset, Ally) — Starts in play. Exhaust: Fight at base combat 4, +1 damage. OR Exhaust: Investigate at base intellect 4, may move to a connecting location first. Duke IS Pete's stats.

@@ -62,6 +62,8 @@ Dashboard/
   kickstarter.html        — Kickstarter watchlist
   narrative-finder.html   — Narrative game finder
   styles.css              — Shared styles
+  games.js                — Collection data for collection.html
+  kickstarters.js         — Kickstarter watchlist data
   arkham/
     lcg.html              — Arkham Horror LCG collection dashboard
     official.html         — Official campaigns ranked
@@ -77,8 +79,8 @@ Dashboard/
     survivor.html         — Pete deck + tips
     lily.html             — Lily Chen page (Sleepy Hollow / Blob Team 2)
     starters.html         — 5 starter deck tips + standalone upgrades
-    ch2-research.html     — Arkham Horror Chapter 2 Core Set research
   scenarios/
+    index.html            — Scenario landing page (investigator recommendations table)
     excelsior.html        — Murder at the Excelsior Hotel guide
     blob.html             — The Blob That Ate Everything guide
     film-fatale.html      — Film Fatale guide
