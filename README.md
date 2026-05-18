@@ -42,4 +42,4 @@ All pages share `styles.css` for consistent styling. Page-specific styles remain
 
 ## Output
 
-Long recommendations from the Curator and Recommender personas are written to `Output/recommendation.md`. Check that file after asking for detailed advice.
+All recommendations from the Curator and Recommender personas go directly into the Dashboard HTML pages (scenarios, campaigns, investigators, rankings).

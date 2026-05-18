@@ -16,6 +16,7 @@
     .tag-tierB { background: #dbeafe; color: #2563eb; }
     .tag-tierC { background: #f3e8ff; color: #7c3aed; }
     .tag-tierD { background: #f3f4f6; color: #6b7280; }
+    .tag-tierX { background: #fee2e2; color: #991b1b; }
     .tag-scifi { background: #cffafe; color: #155e75; }
     .tag-fiddly { background: #fee2e2; color: #991b1b; }
     .sort-btn { padding: 0.3rem 0.6rem; border: 1px solid #d1d5db; border-radius: 0.25rem; background: #fff; cursor: pointer; font-size: 0.75rem; }
@@ -258,11 +259,53 @@ const standalones = [
     mech:6, narr:6, fiddle:2, tier:"D",
     desc:"Five short standalones, each involving an iconic ally. Varied mechanics.",
     fit:"Fun palate cleansers but deck-dependent. Best two: Too Noble and Mysterious Benefits." },
+  { rank:0, name:"The Grand Oak Hotel", creator:"ArgusTheCat", type:"homebrew", status:"cut",
+    mech:6, narr:7, fiddle:2, tier:"X",
+    desc:"Hotel mystery with memory-loss 'Nobody' mechanic.",
+    fit:"CUT — Hook arrives too late (halfway through). Half the encounter deck is blank cards until then. Massive difficulty spikes between 'nothing happens' and instant death." },
+  { rank:0, name:"Dr. Jekyll and Mr. Hyde", creator:"The Beard", type:"homebrew", status:"cut",
+    mech:6, narr:6, fiddle:2, tier:"X",
+    desc:"Variable doom clock with escalating tests. Help Dr. Jekyll find a cure.",
+    fit:"CUT — Straightforward but unmemorable. Hyde feels like an annoyance rather than a threat. Lacks a memorable hook to pull it together." },
+  { rank:0, name:"Blood Spilled in Salem", creator:"Colin Towle", type:"homebrew", status:"cut",
+    mech:5, narr:5, fiddle:2, tier:"X",
+    desc:"Stop a witch ritual in Salem. Grid of 9 locations.",
+    fit:"CUT — Arbitrary hand-slot requirement stalls some builds. Most locations are filler. Encounter cards extremely uneven. Anti-climactic ending. Wastes its theme." },
+  { rank:0, name:"The Undying", creator:"Weyird", type:"homebrew", status:"cut",
+    mech:5, narr:6, fiddle:2, tier:"X",
+    desc:"Zombie survival with doom and civilian rescue mechanics.",
+    fit:"CUT — Fundamental design flaw: rushing past everything for a quick win is optimal. Engaging with the zombie mechanics is suboptimal play." },
+  { rank:0, name:"Code Red at Bleeding Heart", creator:"Myriad", type:"homebrew", status:"cut",
+    mech:5, narr:6, fiddle:3, tier:"X",
+    desc:"Haunted hospital with location-damage mechanic.",
+    fit:"CUT — Main mechanic (location damage) falls flat in practice. Second half is random chance. Hidden enemy has no counterplay for some builds." },
+  { rank:0, name:"The Colour Out of Space", creator:"Joe Ehret", type:"homebrew", status:"cut",
+    mech:6, narr:6, fiddle:2, tier:"X",
+    desc:"Lovecraft adaptation. Alien colour corrupts a farmstead.",
+    fit:"CUT — Doesn't stand out mechanically or narratively enough against stronger entries in the same space." },
+  { rank:0, name:"The Nameless City", creator:"bau", type:"homebrew", status:"cut",
+    mech:6, narr:6, fiddle:2, tier:"X",
+    desc:"Exploration of a buried city beneath the desert.",
+    fit:"CUT — Doesn't distinguish itself from stronger exploration scenarios (Wendigo, Sleepy Hollow)." },
+  { rank:0, name:"'Tis the Season", creator:"Frying Tonight", type:"homebrew", status:"cut",
+    mech:6, narr:6, fiddle:1, tier:"X",
+    desc:"Holiday-themed scenario. Festive novelty.",
+    fit:"CUT — Fun novelty but not mechanically strong enough for the ranked list. Seasonal gimmick over substance." },
+  { rank:0, name:"Defense of the Arkham", creator:"Rei", type:"homebrew", status:"cut",
+    mech:5, narr:5, fiddle:3, tier:"X",
+    desc:"Tower-defense style scenario protecting a location.",
+    fit:"CUT — Tower-defense concept doesn't translate well to the Arkham card game format. Niche and repetitive." },
+  { rank:0, name:"Stranger Things", creator:"Mythos Busters", type:"homebrew", status:"cut",
+    mech:5, narr:6, fiddle:2, tier:"X",
+    desc:"2017 fan scenario based on the TV show. One of the first popular fan scenarios.",
+    fit:"CUT — Historically significant but mechanically outdated by modern standards. The game has evolved far past this." },
 ];
 
 function renderList(data, containerId) {
   const el = document.getElementById(containerId);
-  el.innerHTML = data.map(c => {
+  const ranked = data.filter(c => c.status !== 'cut');
+  const cut = data.filter(c => c.status === 'cut');
+  let html = ranked.map(c => {
     const typeTag = c.type === 'official'
       ? '<span class="tag tag-official">Official</span>'
       : '<span class="tag tag-homebrew">Homebrew</span>';
@@ -285,6 +328,19 @@ function renderList(data, containerId) {
         <div class="${fitClass}">${c.fit}</div>
     </div>`;
   }).join('');
+  if (cut.length > 0) {
+    html += `<h2 style="margin-top:2rem; color:#6b7280; border-bottom-color:#d1d5db;">❌ Didn't Make the Cut</h2>
+      <p style="font-size:0.8rem; color:#6b7280; margin-bottom:0.75rem;">Popular scenarios that were considered but excluded — Mechanics below 7, or fundamental design flaws.</p>`;
+    html += cut.map(c => `<div class="card unowned" style="opacity:0.7;">
+        <div class="card-header">
+          <span class="card-title" style="color:#6b7280;">${c.name}</span>
+          <span class="card-creator">${c.creator} · Mechanics: ${c.mech} · Narrative: ${c.narr}</span>
+        </div>
+        <div class="card-desc">${c.desc}</div>
+        <div class="fit fit-bad">${c.fit}</div>
+    </div>`).join('');
+  }
+  el.innerHTML = html;
 }
 
 renderList(campaigns, 'campaigns');

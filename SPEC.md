@@ -52,7 +52,7 @@ Prompts/
   GameRecommendations.txt — Recommender persona prompt
   GameRulesTeacher.txt    — Rules Teacher persona prompt
 Output/
-  recommendation.md       — Long-form output from Curator/Recommender personas
+  recommendation.md       — (Deprecated) All recommendations now go directly into Dashboard HTML pages
 RulesReference/           — Downloaded/summarized rulebooks for Rules Teacher reference
 UserData/
   collection.csv          — Full raw BGG export (drop zone for updates)
